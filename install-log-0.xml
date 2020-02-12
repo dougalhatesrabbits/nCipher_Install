@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-02-12T21:21:42.891748Z</date>
+  <millis>1581542502891</millis>
+  <nanos>748000</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>Test</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>New instance of Install started</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-02-12T21:24:21.550742Z</date>
+  <millis>1581542661550</millis>
+  <nanos>742000</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>Install</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>New instance of Install started</message>
+</record>
+<record>
+  <date>2020-02-12T21:24:29.902456Z</date>
+  <millis>1581542669902</millis>
+  <nanos>456000</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>SecurityWorldLinux</class>
+  <method>check_Mount</method>
+  <thread>1</thread>
+  <message>New instance of *check_Mount* started</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-02-12T21:25:44.676773Z</date>
+  <millis>1581542744676</millis>
+  <nanos>773000</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>Install</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>New instance of Install started</message>
+</record>

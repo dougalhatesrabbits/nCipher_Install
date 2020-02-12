@@ -1,0 +1,1 @@
+2020-02-12 20:56:34 [SEVERE] <global UseLogger doSomeThingAndLog> [Warning Log] null 1581540994362
