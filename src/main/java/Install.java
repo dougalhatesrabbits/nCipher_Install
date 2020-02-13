@@ -93,22 +93,21 @@ public class Install {
                 windows.applyFirmware();
                 break;
             case "mac os x":
-                String COMPRESSED_FILE = "linux.tar.gz";
-                String DESTINATION_PATH = "";
-                File destFile = new File(DESTINATION_PATH);
 
                 System.out.println("MAC OS machine");
                 SecurityWorldLinux linux = new SecurityWorldLinux("a", (short) 12504, "c");
 
-                linux.check_Existing_SW(osx);
+                //linux.check_Existing_SW(osx);
                 /*linux.remove_Existing_SW(osx, linux, null);*/
+                linux.checkEnvironmentVariables();
                 linux.check_Mount();
                 linux.checkJava();
-                linux.unpackSecurityWorld(COMPRESSED_FILE, destFile);
+                linux.unpackSecurityWorld("task.tgz", "mnt");
                 linux.applySecurityWorld();
-                linux.checkEnvironmentVariables();
                 linux.check_Users();
-                if (linux.sw_version > 12603) {
+
+                if (linux.sw_version > 12504) {
+                    // This is really separate to Client install but can still prep by copy over to RFS
                     linux.applyFirmware();
                 }
                 break;
