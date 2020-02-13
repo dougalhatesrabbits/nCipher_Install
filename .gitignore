@@ -21,3 +21,23 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.idea/vcs.xml
+.idea/vcs.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/workspace.xml
+/.idea/
+/target/
+/temp3.txt
+/test.iso
+/temp1.txt
+/temp2.txt
+src/main/resources/
+src/test/
+
+/CentOS-8.1.1911-x86_64-dvd1.iso
+/commons-compress-1.20-bin.tar copy.gz
+/commons-compress-1.20/
+/ubuntu-19.10-desktop-amd64.iso
+/Win10_Pro_1511_English_x64_july_2016.iso
+/mnt/

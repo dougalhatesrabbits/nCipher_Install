@@ -1,15 +1,12 @@
-import com.platform.Platform;
+import com.iso.ReadIso;
 
-import java.io.LineNumberReader;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
 import java.util.logging.Logger;
 
 public class SecurityWorldLinux extends SecurityWorld {
     // Always use the classname, this way you can refactor
-    private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     /***
      * Child class
      *
@@ -17,16 +14,15 @@ public class SecurityWorldLinux extends SecurityWorld {
      * @param version
      */
 
-    String sw_filename;
-    short    sw_version;
-    String sw_location;
+    String sw_filename = "Clive.iso";
+    short    sw_version = 12603;
+    String sw_location = "mnt";
+
     final String NFAST_HOME = "/opt/nfast/";
     final String NFAST_KMDATA = "/opt/nfast/kmdata";
     final String CLASSPATH = null;
     final String PATH = "opt/nfast/bin";
     final String JAVA_PATH = null;
-
-
 
     // Default constructor
     public SecurityWorldLinux(String name, short version, String location) {
@@ -38,44 +34,26 @@ public class SecurityWorldLinux extends SecurityWorld {
     void check_Mount(){
         LOGGER.info("New instance of *check_Mount* started");
         System.out.println("Checking if ISO is mounted");
+        // Do checksum on iso
+        ReadIso tempIso = new ReadIso(new File(sw_filename), new File(sw_location));
+        System.out.println("Mounted " + File.listRoots() + "at /" + sw_location);
     }
 
-    void check_Users(){
+    void check_Users() throws IOException {
         LOGGER.fine("New instance of -check_Users- started");
         System.out.println("Checking if Users are in correct Groups");
+        //Process p = Runtime.getRuntime().exec("////command////");
     }
 
-    public void check_Existing_SW(){
-        LOGGER.fine("New instance of -check_Existing_SW- started");
-        System.out.println("Checking for existing Security World");
-        SecurityWorldLinux linux = new SecurityWorldLinux("a", (short) 123, "c");
-        Path path = Paths.get(linux.NFAST_HOME);
-        System.out.println(path);
-
-        if (Files.exists(path)) {
-            System.out.println("Found SW, removing previous Linux install: \nconfirm (Y) to proceed, (N) to abort installation >");
-            Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-
-
-            String confirm = myObj.nextLine();  // Read user input
-            if (confirm.toLowerCase().equals("y")){
-                System.out.println("You entered proceed " + confirm);
-                remove_Existing_SW();// Output user input
-            } else {
-                System.out.println("You entered stop " + confirm);
-                System.exit(1);
-            }
-        } else {
-            System.out.println("No linux SW aha");
-
-        }
+    void unpackSecurityWorld(String tarFile, File destFile) {
+        LOGGER.fine("New instance of -UnpackSecurityWorld- started");
+        System.out.println("Unpacking Security World...");
 
 
     }
 
-    public void remove_Existing_SW(){
-        LOGGER.fine("New instance of -remove_Existing_SW- started");
-        System.out.println("Removing old Linux Security World");
-    }
+
+
+
 
 }

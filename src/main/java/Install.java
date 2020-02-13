@@ -7,6 +7,7 @@ import net.sourceforge.argparse4j.inf.ArgumentParser;
 import net.sourceforge.argparse4j.inf.ArgumentParserException;
 import net.sourceforge.argparse4j.inf.Namespace;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -44,7 +45,7 @@ public class Install {
         try {
             _level_ = ns.getString("level");
         } catch (Exception e) {
-            //LOGGER.logrb(Level.SEVERE, "Install", "main", (String) null, "Could not get logging level", e);
+            LOGGER.logrb(Level.SEVERE, "Install", "main", (String) null, "Could not get logging level", e);
             System.err.printf("Could not get logging level %s: %s",
                     ns.getString("level"), e.getMessage());
             System.exit(1);
@@ -79,28 +80,31 @@ public class Install {
         //String os = osx.getOsName();
        // System.out.println("\n" + os);
 
-
         switch(osx.getOsName()) {
             case "windows":
                 System.out.println("Windows OS");
                 SecurityWorldWindows windows = new SecurityWorldWindows("a", (short) 12504, "c");
-                windows.check_Existing_SW();
-                windows.remove_Existing_SW();
+                windows.check_Existing_SW(osx);
+                //windows.remove_Existing_SW(osx, null, windows);
                 windows.checkJava();
-                windows.unpackSecurityWorld();
+                //windows.unpackSecurityWorld();
                 windows.applySecurityWorld();
                 windows.checkEnvironmentVariables();
                 windows.applyFirmware();
                 break;
             case "mac os x":
+                String COMPRESSED_FILE = "linux.tar.gz";
+                String DESTINATION_PATH = "";
+                File destFile = new File(DESTINATION_PATH);
+
                 System.out.println("MAC OS machine");
                 SecurityWorldLinux linux = new SecurityWorldLinux("a", (short) 12504, "c");
 
-                linux.check_Existing_SW();
-                //linux.remove_Existing_SW();
+                linux.check_Existing_SW(osx);
+                /*linux.remove_Existing_SW(osx, linux, null);*/
                 linux.check_Mount();
                 linux.checkJava();
-                linux.unpackSecurityWorld();
+                linux.unpackSecurityWorld(COMPRESSED_FILE, destFile);
                 linux.applySecurityWorld();
                 linux.checkEnvironmentVariables();
                 linux.check_Users();
@@ -114,7 +118,7 @@ public class Install {
                 SecurityWorldLinux linuxreal = new SecurityWorldLinux("a", (short) 12505, "c");
                 linuxreal.check_Mount();
                 linuxreal.checkEnvironmentVariables();
-                linuxreal.check_Existing_SW();
+                linuxreal.check_Existing_SW(osx);
                 linuxreal.checkJava();
                 linuxreal.check_Users();
                 break;
