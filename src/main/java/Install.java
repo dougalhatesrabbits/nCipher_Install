@@ -45,7 +45,7 @@ public class Install {
         try {
             _level_ = ns.getString("level");
         } catch (Exception e) {
-            LOGGER.logrb(Level.SEVERE, "Install", "main", (String) null, "Could not get logging level", e);
+            LOGGER.logp(Level.SEVERE, "Install", "main", "Could not get logging level", e);
             System.err.printf("Could not get logging level %s: %s",
                     ns.getString("level"), e.getMessage());
             System.exit(1);
@@ -88,7 +88,7 @@ public class Install {
                 //windows.remove_Existing_SW(osx, null, windows);
                 windows.checkJava();
                 //windows.unpackSecurityWorld();
-                windows.applySecurityWorld();
+                windows.applySecurityWorld(osx, null, windows);
                 windows.checkEnvironmentVariables();
                 windows.applyFirmware();
                 break;
@@ -103,7 +103,9 @@ public class Install {
                 linux.check_Mount();
                 linux.checkJava();
                 linux.unpackSecurityWorld("task.tgz", "mnt");
-                linux.applySecurityWorld();
+                //linux.unpackSecurityWorld("Archive.zip", "mnt");
+                //linux.unpackSecurityWorld("linux.tar.gz", "mnt");
+                linux.applySecurityWorld(osx, linux, null);
                 linux.check_Users();
 
                 if (linux.sw_version > 12504) {

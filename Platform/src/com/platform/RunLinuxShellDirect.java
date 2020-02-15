@@ -5,6 +5,9 @@ import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 
 class RunLinuxShellDirect implements Runnable {
+    /***
+     * https://www.baeldung.com/run-shell-command-in-java
+     */
     private InputStream inputStream;
     private Consumer<String> consumer;
 
@@ -29,6 +32,7 @@ class RunLinuxShellDirect implements Runnable {
         if (isWindows) {
             builder.command("cmd.exe", "/c", "dir");
         } else {
+            //builder.command("/bin/bash", "-c", "source", "/Users/david/.bash_profile");
             builder.command("sh", "-c", "ls");
         }
         builder.directory(new File(System.getProperty("user.home")));
