@@ -42,7 +42,7 @@ src/test/
 /Win10_Pro_1511_English_x64_july_2016.iso
 /mnt/
 /.idea/
-/.idea/
+
 !/.idea/vcs.xml
 !/.idea/workspace.xml
 !/.idea/uiDesigner.xml
@@ -56,3 +56,5 @@ src/test/
 /temp2.txt
 /temp3.txt
 /test.iso
+/.idea/
+/tmp/
