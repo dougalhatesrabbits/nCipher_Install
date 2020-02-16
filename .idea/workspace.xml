@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a959431d-03c8-4083-ba83-c96c0bb67cf7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +27,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Logging" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.36206895" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -55,7 +50,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581853359711</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new">
+      <created>1581853579110</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581853579110</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -71,34 +73,38 @@
       <screen x="0" y="28" width="1218" height="652" />
     </state>
     <state x="67" y="28" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1218.652@0.28.1218.652" timestamp="1581807548059" />
-    <state x="222" y="28" width="763" height="652" key="CommitChangelistDialog2" timestamp="1581853358101">
+    <state x="222" y="28" width="763" height="652" key="CommitChangelistDialog2" timestamp="1581853578600">
       <screen x="0" y="28" width="1218" height="652" />
     </state>
-    <state x="222" y="28" width="763" height="652" key="CommitChangelistDialog2/0.28.1218.652@0.28.1218.652" timestamp="1581853358101" />
+    <state x="222" y="28" width="763" height="652" key="CommitChangelistDialog2/0.28.1218.652@0.28.1218.652" timestamp="1581853578600" />
     <state x="358" y="67" width="476" height="580" key="DetectedRootsChooserDialog" timestamp="1581807009113">
       <screen x="0" y="28" width="1218" height="652" />
     </state>
     <state x="358" y="67" width="476" height="580" key="DetectedRootsChooserDialog/0.28.1218.652@0.28.1218.652" timestamp="1581807009113" />
-    <state x="465" y="96" width="701" height="529" key="FileChooserDialogImpl" timestamp="1581810442118">
+    <state x="465" y="96" width="701" height="529" key="FileChooserDialogImpl" timestamp="1581853742331">
       <screen x="0" y="28" width="1218" height="652" />
     </state>
-    <state x="465" y="96" width="701" height="529" key="FileChooserDialogImpl/0.28.1218.652@0.28.1218.652" timestamp="1581810442118" />
-    <state x="205" y="28" width="782" height="652" key="NewModule_or_Project.wizard" timestamp="1581810423672">
+    <state x="465" y="96" width="701" height="529" key="FileChooserDialogImpl/0.28.1218.652@0.28.1218.652" timestamp="1581853742331" />
+    <state x="205" y="28" width="782" height="652" key="NewModule_or_Project.wizard" timestamp="1581853755290">
       <screen x="0" y="28" width="1218" height="652" />
     </state>
-    <state x="205" y="28" width="782" height="652" key="NewModule_or_Project.wizard/0.28.1218.652@0.28.1218.652" timestamp="1581810423672" />
-    <state x="89" y="28" width="1024" height="652" key="SettingsEditor" timestamp="1581810490611">
+    <state x="205" y="28" width="782" height="652" key="NewModule_or_Project.wizard/0.28.1218.652@0.28.1218.652" timestamp="1581853755290" />
+    <state x="89" y="28" width="1024" height="652" key="SettingsEditor" timestamp="1581853759915">
       <screen x="0" y="28" width="1218" height="652" />
     </state>
-    <state x="89" y="28" width="1024" height="652" key="SettingsEditor/0.28.1218.652@0.28.1218.652" timestamp="1581810490611" />
+    <state x="89" y="28" width="1024" height="652" key="SettingsEditor/0.28.1218.652@0.28.1218.652" timestamp="1581853759915" />
+    <state x="353" y="28" width="502" height="652" key="VCS.ChangeListViewerDialog" timestamp="1581853621804">
+      <screen x="0" y="28" width="1218" height="652" />
+    </state>
+    <state x="353" y="28" width="502" height="652" key="VCS.ChangeListViewerDialog/0.28.1218.652@0.28.1218.652" timestamp="1581853621804" />
     <state x="285" y="248" width="628" height="235" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1581807428773">
       <screen x="0" y="28" width="1218" height="652" />
     </state>
     <state x="285" y="248" width="628" height="235" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.28.1218.652@0.28.1218.652" timestamp="1581807428773" />
-    <state x="387" y="273" width="443" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581853435506">
+    <state x="387" y="273" width="443" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581853609535">
       <screen x="0" y="28" width="1218" height="652" />
     </state>
-    <state x="387" y="273" width="443" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1218.652@0.28.1218.652" timestamp="1581853435506" />
+    <state x="387" y="273" width="443" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1218.652@0.28.1218.652" timestamp="1581853609535" />
     <state x="251" y="143" width="706" height="428" key="git4idea.merge.GitPullDialog" timestamp="1581853172729">
       <screen x="0" y="28" width="1218" height="652" />
     </state>
