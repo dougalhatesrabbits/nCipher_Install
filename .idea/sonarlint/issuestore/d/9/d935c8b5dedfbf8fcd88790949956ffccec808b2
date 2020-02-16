@@ -1,0 +1,9 @@
+
+ssquid:UselessImportCheck
+"CRemove this unused import 'java.security.NoSuchAlgorithmException'.(ŒòÍ¾şÿÿÿÿ8õÄ†„.
+_squid:UselessImportCheck"4Remove this unused import 'java.util.logging.Level'.(…µÛ¶8õÄ†„.
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(‹¯·­8õÄ†„.
+Wsquid:S1854("9Remove this useless assignment to local variable "level".(·íÂß8õÄ†„.
+Msquid:S1481&"*Remove this unused "level" local variable.(ó§—şÿÿÿÿÿ8õÄ†„.
+Hsquid:S1068"*Remove this unused "LOGGER" private field.(‹¯·­8õÄ†„.
+nsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(ÿÿÛåøÿÿÿÿ8õÄ†„.
