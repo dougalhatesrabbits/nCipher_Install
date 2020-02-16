@@ -28,13 +28,11 @@ temp3.txt
 test.iso
 temp1.txt
 temp2.txt
-/out/
+
 /Clive.iso
 /task.tgz
 /tmp/
 apple.jpg
-src/main/resources/
-src/test/
 install-0.log
 install-log-0.html
 install-log-0.xml
