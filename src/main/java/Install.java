@@ -1,6 +1,6 @@
 import com.log.*;
 import com.platform.*;
-import com.file.*;
+
 
 import net.sourceforge.argparse4j.ArgumentParsers;
 import net.sourceforge.argparse4j.inf.ArgumentParser;
@@ -78,7 +78,7 @@ public class Install {
 
         Platform osx = new Platform();
         //String os = osx.getOsName();
-       // System.out.println("\n" + os);
+        //System.out.println("\n" + os);
 
         switch(osx.getOsName()) {
             case "windows":
@@ -95,36 +95,56 @@ public class Install {
             case "mac os x":
 
                 System.out.println("MAC OS machine");
-                SecurityWorldLinux linux = new SecurityWorldLinux("a", (short) 12504, "c");
+                SecurityWorldLinux linuxosx = new SecurityWorldLinux("a", (short) 12504, "c");
 
                 //linux.check_Existing_SW(osx);
                 /*linux.remove_Existing_SW(osx, linux, null);*/
-                linux.checkEnvironmentVariables();
-                linux.check_Mount();
-                linux.checkJava();
-                linux.unpackSecurityWorld("task.tgz", "mnt");
+                linuxosx.checkEnvironmentVariables();
+                linuxosx.check_Mount();
+                linuxosx.checkJava();
+                linuxosx.unpackSecurityWorld("task.tgz", "mnt");
                 //linux.unpackSecurityWorld("Archive.zip", "mnt");
                 //linux.unpackSecurityWorld("linux.tar.gz", "mnt");
-                linux.applySecurityWorld(osx, linux, null);
-                linux.check_Users();
+                linuxosx.applySecurityWorld(osx, linuxosx, null);
+                linuxosx.check_Users();
 
-                if (linux.sw_version > 12504) {
+                if (linuxosx.sw_version > 12504) {
                     // This is really separate to Client install but can still prep by copy over to RFS
-                    linux.applyFirmware();
+                    linuxosx.applyFirmware();
                 }
                 break;
-
             case "nix":
                 System.out.println("Unix OS");
-                SecurityWorldLinux linuxreal = new SecurityWorldLinux("a", (short) 12505, "c");
-                linuxreal.check_Mount();
-                linuxreal.checkEnvironmentVariables();
-                linuxreal.check_Existing_SW(osx);
-                linuxreal.checkJava();
-                linuxreal.check_Users();
+                SecurityWorldLinux nix = new SecurityWorldLinux("a", (short) 12505, "c");
+                nix.check_Mount();
+                nix.checkEnvironmentVariables();
+                nix.check_Existing_SW(osx);
+                nix.checkJava();
+                nix.check_Users();
+                break;
+            case "linux":
+                System.out.println("Linux OS");
+                SecurityWorldLinux linux = new SecurityWorldLinux("a", (short) 12505, "c");
+
+                linux.check_Existing_SW(osx);
+                linux.checkEnvironmentVariables();
+                linux.check_Mount();
+                linux.unpackSecurityWorld("linux.tar.gz", "mnt");
+                linux.applySecurityWorld(osx, linux, null);
+                linux.checkJava();
+                linux.check_Users();
                 break;
             case "sunos":
                 System.out.println("Solaris OS");
+                SecurityWorldLinux sun = new SecurityWorldLinux("a", (short) 12505, "c");
+
+                sun.check_Existing_SW(osx);
+                sun.checkEnvironmentVariables();
+                sun.check_Mount();
+                sun.unpackSecurityWorld("task.tgz", "mnt");
+                sun.applySecurityWorld(osx, sun, null);
+                sun.checkJava();
+                sun.check_Users();
                 break;
             default:
                 System.out.println("Unknown OS");

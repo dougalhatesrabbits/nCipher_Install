@@ -72,15 +72,12 @@ public class SecurityWorldLinux extends SecurityWorld {
         //Process p = Runtime.getRuntime().exec("////command////");
         Process p = Runtime.getRuntime().exec("pwd");
         try {
+            ProcessBuilder pb = new ProcessBuilder();
+            pb.command("ls", "-l");
 
-            ProcessBuilder pb = new ProcessBuilder("/bin/bash", "pwd",
-                    "sudo useradd username",
-                    "sudo mkdir /home/username", "sudo passwd username",
-                    "sudo chown username /home/username",
-                    "sudo chgrp username /home/username",
-                    "sudo adduser username", "sudo adduser username sudo");
             pb.redirectErrorStream();
             Process process = pb.start();
+            pb.start();
             InputStream inputStream = process.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     inputStream));

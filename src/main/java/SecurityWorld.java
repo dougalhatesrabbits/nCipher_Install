@@ -63,7 +63,7 @@ public class SecurityWorld {
         // TODO
         // check for root user
         Process p = Runtime.getRuntime().exec("id -u");
-        p.info();
+        //p.info();
 
     }
 
