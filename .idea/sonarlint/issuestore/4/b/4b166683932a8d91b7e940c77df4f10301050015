@@ -1,0 +1,25 @@
+
+Osquid:S2387"1"PATH" is the name of a field in "SecurityWorld".(·«ψ8ύν―έƒ.
+>squid:S1170"!Make this final field static too.(–Α¨8ύν―έƒ.
+Ssquid:S2387"6"CLASSPATH" is the name of a field in "SecurityWorld".(–Α¨8ύν―έƒ.
+Wsquid:S2387"9"NFAST_KMDATA" is the name of a field in "SecurityWorld".(²ΒΒ8ύν―έƒ.
+vsquid:S00116"WRename this field "NFAST_KMDATA" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ΒΒ8ύν―έƒ.
+?squid:S1170"!Make this final field static too.(Ύ‡ΤΓ8ύν―έƒ.
+[squid:S2387"8"sw_location" is the name of a field in "SecurityWorld".(—γψÿÿÿÿ8ύν―έƒ.
+tsquid:S00116
+"URename this field "sw_version" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ασΩ8ύν―έƒ.
+rsquid:S00116"TRename this field "CLASSPATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–Α¨8ύν―έƒ.
+[squid:S2387	"8"sw_filename" is the name of a field in "SecurityWorld".(ά¤™όϋÿÿÿÿ8ύν―έƒ.
+?squid:S1170"!Make this final field static too.(²ΒΒ8ύν―έƒ.
+Usquid:S2387
+"7"sw_version" is the name of a field in "SecurityWorld".(ασΩ8ύν―έƒ.
+zsquid:S00116	"VRename this field "sw_filename" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ά¤™όϋÿÿÿÿ8ύν―έƒ.
+?squid:S1170"!Make this final field static too.(·«ψ8ύν―έƒ.
+nsquid:S00116"ORename this field "PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·«ψ8ύν―έƒ.
+Usquid:S2387"7"NFAST_HOME" is the name of a field in "SecurityWorld".(Ύ‡ΤΓ8ύν―έƒ.
+Dsquid:S1170"!Make this final field static too.(”Ϋÿÿÿÿÿ8ύν―έƒ.
+xsquid:S00116"TRename this field "JAVA_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ϋÿÿÿÿÿ8ύν―έƒ.
+Ysquid:S2387"6"JAVA_PATH" is the name of a field in "SecurityWorld".(”Ϋÿÿÿÿÿ8ύν―έƒ.
+zsquid:S00116"VRename this field "sw_location" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—γψÿÿÿÿ8ύν―έƒ.
+tsquid:S00116"URename this field "NFAST_HOME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ύ‡ΤΓ8ύν―έƒ.
+squid:S1845"rRename field "PATH" to prevent any misunderstanding/clash with field "path" defined in superclass "SecurityWorld".(·«ψ8¤θΊ„.

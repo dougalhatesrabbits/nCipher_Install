@@ -1,23 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/target" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:${jackson.version}" level="project" />
-    <orderEntry type="library" name="net.sourceforge.argparse4j:argparse4j:0.8.1" level="application" />
-    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-annotations:2.6.3" level="application" />
-    <orderEntry type="library" name="commons-compress-1" level="application" />
-    <orderEntry type="library" name="commons-compress-1.20" level="application" />
-    <orderEntry type="library" name="commons-compress-1.20-javadoc" level="application" />
-    <orderEntry type="library" name="com.github.stephenc.java-iso-tools:iso9660-ant-tasks:2.0.1" level="application" />
-    <orderEntry type="library" name="com.github.stephenc.java-iso-tools:iso9660-vfs-impl:2.0.1" level="application" />
-    <orderEntry type="library" name="com.github.stephenc.java-iso-tools:iso9660-writer:2.0.1" level="application" />
-    <orderEntry type="library" name="commons-io:commons-io:2.6" level="application" />
-    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-core:2.6.4" level="application" />
-    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-databind:2.6.4" level="application" />
-  </component>
-</module>
+<module type="JAVA_MODULE" version="4" />

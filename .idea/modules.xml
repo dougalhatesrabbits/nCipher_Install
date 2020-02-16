@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IO/IO.iml" filepath="$PROJECT_DIR$/IO/IO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Logging/Logging.iml" filepath="$PROJECT_DIR$/Logging/Logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/Platform/Platform.iml" filepath="$PROJECT_DIR$/Platform/Platform.iml" />
-      <module fileurl="file://$PROJECT_DIR$/nCipher_Install.iml" filepath="$PROJECT_DIR$/nCipher_Install.iml" />
     </modules>
   </component>
 </project>

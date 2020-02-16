@@ -1,0 +1,28 @@
+
+jsquid:S1192&"GDefine a constant instead of duplicating this literal "IOFile" 6 times.(Äüåãûÿÿÿÿ8è´‹†„.
+wsquid:S1192&"TDefine a constant instead of duplicating this literal "Unable to open file" 4 times.(Äüåãûÿÿÿÿ8è´‹†„.
+osquid:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(µÎ Àúÿÿÿÿ8è´‹†„.
+qsquid:S2095"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(®»Ëßÿÿÿÿÿ8è´‹†„.
+osquid:S2095]"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(¢µ—şùÿÿÿÿ8è´‹†„.
+psquid:S20956"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(õè«øøÿÿÿÿ8è´‹†„.
+ksquid:S2095Y"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(‡Ï»¡øÿÿÿÿ8è´‹†„.
+fsquid:S2095"HUse try-with-resources or close this "FileReader" in a "finally" clause.(¯›¥¸8è´‹†„.
+Asquid:S1148%"#Use a logger to log this exception.(Ç’Çê8è´‹†„.
+Asquid:S1148)"#Use a logger to log this exception.(Ç’Çê8è´‹†„.
+Asquid:S1148K"#Use a logger to log this exception.(Ç’Çê8è´‹†„.
+Asquid:S1148N"#Use a logger to log this exception.(Ç’Çê8è´‹†„.
+Asquid:S1148l"#Use a logger to log this exception.(Ç’Çê8è´‹†„.
+Bsquid:S1148‘"#Use a logger to log this exception.(Ç’Çê8è´‹†„.
+qsquid:ModifiersOrderCheck	"EReorder the modifiers to comply with the Java Language Specification.(‹¯·­8è´‹†„.
+Usquid:S1854"7Remove this useless assignment to local variable "cwd".(±Æöş8è´‹†„.
+asquid:CallToDeprecatedMethod&"-Remove this use of "logrb"; it is deprecated.(Äüåãûÿÿÿÿ8è´‹†„.
+\squid:CallToDeprecatedMethod*"-Remove this use of "logrb"; it is deprecated.(„û‡Â8è´‹†„.
+Usquid:S18541"7Remove this useless assignment to local variable "cwd".(±Æöş8è´‹†„.
+bsquid:S2147M"DCombine this catch with the one at line 74, which has the same body.(Ãôş•8è´‹†„.
+\squid:CallToDeprecatedMethodL"-Remove this use of "logrb"; it is deprecated.(§ÎÊ§8è´‹†„.
+\squid:CallToDeprecatedMethodO"-Remove this use of "logrb"; it is deprecated.(§ÎÊ§8è´‹†„.
+Rsquid:EmptyStatementUsageCheckT"Remove this empty statement.(Íÿ‰úÿÿÿÿ8è´‹†„.
+\squid:CallToDeprecatedMethodm"-Remove this use of "logrb"; it is deprecated.(ÜÎ”í8è´‹†„.
+bsquid:CallToDeprecatedMethod’"-Remove this use of "logrb"; it is deprecated.(Šöëûÿÿÿÿ8è´‹†„.
+Fsquid:S1481"(Remove this unused "cwd" local variable.(±Æöş8è´‹†„.
+Fsquid:S14811"(Remove this unused "cwd" local variable.(±Æöş8è´‹†„.

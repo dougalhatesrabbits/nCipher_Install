@@ -1,0 +1,8 @@
+
+vsquid:S2095"SUse try-with-resources or close this "TarArchiveInputStream" in a "finally" clause.(±®Σαψÿÿÿÿ8Ρΐι„.
+lsquid:S2095B"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(’¨Μ½8λεδ„.
+Fsquid:S1481"(Remove this unused "tar" local variable.(ΣΤ8ω’¨‚„.
+nsquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(Μψη™ύÿÿÿÿ8όγ„.
+Gsquid:S1481")Remove this unused "dest" local variable.(•«Θ¨8Εª©‚„.
+nsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(“ώτΕϋÿÿÿÿ8όγ„.
+ksquid:S2095@"MUse try-with-resources or close this "GZIPInputStream" in a "finally" clause.(Θί―8λεδ„.

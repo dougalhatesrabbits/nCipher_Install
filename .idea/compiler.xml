@@ -9,8 +9,6 @@
         <module name="nCipher_Install" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="nCipher_Install" target="7" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="13" />
   </component>
 </project>
