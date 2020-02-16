@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a959431d-03c8-4083-ba83-c96c0bb67cf7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1XrW3z2wKiUxN6pCBaXpvMHM4iz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Logging" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.36206895" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a959431d-03c8-4083-ba83-c96c0bb67cf7" name="Default Changelist" comment="" />
+      <created>1581804498571</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581804498571</updated>
+    </task>
+    <task id="LOCAL-00001" summary="new">
+      <created>1581853359711</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581853359711</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new" />
+    <option name="LAST_COMMIT_MESSAGE" value="new" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="204" y="28" width="800" height="652" key="#Project_Structure" timestamp="1581852920387">
+      <screen x="0" y="28" width="1218" height="652" />
+    </state>
+    <state x="204" y="28" width="800" height="652" key="#Project_Structure/0.28.1218.652@0.28.1218.652" timestamp="1581852920387" />
+    <state x="67" y="28" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581807548059">
+      <screen x="0" y="28" width="1218" height="652" />
+    </state>
+    <state x="67" y="28" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1218.652@0.28.1218.652" timestamp="1581807548059" />
+    <state x="222" y="28" width="763" height="652" key="CommitChangelistDialog2" timestamp="1581853358101">
+      <screen x="0" y="28" width="1218" height="652" />
+    </state>
+    <state x="222" y="28" width="763" height="652" key="CommitChangelistDialog2/0.28.1218.652@0.28.1218.652" timestamp="1581853358101" />
+    <state x="358" y="67" width="476" height="580" key="DetectedRootsChooserDialog" timestamp="1581807009113">
+      <screen x="0" y="28" width="1218" height="652" />
+    </state>
+    <state x="358" y="67" width="476" height="580" key="DetectedRootsChooserDialog/0.28.1218.652@0.28.1218.652" timestamp="1581807009113" />
+    <state x="465" y="96" width="701" height="529" key="FileChooserDialogImpl" timestamp="1581810442118">
+      <screen x="0" y="28" width="1218" height="652" />
+    </state>
+    <state x="465" y="96" width="701" height="529" key="FileChooserDialogImpl/0.28.1218.652@0.28.1218.652" timestamp="1581810442118" />
+    <state x="205" y="28" width="782" height="652" key="NewModule_or_Project.wizard" timestamp="1581810423672">
+      <screen x="0" y="28" width="1218" height="652" />
+    </state>
+    <state x="205" y="28" width="782" height="652" key="NewModule_or_Project.wizard/0.28.1218.652@0.28.1218.652" timestamp="1581810423672" />
+    <state x="89" y="28" width="1024" height="652" key="SettingsEditor" timestamp="1581810490611">
+      <screen x="0" y="28" width="1218" height="652" />
+    </state>
+    <state x="89" y="28" width="1024" height="652" key="SettingsEditor/0.28.1218.652@0.28.1218.652" timestamp="1581810490611" />
+    <state x="285" y="248" width="628" height="235" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1581807428773">
+      <screen x="0" y="28" width="1218" height="652" />
+    </state>
+    <state x="285" y="248" width="628" height="235" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.28.1218.652@0.28.1218.652" timestamp="1581807428773" />
+    <state x="387" y="273" width="443" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581853435506">
+      <screen x="0" y="28" width="1218" height="652" />
+    </state>
+    <state x="387" y="273" width="443" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1218.652@0.28.1218.652" timestamp="1581853435506" />
+    <state x="251" y="143" width="706" height="428" key="git4idea.merge.GitPullDialog" timestamp="1581853172729">
+      <screen x="0" y="28" width="1218" height="652" />
+    </state>
+    <state x="251" y="143" width="706" height="428" key="git4idea.merge.GitPullDialog/0.28.1218.652@0.28.1218.652" timestamp="1581853172729" />
+  </component>
+</project>

@@ -21,12 +21,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-.idea/vcs.xml
-.idea/vcs.xml
-.idea/vcs.xml
-.idea/workspace.xml
-.idea/workspace.xml
-/.idea/
+
 /target/
 /temp3.txt
 /test.iso
@@ -43,18 +38,7 @@ src/test/
 /mnt/
 /.idea/
 
-!/.idea/vcs.xml
-!/.idea/workspace.xml
-!/.idea/uiDesigner.xml
-!/.idea/misc.xml
-!/.idea/modules.xml
-!/.idea/compiler.xml
 /out/
 /Clive.iso
 /task.tgz
-/temp1.txt
-/temp2.txt
-/temp3.txt
-/test.iso
-/.idea/
 /tmp/
