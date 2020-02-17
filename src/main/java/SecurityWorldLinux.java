@@ -76,7 +76,6 @@ public class SecurityWorldLinux extends SecurityWorld {
         //Process p = Runtime.getRuntime().exec("pwd");
         new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "pwd"});
         new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "ls -l"});
-        new RunProcessBuilder().run(new String[]{"ls -l"});
         new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "source .bash_profile"});
 
         /*

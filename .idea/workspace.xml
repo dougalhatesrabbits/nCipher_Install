@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="973d0605-95d8-4bd4-a8e9-ad1b0f427f7a" name="Default Changelist" comment="idea">
-      <change afterPath="$PROJECT_DIR$/Platform/src/com/platform/RunProcessBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/019e711de99706d287ce3b0187de1d6ba9bcf614" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/019e711de99706d287ce3b0187de1d6ba9bcf614" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/5096e6bc04fe5e4d170e04ff4b5eebc9e1d0c66b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/5096e6bc04fe5e4d170e04ff4b5eebc9e1d0c66b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/5792b1c5f6cece3ad89093263f391a7f996f5635" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/727de816efb8c5d81602678a9ceb16956008d12e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/727de816efb8c5d81602678a9ceb16956008d12e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/949cade905e3e50ed3f0715b147e694b1091cc65" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/953875399ba27886cd5fe0b3636d590800bbdda2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/953875399ba27886cd5fe0b3636d590800bbdda2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a63bfdaeb1d1ddbef813cfbe7be146ac2d04d521" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5ac14112f715f091928f8f0592e55a89d7befdf" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5ac14112f715f091928f8f0592e55a89d7befdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3883b01c2c313fd8fe0ddb537106b71cf3f7c27" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3883b01c2c313fd8fe0ddb537106b71cf3f7c27" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="973d0605-95d8-4bd4-a8e9-ad1b0f427f7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platform/src/com/platform/MyMultipleCommandsEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/src/com/platform/MyMultipleCommandsEx.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SecurityWorldLinux.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SecurityWorldLinux.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581967394752</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="pb">
+      <created>1581982778884</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1581982778884</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,7 +227,8 @@
     <MESSAGE value="main" />
     <MESSAGE value="idea" />
     <MESSAGE value="iso" />
-    <option name="LAST_COMMIT_MESSAGE" value="iso" />
+    <MESSAGE value="pb" />
+    <option name="LAST_COMMIT_MESSAGE" value="pb" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="98" key="#Env" timestamp="1581640202355">
@@ -283,10 +279,10 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="601" y="207" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.22.1440.824@0.22.1440.824" timestamp="1581611930820" />
-    <state x="365" y="24" key="CommitChangelistDialog2" timestamp="1581967394234">
+    <state x="365" y="24" key="CommitChangelistDialog2" timestamp="1581982778260">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="365" y="24" key="CommitChangelistDialog2/0.22.1440.824@0.22.1440.824" timestamp="1581967394234" />
+    <state x="365" y="24" key="CommitChangelistDialog2/0.22.1440.824@0.22.1440.824" timestamp="1581982778260" />
     <state x="511" y="157" key="DetectedRootsChooserDialog" timestamp="1581558495088">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -295,22 +291,22 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="132" y="129" width="1200" height="584" key="DiffContextDialog/0.22.1440.824@0.22.1440.824" timestamp="1581789789487" />
-    <state width="1352" height="207" key="GridCell.Tab.0.bottom" timestamp="1581982422250">
+    <state width="1352" height="207" key="GridCell.Tab.0.bottom" timestamp="1581983041356">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1352" height="207" key="GridCell.Tab.0.bottom/0.22.1440.824@0.22.1440.824" timestamp="1581982422250" />
-    <state width="1352" height="207" key="GridCell.Tab.0.center" timestamp="1581982422249">
+    <state width="1352" height="207" key="GridCell.Tab.0.bottom/0.22.1440.824@0.22.1440.824" timestamp="1581983041356" />
+    <state width="1352" height="207" key="GridCell.Tab.0.center" timestamp="1581983041355">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1352" height="207" key="GridCell.Tab.0.center/0.22.1440.824@0.22.1440.824" timestamp="1581982422249" />
-    <state width="1352" height="207" key="GridCell.Tab.0.left" timestamp="1581982422249">
+    <state width="1352" height="207" key="GridCell.Tab.0.center/0.22.1440.824@0.22.1440.824" timestamp="1581983041355" />
+    <state width="1352" height="207" key="GridCell.Tab.0.left" timestamp="1581983041354">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1352" height="207" key="GridCell.Tab.0.left/0.22.1440.824@0.22.1440.824" timestamp="1581982422249" />
-    <state width="1352" height="207" key="GridCell.Tab.0.right" timestamp="1581982422250">
+    <state width="1352" height="207" key="GridCell.Tab.0.left/0.22.1440.824@0.22.1440.824" timestamp="1581983041354" />
+    <state width="1352" height="207" key="GridCell.Tab.0.right" timestamp="1581983041355">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1352" height="207" key="GridCell.Tab.0.right/0.22.1440.824@0.22.1440.824" timestamp="1581982422250" />
+    <state width="1352" height="207" key="GridCell.Tab.0.right/0.22.1440.824@0.22.1440.824" timestamp="1581983041355" />
     <state x="270" y="83" key="Maven.ArtifactSearchDialog" timestamp="1581598102159">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -327,10 +323,10 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="494" y="144" key="VCS.ChangeListViewerDialog/0.22.1440.824@0.22.1440.824" timestamp="1581789358160" />
-    <state x="332" y="161" key="Vcs.Push.Dialog.v2" timestamp="1581967421089">
+    <state x="332" y="161" key="Vcs.Push.Dialog.v2" timestamp="1581982804009">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="332" y="161" key="Vcs.Push.Dialog.v2/0.22.1440.824@0.22.1440.824" timestamp="1581967421089" />
+    <state x="332" y="161" key="Vcs.Push.Dialog.v2/0.22.1440.824@0.22.1440.824" timestamp="1581982804009" />
     <state x="527" y="206" key="chooseDestDirectoryDialog" timestamp="1581539051280">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
