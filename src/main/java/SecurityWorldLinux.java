@@ -1,10 +1,13 @@
-import com.iso.ReadIso;
+import com.file.ReadIso;
 import com.file.*;
 
 import java.io.*;
 import java.nio.file.FileAlreadyExistsException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import com.platform.MyMultipleCommandsEx;
+import com.platform.RunProcessBuilder;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 
@@ -70,17 +73,25 @@ public class SecurityWorldLinux extends SecurityWorld {
         LOGGER.fine("New instance of -check_Users- started");
         System.out.println("Checking if Users are in correct Groups");
         //Process p = Runtime.getRuntime().exec("////command////");
-        Process p = Runtime.getRuntime().exec("pwd");
+        //Process p = Runtime.getRuntime().exec("pwd");
+        new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "pwd"});
+        new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "ls -l"});
+        new RunProcessBuilder().run(new String[]{"ls -l"});
+        new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "source .bash_profile"});
+
+        /*
         try {
 
-            ProcessBuilder pb = new ProcessBuilder("/bin/bash", "pwd",
+            ProcessBuilder pb = new ProcessBuilder("/bin/bash", "-c", "pwd",
                     "sudo useradd username",
                     "sudo mkdir /home/username", "sudo passwd username",
                     "sudo chown username /home/username",
                     "sudo chgrp username /home/username",
                     "sudo adduser username", "sudo adduser username sudo");
+            pb.command("bash", "-c", "ls -l");
             pb.redirectErrorStream();
             Process process = pb.start();
+            pb.start();
             InputStream inputStream = process.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     inputStream));
@@ -93,6 +104,10 @@ public class SecurityWorldLinux extends SecurityWorld {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
+         */
+
+
     }
         // TODO
 

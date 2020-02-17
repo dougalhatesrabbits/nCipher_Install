@@ -7,20 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyMultipleCommandsEx {
-    public static void main(String a[]){
+    public static void run(String a[]){
 
         InputStream is = null;
         ByteArrayOutputStream baos = null;
         List<String> commands = new ArrayList<String>();
-        commands.add("/bin/bash");
+        commands.add("sh");
         commands.add("-c");
-        commands.add("source");
-        commands.add("/users/david/.bash_profile");
-        commands.add("ls");
-        commands.add("-l");
-        commands.add("/Users/");
-        commands.add("source");
-        commands.add("~/.bash_profile");
+        commands.add("ls -l");
         ProcessBuilder pb = new ProcessBuilder(commands);
         try {
             Process prs = pb.start();

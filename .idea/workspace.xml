@@ -2,44 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="973d0605-95d8-4bd4-a8e9-ad1b0f427f7a" name="Default Changelist" comment="idea">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/019e711de99706d287ce3b0187de1d6ba9bcf614" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/097e43764457dcb431f6f1abae37acfbc89d163a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/151607c33b2648d81c9e89d14c244a3d67e6edd6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/168bc5fb5ce2ea3f0f176211150b3e7257a63591" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/17219347691bb050c1daab3abd879d8d9f48c571" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/8/288137da4b79cf62bf2cdfdb2538bafdec01bf6f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30d1a49a3a711aebafceb07b5a186fbf10c0ee3f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3d6f18f6c295b83ad223a4a27a3f7932ee99074d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a64a3f0491009ebc52fb1acc1f959ff60a91730" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b166683932a8d91b7e940c77df4f10301050015" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/5096e6bc04fe5e4d170e04ff4b5eebc9e1d0c66b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/5236ddaaaa7444759854a86ab21411d65e778ccb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/545b93547230edac8518b380539bb619ab9b320a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/5792b1c5f6cece3ad89093263f391a7f996f5635" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/57e95bdd01dc7e45eed7f52032bdba7421f04c41" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5bdab11ad056e6a16ac99a111b0dce809ca1e1f1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/c/6c5bbf8cc97d859c6039f3da0719b9b082bbea73" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/727de816efb8c5d81602678a9ceb16956008d12e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75c26020f452bf77219f754730977ef15c894540" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/d/8d6a4d9b80ccccff1076d8accf2856b9c1a661ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/949cade905e3e50ed3f0715b147e694b1091cc65" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/953875399ba27886cd5fe0b3636d590800bbdda2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/979268807f656ca0310ce16698aebd32b7863e4d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a63bfdaeb1d1ddbef813cfbe7be146ac2d04d521" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/aba0e0ba3d1ff8b178705b3fb043176dca1d105a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5ac14112f715f091928f8f0592e55a89d7befdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3883b01c2c313fd8fe0ddb537106b71cf3f7c27" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d660d107522289a45530f7f6f393ddbf02fe5f14" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d935c8b5dedfbf8fcd88790949956ffccec808b2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/ee481dc0e972589a0f7be63e77750b87a1180655" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Platform/src/com/platform/ProcessDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Platform/src/com/platform/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Platform/src/com/platform/RunProcessBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/019e711de99706d287ce3b0187de1d6ba9bcf614" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/019e711de99706d287ce3b0187de1d6ba9bcf614" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/5096e6bc04fe5e4d170e04ff4b5eebc9e1d0c66b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/5096e6bc04fe5e4d170e04ff4b5eebc9e1d0c66b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/5792b1c5f6cece3ad89093263f391a7f996f5635" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/727de816efb8c5d81602678a9ceb16956008d12e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/727de816efb8c5d81602678a9ceb16956008d12e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/949cade905e3e50ed3f0715b147e694b1091cc65" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/953875399ba27886cd5fe0b3636d590800bbdda2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/953875399ba27886cd5fe0b3636d590800bbdda2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a63bfdaeb1d1ddbef813cfbe7be146ac2d04d521" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5ac14112f715f091928f8f0592e55a89d7befdf" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5ac14112f715f091928f8f0592e55a89d7befdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3883b01c2c313fd8fe0ddb537106b71cf3f7c27" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3883b01c2c313fd8fe0ddb537106b71cf3f7c27" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/src/com/platform/MyMultipleCommandsEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/src/com/platform/MyMultipleCommandsEx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SecurityWorldLinux.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SecurityWorldLinux.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +61,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="add_unversioned_files" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -95,12 +72,15 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.platform" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.platform" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.file" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.platform" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Install">
@@ -150,33 +130,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.platform.Test" />
-      <module name="Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.platform.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MyMultipleCommandsEx" />
       <item itemvalue="Application.Install" />
-      <item itemvalue="Application.Test" />
       <item itemvalue="Application.EnvMap" />
       <item itemvalue="Application.RunLinuxShellDirect" />
+      <item itemvalue="Application.MyMultipleCommandsEx" />
+      <item itemvalue="Java Scratch.Scratch" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Install" />
+        <item itemvalue="Application.MyMultipleCommandsEx" />
+        <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Application.RunLinuxShellDirect" />
         <item itemvalue="Application.EnvMap" />
-        <item itemvalue="Application.MyMultipleCommandsEx" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581789849963</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="idea">
+      <created>1581854869764</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581854869764</updated>
+    </task>
+    <task id="LOCAL-00006" summary="iso">
+      <created>1581967394752</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1581967394752</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +231,8 @@
     <MESSAGE value="tar" />
     <MESSAGE value="main" />
     <MESSAGE value="idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="idea" />
+    <MESSAGE value="iso" />
+    <option name="LAST_COMMIT_MESSAGE" value="iso" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="98" key="#Env" timestamp="1581640202355">
@@ -266,6 +255,10 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="196" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1440.824@0.22.1440.824" timestamp="1581771518765" />
+    <state x="470" y="208" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1581967221508">
+      <screen x="0" y="22" width="1440" height="824" />
+    </state>
+    <state x="470" y="208" key="#com.intellij.ide.util.PackageChooserDialog/0.22.1440.824@0.22.1440.824" timestamp="1581967221508" />
     <state x="487" y="225" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581563381961">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -278,6 +271,10 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="387" y="344" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.22.1440.824@0.22.1440.824" timestamp="1581539060533" />
+    <state x="506" y="287" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581967229670">
+      <screen x="0" y="22" width="1440" height="824" />
+    </state>
+    <state x="506" y="287" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.22.1440.824@0.22.1440.824" timestamp="1581967229670" />
     <state x="470" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581614057436">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -286,10 +283,10 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="601" y="207" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.22.1440.824@0.22.1440.824" timestamp="1581611930820" />
-    <state x="365" y="24" key="CommitChangelistDialog2" timestamp="1581851887417">
+    <state x="365" y="24" key="CommitChangelistDialog2" timestamp="1581967394234">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="365" y="24" key="CommitChangelistDialog2/0.22.1440.824@0.22.1440.824" timestamp="1581851887417" />
+    <state x="365" y="24" key="CommitChangelistDialog2/0.22.1440.824@0.22.1440.824" timestamp="1581967394234" />
     <state x="511" y="157" key="DetectedRootsChooserDialog" timestamp="1581558495088">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -298,22 +295,22 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="132" y="129" width="1200" height="584" key="DiffContextDialog/0.22.1440.824@0.22.1440.824" timestamp="1581789789487" />
-    <state width="679" height="244" key="GridCell.Tab.0.bottom" timestamp="1581790961143">
+    <state width="1352" height="207" key="GridCell.Tab.0.bottom" timestamp="1581982422250">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="679" height="244" key="GridCell.Tab.0.bottom/0.22.1440.824@0.22.1440.824" timestamp="1581790961143" />
-    <state width="679" height="244" key="GridCell.Tab.0.center" timestamp="1581790961143">
+    <state width="1352" height="207" key="GridCell.Tab.0.bottom/0.22.1440.824@0.22.1440.824" timestamp="1581982422250" />
+    <state width="1352" height="207" key="GridCell.Tab.0.center" timestamp="1581982422249">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="679" height="244" key="GridCell.Tab.0.center/0.22.1440.824@0.22.1440.824" timestamp="1581790961143" />
-    <state width="679" height="244" key="GridCell.Tab.0.left" timestamp="1581790961142">
+    <state width="1352" height="207" key="GridCell.Tab.0.center/0.22.1440.824@0.22.1440.824" timestamp="1581982422249" />
+    <state width="1352" height="207" key="GridCell.Tab.0.left" timestamp="1581982422249">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="679" height="244" key="GridCell.Tab.0.left/0.22.1440.824@0.22.1440.824" timestamp="1581790961142" />
-    <state width="679" height="244" key="GridCell.Tab.0.right" timestamp="1581790961143">
+    <state width="1352" height="207" key="GridCell.Tab.0.left/0.22.1440.824@0.22.1440.824" timestamp="1581982422249" />
+    <state width="1352" height="207" key="GridCell.Tab.0.right" timestamp="1581982422250">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="679" height="244" key="GridCell.Tab.0.right/0.22.1440.824@0.22.1440.824" timestamp="1581790961143" />
+    <state width="1352" height="207" key="GridCell.Tab.0.right/0.22.1440.824@0.22.1440.824" timestamp="1581982422250" />
     <state x="270" y="83" key="Maven.ArtifactSearchDialog" timestamp="1581598102159">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -322,18 +319,18 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="509" y="139" key="RollbackChangesDialog/0.22.1440.824@0.22.1440.824" timestamp="1581841693723" />
-    <state x="352" y="22" width="1024" height="824" key="SettingsEditor" timestamp="1581852041243">
+    <state x="352" y="22" width="1024" height="824" key="SettingsEditor" timestamp="1581860440356">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="352" y="22" width="1024" height="824" key="SettingsEditor/0.22.1440.824@0.22.1440.824" timestamp="1581852041243" />
+    <state x="352" y="22" width="1024" height="824" key="SettingsEditor/0.22.1440.824@0.22.1440.824" timestamp="1581860440356" />
     <state x="494" y="144" key="VCS.ChangeListViewerDialog" timestamp="1581789358160">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="494" y="144" key="VCS.ChangeListViewerDialog/0.22.1440.824@0.22.1440.824" timestamp="1581789358160" />
-    <state x="332" y="161" key="Vcs.Push.Dialog.v2" timestamp="1581806020387">
+    <state x="332" y="161" key="Vcs.Push.Dialog.v2" timestamp="1581967421089">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="332" y="161" key="Vcs.Push.Dialog.v2/0.22.1440.824@0.22.1440.824" timestamp="1581806020387" />
+    <state x="332" y="161" key="Vcs.Push.Dialog.v2/0.22.1440.824@0.22.1440.824" timestamp="1581967421089" />
     <state x="527" y="206" key="chooseDestDirectoryDialog" timestamp="1581539051280">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -342,10 +339,10 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="132" y="129" width="1200" height="584" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.22.1440.824@0.22.1440.824" timestamp="1581541180600" />
-    <state x="411" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1581805405231">
+    <state x="411" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1581967041437">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="411" y="253" key="com.intellij.ide.util.TipDialog/0.22.1440.824@0.22.1440.824" timestamp="1581805405231" />
+    <state x="411" y="253" key="com.intellij.ide.util.TipDialog/0.22.1440.824@0.22.1440.824" timestamp="1581967041437" />
     <state x="575" y="335" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1581777724610">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
