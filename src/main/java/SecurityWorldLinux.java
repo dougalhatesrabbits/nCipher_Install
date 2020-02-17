@@ -78,38 +78,9 @@ public class SecurityWorldLinux extends SecurityWorld {
         new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "ls -l"});
         new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "source .bash_profile"});
 
-        /*
-        try {
-
-            ProcessBuilder pb = new ProcessBuilder("/bin/bash", "-c", "pwd",
-                    "sudo useradd username",
-                    "sudo mkdir /home/username", "sudo passwd username",
-                    "sudo chown username /home/username",
-                    "sudo chgrp username /home/username",
-                    "sudo adduser username", "sudo adduser username sudo");
-            pb.command("bash", "-c", "ls -l");
-            pb.redirectErrorStream();
-            Process process = pb.start();
-            pb.start();
-            InputStream inputStream = process.getInputStream();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    inputStream));
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-            process.waitFor();
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
-         */
-
-
-    }
         // TODO
 
+    }
 
 
     void unpackSecurityWorld(String tar, String dest) {
