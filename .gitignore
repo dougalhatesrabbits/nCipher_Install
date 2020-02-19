@@ -46,3 +46,4 @@ install-log-0.xml
 
 .DS_Store
 /.idea/sonarlint/
+/apache-maven-3.6.3-bin.tar

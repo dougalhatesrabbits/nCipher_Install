@@ -2,8 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="973d0605-95d8-4bd4-a8e9-ad1b0f427f7a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IO/src/com/file/AppUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IO/src/com/file/ECommerce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/versions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/019e711de99706d287ce3b0187de1d6ba9bcf614" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/019e711de99706d287ce3b0187de1d6ba9bcf614" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b166683932a8d91b7e940c77df4f10301050015" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b166683932a8d91b7e940c77df4f10301050015" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/5096e6bc04fe5e4d170e04ff4b5eebc9e1d0c66b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/5096e6bc04fe5e4d170e04ff4b5eebc9e1d0c66b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/727de816efb8c5d81602678a9ceb16956008d12e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/727de816efb8c5d81602678a9ceb16956008d12e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75c26020f452bf77219f754730977ef15c894540" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75c26020f452bf77219f754730977ef15c894540" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/953875399ba27886cd5fe0b3636d590800bbdda2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/953875399ba27886cd5fe0b3636d590800bbdda2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/aba0e0ba3d1ff8b178705b3fb043176dca1d105a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/aba0e0ba3d1ff8b178705b3fb043176dca1d105a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5ac14112f715f091928f8f0592e55a89d7befdf" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5ac14112f715f091928f8f0592e55a89d7befdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3883b01c2c313fd8fe0ddb537106b71cf3f7c27" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3883b01c2c313fd8fe0ddb537106b71cf3f7c27" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/ee481dc0e972589a0f7be63e77750b87a1180655" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/ee481dc0e972589a0f7be63e77750b87a1180655" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/IO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IO/IO.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/src/com/file/UnTarFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/IO/src/com/file/UnTarFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Platform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Install.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Install.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SecurityWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SecurityWorld.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SecurityWorldLinux.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SecurityWorldLinux.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SecurityWorldWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SecurityWorldWindows.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +41,9 @@
     <option name="hideWarnings" value="true" />
     <option name="HIDE_WARNINGS" value="true" />
     <option name="HIDE_INFO_MESSAGES" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="nCipher_Install" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -30,6 +59,23 @@
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="b9dccf67-89b2-46ae-a7c8-58911971d2cb" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="usePluginRegistry" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="true" />
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1XiozO9hQOYwGWyMBAoZSJYzLmg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -47,14 +93,15 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4085155" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -72,12 +119,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Install">
-    <configuration name="EnvMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.platform.EnvMap" />
-      <module name="Platform" />
+    <configuration name="ECommerce" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.file.ECommerce" />
+      <module name="IO" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.platform.*" />
+          <option name="PATTERN" value="com.file.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,18 +174,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Install" />
-      <item itemvalue="Application.EnvMap" />
       <item itemvalue="Application.RunLinuxShellDirect" />
       <item itemvalue="Application.MyMultipleCommandsEx" />
+      <item itemvalue="Application.ECommerce" />
       <item itemvalue="Java Scratch.Scratch" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Install" />
+        <item itemvalue="Application.ECommerce" />
         <item itemvalue="Application.MyMultipleCommandsEx" />
         <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Application.RunLinuxShellDirect" />
-        <item itemvalue="Application.EnvMap" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +249,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581982778884</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="pb">
+      <created>1581983152397</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581983152397</updated>
+    </task>
+    <task id="LOCAL-00009" summary="pb">
+      <created>1581983213630</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581983213630</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,14 +304,18 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="332" y="86" key="#Notifications/0.22.1440.824@0.22.1440.824" timestamp="1581842122612" />
-    <state x="332" y="86" key="#Project_Structure" timestamp="1581625285979">
+    <state x="332" y="86" key="#Project_Structure" timestamp="1582137735446">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="332" y="86" key="#Project_Structure/0.22.1440.824@0.22.1440.824" timestamp="1581625285979" />
-    <state x="196" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581771518765">
+    <state x="332" y="86" key="#Project_Structure/0.22.1440.824@0.22.1440.824" timestamp="1582137735446" />
+    <state x="196" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582018151687">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="196" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1440.824@0.22.1440.824" timestamp="1581771518765" />
+    <state x="196" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1440.824@0.22.1440.824" timestamp="1582018151687" />
+    <state x="451" y="270" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1582138018076">
+      <screen x="0" y="22" width="1440" height="824" />
+    </state>
+    <state x="451" y="270" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.22.1440.824@0.22.1440.824" timestamp="1582138018076" />
     <state x="470" y="208" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1581967221508">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -279,34 +344,38 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="601" y="207" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.22.1440.824@0.22.1440.824" timestamp="1581611930820" />
-    <state x="365" y="24" key="CommitChangelistDialog2" timestamp="1581983152054">
+    <state x="451" y="166" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1582112215673">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="365" y="24" key="CommitChangelistDialog2/0.22.1440.824@0.22.1440.824" timestamp="1581983152054" />
-    <state x="511" y="157" key="DetectedRootsChooserDialog" timestamp="1581558495088">
+    <state x="451" y="166" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.22.1440.824@0.22.1440.824" timestamp="1582112215673" />
+    <state x="365" y="24" key="CommitChangelistDialog2" timestamp="1581983213412">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="511" y="157" key="DetectedRootsChooserDialog/0.22.1440.824@0.22.1440.824" timestamp="1581558495088" />
+    <state x="365" y="24" key="CommitChangelistDialog2/0.22.1440.824@0.22.1440.824" timestamp="1581983213412" />
+    <state x="511" y="157" key="DetectedRootsChooserDialog" timestamp="1582111334603">
+      <screen x="0" y="22" width="1440" height="824" />
+    </state>
+    <state x="511" y="157" key="DetectedRootsChooserDialog/0.22.1440.824@0.22.1440.824" timestamp="1582111334603" />
     <state x="132" y="129" width="1200" height="584" key="DiffContextDialog" timestamp="1581789789487">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="132" y="129" width="1200" height="584" key="DiffContextDialog/0.22.1440.824@0.22.1440.824" timestamp="1581789789487" />
-    <state width="1352" height="207" key="GridCell.Tab.0.bottom" timestamp="1581983041356">
+    <state width="1352" height="221" key="GridCell.Tab.0.bottom" timestamp="1582148513281">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1352" height="207" key="GridCell.Tab.0.bottom/0.22.1440.824@0.22.1440.824" timestamp="1581983041356" />
-    <state width="1352" height="207" key="GridCell.Tab.0.center" timestamp="1581983041355">
+    <state width="1352" height="221" key="GridCell.Tab.0.bottom/0.22.1440.824@0.22.1440.824" timestamp="1582148513281" />
+    <state width="1352" height="221" key="GridCell.Tab.0.center" timestamp="1582148513280">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1352" height="207" key="GridCell.Tab.0.center/0.22.1440.824@0.22.1440.824" timestamp="1581983041355" />
-    <state width="1352" height="207" key="GridCell.Tab.0.left" timestamp="1581983041354">
+    <state width="1352" height="221" key="GridCell.Tab.0.center/0.22.1440.824@0.22.1440.824" timestamp="1582148513280" />
+    <state width="1352" height="221" key="GridCell.Tab.0.left" timestamp="1582148513279">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1352" height="207" key="GridCell.Tab.0.left/0.22.1440.824@0.22.1440.824" timestamp="1581983041354" />
-    <state width="1352" height="207" key="GridCell.Tab.0.right" timestamp="1581983041355">
+    <state width="1352" height="221" key="GridCell.Tab.0.left/0.22.1440.824@0.22.1440.824" timestamp="1582148513279" />
+    <state width="1352" height="221" key="GridCell.Tab.0.right" timestamp="1582148513280">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1352" height="207" key="GridCell.Tab.0.right/0.22.1440.824@0.22.1440.824" timestamp="1581983041355" />
+    <state width="1352" height="221" key="GridCell.Tab.0.right/0.22.1440.824@0.22.1440.824" timestamp="1582148513280" />
     <state x="270" y="83" key="Maven.ArtifactSearchDialog" timestamp="1581598102159">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -315,38 +384,42 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="509" y="139" key="RollbackChangesDialog/0.22.1440.824@0.22.1440.824" timestamp="1581841693723" />
-    <state x="352" y="22" width="1024" height="824" key="SettingsEditor" timestamp="1581860440356">
+    <state x="352" y="22" width="1024" height="824" key="SettingsEditor" timestamp="1582138383137">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="352" y="22" width="1024" height="824" key="SettingsEditor/0.22.1440.824@0.22.1440.824" timestamp="1581860440356" />
+    <state x="352" y="22" width="1024" height="824" key="SettingsEditor/0.22.1440.824@0.22.1440.824" timestamp="1582138383137" />
     <state x="494" y="144" key="VCS.ChangeListViewerDialog" timestamp="1581789358160">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="494" y="144" key="VCS.ChangeListViewerDialog/0.22.1440.824@0.22.1440.824" timestamp="1581789358160" />
-    <state x="332" y="161" key="Vcs.Push.Dialog.v2" timestamp="1581983166468">
+    <state x="332" y="161" key="Vcs.Push.Dialog.v2" timestamp="1581983223166">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="332" y="161" key="Vcs.Push.Dialog.v2/0.22.1440.824@0.22.1440.824" timestamp="1581983166468" />
+    <state x="332" y="161" key="Vcs.Push.Dialog.v2/0.22.1440.824@0.22.1440.824" timestamp="1581983223166" />
     <state x="527" y="206" key="chooseDestDirectoryDialog" timestamp="1581539051280">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="527" y="206" key="chooseDestDirectoryDialog/0.22.1440.824@0.22.1440.824" timestamp="1581539051280" />
-    <state x="132" y="129" width="1200" height="584" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581541180600">
+    <state x="132" y="129" width="1200" height="584" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1582135332090">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="132" y="129" width="1200" height="584" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.22.1440.824@0.22.1440.824" timestamp="1581541180600" />
-    <state x="411" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1581967041437">
+    <state x="132" y="129" width="1200" height="584" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.22.1440.824@0.22.1440.824" timestamp="1582135332090" />
+    <state x="411" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1582136005826">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="411" y="253" key="com.intellij.ide.util.TipDialog/0.22.1440.824@0.22.1440.824" timestamp="1581967041437" />
-    <state x="575" y="335" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1581777724610">
+    <state x="411" y="253" key="com.intellij.ide.util.TipDialog/0.22.1440.824@0.22.1440.824" timestamp="1582136005826" />
+    <state x="575" y="335" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1582074493870">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="575" y="335" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.22.1440.824@0.22.1440.824" timestamp="1581777724610" />
+    <state x="575" y="335" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.22.1440.824@0.22.1440.824" timestamp="1582074493870" />
     <state x="521" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581852305992">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="521" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.22.1440.824@0.22.1440.824" timestamp="1581852305992" />
+    <state x="369" y="183" width="667" height="486" key="find.popup" timestamp="1582059210101">
+      <screen x="0" y="22" width="1440" height="824" />
+    </state>
+    <state x="369" y="183" width="667" height="486" key="find.popup/0.22.1440.824@0.22.1440.824" timestamp="1582059210101" />
     <state x="506" y="219" key="git4idea.merge.GitMergeDialog" timestamp="1581851919470">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -359,9 +432,9 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="517" y="328" key="git4idea.ui.GitStashDialog/0.22.1440.824@0.22.1440.824" timestamp="1581842275998" />
-    <state x="212" y="91" key="new project wizard" timestamp="1581539133793">
+    <state x="212" y="91" key="new project wizard" timestamp="1582136503146">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="212" y="91" key="new project wizard/0.22.1440.824@0.22.1440.824" timestamp="1581539133793" />
+    <state x="212" y="91" key="new project wizard/0.22.1440.824@0.22.1440.824" timestamp="1582136503146" />
   </component>
 </project>

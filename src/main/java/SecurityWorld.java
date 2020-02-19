@@ -1,4 +1,5 @@
 import com.platform.*;
+import com.file.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -63,7 +64,7 @@ public class SecurityWorld {
         // TODO
         // check for root user
         Process p = Runtime.getRuntime().exec("id -u");
-        p.info();
+        //p.info();
 
     }
 
@@ -91,7 +92,7 @@ public class SecurityWorld {
         // TODO
     }
 
-    public void check_Existing_SW(Platform osx){
+    public void check_Existing_SW(Platform osx) throws IOException {
         LOGGER.fine("New instance of -check_Existing_SW- started");
         System.out.println("Checking for existing Security World");
 
@@ -119,19 +120,21 @@ public class SecurityWorld {
                 System.exit(1);
             }
         } else {
-            System.out.println("No SW aha");
+            System.out.println("No existing SW found, proceeding with install");
         }
     }
 
-    public void remove_Existing_SW(Platform osx, SecurityWorldLinux linux, SecurityWorldWindows windows){
+    public void remove_Existing_SW(Platform osx, SecurityWorldLinux linux, SecurityWorldWindows windows) throws IOException {
         LOGGER.fine("New instance of -remove_Existing_SW- started");
         System.out.println("Removing old Security World");
         if (osx.isWindows()){
             String cmd = windows.NFAST_HOME + "/sbin/install -d";
+            new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "pwd"});
             System.out.println(cmd);
             // TODO
         } else {
             String cmd =linux.NFAST_HOME + "sbin/install -d";
+            new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "sudo " + cmd});
             System.out.println(cmd);
             // TODO
         }

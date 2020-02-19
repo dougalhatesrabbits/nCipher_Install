@@ -29,9 +29,12 @@ public class Install {
                 .choices("install", "upgrade", "remove").setDefault("install")
                 .help("Specify install type.");
         parser.addArgument("-v", "--version")
-                .help("Version to install");
+                .required(false)
+                .help("Version 0.1");
         parser.addArgument("-f", "--file")
-                .help("Hotfix File to install");
+                .help("Hotfix/Security World File to install");
+        parser.addArgument("-s", "--silent")
+                .help("Silent mode install");
         Namespace ns = null;
 
         try {
@@ -41,9 +44,12 @@ public class Install {
             parser.handleError(e);
             System.exit(1);
         }
-        String _level_ = null;
+        String argLevel = null;
+        String argFile = null;
+        String argType = null;
+        String argStats = null;
         try {
-            _level_ = ns.getString("level");
+            argLevel = ns.getString("level");
         } catch (Exception e) {
             LOGGER.logp(Level.SEVERE, "Install", "main", "Could not get logging level", e);
             System.err.printf("Could not get logging level %s: %s",
@@ -52,7 +58,7 @@ public class Install {
         }
 
         InstallLogger log = new InstallLogger();
-        log.setup(_level_);
+        log.setup(argLevel);
 
         LOGGER.info("New instance of Install started");
 
@@ -100,11 +106,13 @@ public class Install {
                 //linux.check_Existing_SW(osx);
                 /*linux.remove_Existing_SW(osx, linux, null);*/
                 linux.checkEnvironmentVariables();
-                linux.check_Mount();
+                //linux.check_Mount();
                 linux.checkJava();
                 linux.unpackSecurityWorld("task.tgz", "mnt");
                 //linux.unpackSecurityWorld("Archive.zip", "mnt");
-                //linux.unpackSecurityWorld("linux.tar.gz", "mnt");
+                //linux.unpackSecurityWorld("commons-compress-1.20-bin.tar.gz", "mnt");
+                //linux.unpackSecurityWorld("apache-maven-3.6.3-bin.tar", "mnt");
+
                 linux.applySecurityWorld(osx, linux, null);
                 linux.check_Users();
 

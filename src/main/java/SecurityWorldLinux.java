@@ -88,9 +88,9 @@ public class SecurityWorldLinux extends SecurityWorld {
         System.out.println("Unpacking Security World...");
 
         String ext = FilenameUtils.getExtension(tar);
-        if (!ext.equals("tar")) {
+        if (ext.equals("tgz")) {
             System.out.println("We have a Gunzip compressed tarball " + ext);
-            UnTarFile untar = new UnTarFile(tar, dest);
+            UnTarFile untar = new UnTarFile();
             try {
                 File inputFile = new File(tar);
                 String outputFile = untar.getFileName(inputFile, TAR_FOLDER);
@@ -99,7 +99,7 @@ public class SecurityWorldLinux extends SecurityWorld {
                 // Calling method to decompress file
                 tarFile = untar.deCompressGZipFile(inputFile, tarFile);
                 File destFile = new File(dest);
-                if(!destFile.exists()){
+                if (!destFile.exists()) {
                     destFile.mkdir();
                 }
                 // Calling method to untar file
@@ -109,9 +109,21 @@ public class SecurityWorldLinux extends SecurityWorld {
                 LOGGER.logp(Level.WARNING, "SecurityWorldLinux", "unpackSecurityWorld", "Cannot unpack", e.getCause());
                 e.printStackTrace();
             }
+        } else if (ext.equals("zip")) {
+            System.out.println("We have a standard zip file " + ext);
+            UnTarFile untar = new UnTarFile();
+            try {
+                String inputFile = new String(tar);
+                File destFile = new File(dest);
+                untar.unzip(inputFile, destFile);
+            } catch (IOException e) {
+                LOGGER.logp(Level.WARNING, "SecurityWorldLinux", "unpackSecurityWorld", "Cannot unpack", e.fillInStackTrace());
+                LOGGER.logp(Level.WARNING, "SecurityWorldLinux", "unpackSecurityWorld", "Cannot unpack", e.getCause());
+                e.printStackTrace();
+            }
         } else {
-            System.out.println("We have a tarball " + ext);
-            UnTarFile untar = new UnTarFile(tar, dest);
+            System.out.println("We have a standard compressed tarball " + ext);
+            UnTarFile untar = new UnTarFile();
             try {
                 File inputFile = new File(tar);
                 File destFile = new File(dest);
