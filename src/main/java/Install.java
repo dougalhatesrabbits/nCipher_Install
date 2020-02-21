@@ -1,21 +1,18 @@
 import com.log.*;
 import com.platform.*;
-import com.file.*;
 
 import net.sourceforge.argparse4j.ArgumentParsers;
 import net.sourceforge.argparse4j.inf.ArgumentParser;
 import net.sourceforge.argparse4j.inf.ArgumentParserException;
 import net.sourceforge.argparse4j.inf.Namespace;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Install {
     // Always use the classname, this way you can refactor
-    private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    //private final static Logger LOGGER = Logger.getLogger(Install.class.getName());
+    private static final  Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     public static void main(String[] args) throws IOException {
 
@@ -47,11 +44,14 @@ public class Install {
         String argLevel = null;
         String argFile = null;
         String argType = null;
-        String argStats = null;
+        String argSilent = null;
         try {
             argLevel = ns.getString("level");
         } catch (Exception e) {
-            LOGGER.logp(Level.SEVERE, "Install", "main", "Could not get logging level", e);
+            LOGGER.logp(Level.SEVERE,
+                    "Install",
+                    "main",
+                    "Could not get logging level", e);
             System.err.printf("Could not get logging level %s: %s",
                     ns.getString("level"), e.getMessage());
             System.exit(1);
@@ -60,7 +60,7 @@ public class Install {
         InstallLogger log = new InstallLogger();
         log.setup(argLevel);
 
-        LOGGER.info("New instance of Install started");
+        LOGGER.info("New instance of -Install- started");
 
         /*
         IOFile file = new IOFile();
@@ -70,11 +70,9 @@ public class Install {
         file.readBinaryFile("temp2.txt");
         file.writeBinaryFile("temp3.txt", " Lovely day");
 
-
         IOImage imagefile = new IOImage();
         imagefile.readImage("temp2.txt");
         imagefile.readImage("apple.jpg");
-
          */
 
         /* Get platform properties listing
@@ -89,34 +87,38 @@ public class Install {
         switch(osx.getOsName()) {
             case "windows":
                 System.out.println("Windows OS");
-                SecurityWorldWindows windows = new SecurityWorldWindows("a", (short) 12504, "c");
-                windows.check_Existing_SW(osx);
+                Windows windows = new Windows("a","125040", "c");
+
+                windows.checkExistingSW(osx);
                 //windows.remove_Existing_SW(osx, null, windows);
                 windows.checkJava();
                 //windows.unpackSecurityWorld();
-                windows.applySecurityWorld(osx, null, windows);
-                windows.checkEnvironmentVariables();
+                windows.applySecWorld(osx, null, windows);
+                windows.checkEnvVariables();
                 windows.applyFirmware();
                 break;
             case "mac os x":
-
                 System.out.println("MAC OS machine");
-                SecurityWorldLinux linux = new SecurityWorldLinux("a", (short) 12504, "c");
+                Linux linux = new Linux("a", "125040", "c");
 
                 //linux.check_Existing_SW(osx);
                 /*linux.remove_Existing_SW(osx, linux, null);*/
-                linux.checkEnvironmentVariables();
-                //linux.check_Mount();
-                linux.checkJava();
-                linux.unpackSecurityWorld("task.tgz", "mnt");
+                //linux.checkEnvVariables();
+
+                //linux.checkJava();
+                linux.getSecWorld();
+                linux.sw_filename= linux.getIsoChoices();
+                linux.checkMount(linux.sw_filename);
+                //linux.unpackSecWorld("SecWorld-linux64-user-12.60.3.iso", "mnt");
                 //linux.unpackSecurityWorld("Archive.zip", "mnt");
                 //linux.unpackSecurityWorld("commons-compress-1.20-bin.tar.gz", "mnt");
                 //linux.unpackSecurityWorld("apache-maven-3.6.3-bin.tar", "mnt");
+                //linux.applyDrivers
+                //linux.applySecWorld(osx, linux, null);
+                //linux.checkUsers();
 
-                linux.applySecurityWorld(osx, linux, null);
-                linux.check_Users();
-
-                if (linux.sw_version > 12504) {
+                int version = Integer.parseInt(linux.sw_version);
+                if (version > 125040) {
                     // This is really separate to Client install but can still prep by copy over to RFS
                     linux.applyFirmware();
                 }
@@ -124,12 +126,12 @@ public class Install {
 
             case "nix":
                 System.out.println("Unix OS");
-                SecurityWorldLinux linuxreal = new SecurityWorldLinux("a", (short) 12505, "c");
-                linuxreal.check_Mount();
-                linuxreal.checkEnvironmentVariables();
-                linuxreal.check_Existing_SW(osx);
+                Linux linuxreal = new Linux("a", "125050", "c");
+                linuxreal.checkMount(linuxreal.sw_filename);
+                linuxreal.checkEnvVariables();
+                linuxreal.checkExistingSW(osx);
                 linuxreal.checkJava();
-                linuxreal.check_Users();
+                linuxreal.checkUsers();
                 break;
             case "sunos":
                 System.out.println("Solaris OS");

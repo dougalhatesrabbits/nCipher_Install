@@ -1,6 +1,9 @@
 import java.util.Map;
+import java.util.logging.Logger;
 
-public class SecurityWorldWindows extends SecurityWorld {
+public class Windows extends SecurityWorld {
+    // Always use the classname, this way you can refactor
+    private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     /***
      * Child class
      *
@@ -8,9 +11,7 @@ public class SecurityWorldWindows extends SecurityWorld {
      * @param version
      */
 
-    String sw_filename;
-    short    sw_version;
-    String sw_location;
+
     String value = System.getenv("ProgramFiles");
     //System.out.println(System.getenv("ProgramFiles(X86)"));
     final String NFAST_HOME = "%PROGRAM_FILES%/ncipher/";
@@ -20,7 +21,7 @@ public class SecurityWorldWindows extends SecurityWorld {
     final String JAVA_PATH = null;
 
     // Default constructor
-    public SecurityWorldWindows(String name, short version, String location) {
+    public Windows(String name, String version, String location) {
         super(name, version, location);
     }
 }

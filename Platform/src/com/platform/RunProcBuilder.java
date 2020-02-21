@@ -11,14 +11,12 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RunProcessBuilder {
+public class RunProcBuilder {
     // Always use the classname, this way you can refactor
     private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-
-
-
     public void run(String[] args) throws IOException {
+        LOGGER.fine("running -run- method");
         //Process p = Runtime.getRuntime().exec("pwd");
         //List<String> args = new ArrayList<String>();
         ProcessBuilder pb = new ProcessBuilder(args);

@@ -1,5 +1,4 @@
 import com.platform.*;
-import com.file.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,45 +11,36 @@ import java.util.logging.Logger;
 public class SecurityWorld {
     // Always use the classname, this way you can refactor
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    //private final static Logger LOGGER = Logger.getLogger(Install.class.getName());
     /***
      * This is a parent
      */
     // Class attributes
-    String sw_filename;
-    short  sw_version;
-    String sw_location;
-    final String NFAST_HOME = null;
-    final String NFAST_KMDATA = null;
-    final String CLASSPATH = null;
-    final String PATH = null;
-    final String JAVA_PATH = null;
     Path path = null;
 
 
 
     // Constructor
-    public SecurityWorld(String name, short version, String location){
-        sw_filename = name;
-        sw_version = version;
-        sw_location = location; //basename
+    public SecurityWorld(String name, String version, String location){
+        String sw_filename = name;
+        String sw_version = version;
+        String sw_location = location; //basename
     }
 
     // Methods
     void applyFirmware(){
-        LOGGER.fine("New instance of -ApplyFirmware- started");
+        LOGGER.fine("running -applyFirmware- method");
         System.out.println("Installing firmware");
         // TODO
     }
 
     void applyHotFix(){
-        LOGGER.fine("New instance of -ApplyHotFix- started");
+        LOGGER.fine("running -applyHotFix- method");
         System.out.println("Installing hotfix");
         // TODO
     }
 
-    void applySecurityWorld(Platform osx, SecurityWorldLinux linux, SecurityWorldWindows windows) throws IOException {
-        LOGGER.fine("New instance of -ApplySecurityWorld- started");
+    void applySecWorld(Platform osx, Linux linux, Windows windows) throws IOException {
+        LOGGER.fine("running -applySecurityWorld- method");
         System.out.println("Installing Security World");
         if (osx.isWindows()){
             String cmd = windows.NFAST_HOME + "/sbin/install";
@@ -61,15 +51,16 @@ public class SecurityWorld {
             System.out.println(cmd);
             // TODO
         }
-        // TODO
+
         // check for root user
         Process p = Runtime.getRuntime().exec("id -u");
         //p.info();
+        // TODO
 
     }
 
-    void checkEnvironmentVariables() throws IOException {
-        LOGGER.fine("New instance of -check_Environment_Variables- started");
+    void checkEnvVariables() throws IOException {
+        LOGGER.fine("running -checkEnvironmentVariables- method");
         System.out.println("Checking environment variables");
         System.out.println(System.getenv("NFAST_HOME"));
         System.out.println(System.getenv("PATH"));
@@ -85,19 +76,19 @@ public class SecurityWorld {
     }
 
     void checkJava(){
-        LOGGER.fine("New instance of -check_Java- started");
+        LOGGER.fine("running -checkJava- method");
         System.out.println("Checking Java");
         System.out.println(System.getenv("JAVA_HOME"));
         System.out.println(System.getenv("JAVA_PATH"));
         // TODO
     }
 
-    public void check_Existing_SW(Platform osx) throws IOException {
-        LOGGER.fine("New instance of -check_Existing_SW- started");
+    public void checkExistingSW(Platform osx) throws IOException {
+        LOGGER.fine("running -checkExistingSW- method");
         System.out.println("Checking for existing Security World");
 
-        SecurityWorldLinux linux = new SecurityWorldLinux("a", (short) 123, "c");
-        SecurityWorldWindows windows = new SecurityWorldWindows("a", (short) 21, "b");
+        Linux linux = new Linux("a", (String) "123", "c");
+        Windows windows = new Windows("a", (String) "21", "b");
 
         if (osx.isWindows()){
             path = Paths.get(windows.NFAST_HOME);
@@ -114,7 +105,7 @@ public class SecurityWorld {
             String confirm = myObj.nextLine();  // Read user input
             if (confirm.toLowerCase().equals("y")){
                 System.out.println("You entered proceed " + confirm);
-                remove_Existing_SW(osx, linux, windows);// Output user input
+                removeExistingSW(osx, linux, windows);// Output user input
             } else {
                 System.out.println("You entered stop " + confirm);
                 System.exit(1);
@@ -124,17 +115,17 @@ public class SecurityWorld {
         }
     }
 
-    public void remove_Existing_SW(Platform osx, SecurityWorldLinux linux, SecurityWorldWindows windows) throws IOException {
-        LOGGER.fine("New instance of -remove_Existing_SW- started");
+    public void removeExistingSW(Platform osx, Linux linux, Windows windows) throws IOException {
+        LOGGER.fine("running removeExistingSW method");
         System.out.println("Removing old Security World");
         if (osx.isWindows()){
             String cmd = windows.NFAST_HOME + "/sbin/install -d";
-            new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "pwd"});
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "pwd"});
             System.out.println(cmd);
             // TODO
         } else {
             String cmd =linux.NFAST_HOME + "sbin/install -d";
-            new RunProcessBuilder().run(new String[]{"/bin/bash", "-c", "sudo " + cmd});
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo " + cmd});
             System.out.println(cmd);
             // TODO
         }

@@ -17,5 +17,6 @@
     <orderEntry type="library" exported="" name="org.beryx:text-io-web:3.4.0" level="application" />
     <orderEntry type="library" exported="" name="org.beryx:handlebars-java-helpers:0.4.1" level="application" />
     <orderEntry type="library" exported="" name="org.beryx:streamplify:1.1.1" level="application" />
+    <orderEntry type="library" exported="" name="org.slf4j:slf4j-nop:1.6.2" level="application" />
   </component>
 </module>

@@ -1,6 +1,7 @@
 package com.file;
 
 import java.io.*;
+import java.util.logging.Logger;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
@@ -10,13 +11,14 @@ import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.apache.commons.compress.utils.IOUtils;
 
 public class UnTarFile {
+    // Always use the classname, this way you can refactor
+    private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     /*
     public UnTarFile (String tarFile, String destFile){
         //String tar = tarFile;
         //String dest = destFile;
     }
-
     */
 
     //for zip
@@ -40,6 +42,7 @@ public class UnTarFile {
      * @throws IOException
      */
     public void unTarFile(File tar, File dest) throws IOException{
+        LOGGER.fine("running -unTarFile- method");
         FileInputStream fis = new FileInputStream(tar);
         TarArchiveInputStream tis = new TarArchiveInputStream(fis);
         TarArchiveEntry tarEntry = null;
@@ -75,6 +78,7 @@ public class UnTarFile {
      * @throws IOException
      */
     public File deCompressGZipFile(File gZippedFile, File tarFile) throws IOException{
+        LOGGER.fine("running -deCompressGZipFile- method");
         FileInputStream fis = new FileInputStream(gZippedFile);
         GZIPInputStream gZIPInputStream = new GZIPInputStream(fis);
         FileOutputStream fos = new FileOutputStream(tarFile);
@@ -99,11 +103,13 @@ public class UnTarFile {
      * @return
      */
     public static String getFileName(File inputFile, String outputFolder){
+        LOGGER.fine("running -getFileName- method");
         return outputFolder + File.separator +
                 inputFile.getName().substring(0, inputFile.getName().lastIndexOf('.'));
     }
 
     public void unzip(String zip, File output) throws IOException {
+        LOGGER.fine("running -unzip- method");
         try {
             String infolder = zip.substring(0,zip.lastIndexOf('.'));
             File folder = new File(output + "/" + infolder);
