@@ -48,17 +48,24 @@ import java.io.*;
 //for VMs
 import java.nio.file.*;
 import java.nio.file.attribute.*;
+import java.util.logging.Logger;
+
 import static java.nio.file.FileVisitResult.*;
 
 public class Find {
+    // Always use the classname, this way you can refactor
+    private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     public static class Finder
             extends SimpleFileVisitor<Path> {
+        // Always use the classname, this way you can refactor
+        private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
         private final PathMatcher matcher;
         private int numMatches = 0;
 
         public Finder(String pattern) {
+            LOGGER.fine("running -Finder- method");
             matcher = FileSystems.getDefault()
                     .getPathMatcher("glob:" + pattern);
         }
@@ -66,17 +73,22 @@ public class Find {
         // Compares the glob pattern against
         // the file or directory name.
         void find(Path file) {
+            LOGGER.fine("running -find- method");
             Path name = file.getFileName();
             if (name != null && matcher.matches(name)) {
                 numMatches++;
                 System.out.println(file);
+                LOGGER.info(file.toString());
             }
         }
 
         // Prints the total number of
         // matches to standard out.
         void done() {
+            LOGGER.fine("running -done- method");
             System.out.println("Matched: "
+                    + numMatches);
+            LOGGER.info("Matched: "
                     + numMatches);
         }
 
@@ -102,6 +114,7 @@ public class Find {
         public FileVisitResult visitFileFailed(Path file,
                                                IOException exc) {
             System.err.println(exc);
+            LOGGER.severe(exc.getMessage());
             return CONTINUE;
         }
     }

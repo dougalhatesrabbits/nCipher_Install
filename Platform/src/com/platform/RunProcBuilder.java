@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -22,8 +23,6 @@ public class RunProcBuilder {
         ProcessBuilder pb = new ProcessBuilder(args);
 
         try {
-
-
             pb.redirectErrorStream();
             Process process = pb.start();
             InputStream inputStream = process.getInputStream();
@@ -34,9 +33,12 @@ public class RunProcBuilder {
                 System.out.println(line);
             }
             process.waitFor();
-
         } catch (Exception ex) {
             ex.printStackTrace();
+            LOGGER.logp(Level.SEVERE,
+                    "RunProcBuilder",
+                    "run",
+                    "Cannot run command", ex.getCause());
         }
     }
 

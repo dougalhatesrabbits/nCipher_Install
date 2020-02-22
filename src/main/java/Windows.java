@@ -19,9 +19,5 @@ public class Windows extends SecurityWorld {
     final String CLASSPATH = null;
     final String PATH = NFAST_HOME + "/bin";
     final String JAVA_PATH = null;
-
-    // Default constructor
-    public Windows(String name, String version, String location) {
-        super(name, version, location);
-    }
 }
+

@@ -1,6 +1,7 @@
 package com.file;
 
 import java.io.*;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipEntry;
@@ -13,13 +14,6 @@ import org.apache.commons.compress.utils.IOUtils;
 public class UnTarFile {
     // Always use the classname, this way you can refactor
     private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-
-    /*
-    public UnTarFile (String tarFile, String destFile){
-        //String tar = tarFile;
-        //String dest = destFile;
-    }
-    */
 
     //for zip
     static final int BUFFER = 2048;
@@ -55,12 +49,15 @@ public class UnTarFile {
 
                 System.out.println("outputFile Directory ---- "
                         + outputFile.getAbsolutePath());
+                LOGGER.info("outputFile Directory ---- "
+                        + outputFile.getAbsolutePath());
                 if(!outputFile.exists()){
                     outputFile.mkdirs();
                 }
             }else{
                 File output = new File(dest + File.separator + tarEntry.getName());
                 System.out.println("outputFile File ---- " + outputFile.getAbsolutePath());
+                LOGGER.info("outputFile File ---- " + outputFile.getAbsolutePath());
                 output.getParentFile().mkdirs();
                 output.createNewFile();
                 FileOutputStream fos = new FileOutputStream(output);
@@ -124,6 +121,7 @@ public class UnTarFile {
             ZipEntry entry;
             while ((entry = zis.getNextEntry()) != null) {
                 System.out.println("Extracting: " + entry);
+                LOGGER.info("Extracting: " + entry);
                 int count;
                 byte data[] = new byte[BUFFER];
                 String fileName = entry.getName();
@@ -134,7 +132,6 @@ public class UnTarFile {
                         newFile.mkdirs();
                     }
                 } else {
-
                     // write the files to the disk
                     FileOutputStream fos = new FileOutputStream(newFile);
                     dest = new BufferedOutputStream(fos, BUFFER);
@@ -145,12 +142,14 @@ public class UnTarFile {
                     dest.close();
                 }
                 zis.closeEntry();
-
             }
             zis.close();
         } catch(Exception e) {
                 e.printStackTrace();
+                LOGGER.logp(Level.SEVERE,
+                        "UnTarFile",
+                        "unzip",
+                        "Cannot unzip file", e.fillInStackTrace());
         }
-
     }
 }
