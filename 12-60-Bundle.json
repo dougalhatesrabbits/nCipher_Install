@@ -1,0 +1,15 @@
+{
+  "core": [
+    "hwsp.tar",
+    "ctls.tar"
+  ],
+  "java": [
+    "jce.tar"
+  ],
+  "snmp": [
+    "snmp.tar"
+  ],
+  "remote": [
+    "ras.tar"
+  ]
+}
