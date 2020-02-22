@@ -10,6 +10,7 @@ import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.platform.ConsoleColours;
 import com.platform.RunProcBuilder;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
@@ -61,12 +62,12 @@ public class Linux extends SecurityWorld {
             i=i+1;
         }
 
-        System.out.println("Enter choice: ");
+        System.out.println(ConsoleColours.YELLOW+"Enter choice: "+ConsoleColours.RESET);
         LOGGER.info("Enter choice: ");
         Scanner sw = new Scanner(System.in);  // Create a Scanner object
         int confirm = sw.nextInt();
         iso_File =  sw_files.get(confirm-1);
-        System.out.println("You entered " + confirm + iso_File);
+        System.out.println("You entered " + "[" + confirm + "]" + ConsoleColours.YELLOW +iso_File+ConsoleColours.RESET);
         LOGGER.info("You entered " + iso_File);
 
         return iso_File;
@@ -74,7 +75,7 @@ public class Linux extends SecurityWorld {
 
     void checkMount(Path sw_filename) throws IOException {
         LOGGER.fine("running -checkMount- method");
-        System.out.println("Checking if ISO is already mounted");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nChecking if ISO is already mounted"+ConsoleColours.RESET);
         LOGGER.info("Checking if ISO is already mounted");
         File isoFile = null;
         //File isoFile = new File(sw_location + "/" + sw_filename);
@@ -152,7 +153,7 @@ public class Linux extends SecurityWorld {
 
     void checkUsers() throws IOException {
         LOGGER.fine("running -checkUsers- method");
-        System.out.println("\nChecking if Users are in correct Groups");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nChecking if Users are in correct Groups"+ConsoleColours.RESET);
         LOGGER.info("Checking if Users are in correct Groups");
         //Process p = Runtime.getRuntime().exec("////command////");
         //Process p = Runtime.getRuntime().exec("pwd");
@@ -188,7 +189,7 @@ public class Linux extends SecurityWorld {
 
     void unpackSecWorld(String tar, String dest) {
         LOGGER.fine("running -UnpackSecurityWorld- method");
-        System.out.println("Unpacking Security World...");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED+"Unpacking Security World..." +ConsoleColours.RESET);
         LOGGER.info("Unpacking Security World...");
 
         String ext = FilenameUtils.getExtension(tar);
@@ -199,7 +200,7 @@ public class Linux extends SecurityWorld {
             try {
                 File inputFile = new File(tar);
                 String outputFile = untar.getFileName(inputFile, TAR_FOLDER);
-                System.out.println("outputFile " + outputFile);
+                System.out.println(ConsoleColours.GREEN + "outputFile " + outputFile + ConsoleColours.RESET);
                 LOGGER.info("outputFile " + outputFile);
                 File tarFile = new File(outputFile);
                 // Calling method to decompress file
@@ -258,7 +259,7 @@ public class Linux extends SecurityWorld {
 
     void getSecWorld() throws IOException {
         LOGGER.fine("running -getSecWorld- method");
-        System.out.println("\nGetting Security World");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nGetting Security World" +ConsoleColours.RESET);
         LOGGER.info("Getting Security World");
 
         Find.Finder iso =  new Find.Finder("*linux*.iso");

@@ -1,3 +1,5 @@
+package com.file;
+
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.ByteChannel;
@@ -19,7 +21,7 @@ public class Checksum {
     private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     public static void main(String[] args) {
-        ArgumentParser parser = ArgumentParsers.newFor("Checksum").build()
+        ArgumentParser parser = ArgumentParsers.newFor("com.file.Checksum").build()
                 .defaultHelp(true)
                 .description("Calculate checksum of given files.");
         parser.addArgument("-t", "--type")

@@ -1,5 +1,7 @@
 package com.file;
 
+import com.platform.*;
+
 /**
  * https://docs.oracle.com/javase/tutorial/essential/io/find.html
  *
@@ -86,8 +88,8 @@ public class Find {
         // matches to standard out.
         void done() {
             LOGGER.fine("running -done- method");
-            System.out.println("Matched: "
-                    + numMatches);
+            System.out.println(ConsoleColours.YELLOW +"Matched: "
+                    + numMatches +ConsoleColours.RESET);
             LOGGER.info("Matched: "
                     + numMatches);
         }

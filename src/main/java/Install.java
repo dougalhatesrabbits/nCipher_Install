@@ -150,7 +150,7 @@ public class Install {
 
         Platform osx = new Platform();
         //String os = osx.getOsName();
-       // System.out.println("\n" + os);
+        // System.out.println("\n" + os);
 
         switch(osx.getOsName()) {
             case "windows":
@@ -167,31 +167,27 @@ public class Install {
                 windows.applyFirmware();
                 break;
             case "mac os x":
-                System.out.println("MAC OS machine");
+                System.out.println(ConsoleColours.BLUE_BRIGHT + "MAC OS machine" + ConsoleColours.RESET);
                 LOGGER.info("MAC OS machine");
                 Linux linux = new Linux();
 
+                // **Synchronous** //
+                // ******************
                 if (argType.equals("remove")) {
                     linux.removeExistingSW(osx, linux, null);
                     System.exit(0);
                 }
-
                 if (argSilent.equals("No")) {
                     linux.checkExistingSW(osx);
                 } else {
                     linux.removeExistingSW(osx, linux, null);
                 }
-
-                linux.checkEnvVariables();
-                linux.checkJava();
-
                 if (argFile == null) {
                     linux.getSecWorld();
                     linux.sw_filename = linux.getIsoChoices();
                 } else {
                     linux.sw_filename = linux.getSecWorld(argFile);
                 }
-
                 linux.checkMount(linux.sw_filename);
                 linux.getTars();
                 /*
@@ -200,18 +196,22 @@ public class Install {
                 //linux.unpackSecurityWorld("commons-compress-1.20-bin.tar.gz", "mnt");
                 //linux.unpackSecurityWorld("apache-maven-3.6.3-bin.tar", "mnt");
                  */
-
                 linux.applySecWorld(osx, linux, null);
                 //linux.applyDrivers
-                linux.checkUsers();
-
                 int version = Integer.parseInt(linux.sw_version);
                 if (version > 125040) {
                     // This is really separate to Client install but can still prep by copy over to RFS
-                    linux.applyFirmware();
+                    //linux.applyFirmware();
                 }
-                break;
 
+                // **Asynchronous** //
+                // *******************
+                linux.checkEnvVariables();
+                linux.checkJava();
+                //linux.installJava();
+                //linux.configureJava();
+                //linux.checkUsers();
+                break;
             case "nix":
                 System.out.println("Unix OS");
                 LOGGER.info("Unix OS");
