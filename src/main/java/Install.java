@@ -190,7 +190,6 @@ public class Install {
                     linux.sw_filename = linux.getIsoChoices();
                 } else {
                     linux.sw_filename = linux.getSecWorld(argFile);
-
                 }
 
                 linux.checkMount(linux.sw_filename);

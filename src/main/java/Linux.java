@@ -55,7 +55,7 @@ public class Linux extends SecurityWorld {
 
     public Path getIsoChoices(){
         int i = 1;
-
+        System.out.println();
         for (Path file :  sw_files) {
             System.out.println("[" + i + "] " + file);
             i=i+1;
@@ -65,10 +65,8 @@ public class Linux extends SecurityWorld {
         LOGGER.info("Enter choice: ");
         Scanner sw = new Scanner(System.in);  // Create a Scanner object
         int confirm = sw.nextInt();
-        System.out.println("You entered " + confirm);
-        LOGGER.info("You entered " + confirm);
         iso_File =  sw_files.get(confirm-1);
-        System.out.println("You entered " + iso_File);
+        System.out.println("You entered " + confirm + iso_File);
         LOGGER.info("You entered " + iso_File);
 
         return iso_File;
@@ -76,8 +74,8 @@ public class Linux extends SecurityWorld {
 
     void checkMount(Path sw_filename) throws IOException {
         LOGGER.fine("running -checkMount- method");
-        System.out.println("Checking if ISO is mounted");
-        LOGGER.info("Checking if ISO is mounted");
+        System.out.println("Checking if ISO is already mounted");
+        LOGGER.info("Checking if ISO is already mounted");
         File isoFile = null;
         //File isoFile = new File(sw_location + "/" + sw_filename);
 
@@ -147,14 +145,14 @@ public class Linux extends SecurityWorld {
         //new ReadIso(new File(sw_filename), destFile);
         new ReadIso(isoFile, new File(sw_location));
 
-        System.out.println("Mounted " + sw_filename + " at /" + sw_location);
+        System.out.println("\nMounted " + sw_filename + " at /" + sw_location);
 
 
     }
 
     void checkUsers() throws IOException {
         LOGGER.fine("running -checkUsers- method");
-        System.out.println("Checking if Users are in correct Groups");
+        System.out.println("\nChecking if Users are in correct Groups");
         LOGGER.info("Checking if Users are in correct Groups");
         //Process p = Runtime.getRuntime().exec("////command////");
         //Process p = Runtime.getRuntime().exec("pwd");
@@ -260,7 +258,7 @@ public class Linux extends SecurityWorld {
 
     void getSecWorld() throws IOException {
         LOGGER.fine("running -getSecWorld- method");
-        System.out.println("Getting Security World");
+        System.out.println("\nGetting Security World");
         LOGGER.info("Getting Security World");
 
         Find.Finder iso =  new Find.Finder("*linux*.iso");
@@ -274,7 +272,7 @@ public class Linux extends SecurityWorld {
             System.out.println(dir);
             LOGGER.info((Supplier<String>) dir);
             if (dir.isDirectory()) {
-                File[] files = dir.listFiles((FileFilter) new WildcardFileFilter("sample*.java"));
+                File[] files = dir.listFiles((FileFilter) new WildcardFileFilter("*linux*.iso"));
             }
         }
         // https://ant.apache.org/manual/api/org/apache/tools/ant/DirectoryScanner.html
@@ -289,9 +287,7 @@ public class Linux extends SecurityWorld {
         for (String file : files) {
             String found = scanner.getBasedir() + "/" + file;
             Path path = Paths.get(found);
-
-
-             sw_files.add(path);
+            sw_files.add(path);
             System.out.println(path);
             LOGGER.info(path.toString());
         }
