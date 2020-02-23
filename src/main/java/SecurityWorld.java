@@ -1,139 +1,244 @@
 import com.platform.*;
+import org.apache.commons.io.IOUtils;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Scanner;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class SecurityWorld {
     // Always use the classname, this way you can refactor
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    //private final static Logger LOGGER = Logger.getLogger(Install.class.getName());
     /***
      * This is a parent
      */
     // Class attributes
-    String sw_filename;
-    short  sw_version;
-    String sw_location;
-    final String NFAST_HOME = null;
-    final String NFAST_KMDATA = null;
-    final String CLASSPATH = null;
-    final String PATH = null;
-    final String JAVA_PATH = null;
     Path path = null;
-
-
-
-    // Constructor
-    public SecurityWorld(String name, short version, String location){
-        sw_filename = name;
-        sw_version = version;
-        sw_location = location; //basename
-    }
 
     // Methods
     void applyFirmware(){
-        LOGGER.fine("New instance of -ApplyFirmware- started");
+        LOGGER.fine("running -applyFirmware- method");
         System.out.println("Installing firmware");
         // TODO
     }
 
     void applyHotFix(){
-        LOGGER.fine("New instance of -ApplyHotFix- started");
+        LOGGER.fine("running -applyHotFix- method");
         System.out.println("Installing hotfix");
         // TODO
     }
 
-    void applySecurityWorld(Platform osx, SecurityWorldLinux linux, SecurityWorldWindows windows) throws IOException {
-        LOGGER.fine("New instance of -ApplySecurityWorld- started");
-        System.out.println("Installing Security World");
+    void applySecWorld(Platform osx, Linux linux, Windows windows) throws IOException {
+        LOGGER.fine("running -applySecurityWorld- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nInstalling Security World" +ConsoleColours.RESET);
         if (osx.isWindows()){
             String cmd = windows.NFAST_HOME + "/sbin/install";
-            System.out.println(cmd);
-            // TODO
+            try {
+                new RunProcBuilder().run(new String[]{"cmd", "-c", cmd});
+                System.out.println(cmd);
+                LOGGER.info(cmd);
+            } catch (Exception e) {
+                e.printStackTrace();
+                LOGGER.logp(Level.WARNING,
+                        "SecurityWorld",
+                        "removeExistingSW",
+                        "Cannot uninstall", e.fillInStackTrace());
+            }
         } else {
-            String cmd =linux.NFAST_HOME + "sbin/install";
-            System.out.println(cmd);
-            // TODO
+            String cmd =linux.NFAST_HOME + "/sbin/install";
+            try {
+                new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo " + cmd});
+                System.out.println(cmd);
+                LOGGER.info(cmd);
+            } catch (Exception e) {
+                e.printStackTrace();
+                LOGGER.logp(Level.WARNING,
+                        "SecurityWorld",
+                        "removeExistingSW",
+                        "Cannot uninstall", e.fillInStackTrace());
+            }
         }
-        // TODO
+
         // check for root user
         Process p = Runtime.getRuntime().exec("id -u");
         //p.info();
-
+        // TODO
     }
 
-    void checkEnvironmentVariables() throws IOException {
-        LOGGER.fine("New instance of -check_Environment_Variables- started");
-        System.out.println("Checking environment variables");
-        System.out.println(System.getenv("NFAST_HOME"));
-        System.out.println(System.getenv("PATH"));
+    void checkEnvVariables() {
+        LOGGER.fine("running -checkEnvironmentVariables- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking environment variables" + ConsoleColours.RESET);
+        LOGGER.info("Checking environment variables");
 
-        Map<String, String> env = System.getenv();
-        for (String envName : env.keySet()) {
+        Linux linux = new Linux();
+
+        System.out.println(ConsoleColours.YELLOW + "NFAST_HOME= " + ConsoleColours.RESET +System.getenv("NFAST_HOME"));
+        System.out.println(ConsoleColours.YELLOW + "PATH= " + ConsoleColours.RESET +System.getenv("PATH"));
+        System.out.println(ConsoleColours.YELLOW + "NFAST_KMDATA= " + ConsoleColours.RESET +System.getenv("NFAST_KMDATA"));
+
+        //HashMap<String, String> envVars = new HashMap<String, String>();
+
+        System.out.println();
+        Map<String, String> envVars = System.getenv();
+        for (String envName : envVars.keySet()) {
             System.out.format("%s=%s%n",
                     envName,
-                    env.get(envName));
+                    envVars.get(envName));
+            switch (envName) {
+                case "NFAST_HOME":
+                    if (envVars.get(envName).contains(linux.NFAST_HOME)){
+                        System.out.println(ConsoleColours.GREEN + "[OK]" +
+                                ConsoleColours.RESET);
+                    } else {
+                        System.out.println(ConsoleColours.RED + "[NOK]" +
+                                ConsoleColours.RESET);
+                    }
+                    //todo
+                    break;
+                case "NFAST_KMDATA" :
+                    //todo
+                    break;
+                case "PATH" :
+                    if (envVars.get(envName).contains(linux.PATH)){
+                        System.out.println(ConsoleColours.GREEN + "[OK]" +
+                                ConsoleColours.RESET);
+                    } else {
+                        System.out.println(ConsoleColours.RED + "[NOK]" +
+                                ConsoleColours.RESET);
+                    }
+                    //todo
+                    break;
+                //default:
+                    //System.out.println("Cannot find NFAST Variables");
+            }
         }
 
+        Properties envProps = System.getProperties();
+        for (Object propName : envProps.keySet()) {
+            System.out.format("%s=%s%n",
+                    propName,
+                    envProps.get(propName));
+        }
+    }
+
+    void checkJava() throws IOException {
+        LOGGER.fine("running -checkJava- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking Java" + ConsoleColours.RESET);
+        System.out.println(ConsoleColours.YELLOW + "$JAVA_HOME= " + ConsoleColours.RESET +System.getenv("JAVA_HOME"));
+        System.out.println(ConsoleColours.YELLOW + "$JAVA_PATH= " + ConsoleColours.RESET +System.getenv("JAVA_PATH"));
+        System.out.println(ConsoleColours.YELLOW + "$CLASSPATH= " + ConsoleColours.RESET +System.getenv("CLASSPATH"));
+
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "java --version"}); // this may be a JRE (not reqd)
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "$JAVA_HOME/bin/javac -version"}); // This is what we want a JDK
+        System.out.println(System.getProperty("java.version"));
+        System.out.println(System.getProperty("java.runtime.version"));
+        System.out.println(System.getProperty("java.home"));
+        System.out.println(System.getProperty("java.vendor"));
+        System.out.println(System.getProperty("java.vendor.url"));
+        System.out.println(System.getProperty("java.class.path"));
         // TODO
     }
 
-    void checkJava(){
-        LOGGER.fine("New instance of -check_Java- started");
-        System.out.println("Checking Java");
-        System.out.println(System.getenv("JAVA_HOME"));
-        System.out.println(System.getenv("JAVA_PATH"));
-        // TODO
+    void installJava() throws IOException {
+        String home = System.getProperty("user.home");
+        IOUtils.copy(
+                new URL("https://www.oracle.com/java/technologies/javase-jdk13-doc-downloads.html#license-lightbox").openStream(),
+                new FileOutputStream(home + "/Documents")
+        );
+        // JDK 9
+        /***
+         * https://www.tecmint.com/install-java-jdk-jre-in-linux/
+         */
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "cd /opt/java"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "wget --no-cookies --no-check-certificate --header \"Cookie: oraclelicense=accept-securebackup-cookie\" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "tar -zxvf jdk-9.0.4_linux-x64_bin.tar.gz"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "cd jdk-9.0.4/"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --install /usr/bin/java java /opt/java/jdk-9.0.4/bin/java 100"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --config java"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --install /usr/bin/javac javac /opt/java/jdk-9.0.4/bin/javac 100"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --config javac"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --install /usr/bin/jar jar /opt/java/jdk-9.0.4/bin/jar 100"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --config jar"});
+        //TODO
     }
 
-    public void check_Existing_SW(Platform osx){
-        LOGGER.fine("New instance of -check_Existing_SW- started");
-        System.out.println("Checking for existing Security World");
+    void configureJava() throws IOException {
+        // JDK 9
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "export JAVA_HOME=/opt/java/jdk-9.0.4/"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "export JRE_HOME=/opt/java/jdk-9.0.4/jre"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "export PATH=$PATH:/opt/java/jdk-9.0.4/bin:/opt/java/jdk-9.0.4/jre/bin"});
+        //TODO
 
-        SecurityWorldLinux linux = new SecurityWorldLinux("a", (short) 123, "c");
-        SecurityWorldWindows windows = new SecurityWorldWindows("a", (short) 21, "b");
+    }
+
+    public void checkExistingSW(Platform osx) throws IOException {
+        LOGGER.fine("running -checkExistingSW- method");
+        Linux linux = new Linux();
+        Windows windows = new Windows();
 
         if (osx.isWindows()){
             path = Paths.get(windows.NFAST_HOME);
         } else {
             path = Paths.get(linux.NFAST_HOME);
         }
-
-        System.out.println(path);
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking for existing Security World in $NFAST_HOME: " +path +ConsoleColours.RESET);
 
         if (Files.exists(path)) {
-            System.out.println("Found SW, removing previous install: \nconfirm (Y) to proceed, (N) to abort installation >");
+            System.out.println("Found SW, removing previous install: \nConfirm (Y) to proceed, (N) to abort installation >");
             Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-
             String confirm = myObj.nextLine();  // Read user input
-            if (confirm.toLowerCase().equals("y")){
+
+            if (confirm.equalsIgnoreCase("y")) {
                 System.out.println("You entered proceed " + confirm);
-                remove_Existing_SW(osx, linux, windows);// Output user input
+                removeExistingSW(osx, linux, windows);// Output user input
             } else {
                 System.out.println("You entered stop " + confirm);
                 System.exit(1);
             }
         } else {
-            System.out.println("No SW aha");
+            System.out.println("No existing SW found, proceeding with install");
         }
     }
 
-    public void remove_Existing_SW(Platform osx, SecurityWorldLinux linux, SecurityWorldWindows windows){
-        LOGGER.fine("New instance of -remove_Existing_SW- started");
-        System.out.println("Removing old Security World");
-        if (osx.isWindows()){
+    public void removeExistingSW(Platform osx, Linux linux, Windows windows) throws IOException {
+        LOGGER.fine("running removeExistingSW method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED +"\nRemoving old Security World"+ConsoleColours.RESET);
+        if (osx.isWindows() ){
             String cmd = windows.NFAST_HOME + "/sbin/install -d";
-            System.out.println(cmd);
-            // TODO
+            try {
+                new RunProcBuilder().run(new String[]{"cmd", "-c", cmd});
+                System.out.println("Using NFAST " +cmd);
+                LOGGER.info("Using NFAST " +cmd);
+            } catch (Exception e) {
+                e.printStackTrace();
+                LOGGER.logp(Level.WARNING,
+                        "SecurityWorld",
+                        "removeExistingSW",
+                        "Cannot uninstall", e.fillInStackTrace());
+            }
         } else {
-            String cmd =linux.NFAST_HOME + "sbin/install -d";
-            System.out.println(cmd);
-            // TODO
+            String cmd =linux.NFAST_HOME + "/sbin/install -d";
+            try {
+                new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo " + cmd});
+                System.out.println("Using NFAST " +cmd);
+                LOGGER.info("Using NFAST " +cmd);
+            } catch (Exception e) {
+                e.printStackTrace();
+                LOGGER.logp(Level.WARNING,
+                        "SecurityWorld",
+                        "removeExistingSW",
+                        "Cannot uninstall", e.fillInStackTrace());
+            }
         }
     }
 }

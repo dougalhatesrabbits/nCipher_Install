@@ -12,6 +12,7 @@ public class MainArgs {
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     public void getArgs(String[] args) {
+        LOGGER.fine("running -getArgs- method");
         final ArgumentParser parser = ArgumentParsers.newFor("nCipher Install").build()
                 .defaultHelp(true)
                 .description("Installs and configures a Security World.");

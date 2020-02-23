@@ -1,8 +1,11 @@
-package com.iso;
+package com.file;
 
 import java.io.File;
 import java.io.IOException;
+// for VMs
 import java.nio.file.Files;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.github.stephenc.javaisotools.loopfs.iso9660.Iso9660FileEntry;
 import com.github.stephenc.javaisotools.loopfs.iso9660.Iso9660FileSystem;
@@ -13,15 +16,25 @@ import com.github.stephenc.javaisotools.loopfs.iso9660.Iso9660FileSystem;
  */
 
 public class ReadIso {
+    // Always use the classname, this way you can refactor
+    private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     Iso9660FileSystem discFs;
 
     public ReadIso(File isoToRead, File saveLocation) {
+        LOGGER.fine("running -ReadIso- method");
 
         try {
             //Give the file and mention if this is treated as a read only file.
             discFs = new Iso9660FileSystem(isoToRead, true);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.logp(Level.WARNING,
+                    "ReadIso",
+                    "ReadIso",
+                    "Cannot unpack", e.fillInStackTrace());
+            LOGGER.logp(Level.WARNING,
+                    "ReadIso",
+                    "ReadIso",
+                    "Cannot unpack", e.getCause());
         }
 
         //Make our saving folder if it does not exist
@@ -40,6 +53,10 @@ public class ReadIso {
                     Files.copy(discFs.getInputStream(singleFile), tempFile.toPath());
                 } catch (IOException e) {
                     e.printStackTrace();
+                    LOGGER.logp(Level.WARNING,
+                            "ReadIso",
+                            "ReadIso",
+                            "Cannot unpack", e.fillInStackTrace());
                 }
             }
         }

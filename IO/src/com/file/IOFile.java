@@ -9,8 +9,7 @@ public class IOFile {
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     public void readFile(String fileName) {
-        LOGGER.fine("New instance of +readFile+ started");
-
+        LOGGER.fine("running -readFile- method");
 
         // The name of the file to open.
         String cwd = System.getProperty("user.dir");
@@ -20,7 +19,6 @@ public class IOFile {
 
         try {
             // FileReader reads text files in the default encoding.
-
             FileReader fileReader = new FileReader(fileName);
 
             // Always wrap FileReader in BufferedReader.
@@ -35,16 +33,22 @@ public class IOFile {
         }
         catch(FileNotFoundException ex) {
             ex.printStackTrace();
-            LOGGER.logrb(Level.WARNING, "IOFile", "readFile", (String) null, "Unable to open file", ex);
+            LOGGER.logp(Level.WARNING,
+                    "IOFile",
+                    "readFile",
+                    "Unable to open file", ex);
         }
         catch(IOException ex) {
             ex.printStackTrace();
-            LOGGER.logrb(Level.WARNING, "IOFile", "readFile", (String) null, "Error reading file", ex);
+            LOGGER.logp(Level.WARNING,
+                    "IOFile",
+                    "readFile",
+                    "Error reading file", ex);
         }
     }
 
     public void readBinaryFile(String fileName) {
-        LOGGER.fine("New instance of +readBinaryFile+ started");
+        LOGGER.fine("running -readBinaryFile- method");
 
         String cwd = System.getProperty("user.dir");
         try {
@@ -73,15 +77,21 @@ public class IOFile {
             System.out.println("Binary read " + total + " bytes");
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
-            LOGGER.logrb(Level.WARNING, "IOFile", "readBinaryFile", (String) null, "Unable to open file", ex);
+            LOGGER.logp(Level.WARNING,
+                    "IOFile",
+                    "readBinaryFile",
+                    "Unable to open file", ex);
         } catch (IOException ex) {
             ex.printStackTrace();
-            LOGGER.logrb(Level.WARNING, "IOFile", "readBinaryFile", (String) null, "Unable to open file", ex);
+            LOGGER.logp(Level.WARNING,
+                    "IOFile",
+                    "readBinaryFile",
+                    "Unable to open file", ex);
         }
     }
 
     public void writeFile(String fileName, String txt) {
-        LOGGER.fine("New instance of +writeFile+ started");;
+        LOGGER.fine("running -writeFile- method");;
 
         try {
             // Assume default encoding.
@@ -106,12 +116,15 @@ public class IOFile {
         }
         catch(IOException ex) {
             ex.printStackTrace();
-            LOGGER.logrb(Level.WARNING, "IOFile", "writeFile", (String) null, "Unable to open file", ex);
+            LOGGER.logp(Level.WARNING,
+                    "IOFile",
+                    "writeFile",
+                    "Unable to open file", ex);
         }
     }
 
     public void writeBinaryFile(String fileName, String txt) {
-        LOGGER.fine("New instance of +writeBinaryFile+ started");
+        LOGGER.fine("running -writeBinaryFile- method");
 
         try {
             // Put some bytes in a buffer so we can
@@ -143,7 +156,10 @@ public class IOFile {
         }
         catch(IOException ex) {
             ex.printStackTrace();
-            LOGGER.logrb(Level.WARNING, "IOFile", "writeBinaryFile", (String) null, "Unable to write binary file", ex);
+            LOGGER.logp(Level.WARNING,
+                    "IOFile",
+                    "writeBinaryFile",
+                    "Unable to write binary file", ex);
         }
     }
 }
