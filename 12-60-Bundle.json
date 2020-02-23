@@ -11,5 +11,13 @@
   ],
   "remote": [
     "ras.tar"
+  ],
+  "mandatory": [
+    "core"
+  ],
+  "optional": [
+    "java",
+    "snmp",
+    "remote"
   ]
 }
