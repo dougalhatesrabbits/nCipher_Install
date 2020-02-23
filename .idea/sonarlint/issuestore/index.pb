@@ -13,8 +13,6 @@ K
 IO/src/com/file/IOFile.java,3/d/3d6f18f6c295b83ad223a4a27a3f7932ee99074d
 L
 src/main/java/UseLogger.java,9/7/979268807f656ca0310ce16698aebd32b7863e4d
-;
-Logging.txt,a/6/a63bfdaeb1d1ddbef813cfbe7be146ac2d04d521
 V
 &Logging/src/com/log/InstallLogger.java,4/a/4a64a3f0491009ebc52fb1acc1f959ff60a91730
 X
@@ -32,16 +30,12 @@ B
 install-log-0.html,7/5/75c26020f452bf77219f754730977ef15c894540
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-9
-	temp2.txt,9/4/949cade905e3e50ed3f0715b147e694b1091cc65
 P
  src/main/java/SecurityWorld.java,c/5/c5ac14112f715f091928f8f0592e55a89d7befdf
 P
  commons-compress-1.20/README.txt,1/6/168bc5fb5ce2ea3f0f176211150b3e7257a63591
 U
 %src/main/java/SecurityWorldLinux.java,d/3/d3883b01c2c313fd8fe0ddb537106b71cf3f7c27
-K
-IO/src/com/iso/ReadIso.java,5/7/5792b1c5f6cece3ad89093263f391a7f996f5635
 N
 IO/src/com/file/UnTarFile.java,a/b/aba0e0ba3d1ff8b178705b3fb043176dca1d105a
 `
@@ -66,3 +60,5 @@ E
 Platform/Platform.iml,5/7/57e95bdd01dc7e45eed7f52032bdba7421f04c41
 A
 install-log-0.xml,3/0/30d1a49a3a711aebafceb07b5a186fbf10c0ee3f
+`
+0Platform/src/com/platform/RunProcessBuilder.java,c/0/c073547262a347598935c92180ab255a0ecd429a

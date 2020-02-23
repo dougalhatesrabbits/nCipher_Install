@@ -1,8 +1,8 @@
 
+Msquid:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8–°Ç„.
+|squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¼ïÔ©ÿÿÿÿÿ8¦™¯Ç„.
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8–°Ç„.
+Hsquid:S00108$")Either remove or fill this block of code.(±•å•8¦™¯Ç„.
 [squid:S1197
 "8Move the array designator from the variable to the type.(ì…ãüüÿÿÿÿ8¦™¯Ç„.
-Usquid:S1135$"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8¦™¯Ç„.
-Fsquid:S1148%"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8–°Ç„.
-Hsquid:S00108*")Either remove or fill this block of code.(±•å•8¦™¯Ç„.
-Msquid:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8–°Ç„.
-|squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¼ïÔ©ÿÿÿÿÿ8¦™¯Ç„.
+Usquid:S1135"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8¦™¯Ç„.

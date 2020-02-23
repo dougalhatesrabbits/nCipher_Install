@@ -9,28 +9,28 @@ public class Platform {
     private static String OS = null;
 
     public String getOsName() {
-        LOGGER.fine("New instance of *getOSName* started");
+        LOGGER.fine("running -getOSName- method");
         if(OS == null) { OS = System.getProperty("os.name").toLowerCase(); }
         return OS;
     }
 
     public boolean isWindows() {
-        LOGGER.fine("New instance of *isWindows* started");
+        LOGGER.fine("running -isWindows- method");
         return getOsName().startsWith("windows");
     }
 
     public boolean isUnix() {
-        LOGGER.fine("New instance of *isUnix* started");
+        LOGGER.fine("running -isUnix- method");
         return getOsName().startsWith("nix");
     }
 
     public boolean isMac() {
-        LOGGER.fine("New instance of *isMac* started");
+        LOGGER.fine("running -isMac- method");
         return getOsName().startsWith("mac");
     }
 
     public boolean isSolaris() {
-        LOGGER.fine("New instance of *isSolaris* started");
+        LOGGER.fine("running -isSolaris- method");
         return getOsName().startsWith("sunos");
     }
 
