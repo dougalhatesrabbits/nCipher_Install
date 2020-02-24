@@ -1,14 +1,21 @@
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
+
 package com.file;
+
+import com.github.stephenc.javaisotools.loopfs.iso9660.Iso9660FileEntry;
+import com.github.stephenc.javaisotools.loopfs.iso9660.Iso9660FileSystem;
 
 import java.io.File;
 import java.io.IOException;
-// for VMs
 import java.nio.file.Files;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.github.stephenc.javaisotools.loopfs.iso9660.Iso9660FileEntry;
-import com.github.stephenc.javaisotools.loopfs.iso9660.Iso9660FileSystem;
+// for VMs
 
 /***
  * This is a adaptation of https://github.com/danveloper/provisioning-gradle-plugin/blob/master/src/main/groovy/
@@ -43,6 +50,7 @@ public class ReadIso {
         }
 
         //Go through each file on the disc and save it.
+        assert discFs != null;
         for (Iso9660FileEntry singleFile : discFs) {
             if (singleFile.isDirectory()) {
                 new File(saveLocation, singleFile.getPath()).mkdirs();

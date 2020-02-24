@@ -1,6 +1,14 @@
-import com.log.*;
-import com.platform.*;
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.file.SecWorld;
+import com.log.InstallLogger;
+import com.platform.ConsoleColours;
+import com.platform.Platform;
 import net.sourceforge.argparse4j.ArgumentParsers;
 import net.sourceforge.argparse4j.inf.ArgumentParser;
 import net.sourceforge.argparse4j.inf.ArgumentParserException;
@@ -14,7 +22,7 @@ import java.util.logging.Logger;
 
 public class Install {
     // Always use the classname, this way you can refactor
-    private static final  Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     private static String argLevel = null;
     private static String argFile = null;
@@ -23,10 +31,11 @@ public class Install {
 
     public static void main(String[] args) throws IOException {
 
-        final ArgumentParser parser = ArgumentParsers.newFor("nCipher Install").build()
+        final ArgumentParser parser = ArgumentParsers.newFor("nCipher_Install.jar").build()
                 .defaultHelp(true)
-                .version("${prog} 2.0")
-                .description("Installs and configures a Security World.");
+                .version("${prog} 0.4")
+                .description("Installs and configures a Security World. Run as sudo.\n\nTypically: " + ConsoleColours.YELLOW +
+                        "sudo java -jar nCipher_Install.jar" + ConsoleColours.RESET + "\n\nJson files are needed at runtime");
         parser.addArgument("-l", "--level")
                 .choices("debug", "info", "warning").setDefault("info")
                 .help("Specify logging level.");
@@ -148,58 +157,124 @@ public class Install {
         }
 
 
-        Platform osx = new Platform();
+        Platform os = new Platform();
         //String os = osx.getOsName();
         // System.out.println("\n" + os);
 
-        switch(osx.getOsName()) {
+        switch (os.getOsName()) {
             case "windows":
                 System.out.println("Windows OS");
                 LOGGER.info("Windows OS");
                 Windows windows = new Windows();
 
-                windows.checkExistingSW(osx);
+                windows.checkExistingSW(os);
                 //windows.remove_Existing_SW(osx, null, windows);
                 windows.checkJava();
                 //windows.unpackSecurityWorld();
-                windows.applySecWorld(osx, null, windows);
+                windows.applySecWorld(os, null, windows, null);
                 windows.checkEnvVariables();
                 windows.applyFirmware();
                 break;
             case "mac os x":
                 System.out.println(ConsoleColours.BLUE_BRIGHT + "MAC OS machine" + ConsoleColours.RESET);
                 LOGGER.info("MAC OS machine");
-                Linux linux = new Linux();
+                OSX osx = new OSX();
 
                 // **Synchronous** //
                 // ******************
                 if (argType.equals("remove")) {
-                    linux.removeExistingSW(osx, linux, null);
+                    osx.removeExistingSW(os, null, null, osx);
                     System.exit(0);
                 }
                 if (argSilent.equals("No")) {
-                    linux.checkExistingSW(osx);
+                    osx.checkExistingSW(os);
                 } else {
-                    linux.removeExistingSW(osx, linux, null);
+                    osx.removeExistingSW(os, null, null, osx);
                 }
                 if (argFile == null) {
-                    linux.getSecWorld();
-                    linux.sw_filename = linux.getIsoChoices();
+                    osx.getSecWorld();
+                    osx.sw_filename = osx.getIsoChoices();
                 } else {
-                    linux.sw_filename = linux.getSecWorld(argFile);
+                    osx.sw_filename = osx.getSecWorld(argFile);
                 }
-                linux.checkMount(linux.sw_filename);
-                linux.getTars();
+                osx.checkMount(osx.sw_filename);
+                osx.getTars();
                 /*
                 //linux.unpackSecWorld("SecWorld-linux64-user-12.60.3.iso", "mnt");
                 //linux.unpackSecurityWorld("Archive.zip", "mnt");
                 //linux.unpackSecurityWorld("commons-compress-1.20-bin.tar.gz", "mnt");
                 //linux.unpackSecurityWorld("apache-maven-3.6.3-bin.tar", "mnt");
                  */
-                linux.applySecWorld(osx, linux, null);
+                osx.applySecWorld(os, null, null, osx);
                 //linux.applyDrivers
-                int version = Integer.parseInt(linux.sw_version);
+                int version = Integer.parseInt(osx.sw_version);
                 if (version > 125040) {
+                    // This is really separate to Client install but can still prep by copy over to RFS
+                    //linux.applyFirmware();
+                }
+
+                // **Asynchronous** //
+                // *******************
+                osx.checkEnvVariables();
+                osx.checkJava();
+                //linux.installJava();
+                //linux.configureJava();
+                //linux.checkUsers();
+                break;
+            case "linux":
+                System.out.println(ConsoleColours.BLUE_BRIGHT + "Linux OS machine" + ConsoleColours.RESET);
+                LOGGER.info("Linux OS");
+
+                Linux linux = new Linux();
+
+                // **Synchronous** //
+                // ******************
+                if (argType.equals("remove")) {
+                    linux.removeExistingSW(os, linux, null, null);
+                    System.exit(0);
+                }
+                if (argSilent.equals("No")) {
+                    linux.checkExistingSW(os);
+                } else {
+                    linux.removeExistingSW(os, linux, null, null);
+                }
+
+                ObjectMapper mapper = new ObjectMapper();
+                String jsonfile = System.getProperty("user.dir") + "/secWorld.json";
+                try {
+                    // JSON file to Java object
+                    SecWorld world = mapper.readValue(new File(jsonfile), SecWorld.class);
+                    if (argFile == null) {
+                        for (String search : world.getLinuxSearch()) {
+                            System.out.println("\nSearching " + search);
+                            linux.sw_files = linux.getSecWorld(search);
+                        }
+                        //System.out.println(linux.sw_files);
+                        linux.sw_filename = linux.getIsoChoices();
+                    } else {
+                        for (String search : world.getLinuxSearch()) {
+                            linux.sw_filename = linux.getSecWorld(search, argFile);
+                        }
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                linux.checkMount(linux.sw_filename);
+                linux.getTars(); //also unpacks secWorld
+
+                /*
+                //linux.unpackSecWorld("SecWorld-linux64-user-12.60.3.iso", "mnt");
+                //linux.unpackSecurityWorld("Archive.zip", "mnt");
+                //linux.unpackSecurityWorld("commons-compress-1.20-bin.tar.gz", "mnt");
+                //linux.unpackSecurityWorld("apache-maven-3.6.3-bin.tar", "mnt");
+                 */
+
+                linux.applySecWorld(os, linux, null, null);
+                linux.applyDrivers();
+
+                int linuxversion = Integer.parseInt(linux.sw_version);
+                if (linuxversion > 125040) {
                     // This is really separate to Client install but can still prep by copy over to RFS
                     //linux.applyFirmware();
                 }
@@ -209,18 +284,18 @@ public class Install {
                 linux.checkEnvVariables();
                 linux.checkJava();
                 //linux.installJava();
-                //linux.configureJava();
-                //linux.checkUsers();
+                linux.configureJava();
+                linux.checkUsers();
                 break;
             case "nix":
                 System.out.println("Unix OS");
                 LOGGER.info("Unix OS");
-                Linux linuxreal = new Linux();
-                linuxreal.checkMount(linuxreal.sw_filename);
-                linuxreal.checkEnvVariables();
-                linuxreal.checkExistingSW(osx);
-                linuxreal.checkJava();
-                linuxreal.checkUsers();
+                OSX nix = new OSX();
+                nix.checkMount(nix.sw_filename);
+                nix.checkEnvVariables();
+                nix.checkExistingSW(os);
+                nix.checkJava();
+                nix.checkUsers();
                 break;
             case "sunos":
                 System.out.println("Solaris OS");

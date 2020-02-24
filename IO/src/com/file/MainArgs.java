@@ -1,14 +1,10 @@
 package com.file;
 
-import com.log.*;
-
 import net.sourceforge.argparse4j.ArgumentParsers;
 import net.sourceforge.argparse4j.inf.ArgumentParser;
 import net.sourceforge.argparse4j.inf.ArgumentParserException;
 import net.sourceforge.argparse4j.inf.Namespace;
 
-import java.security.NoSuchAlgorithmException;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class MainArgs {

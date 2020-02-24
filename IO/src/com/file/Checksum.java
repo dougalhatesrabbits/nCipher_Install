@@ -1,4 +1,15 @@
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
+
 package com.file;
+
+import net.sourceforge.argparse4j.ArgumentParsers;
+import net.sourceforge.argparse4j.inf.ArgumentParser;
+import net.sourceforge.argparse4j.inf.ArgumentParserException;
+import net.sourceforge.argparse4j.inf.Namespace;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -10,11 +21,6 @@ import java.nio.file.StandardOpenOption;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.logging.Logger;
-
-import net.sourceforge.argparse4j.ArgumentParsers;
-import net.sourceforge.argparse4j.inf.ArgumentParser;
-import net.sourceforge.argparse4j.inf.ArgumentParserException;
-import net.sourceforge.argparse4j.inf.Namespace;
 
 public class Checksum {
     // Always use the classname, this way you can refactor
@@ -47,7 +53,7 @@ public class Checksum {
         for (String name : ns.<String> getList("file")) {
             Path path = Paths.get(name);
             try (ByteChannel channel = Files.newByteChannel(path,
-                    StandardOpenOption.READ);) {
+                    StandardOpenOption.READ)) {
                 ByteBuffer buffer = ByteBuffer.allocate(4096);
                 while (channel.read(buffer) > 0) {
                     buffer.flip();
@@ -56,13 +62,13 @@ public class Checksum {
                 }
             } catch (IOException e) {
                 System.err
-                        .printf("%s: failed to read data: %s", e.getMessage());
+                        .printf("%s: failed to read data: %s", e.getMessage(), path);
                 continue;
             }
-            byte md[] = digest.digest();
+            byte[] md = digest.digest();
             StringBuffer sb = new StringBuffer();
-            for (int i = 0, len = md.length; i < len; ++i) {
-                String x = Integer.toHexString(0xff & md[i]);
+            for (byte b : md) {
+                String x = Integer.toHexString(0xff & b);
                 if (x.length() == 1) {
                     sb.append("0");
                 }

@@ -1,12 +1,17 @@
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
+
 package com.file;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.List;
-import java.util.Map;
+
 
 public class ReadLinuxBundle {
     public static void main(String[] args) {
