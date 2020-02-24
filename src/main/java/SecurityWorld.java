@@ -38,10 +38,10 @@ public class SecurityWorld {
         // TODO
     }
 
-    void applySecWorld(Platform osx, Linux linux, Windows windows) throws IOException {
+    void applySecWorld(Platform os, Linux linux, Windows windows, OSX mac) throws IOException {
         LOGGER.fine("running -applySecurityWorld- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nInstalling Security World" +ConsoleColours.RESET);
-        if (osx.isWindows()){
+        if (os.isWindows()){
             String cmd = windows.NFAST_HOME + "/sbin/install";
             try {
                 new RunProcBuilder().run(new String[]{"cmd", "-c", cmd});
@@ -185,6 +185,7 @@ public class SecurityWorld {
         LOGGER.fine("running -checkExistingSW- method");
         Linux linux = new Linux();
         Windows windows = new Windows();
+        OSX mac = new OSX();
 
         if (osx.isWindows()){
             path = Paths.get(windows.NFAST_HOME);
@@ -200,7 +201,7 @@ public class SecurityWorld {
 
             if (confirm.equalsIgnoreCase("y")) {
                 System.out.println("You entered proceed " + confirm);
-                removeExistingSW(osx, linux, windows);// Output user input
+                removeExistingSW(osx, linux, windows, mac);// Output user input
             } else {
                 System.out.println("You entered stop " + confirm);
                 System.exit(1);
@@ -210,7 +211,7 @@ public class SecurityWorld {
         }
     }
 
-    public void removeExistingSW(Platform osx, Linux linux, Windows windows) throws IOException {
+    public void removeExistingSW(Platform osx, Linux linux, Windows windows, OSX mac) throws IOException {
         LOGGER.fine("running removeExistingSW method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED +"\nRemoving old Security World"+ConsoleColours.RESET);
         if (osx.isWindows() ){

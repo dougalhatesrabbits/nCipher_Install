@@ -1,32 +1,25 @@
+import com.file.Find;
 import com.file.ReadIso;
-import com.file.*;
-
-import java.io.*;
-import java.net.FileNameMap;
-import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Scanner;
-import java.util.function.Supplier;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
+import com.file.UnTarFile;
 import com.platform.ConsoleColours;
 import com.platform.RunProcBuilder;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
-import org.apache.commons.vfs.FileName;
-import org.apache.commons.vfs.FileUtil;
 import org.apache.tools.ant.DirectoryScanner;
-import org.apache.tools.ant.types.FileList;
 
-import javax.tools.FileObject;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.function.Supplier;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class Linux extends SecurityWorld {
+public class OSX extends SecurityWorld {
     // Always use the classname, this way you can refactor
     private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     /***
@@ -39,7 +32,7 @@ public class Linux extends SecurityWorld {
     //String sw_filename = "SecWorld-linux64-user-12.60.3.iso";
     Path sw_filename = null;
     String sw_version = "126030";
-    String sw_location = "mnt/iso";
+    String sw_location = "mnt/iso/";
     // List of source iso filepaths i.e /home/myiso.iso
     ArrayList<Path> sw_files = new ArrayList<Path>();
     ArrayList<Path> tar_files = new ArrayList<Path>();
@@ -57,7 +50,7 @@ public class Linux extends SecurityWorld {
     // String INPUT_FILE = "linux.tar.gz";
     // This folder should exist, that's where
     // .tar file will go
-    String TAR_FOLDER = "/tmp";
+    String TAR_FOLDER = "tmp";
     // After untar files will go to this folder
     // String DESTINATION_FOLDER = "mnt";
 
@@ -87,12 +80,11 @@ public class Linux extends SecurityWorld {
         File isoFile = null;
         //File isoFile = new File(sw_location + "/" + sw_filename);
 
-        System.out.println("check iso location: " + sw_filename);
+        System.out.println("check: " + sw_filename);
         LOGGER.info("check: " + sw_filename);
 
         if ( sw_filename !=null) {
              isoFile = new File( sw_filename.toString());
-             //isoFile.setExecutable(true);
         } else {
             System.out.println("Cannot find iso");
             //isoFile = new File(sw_location + "/" + sw_filename);
@@ -100,34 +92,26 @@ public class Linux extends SecurityWorld {
 
 
         // Check if source file exists on mnt
-        String path = null;
+        String path = "";
         boolean bool = false;
         File file2 = null;
         File file = null;
         try {
-            // 'creating' new file (paths)
+            // creating new files
             file  = new File(sw_location,"linux");
-            file.setReadable(true);
-            file.setExecutable(true);
-            file.setWritable(true);
-            //file.createNewFile(); //this gets done by ReadISO
-            System.out.println("Relative filepath \'file\' " + file);
+            //file.createNewFile();
+            System.out.println(file);
             LOGGER.info((file.toString()));
-
             // creating new canonical from file object
             file2 = file.getCanonicalFile();
-            System.out.println("Canonical filepath \'file2\' " + file2);
-            LOGGER.info((file2.toString()));
-
             // returns true if the file exists
+            System.out.println(file2);
+            LOGGER.info((file2.toString()));
             bool = file2.exists();
-            System.out.println("Does canon path \'file2\' exist? " +bool);
-
             // returns absolute pathname
             path = file2.getAbsolutePath();
-            System.out.println("Absolute path of \'file2\' " +path);
-
-            // if file path exists
+            System.out.println(bool);
+            // if file exists
             if (bool) {
                 // prints
                 System.out.print(path + " Exists? " + bool);
@@ -140,42 +124,31 @@ public class Linux extends SecurityWorld {
         if(bool){
 
             try {
-                if (file2.isDirectory()){
-                    //org.apache.commons.io.FileUtils.deleteDirectory(file2);
-                    //FileUtils.cleanDirectory(file2);
-                    //FileUtils.deleteDirectory(file2);
-                    //FileUtils.forceDelete(file2);
-                    Files.walk(Paths.get(path))
-                            .sorted(Comparator.reverseOrder())
-                            .map(Path::toFile)
-                            .forEach(File::delete);
+            if (file2.isDirectory()){
+                FileUtils.deleteDirectory(file2);
+            } else if (file.delete()){
 
-
-                } else if (file.delete()){
-                        System.out.println(file.getName() + " deleted");//getting and printing the file name
-                        LOGGER.info(file.getName() + " deleted");
-                } else {
-                        System.out.println("failed");
-                        LOGGER.info("failed");
+                    System.out.println(file.getName() + " deleted");//getting and printing the file name
+                    LOGGER.info(file.getName() + " deleted");
+            } else {
+                    System.out.println("failed");
+                    LOGGER.info("failed");
                 }
-            } catch(Exception e) {
+            } catch(Exception e)
+            {
                 e.printStackTrace();
             }
+
+
 
         }
         // TODO Do checksum on iso
         //new ReadIso(new File(sw_filename), destFile);
-        try {
-            //new ReadIso(isoFile, new File(sw_location));
-            sw_iso = file2;
-            new ReadIso(isoFile, new File(String.valueOf(file2)));
-            new ReadIso(isoFile, file2);
+        new ReadIso(isoFile, new File(sw_location));
 
-            System.out.println("\nCompleted ReadingISO, Mounted... " + sw_filename + " at " + sw_iso);
+        System.out.println("\nMounted " + sw_filename + " at /" + sw_location);
 
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+
     }
 
     void checkUsers() throws IOException {
@@ -193,21 +166,12 @@ public class Linux extends SecurityWorld {
     }
 
     void getTars(){
-        LOGGER.fine("running -getTars- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"getTars..." +ConsoleColours.RESET);
-        LOGGER.info("getTars...");
         // https://ant.apache.org/manual/api/org/apache/tools/ant/DirectoryScanner.html
         DirectoryScanner scanner = new DirectoryScanner();
         scanner.setIncludes(new String[]{"**/*tar*"});
-        //scanner.setBasedir(sw_location);
-        scanner.setBasedir(sw_iso);
+        scanner.setBasedir(sw_location + "/linux");
         scanner.setCaseSensitive(false);
-        scanner.setFollowSymlinks(false);
-        try {
-            scanner.scan();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        scanner.scan();
         String[] files = scanner.getIncludedFiles();
         //ArrayList<Path> swfiles = new ArrayList<Path>();
         //String found = null;
@@ -216,7 +180,7 @@ public class Linux extends SecurityWorld {
             Path path = Paths.get(found);
 
 
-            //tar_files.add(path);
+            tar_files.add(path);
             System.out.println(path);
             LOGGER.info(path.toString());
             unpackSecWorld(found, NFAST_HOME);
@@ -228,11 +192,10 @@ public class Linux extends SecurityWorld {
         System.out.println(ConsoleColours.BLUE_UNDERLINED+"Unpacking Security World..." +ConsoleColours.RESET);
         LOGGER.info("Unpacking Security World...");
 
-        //String ext = FilenameUtils.getExtension(tar);
-        //String ext = FileUtils.getName(
-        if (tar.contains("tgz")) {
-            System.out.println("We have a Gunzip compressed tarball " + tar);
-            LOGGER.info("We have a Gunzip compressed tarball " + tar);
+        String ext = FilenameUtils.getExtension(tar);
+        if (ext.equals("tgz")) {
+            System.out.println("We have a Gunzip compressed tarball " + ext);
+            LOGGER.info("We have a Gunzip compressed tarball " + ext);
             UnTarFile untar = new UnTarFile();
             try {
                 File inputFile = new File(tar);
@@ -251,13 +214,13 @@ public class Linux extends SecurityWorld {
 
             } catch (IOException e) {
                 LOGGER.logp(Level.WARNING,
-                        "Linux",
+                        "OSX",
                         "unpackSecurityWorld",
                         "Cannot unpack", e.getCause());
             }
-        } else if (tar.contains("zip")) {
-            System.out.println("We have a standard zip file " + tar);
-            LOGGER.info("We have a standard zip file " + tar);
+        } else if (ext.equals("zip")) {
+            System.out.println("We have a standard zip file " + ext);
+            LOGGER.info("We have a standard zip file " + ext);
             UnTarFile untar = new UnTarFile();
             try {
                 String inputFile = new String(tar);
@@ -265,17 +228,17 @@ public class Linux extends SecurityWorld {
                 untar.unzip(inputFile, destFile);
             } catch (IOException e) {
                 LOGGER.logp(Level.WARNING,
-                        "Linux",
+                        "OSX",
                         "unpackSecurityWorld",
                         "Cannot unpack", e.fillInStackTrace());
                 LOGGER.logp(Level.WARNING,
-                        "Linux",
+                        "OSX",
                         "unpackSecurityWorld",
                         "Cannot unpack", e.getCause());
             }
         } else {
-            System.out.println("We have a standard compressed tarball " + tar);
-            LOGGER.info("We have a standard compressed tarball " + tar);
+            System.out.println("We have a standard compressed tarball " + ext);
+            LOGGER.info("We have a standard compressed tarball " + ext);
             UnTarFile untar = new UnTarFile();
             try {
                 File inputFile = new File(tar);
@@ -283,35 +246,29 @@ public class Linux extends SecurityWorld {
                 untar.unTarFile(inputFile, destFile);
             } catch (IOException e) {
                 LOGGER.logp(Level.WARNING,
-                        "Linux",
+                        "OSX",
                         "unpackSecurityWorld",
                         "Cannot unpack", e.fillInStackTrace());
                 LOGGER.logp(Level.WARNING,
-                        "Linux",
+                        "OSX",
                         "unpackSecurityWorld",
                         "Cannot unpack", e.getCause());
             }
         }
     }
 
-    ArrayList<Path> getSecWorld(String searchpath) throws IOException {
+    void getSecWorld() throws IOException {
         LOGGER.fine("running -getSecWorld- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "Getting Security World" +ConsoleColours.RESET);
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nGetting Security World" +ConsoleColours.RESET);
         LOGGER.info("Getting Security World");
-
-        try {
 
         Find.Finder iso =  new Find.Finder("*linux*.iso");
         //String ext = FilenameUtils.getExtension(tar);
         //Find.main(new String[]{"/Users/david/IdeaProjects/nCipher_Install", "-name", "*test"});
-        Find.main(new String[]{searchpath, "-name", "*linux*.iso"});
+        Find.main(new String[]{"/Users/david/IdeaProjects/nCipher_Install", "-name", "*linux*.iso"});
         //isoList = iso.getResult();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
-        /*
-        File[] dirs = new File(searchpath).listFiles((FileFilter) new WildcardFileFilter("*linux*.iso"));
+        File[] dirs = new File("/Users/david/IdeaProjects/nCipher_Install").listFiles((FileFilter) new WildcardFileFilter("*linux*.iso"));
         for (File dir : dirs) {
             System.out.println(dir);
             LOGGER.info((Supplier<String>) dir);
@@ -319,55 +276,36 @@ public class Linux extends SecurityWorld {
                 File[] files = dir.listFiles((FileFilter) new WildcardFileFilter("*linux*.iso"));
             }
         }
-
-         */
-
         // https://ant.apache.org/manual/api/org/apache/tools/ant/DirectoryScanner.html
         DirectoryScanner scanner = new DirectoryScanner();
         scanner.setIncludes(new String[]{"**/*linux*.iso"});
-        scanner.setBasedir(searchpath);
+        scanner.setBasedir("/Users/david/IdeaProjects/nCipher_Install");
         scanner.setCaseSensitive(false);
-        try {
         scanner.scan();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         String[] files = scanner.getIncludedFiles();
         //ArrayList<Path> swfiles = new ArrayList<Path>();
         //String found = null;
-
         for (String file : files) {
             String found = scanner.getBasedir() + "/" + file;
-            //String ext = FilenameUtils.getExtension(found);
-            //System.out.println(ext);
             Path path = Paths.get(found);
             sw_files.add(path);
             System.out.println(path);
             LOGGER.info(path.toString());
         }
-
-
-        return sw_files;
     }
 
-    public Path getSecWorld(String searchpath, String sw) throws IOException {
+    public Path getSecWorld(String sw) throws IOException {
         LOGGER.fine("running -getSecWorld- overloaded");
         System.out.println("Getting Security world overloaded: " +sw);
         LOGGER.info("Getting Security world overloaded: " +sw);
 
-        try {
-            //Find.Finder iso = new Find.Finder(sw);
-            //String ext = FilenameUtils.getExtension(tar);
-            //Find.main(new String[]{"/Users/david/IdeaProjects/nCipher_Install", "-name", "*test"});
+        Find.Finder iso =  new Find.Finder(sw);
+        //String ext = FilenameUtils.getExtension(tar);
+        //Find.main(new String[]{"/Users/david/IdeaProjects/nCipher_Install", "-name", "*test"});
+        Find.main(new String[]{"/Users/david/IdeaProjects/nCipher_Install", "-name", sw});
+        //isoList = iso.getResult();
 
-            Find.main(new String[]{searchpath, "-name", sw});
-            //isoList = iso.getResult();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-
-        /*
-        File[] dirs = new File(searchpath).listFiles((FileFilter) new WildcardFileFilter(sw));
+        File[] dirs = new File("/Users/david/IdeaProjects/nCipher_Install").listFiles((FileFilter) new WildcardFileFilter(sw));
         for (File dir : dirs) {
             System.out.println(dir);
             LOGGER.info((Supplier<String>) dir);
@@ -375,21 +313,12 @@ public class Linux extends SecurityWorld {
                 File[] files = dir.listFiles((FileFilter) new WildcardFileFilter(sw));
             }
         }
-        */
-
         // https://ant.apache.org/manual/api/org/apache/tools/ant/DirectoryScanner.html
         DirectoryScanner scanner = new DirectoryScanner();
         scanner.setIncludes(new String[]{"**/" + sw});
-        scanner.setBasedir(searchpath);
+        scanner.setBasedir("/Users/david/IdeaProjects/nCipher_Install");
         scanner.setCaseSensitive(false);
-        scanner.setFollowSymlinks(false);
-        scanner.setExcludes(new String[]{"**/."});
-
-        try {
-            scanner.scan();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+        scanner.scan();
         String[] files = scanner.getIncludedFiles();
         System.out.println("Files: " +files.length);
         LOGGER.info("Files: " +files.length);

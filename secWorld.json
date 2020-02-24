@@ -12,8 +12,9 @@
   },
   "linuxSearch" : [
       "/mnt",
-      "/home",
-      "/tmp"
+      "/tmp",
+    "/home"
+
     ],
     "windowsSearch" : [
       "C:/Users",

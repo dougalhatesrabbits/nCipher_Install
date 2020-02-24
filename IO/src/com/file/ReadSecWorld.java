@@ -16,7 +16,7 @@ public class ReadSecWorld {
         try {
 
             // JSON file to Java object
-            SecWorld world = mapper.readValue(new File("SecWorld.json"), SecWorld.class);
+            SecWorld world = mapper.readValue(new File("secWorld.json"), SecWorld.class);
 
             // JSON string to Java object
             //String jsonInString = "{\"name\":\"mkyong\",\"age\":37,\"skills\":[\"java\",\"python\"]}";

@@ -7,6 +7,7 @@ public class SecWorld {
     private String[]             linuxSearch;    //  Array
     private List<String>         windowsSearch;  //  List
     private Map<String, Integer> versions;       //  Map
+    private Map<String, String> wget;       //  Map
 
     // getters , setters, some boring stuff
     public String[] getLinuxSearch() {
@@ -31,5 +32,13 @@ public class SecWorld {
 
     public void setVersions(Map<String, Integer> versions) {
         this.versions = versions;
+    }
+
+    public Map<String, String> getWget() {
+        return wget;
+    }
+
+    public void setWget(Map<String, String> wget) {
+        this.wget = wget;
     }
 }

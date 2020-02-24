@@ -40,6 +40,9 @@ public class ReadIso {
         //Make our saving folder if it does not exist
         if (!saveLocation.exists()) {
             saveLocation.mkdirs();
+            saveLocation.setExecutable(true);
+            saveLocation.setWritable(true);
+            saveLocation.setReadable(true);
         }
 
         //Go through each file on the disc and save it.
@@ -48,6 +51,9 @@ public class ReadIso {
                 new File(saveLocation, singleFile.getPath()).mkdirs();
             } else {
                 File tempFile = new File(saveLocation, singleFile.getPath());
+                tempFile.setReadable(true);
+                tempFile.setWritable(true);
+                tempFile.setExecutable(true);
                 try {
                     //This is java 7, sorry if that is too new for some people
                     Files.copy(discFs.getInputStream(singleFile), tempFile.toPath());
