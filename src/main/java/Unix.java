@@ -161,7 +161,7 @@ public class Unix extends SecurityWorld {
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "ls -l"});
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "source .bash_profile"});
 
-        // TODO
+        // TODO add users if not exist
 
     }
 

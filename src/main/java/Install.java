@@ -31,10 +31,11 @@ public class Install {
 
     public static void main(String[] args) throws IOException {
 
-        final ArgumentParser parser = ArgumentParsers.newFor("nCipher Install").build()
+        final ArgumentParser parser = ArgumentParsers.newFor("nCipher_Install.jar").build()
                 .defaultHelp(true)
-                .version("${prog} 2.0")
-                .description("Installs and configures a Security World.");
+                .version("${prog} 0.4")
+                .description("Installs and configures a Security World. Run as sudo.\n\nTypically: " +ConsoleColours.YELLOW +
+                        "sudo java -jar nCipher_Install.jar" + ConsoleColours.RESET +"\n\nJson files are needed at runtime");
         parser.addArgument("-l", "--level")
                 .choices("debug", "info", "warning").setDefault("info")
                 .help("Specify logging level.");
@@ -260,7 +261,7 @@ public class Install {
                 }
 
                 linux.checkMount(linux.sw_filename);
-                linux.getTars();
+                linux.getTars(); //also unpacks secWorld
 
                 /*
                 //linux.unpackSecWorld("SecWorld-linux64-user-12.60.3.iso", "mnt");
@@ -270,7 +271,8 @@ public class Install {
                  */
 
                 linux.applySecWorld(os, linux, null, null);
-                //linux.applyDrivers
+                linux.applyDrivers();
+
                 int linuxversion = Integer.parseInt(linux.sw_version);
                 if (linuxversion > 125040) {
                     // This is really separate to Client install but can still prep by copy over to RFS
@@ -282,8 +284,8 @@ public class Install {
                 linux.checkEnvVariables();
                 linux.checkJava();
                 //linux.installJava();
-                //linux.configureJava();
-                //linux.checkUsers();
+                linux.configureJava();
+                linux.checkUsers();
                 break;
             case "nix":
                 System.out.println("Unix OS");

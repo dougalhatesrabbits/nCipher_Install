@@ -106,7 +106,8 @@ public class Linux extends SecurityWorld {
         File file = null;
         try {
             // 'creating' new file (paths)
-            file  = new File(sw_location,"linux");
+            //file  = new File(sw_location,"linux");
+            file  = new File(sw_location);
             file.setReadable(true);
             file.setExecutable(true);
             file.setWritable(true);
@@ -184,11 +185,13 @@ public class Linux extends SecurityWorld {
         LOGGER.info("Checking if Users are in correct Groups");
         //Process p = Runtime.getRuntime().exec("////command////");
         //Process p = Runtime.getRuntime().exec("pwd");
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "pwd"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "ls -l"});
+        System.out.println(ConsoleColours.YELLOW+"\nUsers"+ConsoleColours.RESET);
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/passwd"});
+        System.out.println(ConsoleColours.YELLOW+"\nGroups"+ConsoleColours.RESET);
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/group"});
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "source .bash_profile"});
 
-        // TODO
+        // TODO add users if not exist
 
     }
 
@@ -409,7 +412,45 @@ public class Linux extends SecurityWorld {
         return path;
     }
 
-    void applyDrivers(){
+    void applyDrivers() throws IOException {
+        LOGGER.fine("running -applyDrivers- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nAdding PCI drivers"+ConsoleColours.RESET);
+        LOGGER.info("Adding PCI drivers");
+        //Process p = Runtime.getRuntime().exec("////command////");
+        //Process p = Runtime.getRuntime().exec("pwd");
+        System.out.println("\nChecking standard linux gcc compiler is installed/at correct version");
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "gcc --version"});
+        System.out.println("\nChecking existing pci drivers");
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn"});
+        System.out.println("\nChecking existing usb drivers");
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
+
+        System.out.println("\nClean");
+        String cmd = NFAST_HOME + "/sbin/drivers/clean";
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd});
+
+        System.out.println("Configure");
+        String cmd1 = NFAST_HOME + "/sbin/drivers/configure";
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd1});
+
+        System.out.println("Compile");
+        String cmd2 = NFAST_HOME + "sbin/drivers/compile";
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd2});
+
+        System.out.println("Make");
+        String cmd3 = NFAST_HOME + "sbin/drivers/make";
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd3});
+
+        System.out.println("Install");
+        String cmd4 = NFAST_HOME + "sbin/drivers/install";
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd4});
+
+        System.out.println("\nRestarting NFAST Service...");
+        String cmd5 = NFAST_HOME + "bin/init-d restart";
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd5});
+
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "NFAST_HOME/bin/enquiry"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "NFAST_HOME/bin/nfkminfo"});
 
     }
 }

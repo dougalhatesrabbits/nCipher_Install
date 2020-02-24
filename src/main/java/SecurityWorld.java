@@ -29,13 +29,13 @@ public class SecurityWorld {
     void applyFirmware(){
         LOGGER.fine("running -applyFirmware- method");
         System.out.println("Installing firmware");
-        // TODO
+        // TODO apply fw
     }
 
     void applyHotFix(){
         LOGGER.fine("running -applyHotFix- method");
         System.out.println("Installing hotfix");
-        // TODO
+        // TODO apply hotfix
     }
 
     void applySecWorld(Platform os, Linux linux, Windows windows, OSX mac) throws IOException {
@@ -72,7 +72,7 @@ public class SecurityWorld {
         // check for root user
         Process p = Runtime.getRuntime().exec("id -u");
         //p.info();
-        // TODO
+        // TODO check for root user
     }
 
     void checkEnvVariables() {
@@ -103,10 +103,17 @@ public class SecurityWorld {
                         System.out.println(ConsoleColours.RED + "[NOK]" +
                                 ConsoleColours.RESET);
                     }
-                    //todo
+                    //todo validate NFAST_HOME
                     break;
                 case "NFAST_KMDATA" :
-                    //todo
+                    if (envVars.get(envName).contains(linux.NFAST_KMDATA)){
+                        System.out.println(ConsoleColours.GREEN + "[OK]" +
+                                ConsoleColours.RESET);
+                    } else {
+                        System.out.println(ConsoleColours.RED + "[NOK]" +
+                                ConsoleColours.RESET);
+                    }
+                    //todo validate NFAST_KMDATA
                     break;
                 case "PATH" :
                     if (envVars.get(envName).contains(linux.PATH)){
@@ -116,7 +123,7 @@ public class SecurityWorld {
                         System.out.println(ConsoleColours.RED + "[NOK]" +
                                 ConsoleColours.RESET);
                     }
-                    //todo
+                    //todo validate PATH
                     break;
                 //default:
                     //System.out.println("Cannot find NFAST Variables");
@@ -134,6 +141,8 @@ public class SecurityWorld {
     void checkJava() throws IOException {
         LOGGER.fine("running -checkJava- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking Java" + ConsoleColours.RESET);
+        LOGGER.info("Checking Java environment variables");
+
         System.out.println(ConsoleColours.YELLOW + "$JAVA_HOME= " + ConsoleColours.RESET +System.getenv("JAVA_HOME"));
         System.out.println(ConsoleColours.YELLOW + "$JAVA_PATH= " + ConsoleColours.RESET +System.getenv("JAVA_PATH"));
         System.out.println(ConsoleColours.YELLOW + "$CLASSPATH= " + ConsoleColours.RESET +System.getenv("CLASSPATH"));
@@ -146,30 +155,85 @@ public class SecurityWorld {
         System.out.println(System.getProperty("java.vendor"));
         System.out.println(System.getProperty("java.vendor.url"));
         System.out.println(System.getProperty("java.class.path"));
-        // TODO
+        // TODO validate java logic
     }
 
     void installJava() throws IOException {
+        LOGGER.fine("running -installJava- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nInstalling Java" + ConsoleColours.RESET);
+        LOGGER.info("Installing Java");
+
         String home = System.getProperty("user.home");
-        IOUtils.copy(
-                new URL("https://www.oracle.com/java/technologies/javase-jdk13-doc-downloads.html#license-lightbox").openStream(),
-                new FileOutputStream(home + "/Documents")
-        );
+        /*
+        try {
+            IOUtils.copy(
+                    new URL("https://www.oracle.com/java/technologies/javase-jdk13-doc-downloads.html#license-lightbox").openStream(),
+                    new FileOutputStream(home + "/Documents/oracle")
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+         */
         // JDK 9
         /***
          * https://www.tecmint.com/install-java-jdk-jre-in-linux/
          */
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "cd /opt/java"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "wget --no-cookies --no-check-certificate --header \"Cookie: oraclelicense=accept-securebackup-cookie\" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "tar -zxvf jdk-9.0.4_linux-x64_bin.tar.gz"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "cd jdk-9.0.4/"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --install /usr/bin/java java /opt/java/jdk-9.0.4/bin/java 100"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --config java"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --install /usr/bin/javac javac /opt/java/jdk-9.0.4/bin/javac 100"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --config javac"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --install /usr/bin/jar jar /opt/java/jdk-9.0.4/bin/jar 100"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "update-alternatives --config jar"});
-        //TODO
+        try {
+            System.out.println("sudo cd /opt/java");
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cd /opt/java"});
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            System.out.println("wget");
+            String cmd = "sudo wget --no-cookies --no-check-certificate --header \"Cookie: oraclelicense=accept-securebackup-cookie\" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz";
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo tar -zxvf jdk-9.0.4_linux-x64_bin.tar.gz"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cd jdk-9.0.4/"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --install /usr/bin/java java /opt/java/jdk-9.0.4/bin/java 100"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --config java"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --install /usr/bin/javac javac /opt/java/jdk-9.0.4/bin/javac 100"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --config javac"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --install /usr/bin/jar jar /opt/java/jdk-9.0.4/bin/jar 100"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --config jar"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //TODO validate java install logic
     }
 
     void configureJava() throws IOException {
@@ -177,7 +241,7 @@ public class SecurityWorld {
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "export JAVA_HOME=/opt/java/jdk-9.0.4/"});
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "export JRE_HOME=/opt/java/jdk-9.0.4/jre"});
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "export PATH=$PATH:/opt/java/jdk-9.0.4/bin:/opt/java/jdk-9.0.4/jre/bin"});
-        //TODO
+        //TODO validate java config logic
 
     }
 
