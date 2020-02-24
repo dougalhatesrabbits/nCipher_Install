@@ -1,15 +1,17 @@
-import com.platform.*;
-import org.apache.commons.io.IOUtils;
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import com.platform.ConsoleColours;
+import com.platform.Platform;
+import com.platform.RunProcBuilder;
+
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Scanner;
@@ -26,13 +28,13 @@ public class SecurityWorld {
     Path path = null;
 
     // Methods
-    void applyFirmware(){
+    void applyFirmware() {
         LOGGER.fine("running -applyFirmware- method");
         System.out.println("Installing firmware");
         // TODO apply fw
     }
 
-    void applyHotFix(){
+    void applyHotFix() {
         LOGGER.fine("running -applyHotFix- method");
         System.out.println("Installing hotfix");
         // TODO apply hotfix
@@ -40,8 +42,8 @@ public class SecurityWorld {
 
     void applySecWorld(Platform os, Linux linux, Windows windows, OSX mac) throws IOException {
         LOGGER.fine("running -applySecurityWorld- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nInstalling Security World" +ConsoleColours.RESET);
-        if (os.isWindows()){
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nInstalling Security World" + ConsoleColours.RESET);
+        if (os.isWindows()) {
             String cmd = windows.NFAST_HOME + "/sbin/install";
             try {
                 new RunProcBuilder().run(new String[]{"cmd", "-c", cmd});
@@ -55,7 +57,7 @@ public class SecurityWorld {
                         "Cannot uninstall", e.fillInStackTrace());
             }
         } else {
-            String cmd =linux.NFAST_HOME + "/sbin/install";
+            String cmd = linux.NFAST_HOME + "/sbin/install";
             try {
                 new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo " + cmd});
                 System.out.println(cmd);
@@ -82,9 +84,9 @@ public class SecurityWorld {
 
         Linux linux = new Linux();
 
-        System.out.println(ConsoleColours.YELLOW + "NFAST_HOME= " + ConsoleColours.RESET +System.getenv("NFAST_HOME"));
-        System.out.println(ConsoleColours.YELLOW + "PATH= " + ConsoleColours.RESET +System.getenv("PATH"));
-        System.out.println(ConsoleColours.YELLOW + "NFAST_KMDATA= " + ConsoleColours.RESET +System.getenv("NFAST_KMDATA"));
+        System.out.println(ConsoleColours.YELLOW + "NFAST_HOME= " + ConsoleColours.RESET + System.getenv("NFAST_HOME"));
+        System.out.println(ConsoleColours.YELLOW + "PATH= " + ConsoleColours.RESET + System.getenv("PATH"));
+        System.out.println(ConsoleColours.YELLOW + "NFAST_KMDATA= " + ConsoleColours.RESET + System.getenv("NFAST_KMDATA"));
 
         //HashMap<String, String> envVars = new HashMap<String, String>();
 
@@ -96,7 +98,7 @@ public class SecurityWorld {
                     envVars.get(envName));
             switch (envName) {
                 case "NFAST_HOME":
-                    if (envVars.get(envName).contains(linux.NFAST_HOME)){
+                    if (envVars.get(envName).contains(linux.NFAST_HOME)) {
                         System.out.println(ConsoleColours.GREEN + "[OK]" +
                                 ConsoleColours.RESET);
                     } else {
@@ -105,8 +107,8 @@ public class SecurityWorld {
                     }
                     //todo validate NFAST_HOME
                     break;
-                case "NFAST_KMDATA" :
-                    if (envVars.get(envName).contains(linux.NFAST_KMDATA)){
+                case "NFAST_KMDATA":
+                    if (envVars.get(envName).contains(linux.NFAST_KMDATA)) {
                         System.out.println(ConsoleColours.GREEN + "[OK]" +
                                 ConsoleColours.RESET);
                     } else {
@@ -115,8 +117,8 @@ public class SecurityWorld {
                     }
                     //todo validate NFAST_KMDATA
                     break;
-                case "PATH" :
-                    if (envVars.get(envName).contains(linux.PATH)){
+                case "PATH":
+                    if (envVars.get(envName).contains(linux.PATH)) {
                         System.out.println(ConsoleColours.GREEN + "[OK]" +
                                 ConsoleColours.RESET);
                     } else {
@@ -126,7 +128,7 @@ public class SecurityWorld {
                     //todo validate PATH
                     break;
                 //default:
-                    //System.out.println("Cannot find NFAST Variables");
+                //System.out.println("Cannot find NFAST Variables");
             }
         }
 
@@ -143,9 +145,9 @@ public class SecurityWorld {
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking Java" + ConsoleColours.RESET);
         LOGGER.info("Checking Java environment variables");
 
-        System.out.println(ConsoleColours.YELLOW + "$JAVA_HOME= " + ConsoleColours.RESET +System.getenv("JAVA_HOME"));
-        System.out.println(ConsoleColours.YELLOW + "$JAVA_PATH= " + ConsoleColours.RESET +System.getenv("JAVA_PATH"));
-        System.out.println(ConsoleColours.YELLOW + "$CLASSPATH= " + ConsoleColours.RESET +System.getenv("CLASSPATH"));
+        System.out.println(ConsoleColours.YELLOW + "$JAVA_HOME= " + ConsoleColours.RESET + System.getenv("JAVA_HOME"));
+        System.out.println(ConsoleColours.YELLOW + "$JRE_HOME= " + ConsoleColours.RESET + System.getenv("JRE_HOME"));
+        System.out.println(ConsoleColours.YELLOW + "$CLASSPATH= " + ConsoleColours.RESET + System.getenv("CLASSPATH"));
 
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "java --version"}); // this may be a JRE (not reqd)
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "$JAVA_HOME/bin/javac -version"}); // This is what we want a JDK
@@ -156,9 +158,56 @@ public class SecurityWorld {
         System.out.println(System.getProperty("java.vendor.url"));
         System.out.println(System.getProperty("java.class.path"));
         // TODO validate java logic
+        Linux linux = new Linux();
+
+        System.out.println();
+        Map<String, String> envVars = System.getenv();
+        for (String envName : envVars.keySet()) {
+            System.out.format("%s=%s%n",
+                    envName,
+                    envVars.get(envName));
+            switch (envName) {
+                case "JAVA_HOME":
+                    //todo validate JAVA_HOME
+                    assert false;
+                    if (envVars.get(envName).contains(linux.JAVA_HOME)) {
+                        System.out.println(ConsoleColours.GREEN + "[OK]" +
+                                ConsoleColours.RESET);
+                    } else {
+                        System.out.println(ConsoleColours.RED + "[NOK]" +
+                                ConsoleColours.RESET);
+                    }
+                    //todo validate JRE_HOME
+                    break;
+                case "JRE_HOME":
+                    assert false;
+                    if (envVars.get(envName).contains(linux.JRE_HOME)) {
+                        System.out.println(ConsoleColours.GREEN + "[OK]" +
+                                ConsoleColours.RESET);
+                    } else {
+                        System.out.println(ConsoleColours.RED + "[NOK]" +
+                                ConsoleColours.RESET);
+                    }
+                    //todo validate CLASSPATH
+                    break;
+                case "CLASSPATH":
+                    assert false;
+                    if (envVars.get(envName).contains(linux.CLASSPATH)) {
+                        System.out.println(ConsoleColours.GREEN + "[OK]" +
+                                ConsoleColours.RESET);
+                    } else {
+                        System.out.println(ConsoleColours.RED + "[NOK]" +
+                                ConsoleColours.RESET);
+                    }
+
+                    break;
+                //default:
+                //System.out.println("Cannot find NFAST Variables");
+            }
+        }
     }
 
-    void installJava() throws IOException {
+    void installJava() {
         LOGGER.fine("running -installJava- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nInstalling Java" + ConsoleColours.RESET);
         LOGGER.info("Installing Java");
@@ -176,9 +225,6 @@ public class SecurityWorld {
 
          */
         // JDK 9
-        /***
-         * https://www.tecmint.com/install-java-jdk-jre-in-linux/
-         */
         try {
             System.out.println("sudo cd /opt/java");
             new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cd /opt/java"});
@@ -237,26 +283,33 @@ public class SecurityWorld {
     }
 
     void configureJava() throws IOException {
+        LOGGER.fine("running -configureJava- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nConfiguring Java" + ConsoleColours.RESET);
+        LOGGER.info("Configuring Java environment variables");
+
         // JDK 9
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "export JAVA_HOME=/opt/java/jdk-9.0.4/"});
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "export JRE_HOME=/opt/java/jdk-9.0.4/jre"});
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "export PATH=$PATH:/opt/java/jdk-9.0.4/bin:/opt/java/jdk-9.0.4/jre/bin"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "export CLASSPATH=/opt/java/jdk-9.0.4/jre"});
         //TODO validate java config logic
-
     }
 
     public void checkExistingSW(Platform osx) throws IOException {
         LOGGER.fine("running -checkExistingSW- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking Existing SW" + ConsoleColours.RESET);
+        LOGGER.info("Checking existing SW");
+
         Linux linux = new Linux();
         Windows windows = new Windows();
         OSX mac = new OSX();
 
-        if (osx.isWindows()){
+        if (osx.isWindows()) {
             path = Paths.get(windows.NFAST_HOME);
         } else {
             path = Paths.get(linux.NFAST_HOME);
         }
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking for existing Security World in $NFAST_HOME: " +path +ConsoleColours.RESET);
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking for existing Security World in $NFAST_HOME: " + path + ConsoleColours.RESET);
 
         if (Files.exists(path)) {
             System.out.println("Found SW, removing previous install: \nConfirm (Y) to proceed, (N) to abort installation >");
@@ -275,15 +328,15 @@ public class SecurityWorld {
         }
     }
 
-    public void removeExistingSW(Platform osx, Linux linux, Windows windows, OSX mac) throws IOException {
+    public void removeExistingSW(Platform osx, Linux linux, Windows windows, OSX mac) {
         LOGGER.fine("running removeExistingSW method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED +"\nRemoving old Security World"+ConsoleColours.RESET);
-        if (osx.isWindows() ){
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nRemoving old Security World" + ConsoleColours.RESET);
+        if (osx.isWindows()) {
             String cmd = windows.NFAST_HOME + "/sbin/install -d";
             try {
                 new RunProcBuilder().run(new String[]{"cmd", "-c", cmd});
-                System.out.println("Using NFAST " +cmd);
-                LOGGER.info("Using NFAST " +cmd);
+                System.out.println("Using NFAST " + cmd);
+                LOGGER.info("Using NFAST " + cmd);
             } catch (Exception e) {
                 e.printStackTrace();
                 LOGGER.logp(Level.WARNING,
@@ -292,11 +345,11 @@ public class SecurityWorld {
                         "Cannot uninstall", e.fillInStackTrace());
             }
         } else {
-            String cmd =linux.NFAST_HOME + "/sbin/install -d";
+            String cmd = linux.NFAST_HOME + "/sbin/install -d";
             try {
                 new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo " + cmd});
-                System.out.println("Using NFAST " +cmd);
-                LOGGER.info("Using NFAST " +cmd);
+                System.out.println("Using NFAST " + cmd);
+                LOGGER.info("Using NFAST " + cmd);
             } catch (Exception e) {
                 e.printStackTrace();
                 LOGGER.logp(Level.WARNING,

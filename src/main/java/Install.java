@@ -1,28 +1,28 @@
-import com.file.SecWorld;
-import com.log.*;
-import com.platform.*;
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.file.SecWorld;
+import com.log.InstallLogger;
+import com.platform.ConsoleColours;
+import com.platform.Platform;
 import net.sourceforge.argparse4j.ArgumentParsers;
 import net.sourceforge.argparse4j.inf.ArgumentParser;
 import net.sourceforge.argparse4j.inf.ArgumentParserException;
 import net.sourceforge.argparse4j.inf.Namespace;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.nio.file.NoSuchFileException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Install {
     // Always use the classname, this way you can refactor
-    private static final  Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     private static String argLevel = null;
     private static String argFile = null;
@@ -34,8 +34,8 @@ public class Install {
         final ArgumentParser parser = ArgumentParsers.newFor("nCipher_Install.jar").build()
                 .defaultHelp(true)
                 .version("${prog} 0.4")
-                .description("Installs and configures a Security World. Run as sudo.\n\nTypically: " +ConsoleColours.YELLOW +
-                        "sudo java -jar nCipher_Install.jar" + ConsoleColours.RESET +"\n\nJson files are needed at runtime");
+                .description("Installs and configures a Security World. Run as sudo.\n\nTypically: " + ConsoleColours.YELLOW +
+                        "sudo java -jar nCipher_Install.jar" + ConsoleColours.RESET + "\n\nJson files are needed at runtime");
         parser.addArgument("-l", "--level")
                 .choices("debug", "info", "warning").setDefault("info")
                 .help("Specify logging level.");
@@ -161,7 +161,7 @@ public class Install {
         //String os = osx.getOsName();
         // System.out.println("\n" + os);
 
-        switch(os.getOsName()) {
+        switch (os.getOsName()) {
             case "windows":
                 System.out.println("Windows OS");
                 LOGGER.info("Windows OS");
@@ -245,12 +245,12 @@ public class Install {
                     // JSON file to Java object
                     SecWorld world = mapper.readValue(new File(jsonfile), SecWorld.class);
                     if (argFile == null) {
-                            for (String search : world.getLinuxSearch()) {
-                                System.out.println("\nSearching " + search);
-                                linux.sw_files = linux.getSecWorld(search);
-                            }
-                            System.out.println(linux.sw_files);
-                            linux.sw_filename = linux.getIsoChoices();
+                        for (String search : world.getLinuxSearch()) {
+                            System.out.println("\nSearching " + search);
+                            linux.sw_files = linux.getSecWorld(search);
+                        }
+                        //System.out.println(linux.sw_files);
+                        linux.sw_filename = linux.getIsoChoices();
                     } else {
                         for (String search : world.getLinuxSearch()) {
                             linux.sw_filename = linux.getSecWorld(search, argFile);

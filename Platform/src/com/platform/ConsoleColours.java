@@ -1,6 +1,15 @@
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
+
 package com.platform;
 
 public class ConsoleColours {
+    /***
+     * https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println
+     */
     // Reset
     public static final String RESET = "\033[0m";  // Text Reset
 

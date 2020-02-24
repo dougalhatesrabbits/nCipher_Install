@@ -1,30 +1,26 @@
-import com.file.ReadIso;
-import com.file.*;
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
 
-import java.io.*;
-import java.net.FileNameMap;
+import com.file.Find;
+import com.file.ReadIso;
+import com.file.UnTarFile;
+import com.platform.ConsoleColours;
+import com.platform.RunProcBuilder;
+import org.apache.tools.ant.DirectoryScanner;
+
+import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
-import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.platform.ConsoleColours;
-import com.platform.RunProcBuilder;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.filefilter.WildcardFileFilter;
-import org.apache.commons.vfs.FileName;
-import org.apache.commons.vfs.FileUtil;
-import org.apache.tools.ant.DirectoryScanner;
-import org.apache.tools.ant.types.FileList;
-
-import javax.tools.FileObject;
 
 public class Linux extends SecurityWorld {
     // Always use the classname, this way you can refactor
@@ -36,40 +32,38 @@ public class Linux extends SecurityWorld {
      * @param version
      */
 
-    //String sw_filename = "SecWorld-linux64-user-12.60.3.iso";
     Path sw_filename = null;
     String sw_version = "126030";
-    String sw_location = "mnt/iso";
-    // List of source iso filepaths i.e /home/myiso.iso
-    ArrayList<Path> sw_files = new ArrayList<Path>();
-    ArrayList<Path> tar_files = new ArrayList<Path>();
+    final String NFAST_HOME = "/opt/nfast";
+    final String NFAST_KMDATA = "opt/nfast/kmdata";
+
     File sw_iso = null;
     Path iso_File = null;
-
-    final String NFAST_HOME = "opt/nfast";
-    final String NFAST_KMDATA = "$NFAST_HOME/kmdata";
-    final String CLASSPATH = null;
+    final String CLASSPATH = "opt/nfast/java";
+    final String JAVA_HOME = "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64";
+    final String JRE_HOME = "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre";
     final String PATH = "$NFAST_HOME/bin:$NFAST_HOME/sbin";
-    final String JAVA_PATH = null;
+    String sw_location = "/mnt/iso";
+    // List of source iso filepaths i.e /home/myiso.iso
+    ArrayList<Path> sw_files = new ArrayList<>();
 
-    // Path to input file, which is a
-    // tar file compressed to create gzip file
-    // String INPUT_FILE = "linux.tar.gz";
     // This folder should exist, that's where
     // .tar file will go
     String TAR_FOLDER = "/tmp";
-    // After untar files will go to this folder
-    // String DESTINATION_FOLDER = "mnt";
 
-    public Path getIsoChoices(){
+    public Path getIsoChoices() {
+        LOGGER.fine("running -getIsoChoices- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nGet ISO user choice" + ConsoleColours.RESET);
+        LOGGER.info("Get ISO user choice");
+
         int i = 1;
         System.out.println();
-        for (Path file :  sw_files) {
+        for (Path file : sw_files) {
             System.out.println("[" + i + "] " + file);
-            i=i+1;
+            i = i + 1;
         }
 
-        System.out.println(ConsoleColours.YELLOW+"Enter choice: "+ConsoleColours.RESET);
+        System.out.println(ConsoleColours.YELLOW + "Enter choice: " + ConsoleColours.RESET);
         LOGGER.info("Enter choice: ");
         Scanner sw = new Scanner(System.in);  // Create a Scanner object
         int confirm = sw.nextInt();
@@ -80,9 +74,9 @@ public class Linux extends SecurityWorld {
         return iso_File;
     }
 
-    void checkMount(Path sw_filename) throws IOException {
+    void checkMount(Path sw_filename) {
         LOGGER.fine("running -checkMount- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nChecking if ISO is already mounted"+ConsoleColours.RESET);
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking if ISO is already mounted" + ConsoleColours.RESET);
         LOGGER.info("Checking if ISO is already mounted");
         File isoFile = null;
         //File isoFile = new File(sw_location + "/" + sw_filename);
@@ -90,9 +84,9 @@ public class Linux extends SecurityWorld {
         System.out.println("check iso location: " + sw_filename);
         LOGGER.info("check: " + sw_filename);
 
-        if ( sw_filename !=null) {
-             isoFile = new File( sw_filename.toString());
-             //isoFile.setExecutable(true);
+        if (sw_filename != null) {
+            isoFile = new File(sw_filename.toString());
+            //isoFile.setExecutable(true);
         } else {
             System.out.println("Cannot find iso");
             //isoFile = new File(sw_location + "/" + sw_filename);
@@ -108,31 +102,29 @@ public class Linux extends SecurityWorld {
             // 'creating' new file (paths)
             //file  = new File(sw_location,"linux");
             file  = new File(sw_location);
-            file.setReadable(true);
-            file.setExecutable(true);
-            file.setWritable(true);
+
             //file.createNewFile(); //this gets done by ReadISO
-            System.out.println("Relative filepath \'file\' " + file);
+            System.out.println("Relative filepath 'file' " + file);
             LOGGER.info((file.toString()));
 
             // creating new canonical from file object
             file2 = file.getCanonicalFile();
-            System.out.println("Canonical filepath \'file2\' " + file2);
+            System.out.println("Canonical filepath 'file2' " + file2);
             LOGGER.info((file2.toString()));
 
             // returns true if the file exists
             bool = file2.exists();
-            System.out.println("Does canon path \'file2\' exist? " +bool);
+            System.out.println("Does canon path 'file2' exist? " + bool);
 
             // returns absolute pathname
             path = file2.getAbsolutePath();
-            System.out.println("Absolute path of \'file2\' " +path);
+            System.out.println("Absolute path of 'file2' " + path);
 
             // if file path exists
             if (bool) {
                 // prints
-                System.out.print(path + " Exists? " + bool);
-                LOGGER.info(path + " Exists? " + bool);
+                System.out.print(path + " Exists? ");
+                LOGGER.info(path + " Exists? ");
             }
         } catch (Exception e) {
             // if any error occurs
@@ -146,18 +138,19 @@ public class Linux extends SecurityWorld {
                     //FileUtils.cleanDirectory(file2);
                     //FileUtils.deleteDirectory(file2);
                     //FileUtils.forceDelete(file2);
+                    assert path != null;
                     Files.walk(Paths.get(path))
                             .sorted(Comparator.reverseOrder())
                             .map(Path::toFile)
                             .forEach(File::delete);
 
 
-                } else if (file.delete()){
-                        System.out.println(file.getName() + " deleted");//getting and printing the file name
-                        LOGGER.info(file.getName() + " deleted");
+                } else if (file.delete()) {
+                    System.out.println(file.getName() + " deleted");//getting and printing the file name
+                    LOGGER.info(file.getName() + " deleted");
                 } else {
-                        System.out.println("failed");
-                        LOGGER.info("failed");
+                    System.out.println("failed");
+                    LOGGER.info("failed");
                 }
             } catch(Exception e) {
                 e.printStackTrace();
@@ -239,7 +232,7 @@ public class Linux extends SecurityWorld {
             UnTarFile untar = new UnTarFile();
             try {
                 File inputFile = new File(tar);
-                String outputFile = untar.getFileName(inputFile, TAR_FOLDER);
+                String outputFile = UnTarFile.getFileName(inputFile, TAR_FOLDER);
                 System.out.println(ConsoleColours.GREEN + "outputFile " + outputFile + ConsoleColours.RESET);
                 LOGGER.info("outputFile " + outputFile);
                 File tarFile = new File(outputFile);
@@ -263,7 +256,7 @@ public class Linux extends SecurityWorld {
             LOGGER.info("We have a standard zip file " + tar);
             UnTarFile untar = new UnTarFile();
             try {
-                String inputFile = new String(tar);
+                String inputFile = tar;
                 File destFile = new File(dest);
                 untar.unzip(inputFile, destFile);
             } catch (IOException e) {
@@ -304,11 +297,11 @@ public class Linux extends SecurityWorld {
 
         try {
 
-        Find.Finder iso =  new Find.Finder("*linux*.iso");
-        //String ext = FilenameUtils.getExtension(tar);
-        //Find.main(new String[]{"/Users/david/IdeaProjects/nCipher_Install", "-name", "*test"});
-        Find.main(new String[]{searchpath, "-name", "*linux*.iso"});
-        //isoList = iso.getResult();
+            Find.Finder iso = new Find.Finder("*linux*.iso");
+            //String ext = FilenameUtils.getExtension(tar);
+            //Find.main(new String[]{"/Users/david/IdeaProjects/nCipher_Install", "-name", "*test"});
+            Find.main(new String[]{searchpath, "-name", "*linux*.iso"});
+            //isoList = iso.getResult();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -331,7 +324,7 @@ public class Linux extends SecurityWorld {
         scanner.setBasedir(searchpath);
         scanner.setCaseSensitive(false);
         try {
-        scanner.scan();
+            scanner.scan();
         } catch (Exception e) {
             e.printStackTrace();
         }
