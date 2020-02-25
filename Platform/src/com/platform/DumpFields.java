@@ -8,6 +8,9 @@ package com.platform;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.Map;
+import java.util.Properties;
+
 
 public class DumpFields {
     public static void main(String[] args) {
@@ -15,6 +18,23 @@ public class DumpFields {
             inspect(ConsoleColours.class);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+
+        Map<String, String> envVars = System.getenv();
+        for (String envName : envVars.keySet())
+        {
+            System.out.format("%s=%s%n",
+                    envName,
+                    envVars.get(envName));
+        }
+
+        System.out.println();
+
+        Properties envProps = System.getProperties();
+        for (Object propName : envProps.keySet()) {
+            System.out.format("%s=%s%n",
+                    propName,
+                    envProps.get(propName));
         }
     }
 

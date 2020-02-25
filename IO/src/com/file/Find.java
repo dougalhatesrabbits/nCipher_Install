@@ -42,7 +42,7 @@ public class Find {
             Path name = file.getFileName();
             if (name != null && matcher.matches(name)) {
                 numMatches++;
-                System.out.println(file);
+                //System.out.println(file);
                 LOGGER.info(file.toString());
             }
         }
