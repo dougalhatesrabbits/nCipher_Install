@@ -202,27 +202,27 @@ public class Linux extends SecurityWorld {
             file  = new File(sw_location);
 
             //file.createNewFile(); //this gets done by ReadISO
-            System.out.println("Relative filepath 'file' " + file);
-            LOGGER.info((file.toString()));
+            //System.out.println("Relative filepath 'file' " + file);
+            LOGGER.fine((file.toString()));
 
             // creating new canonical from file object
             file2 = file.getCanonicalFile();
-            System.out.println("Canonical filepath 'file2' " + file2);
-            LOGGER.info((file2.toString()));
+            //System.out.println("Canonical filepath 'file2' " + file2);
+            LOGGER.fine((file2.toString()));
 
             // returns true if the file exists
             bool = file2.exists();
-            System.out.println("Does canon path 'file2' exists? " + bool);
+            //System.out.println("Does canon path 'file2' exists? " + bool);
 
             // returns absolute pathname
             path = file2.getAbsolutePath();
-            System.out.println("Absolute path of 'file2' " + path);
+            //System.out.println("Absolute path of 'file2' " + path);
 
             // if file path exists
             if (bool) {
                 // prints
-                System.out.print(path + " Exists? " + bool);
-                LOGGER.info(path + " Exists? " + bool);
+                //System.out.print(path + " Exists? " + bool);
+                LOGGER.fine(path + " Exists? " + bool);
             }
         } catch (Exception e) {
             // if any error occurs
@@ -247,10 +247,10 @@ public class Linux extends SecurityWorld {
 
                 } else if (file.delete()) {
                     System.out.println(file.getName() + " deleted");//getting and printing the file name
-                    LOGGER.info(file.getName() + " deleted");
+                    LOGGER.fine(file.getName() + " deleted");
                 } else {
                     System.out.println("failed");
-                    LOGGER.info("failed");
+                    LOGGER.fine("failed");
                 }
             } catch(Exception e) {
                 e.printStackTrace();

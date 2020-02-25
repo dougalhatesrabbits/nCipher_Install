@@ -192,8 +192,13 @@ public class Install {
                     osx.removeExistingSW();
                     System.exit(0);
                 }
-                Boolean macStatus = osx.checkExistingSW();
-                if (macStatus) {
+
+                if (argSilent.equals("No")) {
+                    Boolean macStatus = osx.checkExistingSW();
+                    if (macStatus) {
+                        osx.removeExistingSW();
+                    }
+                } else {
                     osx.removeExistingSW();
                 }
 

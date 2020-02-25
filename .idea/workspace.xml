@@ -7,27 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="973d0605-95d8-4bd4-a8e9-ad1b0f427f7a" name="Default Changelist" comment="json">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/installSW_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/installSW_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/019e711de99706d287ce3b0187de1d6ba9bcf614" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/019e711de99706d287ce3b0187de1d6ba9bcf614" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/IO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IO/IO.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/src/com/file/Find.java" beforeDir="false" afterPath="$PROJECT_DIR$/IO/src/com/file/Find.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platform/Platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Platform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platform/src/com/platform/DumpFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/src/com/platform/DumpFields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secWorld.json" beforeDir="false" afterPath="$PROJECT_DIR$/secWorld.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/src/com/file/UnTarFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/IO/src/com/file/UnTarFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Install.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Install.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Linux.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Linux.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OSX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OSX.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SecurityWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SecurityWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Windows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Windows.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/12-50-Bundle.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/12-60-Bundle.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/secWorld.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +146,7 @@
     <configuration name="Install" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Install" />
       <module name="nCipher_Install" />
+      <option name="PROGRAM_PARAMETERS" value=" -f SecWorld-linux-user-12.50.4.iso" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -204,10 +192,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.Install" />
+      <item itemvalue="Application.DumpFields" />
       <item itemvalue="JUnit.LinuxTest" />
       <item itemvalue="JUnit.UnTarFileTest" />
       <item itemvalue="JUnit.ReadIsoTest" />
-      <item itemvalue="Application.DumpFields" />
     </list>
     <recent_temporary>
       <list>
@@ -349,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582587435564</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="0.6 Read ISO tidied up">
+      <created>1582668054776</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1582668054777</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,7 +373,8 @@
     <MESSAGE value="silent" />
     <MESSAGE value="java" />
     <MESSAGE value="json" />
-    <option name="LAST_COMMIT_MESSAGE" value="json" />
+    <MESSAGE value="0.6 Read ISO tidied up" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.6 Read ISO tidied up" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="98" key="#Env" timestamp="1581640202355">
@@ -405,10 +401,10 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="395" y="141" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.22.1440.824@0.22.1440.824" timestamp="1582629554238" />
-    <state x="262" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582605953793">
+    <state x="262" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582671968528">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="262" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1440.824@0.22.1440.824" timestamp="1582605953793" />
+    <state x="262" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1440.824@0.22.1440.824" timestamp="1582671968528" />
     <state x="451" y="270" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1582138018076">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -453,10 +449,10 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="451" y="166" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.22.1440.824@0.22.1440.824" timestamp="1582333769923" />
-    <state x="365" y="22" key="CommitChangelistDialog2" timestamp="1582605903967">
+    <state x="365" y="22" key="CommitChangelistDialog2" timestamp="1582668264854">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="365" y="22" key="CommitChangelistDialog2/0.22.1440.824@0.22.1440.824" timestamp="1582605903967" />
+    <state x="365" y="22" key="CommitChangelistDialog2/0.22.1440.824@0.22.1440.824" timestamp="1582668264854" />
     <state x="511" y="157" key="DetectedRootsChooserDialog" timestamp="1582111334603">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -465,22 +461,22 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="132" y="129" width="1200" height="584" key="DiffContextDialog/0.22.1440.824@0.22.1440.824" timestamp="1582645148311" />
-    <state width="1390" height="279" key="GridCell.Tab.0.bottom" timestamp="1582667896736">
+    <state width="1390" height="276" key="GridCell.Tab.0.bottom" timestamp="1582671974024">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1390" height="279" key="GridCell.Tab.0.bottom/0.22.1440.824@0.22.1440.824" timestamp="1582667896736" />
-    <state width="1390" height="279" key="GridCell.Tab.0.center" timestamp="1582667896733">
+    <state width="1390" height="276" key="GridCell.Tab.0.bottom/0.22.1440.824@0.22.1440.824" timestamp="1582671974024" />
+    <state width="1390" height="276" key="GridCell.Tab.0.center" timestamp="1582671974023">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1390" height="279" key="GridCell.Tab.0.center/0.22.1440.824@0.22.1440.824" timestamp="1582667896733" />
-    <state width="1390" height="279" key="GridCell.Tab.0.left" timestamp="1582667896732">
+    <state width="1390" height="276" key="GridCell.Tab.0.center/0.22.1440.824@0.22.1440.824" timestamp="1582671974023" />
+    <state width="1390" height="276" key="GridCell.Tab.0.left" timestamp="1582671974022">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1390" height="279" key="GridCell.Tab.0.left/0.22.1440.824@0.22.1440.824" timestamp="1582667896732" />
-    <state width="1390" height="279" key="GridCell.Tab.0.right" timestamp="1582667896734">
+    <state width="1390" height="276" key="GridCell.Tab.0.left/0.22.1440.824@0.22.1440.824" timestamp="1582671974022" />
+    <state width="1390" height="276" key="GridCell.Tab.0.right" timestamp="1582671974024">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state width="1390" height="279" key="GridCell.Tab.0.right/0.22.1440.824@0.22.1440.824" timestamp="1582667896734" />
+    <state width="1390" height="276" key="GridCell.Tab.0.right/0.22.1440.824@0.22.1440.824" timestamp="1582671974024" />
     <state x="270" y="83" key="Maven.ArtifactSearchDialog" timestamp="1582416053106">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
@@ -533,10 +529,10 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="483" y="182" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.22.1440.824@0.22.1440.824" timestamp="1582416044111" />
-    <state x="369" y="183" width="789" height="574" key="find.popup" timestamp="1582639321329">
+    <state x="369" y="183" width="931" height="574" key="find.popup" timestamp="1582669625587">
       <screen x="0" y="22" width="1440" height="824" />
     </state>
-    <state x="369" y="183" width="789" height="574" key="find.popup/0.22.1440.824@0.22.1440.824" timestamp="1582639321329" />
+    <state x="369" y="183" width="931" height="574" key="find.popup/0.22.1440.824@0.22.1440.824" timestamp="1582669625587" />
     <state x="506" y="219" key="git4idea.merge.GitMergeDialog" timestamp="1581851919470">
       <screen x="0" y="22" width="1440" height="824" />
     </state>

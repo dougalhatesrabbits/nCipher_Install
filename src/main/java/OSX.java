@@ -186,27 +186,27 @@ public class OSX extends SecurityWorld {
             file  = new File(sw_location);
 
             //file.createNewFile(); //this gets done by ReadISO
-            System.out.println("Relative filepath 'file' " + file);
-            LOGGER.info((file.toString()));
+            //System.out.println("Relative filepath 'file' " + file);
+            LOGGER.fine((file.toString()));
 
             // creating new canonical from file object
             file2 = file.getCanonicalFile();
-            System.out.println("Canonical filepath 'file2' " + file2);
-            LOGGER.info((file2.toString()));
+            //System.out.println("Canonical filepath 'file2' " + file2);
+            LOGGER.fine((file2.toString()));
 
             // returns true if the file exists
             bool = file2.exists();
-            System.out.println("Does canon path 'file2' exists? " + bool);
+            //System.out.println("Does canon path 'file2' exists? " + bool);
 
             // returns absolute pathname
             path = file2.getAbsolutePath();
-            System.out.println("Absolute path of 'file2' " + path);
+            //System.out.println("Absolute path of 'file2' " + path);
 
             // if file path exists
             if (bool) {
                 // prints
-                System.out.print(path + " Exists? " + bool);
-                LOGGER.info(path + " Exists? " + bool);
+                //System.out.print(path + " Exists? " + bool);
+                LOGGER.fine(path + " Exists? " + bool);
             }
         } catch (Exception e) {
             // if any error occurs
@@ -231,10 +231,10 @@ public class OSX extends SecurityWorld {
 
                 } else if (file.delete()) {
                     System.out.println(file.getName() + " deleted");//getting and printing the file name
-                    LOGGER.info(file.getName() + " deleted");
+                    LOGGER.fine(file.getName() + " deleted");
                 } else {
                     System.out.println("failed");
-                    LOGGER.info("failed");
+                    LOGGER.fine("failed");
                 }
             } catch(Exception e) {
                 e.printStackTrace();
@@ -258,9 +258,9 @@ public class OSX extends SecurityWorld {
     }
 
     void getTars(){
-        LOGGER.fine("running -getTars- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"getTars..." +ConsoleColours.RESET);
-        LOGGER.info("getTars...");
+        LOGGER.info("running -getTars- method");
+        //System.out.println(ConsoleColours.BLUE_UNDERLINED+"getTars..." +ConsoleColours.RESET);
+        LOGGER.fine("getTars...");
 
         // https://ant.apache.org/manual/api/org/apache/tools/ant/DirectoryScanner.html
         DirectoryScanner scanner = new DirectoryScanner();
@@ -283,8 +283,8 @@ public class OSX extends SecurityWorld {
 
 
             //tar_files.add(path);
-            System.out.println(path);
-            LOGGER.info(path.toString());
+            //System.out.println(path);
+            LOGGER.fine(path.toString());
             unpackSecWorld(found, NFAST_HOME);
         }
     }
