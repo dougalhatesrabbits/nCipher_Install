@@ -47,17 +47,15 @@ public class UnTarFile {
 
             if(tarEntry.isDirectory()){
 
-                System.out.println("outputFile Directory ---- "
-                        + outputFile.getAbsolutePath());
-                LOGGER.info("outputFile Directory ---- "
-                        + outputFile.getAbsolutePath());
+                //System.out.println("outputFile Directory ---- " + outputFile.getAbsolutePath());
+                LOGGER.fine("outputFile Directory ---- " + outputFile.getAbsolutePath());
                 if(!outputFile.exists()){
                     outputFile.mkdirs();
                 }
             }else{
                 File output = new File(dest + File.separator + tarEntry.getName());
-                System.out.println("outputFile File ---- " + outputFile.getAbsolutePath());
-                LOGGER.info("outputFile File ---- " + outputFile.getAbsolutePath());
+                //System.out.println("outputFile File ---- " + outputFile.getAbsolutePath());
+                LOGGER.fine("outputFile File ---- " + outputFile.getAbsolutePath());
                 output.getParentFile().mkdirs();
                 output.createNewFile();
                 FileOutputStream fos = new FileOutputStream(output);

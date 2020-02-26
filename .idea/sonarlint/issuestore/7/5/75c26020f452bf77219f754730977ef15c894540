@@ -1,1285 +1,795 @@
 
-IWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-?	Web:S1827ƒ")Remove this deprecated "width" attribute.(µ ğñ
-h Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-GWeb:BoldAndItalicTagsCheckg"!Replace this <b> tag by <strong>.(Òò™
-IWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-LWeb:BoldAndItalicTagsCheck0"!Replace this <b> tag by <strong>.(ŞÄëİøÿÿÿÿ
-IWeb:TableWithoutCaptionCheckù" Add a description to this table.(µ ğñ
-h Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-IWeb:TableWithoutCaptionCheck¡" Add a description to this table.(µ ğñ
-T	Web:S5254n"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-JWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheck„";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-h Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-HWeb:BoldAndItalicTagsCheck…"!Replace this <b> tag by <strong>.(·¼
-MWeb:BoldAndItalicTagsCheck‡"!Replace this <b> tag by <strong>.(á‰Ìúıÿÿÿÿ
->	Web:S1827V")Remove this deprecated "width" attribute.(µ ğñ
-h Web:TableHeaderHasIdOrScopeCheck„";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-?	Web:S1827’")Remove this deprecated "width" attribute.(µ ğñ
-g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheckW";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-?	Web:S1827¿")Remove this deprecated "width" attribute.(µ ğñ
-IWeb:PageWithoutTitleCheckQ"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-g Web:TableHeaderHasIdOrScopeCheck ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-h Web:TableHeaderHasIdOrScopeCheck±";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-IWeb:TableWithoutCaptionCheck¿" Add a description to this table.(µ ğñ
-WWeb:UnsupportedTagsInHtml5Check£"&Remove this deprecated "font" element.(ŒË—ıÿÿÿÿ
-WWeb:UnsupportedTagsInHtml5CheckÑ"&Remove this deprecated "font" element.(ĞªŒ±ûÿÿÿÿ
-QWeb:UnsupportedTagsInHtml5Checkg"&Remove this deprecated "font" element.(Òò™
-IWeb:PageWithoutTitleCheck3"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-RWeb:UnsupportedTagsInHtml5Check²"&Remove this deprecated "font" element.(Ó­ü
-LWeb:BoldAndItalicTagsCheckK"!Replace this <b> tag by <strong>.(’ı›Øıÿÿÿÿ
-IWeb:TableWithoutCaptionCheckƒ" Add a description to this table.(µ ğñ
-]Web:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <HTML> tag.(¨äÑ>
-g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
->	Web:S1827e")Remove this deprecated "width" attribute.(µ ğñ
-VWeb:UnsupportedTagsInHtml5Check0"&Remove this deprecated "font" element.(ŞÄëİøÿÿÿÿ
-?	Web:S1827Ü")Remove this deprecated "width" attribute.(µ ğñ
-g Web:TableHeaderHasIdOrScopeChecku";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheck ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-QWeb:UnsupportedTagsInHtml5Check<"&Remove this deprecated "font" element.(ìİç¤
-GWeb:BoldAndItalicTagsCheckx"!Replace this <b> tag by <strong>.(âáİÏ
-h Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheckf";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-WWeb:UnsupportedTagsInHtml5Checkû"&Remove this deprecated "font" element.(«òâúÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheck“";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-HWeb:TableWithoutCaptionCheck8" Add a description to this table.(µ ğñ
-g Web:TableHeaderHasIdOrScopeChecku";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeChecku";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-T	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-h Web:TableHeaderHasIdOrScopeCheck„";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheckW";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-h Web:TableHeaderHasIdOrScopeCheck“";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-U	Web:S5254Ö"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-HWeb:BoldAndItalicTagsCheckŞ"!Replace this <b> tag by <strong>.(…Âˆ¼
-HWeb:BoldAndItalicTagsCheckî"!Replace this <b> tag by <strong>.(·òÆ—
-h Web:TableHeaderHasIdOrScopeCheckú";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheck/";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-LWeb:BoldAndItalicTagsCheckX"!Replace this <b> tag by <strong>.(“¡óûÿÿÿÿ
-RWeb:UnsupportedTagsInHtml5Check´"&Remove this deprecated "font" element.(”³Ò¦
-HWeb:TableWithoutCaptionCheck" Add a description to this table.(µ ğñ
-HWeb:TableWithoutCaptionCheck." Add a description to this table.(µ ğñ
-LWeb:BoldAndItalicTagsCheck#"!Replace this <b> tag by <strong>.(âÈ×áúÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-HWeb:BoldAndItalicTagsCheckÁ"!Replace this <b> tag by <strong>.(‡˜„
-h Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-QWeb:UnsupportedTagsInHtml5Checkx"&Remove this deprecated "font" element.(âáİÏ
-T	Web:S5254_"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-HWeb:TableWithoutCaptionCheckG" Add a description to this table.(µ ğñ
->	Web:S1827")Remove this deprecated "width" attribute.(µ ğñ
-LWeb:BoldAndItalicTagsCheckv"!Replace this <b> tag by <strong>.(İŸœ×ÿÿÿÿÿ
-JWeb:PageWithoutTitleCheckœ"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-QWeb:UnsupportedTagsInHtml5CheckI"&Remove this deprecated "font" element.(¨´àı
-QWeb:UnsupportedTagsInHtml5CheckZ"&Remove this deprecated "font" element.(‹É„¹
-h Web:TableHeaderHasIdOrScopeCheck“";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-h Web:TableHeaderHasIdOrScopeCheck„";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-h Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-h Web:TableHeaderHasIdOrScopeCheckú";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-T	Web:S5254A"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-VWeb:UnsupportedTagsInHtml5Check:"&Remove this deprecated "font" element.(ì¯†¼şÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-IWeb:TableWithoutCaptionCheck’" Add a description to this table.(µ ğñ
-IWeb:PageWithoutTitleChecko"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheck±";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheckW";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-T	Web:S5254}"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-GWeb:BoldAndItalicTagsCheckZ"!Replace this <b> tag by <strong>.(‹É„¹
-JWeb:PageWithoutTitleCheck«"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-IWeb:TableWithoutCaptionCheck°" Add a description to this table.(µ ğñ
-h Web:TableHeaderHasIdOrScopeCheckú";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheck/";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheckf";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-PWeb:UnsupportedTagsInHtml5Check!"&Remove this deprecated "font" element.(ÅµÈ
-g Web:TableHeaderHasIdOrScopeCheck/";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-FWeb:BoldAndItalicTagsCheck!"!Replace this <b> tag by <strong>.(ÅµÈ
-VWeb:UnsupportedTagsInHtml5Check#"&Remove this deprecated "font" element.(âÈ×áúÿÿÿÿ
-LWeb:BoldAndItalicTagsCheck:"!Replace this <b> tag by <strong>.(ì¯†¼şÿÿÿÿ
-g Web:TableHeaderHasIdOrScopeCheck ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
->	Web:S1827")Remove this deprecated "width" attribute.(µ ğñ
-HWeb:TableWithoutCaptionChecke" Add a description to this table.(µ ğñ
-g Web:TableHeaderHasIdOrScopeCheck ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-h Web:TableHeaderHasIdOrScopeCheck“";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-HWeb:TableWithoutCaptionCheck" Add a description to this table.(µ ğñ
-h Web:TableHeaderHasIdOrScopeCheck±";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-IWeb:PageWithoutTitleCheckB"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-QWeb:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(‚¨Æô
-IWeb:PageWithoutTitleCheck~"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-IWeb:PageWithoutTitleCheck)"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-MWeb:BoldAndItalicTagsCheckÑ"!Replace this <b> tag by <strong>.(ĞªŒ±ûÿÿÿÿ
-T	Web:S52542"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-RWeb:UnsupportedTagsInHtml5Check”"&Remove this deprecated "font" element.(’×Ø¸
-g Web:TableHeaderHasIdOrScopeCheckH";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-JWeb:PageWithoutTitleCheckô"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck´"!Replace this <b> tag by <strong>.(”³Ò¦
-g Web:TableHeaderHasIdOrScopeCheck9";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-U	Web:S5254ª"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-HWeb:TableWithoutCaptionCheckV" Add a description to this table.(µ ğñ
-U	Web:S5254›"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-GWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(‚¨Æô
->	Web:S1827.")Remove this deprecated "width" attribute.(µ ğñ
-g Web:TableHeaderHasIdOrScopeCheck/";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-HWeb:TableWithoutCaptionCheckt" Add a description to this table.(µ ğñ
-MWeb:BoldAndItalicTagsCheck–"!Replace this <b> tag by <strong>.(–áòÁùÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck”"!Replace this <b> tag by <strong>.(’×Ø¸
-h Web:TableHeaderHasIdOrScopeCheckú";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-MWeb:BoldAndItalicTagsCheck¥"!Replace this <b> tag by <strong>.(¸Œâ–ÿÿÿÿÿ
-RWeb:UnsupportedTagsInHtml5CheckŞ"&Remove this deprecated "font" element.(…Âˆ¼
-g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-JWeb:PageWithoutTitleCheckº"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheckf";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-h Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-WWeb:UnsupportedTagsInHtml5Check–"&Remove this deprecated "font" element.(–áòÁùÿÿÿÿ
-g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-MWeb:BoldAndItalicTagsCheck£"!Replace this <b> tag by <strong>.(ŒË—ıÿÿÿÿ
-g Web:TableHeaderHasIdOrScopeCheckW";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheckf";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeChecku";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-HWeb:BoldAndItalicTagsCheck²"!Replace this <b> tag by <strong>.(Ó­ü
-T	Web:S5254P"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-VWeb:UnsupportedTagsInHtml5CheckX"&Remove this deprecated "font" element.(“¡óûÿÿÿÿ
->	Web:S1827")Remove this deprecated "width" attribute.(µ ğñ
-h Web:TableHeaderHasIdOrScopeCheck±";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheck/";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-?	Web:S1827°")Remove this deprecated "width" attribute.(µ ğñ
-h Web:TableHeaderHasIdOrScopeCheck±";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-h Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-WWeb:UnsupportedTagsInHtml5Check‡"&Remove this deprecated "font" element.(á‰Ìúıÿÿÿÿ
-U	Web:S5254ó"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-h Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-VWeb:UnsupportedTagsInHtml5CheckK"&Remove this deprecated "font" element.(’ı›Øıÿÿÿÿ
-RWeb:UnsupportedTagsInHtml5Check…"&Remove this deprecated "font" element.(·¼
-g Web:TableHeaderHasIdOrScopeCheckH";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-WWeb:UnsupportedTagsInHtml5Check‹"&Remove this deprecated "font" element.(½•·Ùıÿÿÿÿ
-g Web:TableHeaderHasIdOrScopeCheck9";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeChecku";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-MWeb:BoldAndItalicTagsCheck‹"!Replace this <b> tag by <strong>.(½•·Ùıÿÿÿÿ
+o Web:TableHeaderHasIdOrScopeCheck«";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8å—ÖÂ†.
+o Web:TableHeaderHasIdOrScopeCheckó";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827ˆ
+")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+[	Web:S5254_"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckù";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8“èØ§†.
+QWeb:PageWithoutTitleCheck¥
+"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheck†"Add a <title> tag to this page.(üºéñûÿÿÿÿ8ÕÖ’Â†.
+YWeb:UnsupportedTagsInHtml5Check›"&Remove this deprecated "font" element.(öİš­8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckº
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254ñ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8ÑÆÒÂ†.
+o Web:TableHeaderHasIdOrScopeCheckŒ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÕÖ’Â†.
+PWeb:TableWithoutCaptionCheck™" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckó"Add a <title> tag to this page.(üºéñûÿÿÿÿ8“èØ§†.
+o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254à"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8ÙËÂ†.
+o Web:TableHeaderHasIdOrScopeCheckó";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckà"Add a <title> tag to this page.(üºéñûÿÿÿÿ8ÔîÕ§†.
+F	Web:S1827ˆ")Remove this deprecated "width" attribute.(µ ğñ8†¬ÔÂ†.
+o Web:TableHeaderHasIdOrScopeCheck«";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8å—ÖÂ†.
+F	Web:S1827™")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+OWeb:BoldAndItalicTagsCheckÆ"!Replace this <b> tag by <strong>.(ˆßÜæ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Check¬"&Remove this deprecated "font" element.(ëáÕÉ8å—ÖÂ†.
+^Web:UnsupportedTagsInHtml5Check¯"&Remove this deprecated "font" element.(³‡¸³üÿÿÿÿ8‚»¿§†.
+OWeb:TableWithoutCaptionChecke" Add a description to this table.(µ ğñ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckÄ" Add a description to this table.(µ ğñ8‚»¿§†.
+F	Web:S1827×
+")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+QWeb:PageWithoutTitleCheck‘"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+F	Web:S1827æ	")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+QWeb:PageWithoutTitleCheckÃ
+"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+F	Web:S1827ò")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+E	Web:S1827e")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck®";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckŒ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÕÖ’Â†.
+NWeb:BoldAndItalicTagsCheckg"!Replace this <b> tag by <strong>.(èÃñ…8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÓ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8÷¿Ó§†.
+\	Web:S5254ß"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8ÔîÕ§†.
+o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÉ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck´";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8â¯»Â†.
+PWeb:TableWithoutCaptionCheck™	" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‡";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‡";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckæ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÔîÕ§†.
+o Web:TableHeaderHasIdOrScopeCheckÅ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ñÃÂ†.
+o Web:TableHeaderHasIdOrScopeCheckŒ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÕÖ’Â†.
+^Web:UnsupportedTagsInHtml5CheckÆ"&Remove this deprecated "font" element.(Ù®È½ÿÿÿÿÿ8ñÃÂ†.
+o Web:TableHeaderHasIdOrScopeCheckè";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Checkˆ"&Remove this deprecated "font" element.(ÇÈŠª8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckô"!Replace this <b> tag by <strong>.(ÊÕ÷×ıÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckæ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÔîÕ§†.
+^Web:UnsupportedTagsInHtml5Check°"&Remove this deprecated "font" element.(Ù’•‘ûÿÿÿÿ8‚»¿§†.
+OWeb:BoldAndItalicTagsCheck›"!Replace this <b> tag by <strong>.(ëáÕÉ8ÇÊÕÂ†.
+o Web:TableHeaderHasIdOrScopeCheck¯";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckù";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8“èØ§†.
+PWeb:TableWithoutCaptionCheck–" Add a description to this table.(µ ğñ8‚»¿§†.
 HWeb:TableWithoutCaptionCheck" Add a description to this table.(µ ğñ
-GWeb:BoldAndItalicTagsCheck<"!Replace this <b> tag by <strong>.(ìİç¤
-QWeb:UnsupportedTagsInHtml5Checki"&Remove this deprecated "font" element.(µ¾ª‰
-JWeb:PageWithoutTitleCheck×"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-?	Web:S1827ù")Remove this deprecated "width" attribute.(µ ğñ
-g Web:TableHeaderHasIdOrScopeCheckW";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-T	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-IWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-?	Web:S1827¡")Remove this deprecated "width" attribute.(µ ğñ
-RWeb:UnsupportedTagsInHtml5Checkî"&Remove this deprecated "font" element.(·òÆ—
-WWeb:UnsupportedTagsInHtml5Check¥"&Remove this deprecated "font" element.(¸Œâ–ÿÿÿÿÿ
-g Web:TableHeaderHasIdOrScopeCheck9";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
->	Web:S1827G")Remove this deprecated "width" attribute.(µ ğñ
-h Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-T	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-h Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-VWeb:UnsupportedTagsInHtml5Checkv"&Remove this deprecated "font" element.(İŸœ×ÿÿÿÿÿ
-g Web:TableHeaderHasIdOrScopeCheckf";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-T	Web:S5254("@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-MWeb:BoldAndItalicTagsCheckû"!Replace this <b> tag by <strong>.(«òâúÿÿÿÿ
-g Web:TableHeaderHasIdOrScopeCheckH";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheck ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-RWeb:UnsupportedTagsInHtml5CheckÁ"&Remove this deprecated "font" element.(‡˜„
-g Web:TableHeaderHasIdOrScopeCheckH";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-GWeb:BoldAndItalicTagsChecki"!Replace this <b> tag by <strong>.(µ¾ª‰
-h Web:TableHeaderHasIdOrScopeCheck„";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-GWeb:BoldAndItalicTagsCheckI"!Replace this <b> tag by <strong>.(¨´àı
-h Web:TableHeaderHasIdOrScopeCheck“";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheck9";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-g Web:TableHeaderHasIdOrScopeCheckH";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-IWeb:PageWithoutTitleCheck`"Add a <title> tag to this page.(üºéñûÿÿÿÿ
-U	Web:S5254¹"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-IWeb:TableWithoutCaptionCheckÜ" Add a description to this table.(µ ğñ
->	Web:S18278")Remove this deprecated "width" attribute.(µ ğñ
->	Web:S1827t")Remove this deprecated "width" attribute.(µ ğñ
-g Web:TableHeaderHasIdOrScopeCheck9";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-U	Web:S5254Œ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
-h Web:TableHeaderHasIdOrScopeCheckú";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
-\	Web:S5254š"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck›"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck " Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827 ")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¡";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¡";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¡";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¡";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¡";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¢"&Remove this deprecated "font" element.(±ôÉÉ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¢"!Replace this <b> tag by <strong>.(±ôÉÉ8½½ôÏ„.
-\	Web:S5254³"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck´"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¹" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¹")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckº";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckº";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckº";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckº";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckº";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check»"&Remove this deprecated "font" element.(ó€Óêÿÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck»"!Replace this <b> tag by <strong>.(ó€Óêÿÿÿÿÿ8½½ôÏ„.
-\	Web:S5254Ì"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÍ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÒ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ò")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÓ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÓ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÓ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÓ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÓ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÔ"&Remove this deprecated "font" element.(´±¤Íşÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÔ"!Replace this <b> tag by <strong>.(´±¤Íşÿÿÿÿ8½½ôÏ„.
-\	Web:S5254å"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckæ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckë" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827ë")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckì";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckì";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckì";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckì";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckì";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkí"&Remove this deprecated "font" element.(·˜î´ıÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckí"!Replace this <b> tag by <strong>.(·˜î´ıÿÿÿÿ8½½ôÏ„.
-\	Web:S5254ş"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÿ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck„" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827„")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck…";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck…";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck…";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck…";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck…";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check†"&Remove this deprecated "font" element.(ôõÈ¸úÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck†"!Replace this <b> tag by <strong>.(ôõÈ¸úÿÿÿÿ8½½ôÏ„.
-\	Web:S5254“"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck”"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck™" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827™")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check›"&Remove this deprecated "font" element.(Ô´Âÿÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck›"!Replace this <b> tag by <strong>.(Ô´Âÿÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check±"&Remove this deprecated "font" element.(Ùß™şÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck±"!Replace this <b> tag by <strong>.(Ùß™şÿÿÿÿ8½½ôÏ„.
-\	Web:S5254¶"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck·"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¼" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¼")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck½";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck½";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck½";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck½";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck½";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check¾"&Remove this deprecated "font" element.(°ğ…úÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck¾"!Replace this <b> tag by <strong>.(°ğ…úÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÔ"&Remove this deprecated "font" element.(İàöÉ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÔ"!Replace this <b> tag by <strong>.(İàöÉ8½½ôÏ„.
-\	Web:S5254ã"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckä"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionChecké" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827é")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckê";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckê";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckê";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckê";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckê";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkë"&Remove this deprecated "font" element.(‡üÄú8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckë"!Replace this <b> tag by <strong>.(‡üÄú8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkû"&Remove this deprecated "font" element.(â±¬8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckû"!Replace this <b> tag by <strong>.(â±¬8½½ôÏ„.
-\	Web:S5254Š"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck‹"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck‘";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck‘";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck‘";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck‘";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck‘";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check’"&Remove this deprecated "font" element.(ğ¯œ²ùÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck’"!Replace this <b> tag by <strong>.(ğ¯œ²ùÿÿÿÿ8½½ôÏ„.
-\	Web:S5254£"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck¤"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck©" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827©")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckª";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckª";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckª";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckª";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckª";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check«"&Remove this deprecated "font" element.(«Áİ·8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck«"!Replace this <b> tag by <strong>.(«Áİ·8½½ôÏ„.
-\	Web:S5254¼"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck½"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÂ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Â")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÃ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÃ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÃ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÃ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÃ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÄ"&Remove this deprecated "font" element.( “­ùÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÄ"!Replace this <b> tag by <strong>.( “­ùÿÿÿÿ8½½ôÏ„.
-\	Web:S5254Õ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÖ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÛ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Û")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkİ"&Remove this deprecated "font" element.(ß•˜Úúÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckİ"!Replace this <b> tag by <strong>.(ß•˜Úúÿÿÿÿ8½½ôÏ„.
-\	Web:S5254î"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckï"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckô" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827ô")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkö"&Remove this deprecated "font" element.(®Â±8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckö"!Replace this <b> tag by <strong>.(®Â±8½½ôÏ„.
-\	Web:S5254‡"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckˆ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(Õ®¤øÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(Õ®¤øÿÿÿÿ8½½ôÏ„.
-\	Web:S5254 "@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck¡"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¦" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¦")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck§";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck§";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck§";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck§";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck§";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check¨"&Remove this deprecated "font" element.(Õ®¤øÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck¨"!Replace this <b> tag by <strong>.(Õ®¤øÿÿÿÿ8½½ôÏ„.
-\	Web:S5254¹"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckº"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¿" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¿")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÁ"&Remove this deprecated "font" element.(œÿà“üÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÁ"!Replace this <b> tag by <strong>.(œÿà“üÿÿÿÿ8½½ôÏ„.
-\	Web:S5254Ò"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÓ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckØ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ø")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÙ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÙ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÙ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÙ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÙ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÚ"&Remove this deprecated "font" element.(œÿà“üÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÚ"!Replace this <b> tag by <strong>.(œÿà“üÿÿÿÿ8½½ôÏ„.
-\	Web:S5254ë"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckì"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckñ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827ñ")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckò";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckò";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckò";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckò";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckò";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkó"&Remove this deprecated "font" element.(æÓÆ„ıÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckó"!Replace this <b> tag by <strong>.(æÓÆ„ıÿÿÿÿ8½½ôÏ„.
-\	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck‘"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck–" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827–")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check˜"&Remove this deprecated "font" element.(î¾Òøøÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck˜"!Replace this <b> tag by <strong>.(î¾Òøøÿÿÿÿ8½½ôÏ„.
-\	Web:S5254µ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck¶"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck»" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827»")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¼";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¼";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¼";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¼";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¼";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check½"&Remove this deprecated "font" element.(‚¬¾®8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck½"!Replace this <b> tag by <strong>.(‚¬¾®8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÍ"&Remove this deprecated "font" element.(é«¬İúÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÍ"!Replace this <b> tag by <strong>.(é«¬İúÿÿÿÿ8½½ôÏ„.
-\	Web:S5254Ü"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckİ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckâ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827â")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckã";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckã";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckã";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckã";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckã";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkä"&Remove this deprecated "font" element.(¬Ÿû¯ÿÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckä"!Replace this <b> tag by <strong>.(¬Ÿû¯ÿÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkô"&Remove this deprecated "font" element.(‹£â8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckô"!Replace this <b> tag by <strong>.(‹£â8½½ôÏ„.
-\	Web:S5254ƒ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck„"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck‰" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827‰")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckŠ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckŠ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckŠ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckŠ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckŠ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check‹"&Remove this deprecated "font" element.(ÂÙšùÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck‹"!Replace this <b> tag by <strong>.(ÂÙšùÿÿÿÿ8½½ôÏ„.
-XWeb:UnsupportedTagsInHtml5Check›"&Remove this deprecated "font" element.(ßáãZ8½½ôÏ„.
-NWeb:BoldAndItalicTagsCheck›"!Replace this <b> tag by <strong>.(ßáãZ8½½ôÏ„.
-\	Web:S5254ª"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck«"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck°" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827°")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck±";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck±";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck±";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck±";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck±";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check²"&Remove this deprecated "font" element.(…Ö£¡8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck²"!Replace this <b> tag by <strong>.(…Ö£¡8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÂ"&Remove this deprecated "font" element.(•Ô‹Îıÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÂ"!Replace this <b> tag by <strong>.(•Ô‹Îıÿÿÿÿ8½½ôÏ„.
-\	Web:S5254Ñ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÒ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck×" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827×")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckØ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckØ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckØ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckØ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckØ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-XWeb:UnsupportedTagsInHtml5CheckÙ"&Remove this deprecated "font" element.(Ñ‘ÅH8½½ôÏ„.
-NWeb:BoldAndItalicTagsCheckÙ"!Replace this <b> tag by <strong>.(Ñ‘ÅH8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkß"&Remove this deprecated "font" element.(©Ìÿêúÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckß"!Replace this <b> tag by <strong>.(©Ìÿêúÿÿÿÿ8½½ôÏ„.
-\	Web:S5254î"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckï"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckô" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827ô")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkö"&Remove this deprecated "font" element.(²è‹8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckö"!Replace this <b> tag by <strong>.(²è‹8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkü"&Remove this deprecated "font" element.(¤ÑÁ¹8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckü"!Replace this <b> tag by <strong>.(¤ÑÁ¹8½½ôÏ„.
-\	Web:S5254‹"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckŒ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck‘" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827‘")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check“"&Remove this deprecated "font" element.(²åÂúÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck“"!Replace this <b> tag by <strong>.(²åÂúÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check™"&Remove this deprecated "font" element.(—½’¸øÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck™"!Replace this <b> tag by <strong>.(—½’¸øÿÿÿÿ8½½ôÏ„.
-\	Web:S5254¨"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck©"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck®" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827®")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¯";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¯";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¯";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¯";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¯";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check°"&Remove this deprecated "font" element.(ƒÀ…Ó8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck°"!Replace this <b> tag by <strong>.(ƒÀ…Ó8½½ôÏ„.
-XWeb:UnsupportedTagsInHtml5Check¶"&Remove this deprecated "font" element.(Ÿíû8½½ôÏ„.
-NWeb:BoldAndItalicTagsCheck¶"!Replace this <b> tag by <strong>.(Ÿíû8½½ôÏ„.
-\	Web:S5254Å"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÆ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckË" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ë")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÌ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÌ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÌ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÌ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÌ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÍ"&Remove this deprecated "font" element.(Ëÿë‘úÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÍ"!Replace this <b> tag by <strong>.(Ëÿë‘úÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÓ"&Remove this deprecated "font" element.(ı€À‚ûÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÓ"!Replace this <b> tag by <strong>.(ı€À‚ûÿÿÿÿ8½½ôÏ„.
-\	Web:S5254â"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckã"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckè" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827è")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeChecké";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeChecké";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeChecké";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeChecké";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeChecké";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkê"&Remove this deprecated "font" element.(¯´Çòøÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckê"!Replace this <b> tag by <strong>.(¯´Çòøÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkğ"&Remove this deprecated "font" element.(”ø¼ç8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckğ"!Replace this <b> tag by <strong>.(”ø¼ç8½½ôÏ„.
-\	Web:S5254ÿ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck€	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck…	" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827…	")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck†	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck†	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck†	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck†	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck†	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check‡	"&Remove this deprecated "font" element.(‹œ¿ëıÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck‡	"!Replace this <b> tag by <strong>.(‹œ¿ëıÿÿÿÿ8½½ôÏ„.
-XWeb:UnsupportedTagsInHtml5Check	"&Remove this deprecated "font" element.(éîÍE8½½ôÏ„.
-NWeb:BoldAndItalicTagsCheck	"!Replace this <b> tag by <strong>.(éîÍE8½½ôÏ„.
-\	Web:S5254œ	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¢	" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¢	")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck£	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck£	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck£	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck£	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck£	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¤	"&Remove this deprecated "font" element.(ƒÿ¢8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¤	"!Replace this <b> tag by <strong>.(ƒÿ¢8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkª	"&Remove this deprecated "font" element.(‚µş¿ıÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckª	"!Replace this <b> tag by <strong>.(‚µş¿ıÿÿÿÿ8½½ôÏ„.
-\	Web:S5254¹	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckº	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¿	" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¿	")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÀ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÀ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÀ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÀ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÀ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÁ	"&Remove this deprecated "font" element.(ƒì³²ıÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÁ	"!Replace this <b> tag by <strong>.(ƒì³²ıÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÇ	"&Remove this deprecated "font" element.(ˆä¸Æ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÇ	"!Replace this <b> tag by <strong>.(ˆä¸Æ8½½ôÏ„.
-\	Web:S5254Ö	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck×	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÜ	" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ü	")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckİ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckİ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckİ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckİ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckİ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-XWeb:UnsupportedTagsInHtml5CheckŞ	"&Remove this deprecated "font" element.(åäÍ"8½½ôÏ„.
-NWeb:BoldAndItalicTagsCheckŞ	"!Replace this <b> tag by <strong>.(åäÍ"8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkä	"&Remove this deprecated "font" element.(Šâƒè8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckä	"!Replace this <b> tag by <strong>.(Šâƒè8½½ôÏ„.
-\	Web:S5254ó	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckô	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckù	" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827ù	")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckú	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckú	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckú	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckú	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckú	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkû	"&Remove this deprecated "font" element.(šíåµùÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckû	"!Replace this <b> tag by <strong>.(šíåµùÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check
-"&Remove this deprecated "font" element.(ƒ²Ğ”8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck
-"!Replace this <b> tag by <strong>.(ƒ²Ğ”8½½ôÏ„.
-\	Web:S5254
-"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck‘
-"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck–
-" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827–
-")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck—
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck—
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck—
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck—
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck—
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check˜
-"&Remove this deprecated "font" element.(éëÂ¥ùÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck˜
-"!Replace this <b> tag by <strong>.(éëÂ¥ùÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check
-"&Remove this deprecated "font" element.(À³„¹8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck
-"!Replace this <b> tag by <strong>.(À³„¹8½½ôÏ„.
-\	Web:S5254­
-"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck®
-"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck³
-" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827³
-")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck´
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck´
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck´
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck´
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck´
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkµ
-"&Remove this deprecated "font" element.(øğÆåøÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckµ
-"!Replace this <b> tag by <strong>.(øğÆåøÿÿÿÿ8½½ôÏ„.
+o Web:TableHeaderHasIdOrScopeCheck•";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+NWeb:BoldAndItalicTagsCheckÒ"!Replace this <b> tag by <strong>.(ÂÁĞ/8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Checkİ"&Remove this deprecated "font" element.(ˆßÜæ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckÄ" Add a description to this table.(µ ğñ8ñÃÂ†.
+PWeb:TableWithoutCaptionCheckÅ" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck«";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8å—ÖÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+LWeb:BoldAndItalicTagsCheck	"!Replace this <b> tag by <strong>.(ùÅ|8†ÊëÑ….
+o Web:TableHeaderHasIdOrScopeCheckÖ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8™ÊÂ†.
+n Web:TableHeaderHasIdOrScopeCheckf";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(Æıóøÿÿÿÿ8‚»¿§†.
+PWeb:TableWithoutCaptionCheck”" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÇÊÕÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckº"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‡—È§†.
+o Web:TableHeaderHasIdOrScopeCheck«
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827¡")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+F	Web:S1827®")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckª
+" Add a description to this table.(µ ğñ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckˆ
+" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÖ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8™ÊÂ†.
+o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckØ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+n Web:TableHeaderHasIdOrScopeCheckf";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+F	Web:S1827Ò")Remove this deprecated "width" attribute.(µ ğñ8÷¿Ó§†.
+o Web:TableHeaderHasIdOrScopeCheck¹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckè";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheckæ" Add a description to this table.(µ ğñ8ÙËÂ†.
+o Web:TableHeaderHasIdOrScopeCheckó";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckó";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck•";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck«
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+XWeb:UnsupportedTagsInHtml5CheckÒ"&Remove this deprecated "font" element.(ÂÁĞ/8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck®";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Checkõ"&Remove this deprecated "font" element.(ªÀÆ¦øÿÿÿÿ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Checkè
+"&Remove this deprecated "font" element.(‡Öñª8‚»¿§†.
+PWeb:TableWithoutCaptionCheckø" Add a description to this table.(µ ğñ8“èØ§†.
+F	Web:S1827ª
+")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckÿ" Add a description to this table.(µ ğñ8‚»¿§†.
+PWeb:TableWithoutCaptionCheck»" Add a description to this table.(µ ğñ8‚»¿§†.
+\	Web:S5254í"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+QWeb:PageWithoutTitleCheckÖ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÄ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827”")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÅ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254³
+"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckš	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck­";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckë";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¼";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827õ	")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+n Web:TableHeaderHasIdOrScopeCheck7";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827Ä")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckù";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8“èØ§†.
+o Web:TableHeaderHasIdOrScopeCheckç";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÙËÂ†.
+o Web:TableHeaderHasIdOrScopeCheckó";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÆ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254‚
+"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÉ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+OWeb:BoldAndItalicTagsCheckµ"!Replace this <b> tag by <strong>.(‘õÿÌ8â¯»Â†.
+TWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(Ÿ”ûÿÿÿÿ8Óì¤Â†.
+o Web:TableHeaderHasIdOrScopeCheckØ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+OWeb:BoldAndItalicTagsCheck›"!Replace this <b> tag by <strong>.(öİš­8‚»¿§†.
+\	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827‰")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254…"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8ÕÖ’Â†.
+o Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‡—È§†.
+o Web:TableHeaderHasIdOrScopeCheckÅ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckö
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÓ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8÷¿Ó§†.
+OWeb:BoldAndItalicTagsCheckß"!Replace this <b> tag by <strong>.(ÓÏƒ³8‚»¿§†.
+F	Web:S1827†")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckæ	" Add a description to this table.(µ ğñ8‚»¿§†.
+PWeb:PageWithoutTitleCheck1"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+PWeb:PageWithoutTitleCheck`"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+\	Web:S5254ï	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+\	Web:S5254Ñ
+"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+VWeb:UnsupportedTagsInHtml5Check	"&Remove this deprecated "font" element.(ùÅ|8†ÊëÑ….
+OWeb:BoldAndItalicTagsCheck
+"!Replace this <b> tag by <strong>.(÷Ûë8‚»¿§†.
+PWeb:TableWithoutCaptionCheckˆ" Add a description to this table.(µ ğñ8†¬ÔÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÓ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8÷¿Ó§†.
+OWeb:BoldAndItalicTagsCheckº"!Replace this <b> tag by <strong>.(²ıÄ³8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‡—È§†.
+QWeb:PageWithoutTitleCheckÃ	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Checkµ"&Remove this deprecated "font" element.(‘õÿÌ8â¯»Â†.
+^Web:UnsupportedTagsInHtml5Checkè	"&Remove this deprecated "font" element.(û¯¤óÿÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‡";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckº
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‰";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8†¬ÔÂ†.
+PWeb:TableWithoutCaptionCheckÛ" Add a description to this table.(µ ğñ8‚»¿§†.
+\	Web:S5254Ï"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8™ÊÂ†.
+\	Web:S5254Õ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‰";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8†¬ÔÂ†.
+^Web:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(›ˆÃªøÿÿÿÿ8‚»¿§†.
+PWeb:TableWithoutCaptionCheck‰" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¼";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+^Web:UnsupportedTagsInHtml5CheckÙ
+"&Remove this deprecated "font" element.(ÅÍøœşÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckë";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Checkè"&Remove this deprecated "font" element.(«½€µ8ÙËÂ†.
+OWeb:BoldAndItalicTagsCheck¬	"!Replace this <b> tag by <strong>.(ÏåšÄ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckö
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827ª")Remove this deprecated "width" attribute.(µ ğñ8å—ÖÂ†.
+o Web:TableHeaderHasIdOrScopeCheckæ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÔîÕ§†.
+o Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckÊ	"!Replace this <b> tag by <strong>.(öéõùÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckö	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254²"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckº	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Check÷	"&Remove this deprecated "font" element.(‚ı‡Äÿÿÿÿÿ8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Checkç"&Remove this deprecated "font" element.(ùÓ€şÿÿÿÿ8ÔîÕ§†.
+\	Web:S5254–"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8Óì¤Â†.
+^Web:UnsupportedTagsInHtml5Checkì"&Remove this deprecated "font" element.(Üù¶¤ıÿÿÿÿ8‚»¿§†.
+\	Web:S5254¹"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‡—È§†.
+YWeb:UnsupportedTagsInHtml5CheckŒ"&Remove this deprecated "font" element.(ş¬à¢8‚»¿§†.
+QWeb:PageWithoutTitleCheck×"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckº	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckŞ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÇÊÕÂ†.
+^Web:UnsupportedTagsInHtml5CheckÅ"&Remove this deprecated "font" element.(â‡¾Øùÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckô";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+OWeb:BoldAndItalicTagsCheckŞ"!Replace this <b> tag by <strong>.(àÚ¿±8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckô";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
+\	Web:S5254Â
+"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckë";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8Óì¤Â†.
+OWeb:BoldAndItalicTagsCheckè"!Replace this <b> tag by <strong>.(«½€µ8ÙËÂ†.
+\	Web:S5254ù"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¯";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÄ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254ù"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+PWeb:TableWithoutCaptionCheck×
+" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÉ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827›
+")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+\	Web:S5254á"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Check¬	"&Remove this deprecated "font" element.(ÏåšÄ8‚»¿§†.
+PWeb:TableWithoutCaptionCheck‹" Add a description to this table.(µ ğñ8ÕÖ’Â†.
+o Web:TableHeaderHasIdOrScopeCheckÉ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck´";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8â¯»Â†.
+o Web:TableHeaderHasIdOrScopeCheckù";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8“èØ§†.
+PWeb:TableWithoutCaptionCheckÃ" Add a description to this table.(µ ğñ8‚»¿§†.
+F	Web:S1827Ã")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÉ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
 ^Web:UnsupportedTagsInHtml5Check»
-"&Remove this deprecated "font" element.(åøÁ³ûÿÿÿÿ8½½ôÏ„.
+"&Remove this deprecated "font" element.(ĞÖ¨úÿÿÿÿ8‚»¿§†.
+\	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÇÊÕÂ†.
+o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck«	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827Ü")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+F	Web:S1827È
+")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckÔ"!Replace this <b> tag by <strong>.(¸Äïùÿÿÿÿ8÷¿Ó§†.
+F	Web:S1827¸")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+\	Web:S5254Â	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+\	Web:S5254¾"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8ñÃÂ†.
+OWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(ê˜¹È8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÙËÂ†.
+^Web:UnsupportedTagsInHtml5Check‹"&Remove this deprecated "font" element.(æşØ•ÿÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck«
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Check½"&Remove this deprecated "font" element.(Æıóøÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827Œ")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+\	Web:S5254ì"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+PWeb:TableWithoutCaptionCheckª	" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckö
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck´";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8â¯»Â†.
+o Web:TableHeaderHasIdOrScopeCheckÖ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8™ÊÂ†.
+^Web:UnsupportedTagsInHtml5CheckÙ	"&Remove this deprecated "font" element.(öéõùÿÿÿÿ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckì"!Replace this <b> tag by <strong>.(Üù¶¤ıÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheckî"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheck¿" Add a description to this table.(µ ğñ8‡—È§†.
+n Web:TableHeaderHasIdOrScopeCheck7";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254¦"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck«";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8å—ÖÂ†.
+XWeb:UnsupportedTagsInHtml5Check8"&Remove this deprecated "font" element.(•ŒşÛ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck«	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÙËÂ†.
+o Web:TableHeaderHasIdOrScopeCheckö	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheck´
+"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheck¿"Add a <title> tag to this page.(üºéñûÿÿÿÿ8ñÃÂ†.
+\	Web:S5254§"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckØ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckĞ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8™ÊÂ†.
+PWeb:TableWithoutCaptionCheckŒ" Add a description to this table.(µ ğñ8‚»¿§†.
+QWeb:PageWithoutTitleCheckÒ	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+\	Web:S5254ƒ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‡";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckè";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheck”"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckõ"!Replace this <b> tag by <strong>.(ªÀÆ¦øÿÿÿÿ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckò" Add a description to this table.(µ ğñ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckœ" Add a description to this table.(µ ğñ8Óì¤Â†.
+PWeb:TableWithoutCaptionCheckõ	" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckº
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827Ğ")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheck¯"!Replace this <b> tag by <strong>.(³‡¸³üÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheckå"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+F	Web:S1827¹	")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(›ˆÃªøÿÿÿÿ8‚»¿§†.
+OWeb:BoldAndItalicTagsCheck´"!Replace this <b> tag by <strong>.(‡µ’Ï8å—ÖÂ†.
+F	Web:S1827¡")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+OWeb:BoldAndItalicTagsCheckŠ
+"!Replace this <b> tag by <strong>.(÷Ûë8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÄ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+TWeb:BoldAndItalicTagsCheck£"!Replace this <b> tag by <strong>.(ŠÎÍ±ûÿÿÿÿ8‚»¿§†.
+PWeb:TableWithoutCaptionCheck›
+" Add a description to this table.(µ ğñ8‚»¿§†.
+QWeb:PageWithoutTitleCheckí"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckº	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254Ê"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckØ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheck´	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck«	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckâ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827ç")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+OWeb:BoldAndItalicTagsCheckè
+"!Replace this <b> tag by <strong>.(‡Öñª8‚»¿§†.
+\	Web:S5254ä"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+PWeb:TableWithoutCaptionCheckÕ" Add a description to this table.(µ ğñ8™ÊÂ†.
+o Web:TableHeaderHasIdOrScopeCheckš	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckŠ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254†"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+\	Web:S5254¨"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+\	Web:S5254Ñ	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5CheckÇ"&Remove this deprecated "font" element.(Ó³›š8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+OWeb:BoldAndItalicTagsCheckŠ"!Replace this <b> tag by <strong>.(ëáÕÉ8†¬ÔÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÖ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8™ÊÂ†.
+F	Web:S1827–")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckœ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckù";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8“èØ§†.
+o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8Óì¤Â†.
+^Web:UnsupportedTagsInHtml5Check×"&Remove this deprecated "font" element.(Ç¡ÿÿÿÿÿ8™ÊÂ†.
+QWeb:PageWithoutTitleCheck¾"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
+\	Web:S5254Ì"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8÷¿Ó§†.
+OWeb:TableWithoutCaptionCheck6" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+n Web:TableHeaderHasIdOrScopeCheck7";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckç"!Replace this <b> tag by <strong>.(ùÓ€şÿÿÿÿ8ÔîÕ§†.
+PWeb:TableWithoutCaptionCheckĞ" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‰
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8Óì¤Â†.
+o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck­";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckš	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8Óì¤Â†.
+o Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckø";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÑÆÒÂ†.
+n Web:TableHeaderHasIdOrScopeCheckf";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Check–"&Remove this deprecated "font" element.(’úùÿÿÿÿ8‚»¿§†.
+\	Web:S5254¤"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8å—ÖÂ†.
+o Web:TableHeaderHasIdOrScopeCheck­";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckº	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‡—È§†.
+F	Web:S1827ÿ")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+\	Web:S5254³	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+PWeb:TableWithoutCaptionCheck¹	" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckô";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckŒ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÕÖ’Â†.
+QWeb:PageWithoutTitleCheck¨"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+NWeb:BoldAndItalicTagsCheck®"!Replace this <b> tag by <strong>.(¥Ğ¹)8‚»¿§†.
+PWeb:TableWithoutCaptionCheck®" Add a description to this table.(µ ğñ8‚»¿§†.
+F	Web:S1827Û")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Check˜"&Remove this deprecated "font" element.(ñİ¥şÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckŠ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckØ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(Ÿ”ûÿÿÿÿ8Óì¤Â†.
+YWeb:UnsupportedTagsInHtml5Check´"&Remove this deprecated "font" element.(‡µ’Ï8å—ÖÂ†.
+o Web:TableHeaderHasIdOrScopeCheckó";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254¤	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckœ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheck¡" Add a description to this table.(µ ğñ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Check¨"&Remove this deprecated "font" element.(ğÏµ‰8Óì¤Â†.
+o Web:TableHeaderHasIdOrScopeCheckö
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckç";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÙËÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÅ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254½"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+OWeb:BoldAndItalicTagsCheck»	"!Replace this <b> tag by <strong>.(¦£·8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckó";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckø";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÑÆÒÂ†.
+^Web:UnsupportedTagsInHtml5Checkô"&Remove this deprecated "font" element.(ÊÕ÷×ıÿÿÿÿ8‚»¿§†.
+g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
+QWeb:PageWithoutTitleCheckƒ
+"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckô";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckö	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Checkù"&Remove this deprecated "font" element.(×§’¯8ÑÆÒÂ†.
+[	Web:S52540"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+\	Web:S5254ì"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254¤
+"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+\	Web:S5254­"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8â¯»Â†.
+OWeb:BoldAndItalicTagsCheck¬"!Replace this <b> tag by <strong>.(ëáÕÉ8å—ÖÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÅ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Check£"&Remove this deprecated "font" element.(¾æ…ïûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8Óì¤Â†.
+o Web:TableHeaderHasIdOrScopeCheckœ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5CheckŠ"&Remove this deprecated "font" element.(ëáÕÉ8†¬ÔÂ†.
+TWeb:BoldAndItalicTagsCheck–"!Replace this <b> tag by <strong>.(’úùÿÿÿÿ8‚»¿§†.
+XWeb:UnsupportedTagsInHtml5Checkg"&Remove this deprecated "font" element.(èÃñ…8‚»¿§†.
+\	Web:S5254€"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‡";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Check¦"&Remove this deprecated "font" element.(ù®£8Óì¤Â†.
+OWeb:BoldAndItalicTagsCheckİ"!Replace this <b> tag by <strong>.(ˆßÜæ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckİ" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck•";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckŞ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckö	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827™	")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Checkß"&Remove this deprecated "font" element.(ÓÏƒ³8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+n Web:TableHeaderHasIdOrScopeCheck7";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheck¹
+" Add a description to this table.(µ ğñ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckÅ"!Replace this <b> tag by <strong>.(â‡¾Øùÿÿÿÿ8‚»¿§†.
+\	Web:S5254„"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+TWeb:BoldAndItalicTagsCheck÷	"!Replace this <b> tag by <strong>.(‚ı‡Äÿÿÿÿÿ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Checkº"&Remove this deprecated "font" element.(²ıÄ³8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÄ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¯";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckÆ"!Replace this <b> tag by <strong>.(Ù®È½ÿÿÿÿÿ8ñÃÂ†.
+QWeb:PageWithoutTitleCheckò"Add a <title> tag to this page.(üºéñûÿÿÿÿ8ÑÆÒÂ†.
+o Web:TableHeaderHasIdOrScopeCheck«
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Check¶"&Remove this deprecated "font" element.(±ËÔê8å—ÖÂ†.
+F	Web:S1827ê")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+QWeb:PageWithoutTitleCheck¿"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+F	Web:S1827Ğ")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckÈ	" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÉ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheck„"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleChecká	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheck°"!Replace this <b> tag by <strong>.(Ù’•‘ûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckë";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5CheckÒ"&Remove this deprecated "font" element.(İõäš8‚»¿§†.
+OWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(²ƒéÜ8ÕÖ’Â†.
+o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÇÊÕÂ†.
+o Web:TableHeaderHasIdOrScopeCheckô";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827³")Remove this deprecated "width" attribute.(µ ğñ8â¯»Â†.
+o Web:TableHeaderHasIdOrScopeCheckº	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Checkú"&Remove this deprecated "font" element.(ùÓ€şÿÿÿÿ8“èØ§†.
+o Web:TableHeaderHasIdOrScopeCheck‰";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8†¬ÔÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254ò"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8“èØ§†.
+PWeb:TableWithoutCaptionCheck¸" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckè";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+OWeb:BoldAndItalicTagsCheckÇ"!Replace this <b> tag by <strong>.(Ó³›š8‚»¿§†.
+>	Web:S1827")Remove this deprecated "width" attribute.(µ ğñ
+o Web:TableHeaderHasIdOrScopeCheck‰
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheck‡"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+F	Web:S1827Š")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+n Web:TableHeaderHasIdOrScopeCheckf";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheck–" Add a description to this table.(µ ğñ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckÙ
+"!Replace this <b> tag by <strong>.(ÅÍøœşÿÿÿÿ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckõ
+" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÉ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÅ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ñÃÂ†.
+o Web:TableHeaderHasIdOrScopeCheckç";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÙËÂ†.
+\	Web:S5254›"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+n Web:TableHeaderHasIdOrScopeCheck7";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+^Web:UnsupportedTagsInHtml5CheckÊ	"&Remove this deprecated "font" element.(öéõùÿÿÿÿ8‚»¿§†.
+\	Web:S5254Ö"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827ø")Remove this deprecated "width" attribute.(µ ğñ8“èØ§†.
+o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheckÜ" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¼";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Checkô"&Remove this deprecated "font" element.(§ÿÁÇûÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheck‘"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck­";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheckÈ
+" Add a description to this table.(µ ğñ8‚»¿§†.
+QWeb:PageWithoutTitleCheckË"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckº
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+]Web:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <HTML> tag.(¨äÑ>
+\	Web:S5254‚"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8†¬ÔÂ†.
+o Web:TableHeaderHasIdOrScopeCheckœ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckœ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Check
+"&Remove this deprecated "font" element.(÷Ûë8‚»¿§†.
+\	Web:S5254“"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckó";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+OWeb:BoldAndItalicTagsCheckÊ
+"!Replace this <b> tag by <strong>.(Îî8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÄ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254µ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+OWeb:BoldAndItalicTagsCheckˆ"!Replace this <b> tag by <strong>.(ÇÈŠª8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÆ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck«	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÖ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8™ÊÂ†.
+o Web:TableHeaderHasIdOrScopeCheck‹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheck§"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheck…"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckœ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+TWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(Æıóøÿÿÿÿ8‚»¿§†.
+NWeb:BoldAndItalicTagsCheck8"!Replace this <b> tag by <strong>.(•ŒşÛ8‚»¿§†.
+F	Web:S1827÷")Remove this deprecated "width" attribute.(µ ğñ8ÑÆÒÂ†.
+o Web:TableHeaderHasIdOrScopeCheck«	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827œ")Remove this deprecated "width" attribute.(µ ğñ8Óì¤Â†.
+o Web:TableHeaderHasIdOrScopeCheckÅ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ñÃÂ†.
+YWeb:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(²ƒéÜ8ÕÖ’Â†.
+o Web:TableHeaderHasIdOrScopeCheckŞ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheck¶"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheck³"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Check»	"&Remove this deprecated "font" element.(¦£·8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÅ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254à	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+^Web:UnsupportedTagsInHtml5CheckÔ"&Remove this deprecated "font" element.(¸Äïùÿÿÿÿ8÷¿Ó§†.
+o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
 TWeb:BoldAndItalicTagsCheck»
-"!Replace this <b> tag by <strong>.(åøÁ³ûÿÿÿÿ8½½ôÏ„.
-\	Web:S5254Ê
-"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckË
-"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckĞ
-" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ğ
-")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÑ
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÑ
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÑ
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÑ
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÑ
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÒ
-"&Remove this deprecated "font" element.(‘Ê­úÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÒ
-"!Replace this <b> tag by <strong>.(‘Ê­úÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckØ
-"&Remove this deprecated "font" element.(Ğ›Éıÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckØ
-"!Replace this <b> tag by <strong>.(Ğ›Éıÿÿÿÿ8½½ôÏ„.
-\	Web:S5254ç
-"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckè
-"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckí
-" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827í
-")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî
-";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkï
-"&Remove this deprecated "font" element.(œıíˆ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckï
-"!Replace this <b> tag by <strong>.(œıíˆ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkõ
-"&Remove this deprecated "font" element.(Ïˆ¦ø8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckõ
-"!Replace this <b> tag by <strong>.(Ïˆ¦ø8½½ôÏ„.
-\	Web:S5254„"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck…"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckŠ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Š")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck‹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck‹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck‹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck‹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck‹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckŒ"&Remove this deprecated "font" element.(†ƒªÕøÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckŒ"!Replace this <b> tag by <strong>.(†ƒªÕøÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check’"&Remove this deprecated "font" element.(šÙ×ªüÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck’"!Replace this <b> tag by <strong>.(šÙ×ªüÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkš"&Remove this deprecated "font" element.(—Ú“†8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckš"!Replace this <b> tag by <strong>.(—Ú“†8½½ôÏ„.
-\	Web:S5254¥"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck¦"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck«" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827«")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¬";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¬";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¬";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¬";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¬";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check­"&Remove this deprecated "font" element.(××…¯8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck­"!Replace this <b> tag by <strong>.(××…¯8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check³"&Remove this deprecated "font" element.(·¨²Ü8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck³"!Replace this <b> tag by <strong>.(·¨²Ü8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check»"&Remove this deprecated "font" element.(“ï ıÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck»"!Replace this <b> tag by <strong>.(“ï ıÿÿÿÿ8½½ôÏ„.
-\	Web:S5254Æ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÇ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÌ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ì")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÍ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÍ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÍ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÍ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÍ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÎ"&Remove this deprecated "font" element.(„ÆÖüÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÎ"!Replace this <b> tag by <strong>.(„ÆÖüÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÔ"&Remove this deprecated "font" element.(ãÚ§¨8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÔ"!Replace this <b> tag by <strong>.(ãÚ§¨8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÜ"&Remove this deprecated "font" element.(¿Ÿ¾Ú8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÜ"!Replace this <b> tag by <strong>.(¿Ÿ¾Ú8½½ôÏ„.
-\	Web:S5254ç"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckè"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckí" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827í")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkï"&Remove this deprecated "font" element.(„ÆÖüÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckï"!Replace this <b> tag by <strong>.(„ÆÖüÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkõ"&Remove this deprecated "font" element.(ãÚ§¨8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckõ"!Replace this <b> tag by <strong>.(ãÚ§¨8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkı"&Remove this deprecated "font" element.(¿Ÿ¾Ú8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckı"!Replace this <b> tag by <strong>.(¿Ÿ¾Ú8½½ôÏ„.
-\	Web:S5254ˆ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck‰"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(ƒ²Ãñ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(ƒ²Ãñ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check–"&Remove this deprecated "font" element.(›è…Æ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck–"!Replace this <b> tag by <strong>.(›è…Æ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(ù—ƒú8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(ù—ƒú8½½ôÏ„.
-\	Web:S5254©"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckª"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¯" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¯")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck°";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck°";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck°";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck°";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck°";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check±"&Remove this deprecated "font" element.(ƒ²Ãñ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck±"!Replace this <b> tag by <strong>.(ƒ²Ãñ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check·"&Remove this deprecated "font" element.(›è…Æ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck·"!Replace this <b> tag by <strong>.(›è…Æ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¿"&Remove this deprecated "font" element.(ù—ƒú8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¿"!Replace this <b> tag by <strong>.(ù—ƒú8½½ôÏ„.
-\	Web:S5254Ê"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckË"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckĞ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ğ")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÒ"&Remove this deprecated "font" element.(Ë–¼ø8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÒ"!Replace this <b> tag by <strong>.(Ë–¼ø8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckØ"&Remove this deprecated "font" element.(óŸ”€ùÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckØ"!Replace this <b> tag by <strong>.(óŸ”€ùÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkà"&Remove this deprecated "font" element.(ÿŠ“˜ùÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckà"!Replace this <b> tag by <strong>.(ÿŠ“˜ùÿÿÿÿ8½½ôÏ„.
-\	Web:S5254ë"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckì"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckñ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827ñ")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckò";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckò";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckò";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckò";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckò";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkó"&Remove this deprecated "font" element.(¯ÇÜ¯8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckó"!Replace this <b> tag by <strong>.(¯ÇÜ¯8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkù"&Remove this deprecated "font" element.(‰˜ˆúÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckù"!Replace this <b> tag by <strong>.(‰˜ˆúÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(‘„’î8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(‘„’î8½½ôÏ„.
-\	Web:S5254Œ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck’" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827’")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck“";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck“";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck“";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck“";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck“";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check”"&Remove this deprecated "font" element.(õ€¦Ã8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck”"!Replace this <b> tag by <strong>.(õ€¦Ã8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkš"&Remove this deprecated "font" element.(Š³µæ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckš"!Replace this <b> tag by <strong>.(Š³µæ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check¢"&Remove this deprecated "font" element.(·¢½±øÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck¢"!Replace this <b> tag by <strong>.(·¢½±øÿÿÿÿ8½½ôÏ„.
-XWeb:UnsupportedTagsInHtml5Check¤"&Remove this deprecated "font" element.(Ä†ç{8½½ôÏ„.
-NWeb:BoldAndItalicTagsCheck¤"!Replace this <b> tag by <strong>.(Ä†ç{8½½ôÏ„.
-\	Web:S5254¯"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck°"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckµ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827µ")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¶";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¶";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¶";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¶";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¶";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check·"&Remove this deprecated "font" element.(·éäÚÿÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck·"!Replace this <b> tag by <strong>.(·éäÚÿÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check½"&Remove this deprecated "font" element.(€¡šæüÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck½"!Replace this <b> tag by <strong>.(€¡šæüÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÅ"&Remove this deprecated "font" element.(¨èÒ­8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÅ"!Replace this <b> tag by <strong>.(¨èÒ­8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÇ"&Remove this deprecated "font" element.(óıûŸıÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÇ"!Replace this <b> tag by <strong>.(óıûŸıÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÉ"&Remove this deprecated "font" element.(’¦ƒƒ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÉ"!Replace this <b> tag by <strong>.(’¦ƒƒ8½½ôÏ„.
-\	Web:S5254Ô"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÕ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÚ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ú")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÛ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÛ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÛ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÛ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÛ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÜ"&Remove this deprecated "font" element.(Ñ‡Ôûÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÜ"!Replace this <b> tag by <strong>.(Ñ‡Ôûÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkâ"&Remove this deprecated "font" element.(Ëøõ½8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckâ"!Replace this <b> tag by <strong>.(Ëøõ½8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkê"&Remove this deprecated "font" element.(êúöè8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckê"!Replace this <b> tag by <strong>.(êúöè8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkì"&Remove this deprecated "font" element.(–™›Š8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckì"!Replace this <b> tag by <strong>.(–™›Š8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkî"&Remove this deprecated "font" element.(Ø¹Ä8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckî"!Replace this <b> tag by <strong>.(Ø¹Ä8½½ôÏ„.
-\	Web:S5254ù"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckú"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÿ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827ÿ")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(ˆ¸ğß8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(ˆ¸ğß8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check‡"&Remove this deprecated "font" element.(ÿ³ñø8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck‡"!Replace this <b> tag by <strong>.(ÿ³ñø8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(ÿóï˜ÿÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(ÿóï˜ÿÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check‘"&Remove this deprecated "font" element.(¼øÆ£8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck‘"!Replace this <b> tag by <strong>.(¼øÆ£8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check“"&Remove this deprecated "font" element.(ÿóï˜ÿÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck“"!Replace this <b> tag by <strong>.(ÿóï˜ÿÿÿÿÿ8½½ôÏ„.
-\	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckŸ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¤" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¤")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¥";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¥";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¥";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¥";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¥";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¦"&Remove this deprecated "font" element.(ŞïÌ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¦"!Replace this <b> tag by <strong>.(ŞïÌ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check¬"&Remove this deprecated "font" element.(úğİ¶ÿÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck¬"!Replace this <b> tag by <strong>.(úğİ¶ÿÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check²"&Remove this deprecated "font" element.(éªÉü8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck²"!Replace this <b> tag by <strong>.(éªÉü8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check´"&Remove this deprecated "font" element.(»ˆ¨£8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck´"!Replace this <b> tag by <strong>.(»ˆ¨£8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¸"&Remove this deprecated "font" element.(éªÉü8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¸"!Replace this <b> tag by <strong>.(éªÉü8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkº"&Remove this deprecated "font" element.(Œ‘ñ”úÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckº"!Replace this <b> tag by <strong>.(Œ‘ñ”úÿÿÿÿ8½½ôÏ„.
-\	Web:S5254Å"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÆ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckË" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ë")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÌ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÌ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÌ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÌ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÌ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÍ"&Remove this deprecated "font" element.(ÉÕ§ıÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÍ"!Replace this <b> tag by <strong>.(ÉÕ§ıÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÓ"&Remove this deprecated "font" element.(¿Ç¬İ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÓ"!Replace this <b> tag by <strong>.(¿Ç¬İ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÛ"&Remove this deprecated "font" element.( ‚èõúÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÛ"!Replace this <b> tag by <strong>.( ‚èõúÿÿÿÿ8½½ôÏ„.
-\	Web:S5254æ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckç"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckì" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827ì")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckí";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckí";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckí";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckí";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckí";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkî"&Remove this deprecated "font" element.(ğ‹”œ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckî"!Replace this <b> tag by <strong>.(ğ‹”œ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkô"&Remove this deprecated "font" element.(âë•ˆøÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckô"!Replace this <b> tag by <strong>.(âë•ˆøÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkü"&Remove this deprecated "font" element.(Š¤­¥8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckü"!Replace this <b> tag by <strong>.(Š¤­¥8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check€"&Remove this deprecated "font" element.(Š¤­¥8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck€"!Replace this <b> tag by <strong>.(Š¤­¥8½½ôÏ„.
-\	Web:S5254‹"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckŒ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck‘" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827‘")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check“"&Remove this deprecated "font" element.(®¸Û¼ùÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck“"!Replace this <b> tag by <strong>.(®¸Û¼ùÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check™"&Remove this deprecated "font" element.(ËÏßê8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck™"!Replace this <b> tag by <strong>.(ËÏßê8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check¡"&Remove this deprecated "font" element.(«ŸÊ¾üÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck¡"!Replace this <b> tag by <strong>.(«ŸÊ¾üÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check¥"&Remove this deprecated "font" element.(«ŸÊ¾üÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck¥"!Replace this <b> tag by <strong>.(«ŸÊ¾üÿÿÿÿ8½½ôÏ„.
-\	Web:S5254°"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck±"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¶" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¶")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck·";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck·";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck·";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck·";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck·";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¸"&Remove this deprecated "font" element.(á®²8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¸"!Replace this <b> tag by <strong>.(á®²8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check¾"&Remove this deprecated "font" element.(˜‘Öıÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck¾"!Replace this <b> tag by <strong>.(˜‘Öıÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÆ"&Remove this deprecated "font" element.(¶­Ç©şÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÆ"!Replace this <b> tag by <strong>.(¶­Ç©şÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÊ"&Remove this deprecated "font" element.(¶­Ç©şÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÊ"!Replace this <b> tag by <strong>.(¶­Ç©şÿÿÿÿ8½½ôÏ„.
-\	Web:S5254Õ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÖ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÛ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Û")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÜ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkİ"&Remove this deprecated "font" element.(œÈæñşÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckİ"!Replace this <b> tag by <strong>.(œÈæñşÿÿÿÿ8½½ôÏ„.
-XWeb:UnsupportedTagsInHtml5Checkã"&Remove this deprecated "font" element.(‹ºØ8½½ôÏ„.
-NWeb:BoldAndItalicTagsCheckã"!Replace this <b> tag by <strong>.(‹ºØ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkë"&Remove this deprecated "font" element.(ù³×Ø8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckë"!Replace this <b> tag by <strong>.(ù³×Ø8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkï"&Remove this deprecated "font" element.(ù³×Ø8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckï"!Replace this <b> tag by <strong>.(ù³×Ø8½½ôÏ„.
-\	Web:S5254ú"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckû"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck€" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827€")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check‚"&Remove this deprecated "font" element.(ã‹©8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck‚"!Replace this <b> tag by <strong>.(ã‹©8½½ôÏ„.
-\	Web:S5254‹"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckŒ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck‘" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827‘")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check“"&Remove this deprecated "font" element.(µÚ•ˆşÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck“"!Replace this <b> tag by <strong>.(µÚ•ˆşÿÿÿÿ8½½ôÏ„.
-\	Web:S5254œ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¢" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¢")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck£";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck£";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck£";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck£";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck£";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check¤"&Remove this deprecated "font" element.(ı°à¼şÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck¤"!Replace this <b> tag by <strong>.(ı°à¼şÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkª"&Remove this deprecated "font" element.(¢ˆ¿œùÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckª"!Replace this <b> tag by <strong>.(¢ˆ¿œùÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check²"&Remove this deprecated "font" element.(ƒşÔ°8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck²"!Replace this <b> tag by <strong>.(ƒşÔ°8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¶"&Remove this deprecated "font" element.(ƒşÔ°8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¶"!Replace this <b> tag by <strong>.(ƒşÔ°8½½ôÏ„.
-\	Web:S5254Á"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÂ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÇ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ç")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÈ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÈ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÈ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÈ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÈ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÉ"&Remove this deprecated "font" element.(ïµáŸ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÉ"!Replace this <b> tag by <strong>.(ïµáŸ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÏ"&Remove this deprecated "font" element.(¦úæåÿÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÏ"!Replace this <b> tag by <strong>.(¦úæåÿÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check×"&Remove this deprecated "font" element.(®«ıÇşÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck×"!Replace this <b> tag by <strong>.(®«ıÇşÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÛ"&Remove this deprecated "font" element.(®«ıÇşÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÛ"!Replace this <b> tag by <strong>.(®«ıÇşÿÿÿÿ8½½ôÏ„.
-\	Web:S5254æ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckç"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckì" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827ì")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckí";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckí";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckí";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckí";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckí";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkî"&Remove this deprecated "font" element.(ïµáŸ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckî"!Replace this <b> tag by <strong>.(ïµáŸ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkô"&Remove this deprecated "font" element.(¦úæåÿÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckô"!Replace this <b> tag by <strong>.(¦úæåÿÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkü"&Remove this deprecated "font" element.(®«ıÇşÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckü"!Replace this <b> tag by <strong>.(®«ıÇşÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check€"&Remove this deprecated "font" element.(®«ıÇşÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck€"!Replace this <b> tag by <strong>.(®«ıÇşÿÿÿÿ8½½ôÏ„.
-\	Web:S5254‹"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckŒ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck‘" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827‘")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check“"&Remove this deprecated "font" element.(ÔÜ›…8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck“"!Replace this <b> tag by <strong>.(ÔÜ›…8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check™"&Remove this deprecated "font" element.(àƒó¸üÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck™"!Replace this <b> tag by <strong>.(àƒó¸üÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¡"&Remove this deprecated "font" element.(°¤õù8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¡"!Replace this <b> tag by <strong>.(°¤õù8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¥"&Remove this deprecated "font" element.(°¤õù8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¥"!Replace this <b> tag by <strong>.(°¤õù8½½ôÏ„.
-\	Web:S5254°"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck±"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¶" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¶")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck·";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck·";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck·";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck·";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck·";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¸"&Remove this deprecated "font" element.(úïØ·8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¸"!Replace this <b> tag by <strong>.(úïØ·8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkº"&Remove this deprecated "font" element.(ÁÎ»“ÿÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckº"!Replace this <b> tag by <strong>.(ÁÎ»“ÿÿÿÿÿ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¼"&Remove this deprecated "font" element.(–¯Â8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¼"!Replace this <b> tag by <strong>.(–¯Â8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check¾"&Remove this deprecated "font" element.(–¯Â8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck¾"!Replace this <b> tag by <strong>.(–¯Â8½½ôÏ„.
-\	Web:S5254Ã"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÄ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÉ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827É")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÊ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÊ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÊ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÊ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÊ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckË"&Remove this deprecated "font" element.(“ÆÑé8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckË"!Replace this <b> tag by <strong>.(“ÆÑé8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÍ"&Remove this deprecated "font" element.(ƒõÊñ8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÍ"!Replace this <b> tag by <strong>.(ƒõÊñ8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÏ"&Remove this deprecated "font" element.(Áß¶À8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÏ"!Replace this <b> tag by <strong>.(Áß¶À8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÑ"&Remove this deprecated "font" element.(Áß¶À8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÑ"!Replace this <b> tag by <strong>.(Áß¶À8½½ôÏ„.
-\	Web:S5254Ö"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck×"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÜ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ü")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckŞ"&Remove this deprecated "font" element.(ì£ç»8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckŞ"!Replace this <b> tag by <strong>.(ì£ç»8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkà"&Remove this deprecated "font" element.(‘ Ü¸8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckà"!Replace this <b> tag by <strong>.(‘ Ü¸8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkâ"&Remove this deprecated "font" element.(ÁÀ±Û8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckâ"!Replace this <b> tag by <strong>.(ÁÀ±Û8½½ôÏ„.
-\	Web:S5254ç"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckè"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckí" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827í")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckî";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkï"&Remove this deprecated "font" element.(ì£ç»8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckï"!Replace this <b> tag by <strong>.(ì£ç»8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkñ"&Remove this deprecated "font" element.(‘ Ü¸8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckñ"!Replace this <b> tag by <strong>.(‘ Ü¸8½½ôÏ„.
-\	Web:S5254ö"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck÷"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckü" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827ü")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckı";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckı";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckı";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckı";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckı";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-XWeb:UnsupportedTagsInHtml5Checkş"&Remove this deprecated "font" element.(„óÜz8½½ôÏ„.
-NWeb:BoldAndItalicTagsCheckş"!Replace this <b> tag by <strong>.(„óÜz8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check€"&Remove this deprecated "font" element.(¹ÁŠÃøÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck€"!Replace this <b> tag by <strong>.(¹ÁŠÃøÿÿÿÿ8½½ôÏ„.
-\	Web:S5254…"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck†"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck‹" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827‹")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckŒ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckŒ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckŒ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckŒ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckŒ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(æ‡¥˜8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(æ‡¥˜8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(ÇÊÅä8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(ÇÊÅä8½½ôÏ„.
-\	Web:S5254”"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck•"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckš" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827š")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck›";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck›";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck›";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck›";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck›";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-XWeb:UnsupportedTagsInHtml5Checkœ"&Remove this deprecated "font" element.(­Ô¸]8½½ôÏ„.
-NWeb:BoldAndItalicTagsCheckœ"!Replace this <b> tag by <strong>.(­Ô¸]8½½ôÏ„.
-XWeb:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(ñÌ—.8½½ôÏ„.
-NWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(ñÌ—.8½½ôÏ„.
-\	Web:S5254£"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck¤"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck©" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827©")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckª";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckª";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckª";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckª";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckª";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check«"&Remove this deprecated "font" element.(®Ë§êùÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck«"!Replace this <b> tag by <strong>.(®Ë§êùÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check­"&Remove this deprecated "font" element.(Ü…‡›şÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck­"!Replace this <b> tag by <strong>.(Ü…‡›şÿÿÿÿ8½½ôÏ„.
-\	Web:S5254²"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheck³"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheck¸" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827¸")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck¹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkº"&Remove this deprecated "font" element.(®Ë§êùÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckº"!Replace this <b> tag by <strong>.(®Ë§êùÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Check¼"&Remove this deprecated "font" element.(Ü…‡›şÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheck¼"!Replace this <b> tag by <strong>.(Ü…‡›şÿÿÿÿ8½½ôÏ„.
-\	Web:S5254Á"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÂ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÇ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ç")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÈ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÈ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÈ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÈ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckÈ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5CheckÉ"&Remove this deprecated "font" element.(æå¢À8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckÉ"!Replace this <b> tag by <strong>.(æå¢À8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckË"&Remove this deprecated "font" element.(Œ­Üÿÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckË"!Replace this <b> tag by <strong>.(Œ­Üÿÿÿÿÿ8½½ôÏ„.
-\	Web:S5254Ğ"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckÑ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckÖ" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827Ö")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck×";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck×";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck×";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck×";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheck×";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckØ"&Remove this deprecated "font" element.(Ã£ÊĞşÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckØ"!Replace this <b> tag by <strong>.(Ã£ÊĞşÿÿÿÿ8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5CheckÚ"&Remove this deprecated "font" element.(û´ÕÓüÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckÚ"!Replace this <b> tag by <strong>.(û´ÕÓüÿÿÿÿ8½½ôÏ„.
-\	Web:S5254ß"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckà"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckå" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827å")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckæ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckæ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckæ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckæ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckæ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkç"&Remove this deprecated "font" element.(øÚ’Í8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckç"!Replace this <b> tag by <strong>.(øÚ’Í8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checké"&Remove this deprecated "font" element.(Ñ“”Í8½½ôÏ„.
-OWeb:BoldAndItalicTagsChecké"!Replace this <b> tag by <strong>.(Ñ“”Í8½½ôÏ„.
-\	Web:S5254î"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8½½ôÏ„.
-QWeb:PageWithoutTitleCheckï"Add a <title> tag to this page.(üºéñûÿÿÿÿ8½½ôÏ„.
-PWeb:TableWithoutCaptionCheckô" Add a description to this table.(µ ğñ8½½ôÏ„.
-F	Web:S1827ô")Remove this deprecated "width" attribute.(µ ğñ8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-o Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8½½ôÏ„.
-YWeb:UnsupportedTagsInHtml5Checkö"&Remove this deprecated "font" element.(ãˆñº8½½ôÏ„.
-OWeb:BoldAndItalicTagsCheckö"!Replace this <b> tag by <strong>.(ãˆñº8½½ôÏ„.
-^Web:UnsupportedTagsInHtml5Checkø"&Remove this deprecated "font" element.(€—Ü¡øÿÿÿÿ8½½ôÏ„.
-TWeb:BoldAndItalicTagsCheckø"!Replace this <b> tag by <strong>.(€—Ü¡øÿÿÿÿ8½½ôÏ„.
+"!Replace this <b> tag by <strong>.(ĞÖ¨úÿÿÿÿ8‚»¿§†.
+PWeb:TableWithoutCaptionCheck³" Add a description to this table.(µ ğñ8â¯»Â†.
+QWeb:PageWithoutTitleCheck”	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+F	Web:S1827ò")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+F	Web:S1827İ")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+QWeb:PageWithoutTitleChecká"Add a <title> tag to this page.(üºéñûÿÿÿÿ8ÙËÂ†.
+F	Web:S1827æ
+")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheck˜"!Replace this <b> tag by <strong>.(è®Šøÿÿÿÿ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Check"&Remove this deprecated "font" element.(ê˜¹È8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‰";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8†¬ÔÂ†.
+o Web:TableHeaderHasIdOrScopeCheckŠ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827ÿ")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¯";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleChecká
+"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheck®"Add a <title> tag to this page.(üºéñûÿÿÿÿ8â¯»Â†.
+^Web:UnsupportedTagsInHtml5Check˜"&Remove this deprecated "font" element.(è®Šøÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckš	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+XWeb:UnsupportedTagsInHtml5Check®"&Remove this deprecated "font" element.(¥Ğ¹)8‚»¿§†.
+QWeb:PageWithoutTitleCheck¥	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheck–
+"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckø";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÑÆÒÂ†.
+o Web:TableHeaderHasIdOrScopeCheck‰";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8†¬ÔÂ†.
+PWeb:TableWithoutCaptionCheckó" Add a description to this table.(µ ğñ8‚»¿§†.
+QWeb:PageWithoutTitleCheck©"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+F	Web:S1827ª	")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¯";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÆ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheckŠ" Add a description to this table.(µ ğñ8‚»¿§†.
+F	Web:S1827×	")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5CheckÁ"&Remove this deprecated "font" element.(‰«Úù8‡—È§†.
+OWeb:BoldAndItalicTagsCheckÒ"!Replace this <b> tag by <strong>.(İõäš8‚»¿§†.
+QWeb:PageWithoutTitleCheck”"Add a <title> tag to this page.(üºéñûÿÿÿÿ8ÇÊÕÂ†.
+OWeb:BoldAndItalicTagsChecké"!Replace this <b> tag by <strong>.(é×èã8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckŒ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÕÖ’Â†.
+o Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‡—È§†.
+YWeb:UnsupportedTagsInHtml5CheckŞ"&Remove this deprecated "font" element.(àÚ¿±8‚»¿§†.
+QWeb:PageWithoutTitleCheckú"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Check›	"&Remove this deprecated "font" element.(ùËÇ—8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+TWeb:BoldAndItalicTagsCheck‹"!Replace this <b> tag by <strong>.(æşØ•ÿÿÿÿÿ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5CheckÆ"&Remove this deprecated "font" element.(ˆßÜæ8‚»¿§†.
+\	Web:S5254¿"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÆ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckÍ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8÷¿Ó§†.
+\	Web:S5254›"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+E	Web:S18276")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckØ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254Ê"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+F	Web:S1827‹")Remove this deprecated "width" attribute.(µ ğñ8ÕÖ’Â†.
+F	Web:S1827™")Remove this deprecated "width" attribute.(µ ğñ8ÇÊÕÂ†.
+^Web:UnsupportedTagsInHtml5Check¬
+"&Remove this deprecated "font" element.(ÄÁ§ııÿÿÿÿ8‚»¿§†.
+OWeb:BoldAndItalicTagsCheck›	"!Replace this <b> tag by <strong>.(ùËÇ—8‚»¿§†.
+PWeb:TableWithoutCaptionCheckæ
+" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckè";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckú"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckæ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÔîÕ§†.
+PWeb:TableWithoutCaptionCheckĞ" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck®";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Checké"&Remove this deprecated "font" element.(é×èã8‚»¿§†.
+\	Web:S5254¾"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+F	Web:S1827¬")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+OWeb:BoldAndItalicTagsCheck¦"!Replace this <b> tag by <strong>.(ù®£8Óì¤Â†.
+F	Web:S1827»")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckó";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
+TWeb:BoldAndItalicTagsCheck×"!Replace this <b> tag by <strong>.(Ç¡ÿÿÿÿÿ8™ÊÂ†.
+QWeb:PageWithoutTitleCheck—"Add a <title> tag to this page.(üºéñûÿÿÿÿ8Óì¤Â†.
+F	Web:S1827ó")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckª" Add a description to this table.(µ ğñ8å—ÖÂ†.
+o Web:TableHeaderHasIdOrScopeCheckö	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827Ä")Remove this deprecated "width" attribute.(µ ğñ8ñÃÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÓ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8÷¿Ó§†.
+OWeb:BoldAndItalicTagsCheckù"!Replace this <b> tag by <strong>.(×§’¯8ÑÆÒÂ†.
+o Web:TableHeaderHasIdOrScopeCheckø";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÑÆÒÂ†.
+PWeb:TableWithoutCaptionCheck¬" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck´";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8â¯»Â†.
+o Web:TableHeaderHasIdOrScopeCheck¹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheck­" Add a description to this table.(µ ğñ8‚»¿§†.
+F	Web:S1827õ
+")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5CheckŠ
+"&Remove this deprecated "font" element.(÷Ûë8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckØ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+TWeb:BoldAndItalicTagsCheck£"!Replace this <b> tag by <strong>.(¾æ…ïûÿÿÿÿ8‚»¿§†.
+PWeb:TableWithoutCaptionCheck†" Add a description to this table.(µ ğñ8‚»¿§†.
+F	Web:S1827¿")Remove this deprecated "width" attribute.(µ ğñ8‡—È§†.
+o Web:TableHeaderHasIdOrScopeCheck•";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254“"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8ÇÊÕÂ†.
+OWeb:BoldAndItalicTagsCheckÁ"!Replace this <b> tag by <strong>.(‰«Úù8‡—È§†.
+o Web:TableHeaderHasIdOrScopeCheck­";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckØ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckØ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheckœ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheck˜"!Replace this <b> tag by <strong>.(ñİ¥şÿÿÿÿ8‚»¿§†.
+PWeb:TableWithoutCaptionCheck÷" Add a description to this table.(µ ğñ8ÑÆÒÂ†.
+o Web:TableHeaderHasIdOrScopeCheckš	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254ï
+"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‡—È§†.
+PWeb:TableWithoutCaptionCheckÒ" Add a description to this table.(µ ğñ8÷¿Ó§†.
+F	Web:S1827È	")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckè	"!Replace this <b> tag by <strong>.(û¯¤óÿÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck—";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheck¡" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheckå" Add a description to this table.(µ ğñ8ÔîÕ§†.
+o Web:TableHeaderHasIdOrScopeCheckÉ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckú"!Replace this <b> tag by <strong>.(ùÓ€şÿÿÿÿ8“èØ§†.
+T	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>
+TWeb:BoldAndItalicTagsCheckÙ	"!Replace this <b> tag by <strong>.(öéõùÿÿÿÿ8‚»¿§†.
+TWeb:BoldAndItalicTagsCheck¬
+"!Replace this <b> tag by <strong>.(ÄÁ§ııÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckŠ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÉ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckë";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckØ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Check›"&Remove this deprecated "font" element.(ëáÕÉ8ÇÊÕÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck€";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827æ")Remove this deprecated "width" attribute.(µ ğñ8ÙËÂ†.
+F	Web:S1827¹
+")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5Check÷
+"&Remove this deprecated "font" element.(‡Öñª8‚»¿§†.
+QWeb:PageWithoutTitleCheckğ	"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+YWeb:UnsupportedTagsInHtml5CheckÊ
+"&Remove this deprecated "font" element.(Îî8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckø";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÑÆÒÂ†.
+\	Web:S5254×"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+OWeb:BoldAndItalicTagsCheck¨"!Replace this <b> tag by <strong>.(ğÏµ‰8Óì¤Â†.
+o Web:TableHeaderHasIdOrScopeCheck‹";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÑ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¼";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheckê" Add a description to this table.(µ ğñ8‚»¿§†.
+OWeb:BoldAndItalicTagsCheck÷
+"!Replace this <b> tag by <strong>.(‡Öñª8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck´";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8â¯»Â†.
+o Web:TableHeaderHasIdOrScopeCheck¼";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+IWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(üºéñûÿÿÿÿ
+o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÇÊÕÂ†.
+TWeb:BoldAndItalicTagsCheck½"!Replace this <b> tag by <strong>.(Æıóøÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckæ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ÔîÕ§†.
+F	Web:S1827­")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+\	Web:S5254“	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+OWeb:BoldAndItalicTagsCheckŒ"!Replace this <b> tag by <strong>.(ş¬à¢8‚»¿§†.
+^Web:UnsupportedTagsInHtml5Check£"&Remove this deprecated "font" element.(ŠÎÍ±ûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckŞ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+TWeb:BoldAndItalicTagsCheckô"!Replace this <b> tag by <strong>.(§ÿÁÇûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÉ	";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckË"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+QWeb:PageWithoutTitleCheckí"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck¢";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‰
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckŠ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck«
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckƒ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8†¬ÔÂ†.
+o Web:TableHeaderHasIdOrScopeCheckó";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheck¥"Add a <title> tag to this page.(üºéñûÿÿÿÿ8å—ÖÂ†.
+o Web:TableHeaderHasIdOrScopeCheckº
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‰
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheckÿ" Add a description to this table.(µ ğñ8‚»¿§†.
+F	Web:S1827Å")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+\	Web:S5254•
+"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+\	Web:S5254à
+"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8‚»¿§†.
+QWeb:PageWithoutTitleCheckÒ
+"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+F	Web:S1827å")Remove this deprecated "width" attribute.(µ ğñ8ÔîÕ§†.
+o Web:TableHeaderHasIdOrScopeCheckö
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckš";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckÀ"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+PWeb:TableWithoutCaptionCheck×	" Add a description to this table.(µ ğñ8‚»¿§†.
+g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò
+PWeb:TableWithoutCaptionCheckç" Add a description to this table.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck‰
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+QWeb:PageWithoutTitleCheckğ
+"Add a <title> tag to this page.(üºéñûÿÿÿÿ8‚»¿§†.
+PWeb:TableWithoutCaptionCheckò" Add a description to this table.(µ ğñ8‚»¿§†.
+F	Web:S1827Õ")Remove this deprecated "width" attribute.(µ ğñ8™ÊÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÅ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ñÃÂ†.
+n Web:TableHeaderHasIdOrScopeCheckf";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckİ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+F	Web:S1827–")Remove this deprecated "width" attribute.(µ ğñ8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck•";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck®";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+PWeb:TableWithoutCaptionCheck™" Add a description to this table.(µ ğñ8ÇÊÕÂ†.
+o Web:TableHeaderHasIdOrScopeCheckØ
+";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck«";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8å—ÖÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÅ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8ñÃÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÓ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8÷¿Ó§†.
+o Web:TableHeaderHasIdOrScopeCheckŞ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheckÆ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+o Web:TableHeaderHasIdOrScopeCheck®";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8‚»¿§†.
+OWeb:BoldAndItalicTagsCheck¶"!Replace this <b> tag by <strong>.(±ËÔê8å—ÖÂ†.
+\	Web:S5254»"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(¨äÑ>8¡ƒçÂ†.
+QWeb:PageWithoutTitleCheck¼"Add a <title> tag to this page.(üºéñûÿÿÿÿ8¡ƒçÂ†.
+PWeb:TableWithoutCaptionCheckÁ" Add a description to this table.(µ ğñ8¡ƒçÂ†.
+F	Web:S1827Á")Remove this deprecated "width" attribute.(µ ğñ8¡ƒçÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÂ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8¡ƒçÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÂ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8¡ƒçÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÂ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8¡ƒçÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÂ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8¡ƒçÂ†.
+o Web:TableHeaderHasIdOrScopeCheckÂ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã÷èò8¡ƒçÂ†.
+YWeb:UnsupportedTagsInHtml5CheckÃ"&Remove this deprecated "font" element.(…š•Á8¡ƒçÂ†.
+OWeb:BoldAndItalicTagsCheckÃ"!Replace this <b> tag by <strong>.(…š•Á8¡ƒçÂ†.
+YWeb:UnsupportedTagsInHtml5CheckË"&Remove this deprecated "font" element.(Šäº8¡ƒçÂ†.
+OWeb:BoldAndItalicTagsCheckË"!Replace this <b> tag by <strong>.(Šäº8¡ƒçÂ†.
+YWeb:UnsupportedTagsInHtml5CheckÍ"&Remove this deprecated "font" element.(Â‰‰à8¡ƒçÂ†.
+OWeb:BoldAndItalicTagsCheckÍ"!Replace this <b> tag by <strong>.(Â‰‰à8¡ƒçÂ†.

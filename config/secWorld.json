@@ -5,16 +5,15 @@
         "12.50.4": 125040,
         "12.50.2": 125020,
         "12.40.2": 124020,
-        "12.30"   : 123000,
+        "12.30": 123000,
         "11.72.03": 117203,
         "11.72.02": 117202,
         "11.72.01": 117201
     },
     "linuxSearch": [
-        "mnt",
+        "/mnt",
         "/tmp",
-        "/home",
-        "/Users/david/IdeaProjects"
+        "/home"
     ],
     "windowsSearch": [
         "C:/Users",
@@ -34,7 +33,7 @@
         "iso": "/mnt/iso",
         "NFAST_HOME": "/opt/nfast",
         "NFAST_KMDATA": "/opt/nfast/kmdata",
-        "CLASSPATH": "/opt/nfast/java",
+        "CLASSPATH": "pt/nfast/java",
         "PATH": "/opt/nfast/bin:/opt/nfast/sbin",
         "JAVA_HOME": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64",
         "JRE_HOME": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre"

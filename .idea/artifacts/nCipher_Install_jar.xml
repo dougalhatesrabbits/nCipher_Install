@@ -5,35 +5,46 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
       </element>
+      <element id="file-copy" path="$PROJECT_DIR$/LICENSE" />
+      <element id="file-copy" path="$PROJECT_DIR$/README.md" />
       <element id="module-output" name="Logging" />
       <element id="module-output" name="IO" />
       <element id="module-output" name="Platform" />
       <element id="module-output" name="nCipher_Install" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/sourceforge/argparse4j/argparse4j/0.8.1/argparse4j-0.8.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.6.4/jackson-databind-2.6.4.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.6.0/jackson-annotations-2.6.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.6.4/jackson-core-2.6.4.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/iso9660-vfs-impl/2.0.1/iso9660-vfs-impl-2.0.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/loop-fs-iso-impl/2.0.1/loop-fs-iso-impl-2.0.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/loop-fs-spi/2.0.1/loop-fs-spi-2.0.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/loop-fs-api/2.0.1/loop-fs-api-2.0.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/iso9660-writer/2.0.1/iso9660-writer-2.0.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/sabre/2.0.1/sabre-2.0.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/ant/ant/1.7.1/ant-1.7.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/ant/ant-launcher/1.7.1/ant-launcher-1.7.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.5.0/jna-5.5.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-vfs/commons-vfs/1.0/commons-vfs-1.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/commons-compress-1.20/commons-compress-1.20.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/commons-compress-1.20/commons-compress-1.20-tests.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/commons-compress-1.20/commons-compress-1.20-javadoc.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/commons-compress-1.20/commons-compress-1.20-sources.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/commons-compress-1.20/commons-compress-1.20-test-sources.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna-platform/5.5.0/jna-platform-5.5.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/diogonunes/JCDP/4.0.1/JCDP-4.0.1.jar" path-in-jar="/" />
-      <element id="library" level="application" name="commons-io:commons-io:2.6" />
+      <element id="directory" name="config">
+        <element id="file-copy" path="$PROJECT_DIR$/config/12-50-Bundle.json" />
+        <element id="file-copy" path="$PROJECT_DIR$/config/12-60-Bundle.json" />
+        <element id="file-copy" path="$PROJECT_DIR$/config/secWorld.json" />
+      </element>
+      <element id="directory" name="libs">
+        <element id="library" level="application" name="commons-io:commons-io:2.6" />
+      </element>
+      <element id="directory" name="jars">
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/diogonunes/JCDP/4.0.1/JCDP-4.0.1.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/sabre/2.0.1/sabre-2.0.1.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.5.0/jna-5.5.0.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/iso9660-writer/2.0.1/iso9660-writer-2.0.1.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna-platform/5.5.0/jna-platform-5.5.0.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/loop-fs-api/2.0.1/loop-fs-api-2.0.1.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/loop-fs-spi/2.0.1/loop-fs-spi-2.0.1.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/loop-fs-iso-impl/2.0.1/loop-fs-iso-impl-2.0.1.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/stephenc/java-iso-tools/iso9660-vfs-impl/2.0.1/iso9660-vfs-impl-2.0.1.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.6.0/jackson-annotations-2.6.0.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.6.4/jackson-core-2.6.4.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.6.4/jackson-databind-2.6.4.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-vfs/commons-vfs/1.0/commons-vfs-1.0.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/commons-compress-1.20/commons-compress-1.20.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/commons-compress-1.20/commons-compress-1.20-tests.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/commons-compress-1.20/commons-compress-1.20-test-sources.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/commons-compress-1.20/commons-compress-1.20-sources.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/sourceforge/argparse4j/argparse4j/0.8.1/argparse4j-0.8.1.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/commons-compress-1.20/commons-compress-1.20-javadoc.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/ant/ant-launcher/1.7.1/ant-launcher-1.7.1.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/ant/ant/1.7.1/ant-1.7.1.jar" path-in-jar="/" />
+      </element>
     </root>
   </artifact>
 </component>

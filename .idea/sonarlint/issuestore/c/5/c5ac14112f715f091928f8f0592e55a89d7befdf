@@ -1,31 +1,32 @@
 
-Dsquid:S1170"!Make this final field static too.(¿€“üıÿÿÿÿ8 ¤İ•„.
-Dsquid:S1170"!Make this final field static too.(Š”Ûÿÿÿÿÿ8–×İ•„.
-zsquid:S00116"VRename this field "sw_filename" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü¤™üûÿÿÿÿ8¤èº„.
-Dsquid:S1170"!Make this final field static too.(şƒã¹üÿÿÿÿ8¤èº„.
-nsquid:S00116"ORename this field "PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÍ´8¤èº„.
-Psquid:S1135["2Complete the task associated to this TODO comment.(…ïœ†8ş¥Á„„.
-{squid:S00116"WRename this field "NFAST_KMDATA" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şƒã¹üÿÿÿÿ8¤èº„.
-Psquid:S1135?"2Complete the task associated to this TODO comment.(…ïœ†8®¯¼„„.
-Psquid:S1135*"2Complete the task associated to this TODO comment.(…ïœ†8—½º„„.
-Psquid:S1135S"2Complete the task associated to this TODO comment.(…ïœ†8øÌÀ„„.
-Qsquid:S1135ˆ"2Complete the task associated to this TODO comment.(…ïœ†8€ÁÍ„„.
-rsquid:S00116"TRename this field "CLASSPATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–Á¨8¤èº„.
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(•¬«¨8¤èº„.
-Psquid:S11350"2Complete the task associated to this TODO comment.(…ïœ†8µ•»„„.
-†squid:S1157r"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(¯²‡¥ûÿÿÿÿ8¤èº„.
-Psquid:S1135="2Complete the task associated to this TODO comment.(…ïœ†8÷úÃÊ„.
-}squid:S1845"_Rename field "path" to prevent any misunderstanding/clash with field "PATH" defined on line 25.(øÉ¬Ù8¤èº„.
-msquid:S00100^"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ³Ôî8¤èº„.
->squid:S1170"!Make this final field static too.(–Á¨8–×İ•„.
-Psquid:S11359"2Complete the task associated to this TODO comment.(…ïœ†8÷úÃÊ„.
-¤%squid:RedundantThrowsDeclarationCheckF"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¼œÎ÷8’¡É„.
-zsquid:S00116"VRename this field "sw_location" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ãøÿÿÿÿ8¤èº„.
-ysquid:S00116"URename this field "NFAST_HOME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿€“üıÿÿÿÿ8¤èº„.
-rsquid:S00100~"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øêîùÿÿÿÿ8¤èº„.
-qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(‹¯·­8¤èº„.
-Wsquid:S2864M"4Iterate over the "entrySet" instead of the "keySet".(¼ËÚ´ûÿÿÿÿ8…Ñ§É„.
-xsquid:S00116"TRename this field "JAVA_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š”Ûÿÿÿÿÿ8¤èº„.
-Qsquid:S1135„"2Complete the task associated to this TODO comment.(…ïœ†8ñóÍ„„.
-?squid:S1170"!Make this final field static too.(ñÍ´8–×İ•„.
-tsquid:S00116"URename this field "sw_version" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áŒóÙ8¤èº„.
+Psquid:S1135K"2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
+Xsquid:S1854I"5Remove this useless assignment to local variable "p".(ğ¤Ã“ûÿÿÿÿ8ÇÔÿê….
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(‹¯·­8ÇÔÿê….
+Qsquid:S1135´"2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
+Isquid:S1481I"&Remove this unused "p" local variable.(ğ¤Ã“ûÿÿÿÿ8ÇÔÿê….
+Qsquid:S1135¬"2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
+nsquid:CommentedOutCodeLineJ"<This block of commented-out lines of code should be removed.(¯€•ıÿÿÿÿ8ÇÔÿê….
+Psquid:S1135&"2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
+Psquid:S1135 "2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
+Qsquid:S1135•"2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
+Vsquid:S2629İ"7Use the built-in formatting to construct this argument.(åˆƒ8ÕäÈŠ‡.
+Vsquid:S2629ê"7Use the built-in formatting to construct this argument.(åˆƒ8ÕäÈŠ‡.
+isquid:S1192<"KDefine a constant instead of duplicating this literal "/bin/bash" 17 times.(œšúò8ÕäÈŠ‡.
+osquid:S11927"QDefine a constant instead of duplicating this literal "Cannot uninstall" 4 times.(³ÿæû8ÕäÈŠ‡.
+qsquid:S11925"NDefine a constant instead of duplicating this literal "SecurityWorld" 4 times.(™—ƒ»ûÿÿÿÿ8ÕäÈŠ‡.
+lsquid:S1192Ü"MDefine a constant instead of duplicating this literal "Using NFAST " 4 times.(òÚ¿8ÕäÈŠ‡.
+osquid:S11926"QDefine a constant instead of duplicating this literal "removeExistingSW" 4 times.(¸¾²Ã8ÕäÈŠ‡.
+fsquid:UselessImportCheck";Remove this unused import 'java.net.MalformedURLException'.(ªËŞˆ8ÕäÈŠ‡.
+jsquid:UselessImportCheck":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8ÕäÈŠ‡.
+Fsquid:S11483"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕäÈŠ‡.
+Fsquid:S1148@"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕäÈŠ‡.
+Gsquid:S1148ß"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕäÈŠ‡.
+Gsquid:S1148ì"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕäÈŠ‡.
+Rsquid:S2864]"4Iterate over the "entrySet" instead of the "keySet".(øÂ×„8ÕäÈŠ‡.
+\"squid:SwitchLastCaseIsDefaultChecka""Add a default case to this switch.(êÙ¢´øÿÿÿÿ8ÕäÈŠ‡.
+Usquid:S1135j"2Complete the task associated to this TODO comment.(ñ•Ôøÿÿÿÿ8ÕäÈŠ‡.
+Usquid:S1135m"2Complete the task associated to this TODO comment.(ñ•Ôøÿÿÿÿ8ÕäÈŠ‡.
+Usquid:S1135w"2Complete the task associated to this TODO comment.(ñ•Ôøÿÿÿÿ8ÕäÈŠ‡.
+Rsquid:S2864"4Iterate over the "entrySet" instead of the "keySet".(İ—å8ÕäÈŠ‡.
+nsquid:CommentedOutCodeLineY"<This block of commented-out lines of code should be removed.(ñšÜòûÿÿÿÿ8ÕäÈŠ‡.
+isquid:CommentedOutCodeLinez"<This block of commented-out lines of code should be removed.(¤õëÁ8ÕäÈŠ‡.

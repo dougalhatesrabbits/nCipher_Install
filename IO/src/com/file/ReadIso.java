@@ -1,14 +1,21 @@
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
+
 package com.file;
+
+import com.github.stephenc.javaisotools.loopfs.iso9660.Iso9660FileEntry;
+import com.github.stephenc.javaisotools.loopfs.iso9660.Iso9660FileSystem;
 
 import java.io.File;
 import java.io.IOException;
-// for VMs
 import java.nio.file.Files;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.github.stephenc.javaisotools.loopfs.iso9660.Iso9660FileEntry;
-import com.github.stephenc.javaisotools.loopfs.iso9660.Iso9660FileSystem;
+// for VMs
 
 /***
  * This is a adaptation of https://github.com/danveloper/provisioning-gradle-plugin/blob/master/src/main/groovy/
@@ -40,20 +47,15 @@ public class ReadIso {
         //Make our saving folder if it does not exist
         if (!saveLocation.exists()) {
             saveLocation.mkdirs();
-            saveLocation.setExecutable(true);
-            saveLocation.setWritable(true);
-            saveLocation.setReadable(true);
         }
 
         //Go through each file on the disc and save it.
+        assert discFs != null;
         for (Iso9660FileEntry singleFile : discFs) {
             if (singleFile.isDirectory()) {
                 new File(saveLocation, singleFile.getPath()).mkdirs();
             } else {
                 File tempFile = new File(saveLocation, singleFile.getPath());
-                tempFile.setReadable(true);
-                tempFile.setWritable(true);
-                tempFile.setExecutable(true);
                 try {
                     //This is java 7, sorry if that is too new for some people
                     Files.copy(discFs.getInputStream(singleFile), tempFile.toPath());

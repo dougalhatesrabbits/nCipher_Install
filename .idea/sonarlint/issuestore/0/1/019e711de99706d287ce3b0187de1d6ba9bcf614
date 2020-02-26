@@ -1,11 +1,17 @@
 
-nsquid:CommentedOutCodeLine<"<This block of commented-out lines of code should be removed.(úºÿùúÿÿÿÿ8Ëšÿƒ.
-hsquid:CommentedOutCodeLinej"<This block of commented-out lines of code should be removed.(ïëå	8æ×ºÊ„.
-isquid:CommentedOutCodeLineP"<This block of commented-out lines of code should be removed.(‡›Ûã8Ëšÿƒ.
-usquid:S00117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ýº¨…ýÿÿÿÿ8Ëšÿƒ.
-nsquid:CommentedOutCodeLineZ"<This block of commented-out lines of code should be removed.(þÌƒÙüÿÿÿÿ8Ëšÿƒ.
-isquid:CommentedOutCodeLined"<This block of commented-out lines of code should be removed.(ÑŽÏµ8üàð„.
-qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(‹¯·­8Ëšÿƒ.
-nsquid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(ü¼„±ûÿÿÿÿ8œ¹ì„.
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(•¬«¨8Ëšÿƒ.
-nsquid:CommentedOutCodeLineK"<This block of commented-out lines of code should be removed.(óè™Œÿÿÿÿÿ8Ëšÿƒ.
+_squid:S1854‹";Remove this useless assignment to local variable "console".(¡•Àþÿÿÿÿ8ÝÅ÷‹‡.
+nsquid:CommentedOutCodeLinez"<This block of commented-out lines of code should be removed.(óè™Œÿÿÿÿÿ8Ëšÿƒ.
+Psquid:S1481‹",Remove this unused "console" local variable.(¡•Àþÿÿÿÿ8ÝÅ÷‹‡.
+nsquid:CommentedOutCodeLinem"<This block of commented-out lines of code should be removed.(úºÿùúÿÿÿÿ8Ëšÿƒ.
+ºsquid:S1192I"›Define a constant instead of duplicating this literal "Could not get security world file from args, none supplied. Will search file system %s: %s" 3 times.(¶éÆÕ8ÝÅ÷‹‡.
+osquid:CommentedOutCodeLineÌ"<This block of commented-out lines of code should be removed.(â‘àÂÿÿÿÿÿ8ÝÅ÷‹‡.
+osquid:CommentedOutCodeLine¢"<This block of commented-out lines of code should be removed.(ü¼„±ûÿÿÿÿ8œ¹ì„.
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(œû¿Ø8ÝÅ÷‹‡.
+isquid:S11927"FDefine a constant instead of duplicating this literal "level" 5 times.(ƒ²ßúÿÿÿÿ8ÝÅ÷‹‡.
+jsquid:CommentedOutCodeLineÂ"<This block of commented-out lines of code should be removed.(¨¼©â8¨™§†.
+fsquid:S1192:"HDefine a constant instead of duplicating this literal "Install" 4 times.(Ÿ­¼Þ8ÝÅ÷‹‡.
+osquid:CommentedOutCodeLine¤"<This block of commented-out lines of code should be removed.(þÌƒÙüÿÿÿÿ8Ëšÿƒ.
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¨Ü–…8ÝÅ÷‹‡.
+isquid:CommentedOutCodeLineÓ"<This block of commented-out lines of code should be removed.(’ñë58ÝÅ÷‹‡.
+osquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(´ƒç¸ûÿÿÿÿ8ÝÅ÷‹‡.
+jsquid:CommentedOutCodeLine˜"<This block of commented-out lines of code should be removed.(‡›Ûã8Ëšÿƒ.
