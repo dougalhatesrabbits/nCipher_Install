@@ -19,6 +19,11 @@ public class Platform {
         return getOsName().startsWith("windows");
     }
 
+    public boolean isLinux() {
+        LOGGER.fine("running -isLinux- method");
+        return getOsName().startsWith("linux");
+    }
+
     public boolean isUnix() {
         LOGGER.fine("running -isUnix- method");
         return getOsName().startsWith("nix");

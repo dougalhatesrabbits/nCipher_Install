@@ -19,7 +19,6 @@
     <orderEntry type="library" name="org.beryx:text-io-web:3.4.0" level="application" />
     <orderEntry type="library" name="org.beryx:text-io:3.4.0" level="application" />
     <orderEntry type="library" name="org.slf4j:slf4j-nop:1.6.2" level="application" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.8" level="project" />
-    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-core:2.6.4" level="application" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.6.4" level="project" />
   </component>
 </module>

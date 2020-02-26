@@ -40,9 +40,8 @@ public class Install {
         String output = read(p.getInputStream());
         String error = read(p.getErrorStream());
         if (Integer.parseInt(output) > 0){
-            // TODO switch on production check for root user
             System.out.println("User must be elevated as root/admin to run this installer: " +output +error);
-            //System.exit(1);
+            System.exit(1);
         }
 
         final ArgumentParser parser = ArgumentParsers.newFor("nCipher_Install.jar").build()
@@ -68,7 +67,7 @@ public class Install {
 
         try {
             ns = parser.parseArgs(args);
-            System.out.println("Namespace = " + ns);
+            System.out.println(ConsoleColours.CLS + "Namespace = " + ns +ConsoleColours.RESET);
         } catch (ArgumentParserException e) {
             parser.handleError(e);
             System.exit(1);
@@ -173,58 +172,56 @@ public class Install {
         Platform os = new Platform();
         //String os = osx.getOsName();
         // System.out.println("\n" + os);
+        String osName = os.getOsName();
 
-        switch (os.getOsName()) {
-            case "windows":
-                System.out.println("Windows OS");
-                LOGGER.info("Windows OS");
-                Windows windows = new Windows();
+        if (osName.equals("windows")) {
+            System.out.println("Windows OS");
+            LOGGER.info("Windows OS");
+            Windows windows = new Windows();
+        } else if (osName.equals("mac os x")) {
+            System.out.println(ConsoleColours.BLUE_BRIGHT + "MAC OS machine" + ConsoleColours.RESET);
+            LOGGER.info("MAC OS machine");
+            OSX osx = new OSX();
 
-                break;
-            case "mac os x":
-                System.out.println(ConsoleColours.BLUE_BRIGHT + "MAC OS machine" + ConsoleColours.RESET);
-                LOGGER.info("MAC OS machine");
-                OSX osx = new OSX();
+            // **Synchronous** //
+            // ******************
+            if (argType.equals("remove")) {
+                osx.removeExistingSW();
+                System.exit(0);
+            }
 
-                // **Synchronous** //
-                // ******************
-                if (argType.equals("remove")) {
+            if (argSilent.equals("No")) {
+                Boolean macStatus = osx.checkExistingSW();
+                if (macStatus) {
                     osx.removeExistingSW();
-                    System.exit(0);
                 }
+            } else {
+                osx.removeExistingSW();
+            }
 
-                if (argSilent.equals("No")) {
-                    Boolean macStatus = osx.checkExistingSW();
-                    if (macStatus) {
-                        osx.removeExistingSW();
+            ObjectMapper osxmapper = new ObjectMapper();
+            String osxjsonfile = System.getProperty("user.dir") + "/secWorld.json";
+            try {
+                // JSON file to Java object
+                SecWorld world = osxmapper.readValue(new File(osxjsonfile), SecWorld.class);
+                if (argFile == null) {
+                    for (String search : world.getLinuxSearch()) {
+                        System.out.println("\nSearching " + search);
+                        osx.sw_files = osx.getSecWorld(search);
                     }
+                    //System.out.println(osx.sw_files);
+                    osx.sw_filename = osx.getIsoChoices();
                 } else {
-                    osx.removeExistingSW();
-                }
-
-                ObjectMapper osxmapper = new ObjectMapper();
-                String osxjsonfile = System.getProperty("user.dir") + "/secWorld.json";
-                try {
-                    // JSON file to Java object
-                    SecWorld world = osxmapper.readValue(new File(osxjsonfile), SecWorld.class);
-                    if (argFile == null) {
-                        for (String search : world.getLinuxSearch()) {
-                            System.out.println("\nSearching " + search);
-                            osx.sw_files = osx.getSecWorld(search);
-                        }
-                        //System.out.println(osx.sw_files);
-                        osx.sw_filename = osx.getIsoChoices();
-                    } else {
-                        for (String search : world.getLinuxSearch()) {
-                            osx.sw_filename = osx.getSecWorld(search, argFile);
-                        }
+                    for (String search : world.getLinuxSearch()) {
+                        osx.sw_filename = osx.getSecWorld(search, argFile);
                     }
-                } catch (IOException e) {
-                    e.printStackTrace();
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-                osx.checkMount(osx.sw_filename);
-                osx.getTars(); //also unpacks secWorld
+            osx.checkMount(osx.sw_filename);
+            osx.getTars(); //also unpacks secWorld
 
                 /*
                 //osx.unpackSecWorld("SecWorld-osx64-user-12.60.3.iso", "mnt");
@@ -233,66 +230,65 @@ public class Install {
                 //osx.unpackSecurityWorld("apache-maven-3.6.3-bin.tar", "mnt");
                  */
 
-                osx.applySecWorld();
-                //osx.applyDrivers();
+            osx.applySecWorld();
+            //osx.applyDrivers();
 
-                int osxversion = Integer.parseInt(osx.sw_version);
-                if (osxversion > 125040) {
-                    // This is really separate to Client install but can still prep by copy over to RFS
-                    //osx.applyFirmware();
-                }
+            int osxversion = Integer.parseInt(osx.sw_version);
+            if (osxversion > 125040) {
+                // This is really separate to Client install but can still prep by copy over to RFS
+                //osx.applyFirmware();
+            }
 
-                // **Asynchronous** //
-                // *******************
-                osx.checkEnvVariables();
-                osx.checkJava();
-                //osx.installJava();
-                //osx.configureJava();
-                osx.checkUsers();
-                break;
-            case "linux":
-                System.out.println(ConsoleColours.BLUE_BRIGHT + "Linux OS machine" + ConsoleColours.RESET);
-                LOGGER.info("Linux OS");
+            // **Asynchronous** //
+            // *******************
+            osx.checkEnvVariables();
+            osx.checkJava();
+            //osx.installJava();
+            //osx.configureJava();
+            osx.checkUsers();
+        } else if (osName.equals("linux")) {
+            System.out.println(ConsoleColours.BLUE_BRIGHT + "Linux OS machine" + ConsoleColours.RESET);
+            LOGGER.info("Linux OS");
 
-                Linux linux = new Linux();
+            Linux linux = new Linux();
 
-                // **Synchronous** //
-                // ******************
-                if (argType.equals("remove")) {
+            // **Synchronous** //
+            // ******************
+            if (argType.equals("remove")) {
+                linux.removeExistingSW();
+                System.exit(0);
+            }
+            if (argSilent.equals("No")) {
+                Boolean linuxStatus = linux.checkExistingSW();
+                if (linuxStatus) {
                     linux.removeExistingSW();
-                    System.exit(0);
                 }
-                if (argSilent.equals("No")) {
-                    Boolean linuxStatus = linux.checkExistingSW();
-                    if (linuxStatus) {
-                        linux.removeExistingSW();
+            } else {
+                linux.removeExistingSW();
+            }
+
+            ObjectMapper mapper = new ObjectMapper();
+            String jsonfile = System.getProperty("user.dir") + "/secWorld.json";
+            try {
+                // JSON file to Java object
+                SecWorld world = mapper.readValue(new File(jsonfile), SecWorld.class);
+                if (argFile == null) {
+                    for (String search : world.getLinuxSearch()) {
+                        System.out.println("\nSearching " + search);
+                        linux.sw_files = linux.getSecWorld(search);
                     }
+                    //System.out.println(linux.sw_files);
+                    linux.sw_filename = linux.getIsoChoices();
                 } else {
-                    linux.removeExistingSW();
-                }
-
-                ObjectMapper mapper = new ObjectMapper();
-                String jsonfile = System.getProperty("user.dir") + "/secWorld.json";
-                try {
-                    // JSON file to Java object
-                    SecWorld world = mapper.readValue(new File(jsonfile), SecWorld.class);
-                    if (argFile == null) {
-                        for (String search : world.getLinuxSearch()) {
-                            System.out.println("\nSearching " + search);
-                            linux.sw_files = linux.getSecWorld(search);
-                        }
-                        //System.out.println(linux.sw_files);
-                        linux.sw_filename = linux.getIsoChoices();
-                    } else {
-                        for (String search : world.getLinuxSearch()) {
-                            linux.sw_filename = linux.getSecWorld(search, argFile);
-                        }
+                    for (String search : world.getLinuxSearch()) {
+                        linux.sw_filename = linux.getSecWorld(search, argFile);
                     }
-                } catch (IOException e) {
-                    e.printStackTrace();
                 }
-                linux.checkMount(linux.sw_filename);
-                linux.getTars(); //also unpacks secWorld
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            linux.checkMount(linux.sw_filename);
+            linux.getTars(); //also unpacks secWorld
                 /*
                 //linux.unpackSecWorld("SecWorld-linux64-user-12.60.3.iso", "mnt");
                 //linux.unpackSecurityWorld("Archive.zip", "mnt");
@@ -300,33 +296,30 @@ public class Install {
                 //linux.unpackSecurityWorld("apache-maven-3.6.3-bin.tar", "mnt");
                  */
 
-                linux.applySecWorld();
-                linux.applyDrivers();
+            linux.applySecWorld();
+            linux.applyDrivers();
 
-                int linuxversion = Integer.parseInt(linux.sw_version);
-                if (linuxversion > 125040) {
-                    // This is really separate to Client install but can still prep by copy over to RFS
-                    //linux.applyFirmware();
-                }
+            int linuxversion = Integer.parseInt(linux.sw_version);
+            if (linuxversion > 125040) {
+                // This is really separate to Client install but can still prep by copy over to RFS
+                //linux.applyFirmware();
+            }
 
-                // **Asynchronous** //
-                // *******************
-                linux.checkEnvVariables();
-                linux.checkJava();
-                //linux.installJava();
-                linux.configureJava();
-                linux.checkUsers();
-                break;
-            case "nix":
-                System.out.println("Unix OS");
-                LOGGER.info("Unix OS");
-                OSX nix = new OSX();
-                break;
-            case "sunos":
-                System.out.println("Solaris OS");
-                break;
-            default:
-                System.out.println("Unknown OS");
+            // **Asynchronous** //
+            // *******************
+            linux.checkEnvVariables();
+            linux.checkJava();
+            //linux.installJava();
+            linux.configureJava();
+            linux.checkUsers();
+        } else if (osName.equals("nix")) {
+            System.out.println("Unix OS");
+            LOGGER.info("Unix OS");
+            OSX nix = new OSX();
+        } else if (osName.equals("sunos")) {
+            System.out.println("Solaris OS");
+        } else {
+            System.out.println("Unknown OS");
         }
 
         log.close();

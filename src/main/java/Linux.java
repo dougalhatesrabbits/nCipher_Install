@@ -38,6 +38,7 @@ public class Linux extends SecurityWorld {
     String sw_version = "126030";
     final static String NFAST_HOME ="/opt/nfast";
     final String NFAST_KMDATA = "/opt/nfast/kmdata";
+    final String TAR_DESTINATION = "/";
 
     File sw_iso = null;
     Path iso_File = null;
@@ -84,9 +85,8 @@ public class Linux extends SecurityWorld {
         LOGGER.fine("running removeExistingSW method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nRemoving old Security World" + ConsoleColours.RESET);
 
-        //String cmd = "sudo " + NFAST_HOME + "/sbin/install -d";
-        String cmd = "sudo rm -rf " + NFAST_HOME;
-        //TODO switch for production
+        String cmd = "sudo " + NFAST_HOME + "/sbin/install -u";
+        //String cmd = "sudo rm -rf " + NFAST_HOME;
         try {
             new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd});
             System.out.println("Using NFAST " + cmd);
@@ -270,6 +270,38 @@ public class Linux extends SecurityWorld {
 
         } catch (Exception e){
             e.printStackTrace();
+        }
+    }
+
+    void getTars(){
+        LOGGER.fine("running -getTars- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED+"getTars..." +ConsoleColours.RESET);
+        LOGGER.info("getTars...");
+
+        // https://ant.apache.org/manual/api/org/apache/tools/ant/DirectoryScanner.html
+        DirectoryScanner scanner = new DirectoryScanner();
+        scanner.setIncludes(new String[]{"**/*tar*"});
+        //scanner.setBasedir(sw_location);
+        scanner.setBasedir(sw_iso);
+        scanner.setCaseSensitive(false);
+        scanner.setFollowSymlinks(false);
+        try {
+            scanner.scan();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        String[] files = scanner.getIncludedFiles();
+        //ArrayList<Path> swfiles = new ArrayList<Path>();
+        //String found = null;
+        for (String file : files) {
+            String found = scanner.getBasedir() + "/" + file;
+            Path path = Paths.get(found);
+
+
+            //tar_files.add(path);
+            System.out.println(path);
+            LOGGER.info(path.toString());
+            unpackSecWorld(found, TAR_DESTINATION);
         }
     }
 }

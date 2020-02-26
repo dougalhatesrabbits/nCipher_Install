@@ -18,23 +18,23 @@ public class ReadSecWorld {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        try {
+        //try {
 
             // JSON file to Java object
-            SecWorld world = mapper.readValue(new File("/secWorld.json"), SecWorld.class);
+            //SecWorld world = mapper.readValue(new File("/secWorld.json"), SecWorld.class);
 
             // JSON string to Java object
             //String jsonInString = "{\"name\":\"mkyong\",\"age\":37,\"skills\":[\"java\",\"python\"]}";
             //Staff staff2 = mapper.readValue(jsonInString, Staff.class);
 
             // compact print
-            System.out.println(world);
+            //System.out.println(world);
 
             // pretty print
-            String prettyworld = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(world);
+            //String prettyworld = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(world);
 
-            System.out.println(prettyworld);
-
+            //System.out.println(prettyworld);
+/*
             String[] linuxSearch = world.getLinuxSearch();
             Map<String, Integer> versions =world.getVersions();
             List<String> windowsSearch = world.getWindowsSearch();
@@ -55,6 +55,8 @@ public class ReadSecWorld {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+ */
 
     }
 }

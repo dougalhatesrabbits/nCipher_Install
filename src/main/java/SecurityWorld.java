@@ -33,6 +33,7 @@ public class SecurityWorld {
     String sw_version = "126030";
     final static String NFAST_HOME = ("/opt/nfast");
     final String NFAST_KMDATA = "/opt/nfast/kmdata";
+    final String TAR_DESTINATION = "/";
 
     File sw_iso = null;
     Path iso_File = null;
@@ -112,9 +113,9 @@ public class SecurityWorld {
         LOGGER.fine("running -applySecurityWorld- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nInstalling Security World" + ConsoleColours.RESET);
 
-        //String cmd = "sudo " + NFAST_HOME + "/sbin/install";
-        String cmd = "sudo ls -l " + NFAST_HOME;
-        //TODO switch for production
+        String cmd = "sudo " + NFAST_HOME + "/sbin/install";
+        //String cmd = "sudo ls -l " + NFAST_HOME;
+
         System.out.println(cmd);
         try {
             new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd});
@@ -628,11 +629,26 @@ public class SecurityWorld {
         //Process p = Runtime.getRuntime().exec("pwd");
         System.out.println(ConsoleColours.YELLOW+"\nUsers"+ConsoleColours.RESET);
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/passwd | grep nfast"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/passwd"});
+        new RunProcBuilder().run(new String[]{"/usr//bin/bash", "-c", "sudo cat /etc/passwd | grep nfast"});
         System.out.println(ConsoleColours.YELLOW+"\nGroups"+ConsoleColours.RESET);
+        //todo logic on filter return
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/group | grep nfast"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/group"});
+        //new RunProcBuilder().run(new String[]{"/usr/bin/bash", "-c", "sudo cat /etc/group | grep nfast"});
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "source .bash_profile"});
+        //new RunProcBuilder().run(new String[]{"/usr/bin/bash", "-c", "source .bash_profile"});
+
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo groups nfast"});
+        //s
+        //
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent group"}); // Get all system groups
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "awk -F':' '{ print $1}' /etc/passwd"});
+
 
         // TODO add users if not exist
+        //new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo groupadd nfast"});
+        //new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo usermod -a -G nfast nfast"});
 
     }
 
@@ -664,7 +680,7 @@ public class SecurityWorld {
             //tar_files.add(path);
             System.out.println(path);
             LOGGER.info(path.toString());
-            unpackSecWorld(found, NFAST_HOME);
+            unpackSecWorld(found, TAR_DESTINATION);
         }
     }
 
@@ -753,31 +769,34 @@ public class SecurityWorld {
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
 
         System.out.println("\nClean");
-        String cmd = NFAST_HOME + "/sbin/drivers/clean";
+        String cmd = NFAST_HOME + "/sbin/driver/clean";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd});
 
         System.out.println("Configure");
-        String cmd1 = NFAST_HOME + "/sbin/drivers/configure";
+        String cmd1 = NFAST_HOME + "/sbin/driver/configure";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd1});
 
         System.out.println("Compile");
-        String cmd2 = NFAST_HOME + "sbin/drivers/compile";
+        String cmd2 = NFAST_HOME + "sbin/driver/make";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd2});
 
         System.out.println("Make");
-        String cmd3 = NFAST_HOME + "sbin/drivers/make";
+        String cmd3 = NFAST_HOME + "sbin/driver/make install";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd3});
 
         System.out.println("Install");
-        String cmd4 = NFAST_HOME + "sbin/drivers/install";
+        String cmd4 = NFAST_HOME + "sbin/install";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd4});
 
         System.out.println("\nRestarting NFAST Service...");
-        String cmd5 = NFAST_HOME + "bin/init-d restart";
+        String cmd5 = NFAST_HOME + "sbin/init.d-ncipher restart";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd5});
 
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "NFAST_HOME/bin/enquiry"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "NFAST_HOME/bin/nfkminfo"});
+        String cmd6 = NFAST_HOME + "bin/enquiry";
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd6});
+
+        String cmd7 = NFAST_HOME + "bin/nfkminfo";
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd7});
 
     }
 }

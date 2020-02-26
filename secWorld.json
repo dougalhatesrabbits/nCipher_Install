@@ -13,7 +13,7 @@
     "linuxSearch": [
         "mnt",
         "/tmp",
-        "/home",
+        "/home/david",
         "/Users/david/IdeaProjects"
     ],
     "windowsSearch": [
