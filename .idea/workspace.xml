@@ -6,22 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="973d0605-95d8-4bd4-a8e9-ad1b0f427f7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/IO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IO/IO.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/src/com/file/ReadLinuxBundle.java" beforeDir="false" afterPath="$PROJECT_DIR$/IO/src/com/file/ReadLinuxBundle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/src/com/file/ReadSecWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/IO/src/com/file/ReadSecWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platform/Platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Platform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platform/src/com/platform/ConsoleColours.java" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/src/com/platform/ConsoleColours.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platform/src/com/platform/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/src/com/platform/Platform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secWorld.json" beforeDir="false" afterPath="$PROJECT_DIR$/secWorld.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Install.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Install.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Linux.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Linux.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SecurityWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SecurityWorld.java" afterDir="false" />
-    </list>
+    <list default="true" id="973d0605-95d8-4bd4-a8e9-ad1b0f427f7a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -360,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582538582168</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="0.8 Linux production tweaks">
+      <created>1582751725396</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1582751725396</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -400,7 +392,8 @@
     <MESSAGE value="java" />
     <MESSAGE value="json" />
     <MESSAGE value="linux" />
-    <option name="LAST_COMMIT_MESSAGE" value="linux" />
+    <MESSAGE value="0.8 Linux production tweaks" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.8 Linux production tweaks" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="98" key="#Env" timestamp="1581640202355">
@@ -564,11 +557,11 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="494" y="144" key="VCS.ChangeListViewerDialog/0.22.1440.824@0.22.1440.824" timestamp="1581789358160" />
-    <state x="175" y="43" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1582539958979">
+    <state x="175" y="43" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1582751765771">
       <screen x="0" y="28" width="1440" height="838" />
     </state>
     <state x="332" y="161" key="Vcs.Push.Dialog.v2/0.22.1440.824@0.22.1440.824" timestamp="1582414960969" />
-    <state x="175" y="43" key="Vcs.Push.Dialog.v2/0.28.1440.838@0.28.1440.838" timestamp="1582539958979" />
+    <state x="175" y="43" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.1440.838@0.28.1440.838" timestamp="1582751765771" />
     <state x="112" y="38" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.922.545@0.28.922.545" timestamp="1582538703992" />
     <state x="527" y="206" key="chooseDestDirectoryDialog" timestamp="1581539051280">
       <screen x="0" y="22" width="1440" height="824" />

@@ -777,25 +777,25 @@ public class SecurityWorld {
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd1});
 
         System.out.println("Compile");
-        String cmd2 = NFAST_HOME + "sbin/driver/make";
+        String cmd2 = NFAST_HOME + "/sbin/driver/make";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd2});
 
         System.out.println("Make");
-        String cmd3 = NFAST_HOME + "sbin/driver/make install";
+        String cmd3 = NFAST_HOME + "/sbin/driver/make install";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd3});
 
         System.out.println("Install");
-        String cmd4 = NFAST_HOME + "sbin/install";
+        String cmd4 = NFAST_HOME + "/sbin/install";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd4});
 
         System.out.println("\nRestarting NFAST Service...");
-        String cmd5 = NFAST_HOME + "sbin/init.d-ncipher restart";
+        String cmd5 = NFAST_HOME + "/sbin/init.d-ncipher restart";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd5});
 
-        String cmd6 = NFAST_HOME + "bin/enquiry";
+        String cmd6 = NFAST_HOME + "/bin/enquiry";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd6});
 
-        String cmd7 = NFAST_HOME + "bin/nfkminfo";
+        String cmd7 = NFAST_HOME + "/bin/nfkminfo";
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd7});
 
     }
