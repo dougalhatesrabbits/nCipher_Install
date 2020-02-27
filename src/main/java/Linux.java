@@ -9,6 +9,7 @@ import com.file.ReadIso;
 import com.file.UnTarFile;
 import com.platform.ConsoleColours;
 import com.platform.RunProcBuilder;
+import com.platform.RunProcBuilder2;
 import org.apache.commons.io.FileUtils;
 import org.apache.tools.ant.DirectoryScanner;
 
@@ -85,10 +86,11 @@ public class Linux extends SecurityWorld {
         LOGGER.fine("running removeExistingSW method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nRemoving old Security World" + ConsoleColours.RESET);
 
-        String cmd = "sudo " + NFAST_HOME + "/sbin/install -u";
+        String[] cmd = {NFAST_HOME + "/sbin/install", "-u"};
         //String cmd = "sudo rm -rf " + NFAST_HOME;
+
         try {
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd});
+            new RunProcBuilder2().run(cmd);
             System.out.println("Using NFAST " + cmd);
             LOGGER.info("Using NFAST " + cmd);
         } catch (Exception e) {

@@ -73,6 +73,8 @@ public class OSX extends SecurityWorld {
         //TODO switch for production
         try {
             new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd});
+            //TODO
+            //new RunProcBuilder().run(new String[]{cmd});
             System.out.println("Using NFAST " + cmd);
             LOGGER.info("Using NFAST " + cmd);
         } catch (Exception e) {

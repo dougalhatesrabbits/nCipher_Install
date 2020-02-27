@@ -118,9 +118,9 @@ public class Windows extends SecurityWorld {
         LOGGER.fine("running removeExistingSW method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nRemoving old Security World" + ConsoleColours.RESET);
 
-        String cmd = NFAST_HOME + "/sbin/install -d";
+        String cmd = NFAST_HOME + "/sbin/install -u";
         try {
-            new RunProcBuilder().run(new String[]{"cmd", "-c", cmd});
+            new RunProcBuilder().run(new String[]{cmd});
             System.out.println("Using NFAST " + cmd);
             LOGGER.info("Using NFAST " + cmd);
         } catch (Exception e) {

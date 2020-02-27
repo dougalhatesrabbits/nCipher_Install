@@ -84,10 +84,10 @@ public class Unix extends SecurityWorld {
         LOGGER.fine("running removeExistingSW method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nRemoving old Security World" + ConsoleColours.RESET);
 
-        //String cmd = "sudo " + NFAST_HOME + "/sbin/install -d";
-        String cmd = "sudo " + NFAST_HOME + "rm -rf linux";
+        String cmd = "sudo " + NFAST_HOME + "/sbin/install -u";
+        //String cmd = "sudo " + NFAST_HOME + "rm -rf linux";
         try {
-            new RunProcBuilder().run(new String[]{"cmd", "-c", cmd});
+            new RunProcBuilder().run(new String[]{cmd});
             System.out.println("Using NFAST " + cmd);
             LOGGER.info("Using NFAST " + cmd);
         } catch (Exception e) {

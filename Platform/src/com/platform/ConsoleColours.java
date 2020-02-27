@@ -13,7 +13,8 @@ public class ConsoleColours {
     // Reset
     public static final String RESET = "\033[0m";  // Text Reset
 
-    public static final String CLS = "\u001b[2J"; //CLS
+    public static final String CLS = "\033[H\033[2J"; //CLS
+    //"\033[H\033[2J"
     public static final String HOME = "\u001b[H"; //HOME
 
     // Regular Colors

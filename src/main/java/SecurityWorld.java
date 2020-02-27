@@ -9,6 +9,7 @@ import com.file.UnTarFile;
 import com.platform.ConsoleColours;
 import com.platform.Platform;
 import com.platform.RunProcBuilder;
+import com.platform.RunProcBuilder2;
 import org.apache.commons.io.FileUtils;
 import org.apache.tools.ant.DirectoryScanner;
 
@@ -93,11 +94,11 @@ public class SecurityWorld {
         LOGGER.fine("running removeExistingSW method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nRemoving old Security World" + ConsoleColours.RESET);
 
-        //String cmd = "sudo " + NFAST_HOME + "/sbin/install -d";
-        String cmd = "sudo rm -rf " + NFAST_HOME;
-        //TODO switch for production
+        String[] cmd = {NFAST_HOME + "/sbin/install", "-u"};
+        //String cmd = "sudo rm -rf " + NFAST_HOME;
+
         try {
-            new RunProcBuilder().run(new String[]{"cmd", "-c", cmd});
+            new RunProcBuilder2().run(cmd);
             System.out.println("Using NFAST " + cmd);
             LOGGER.info("Using NFAST " + cmd);
         } catch (Exception e) {
@@ -113,12 +114,12 @@ public class SecurityWorld {
         LOGGER.fine("running -applySecurityWorld- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nInstalling Security World" + ConsoleColours.RESET);
 
-        String cmd = "sudo " + NFAST_HOME + "/sbin/install";
+        String cmd = NFAST_HOME + "/sbin/install";
         //String cmd = "sudo ls -l " + NFAST_HOME;
 
         System.out.println(cmd);
         try {
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd});
+            new RunProcBuilder2().run(new String[]{cmd});
 
             LOGGER.info(cmd);
         } catch (Exception e) {
@@ -759,44 +760,42 @@ public class SecurityWorld {
         LOGGER.fine("running -applyDrivers- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nAdding PCI drivers"+ConsoleColours.RESET);
         LOGGER.info("Adding PCI drivers");
-        //Process p = Runtime.getRuntime().exec("////command////");
-        //Process p = Runtime.getRuntime().exec("pwd");
+
         System.out.println("\nChecking standard linux gcc compiler is installed/at correct version");
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "gcc --version"});
+        new RunProcBuilder2().run(new String[]{"/bin/bash", "-c", "gcc --version"});
         System.out.println("\nChecking existing pci drivers");
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn"});
+        new RunProcBuilder2().run(new String[]{"/bin/bash", "-c", "lspci -nn"});
         System.out.println("\nChecking existing usb drivers");
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
+        new RunProcBuilder2().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
 
         System.out.println("\nClean");
-        String cmd = NFAST_HOME + "/sbin/driver/clean";
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd});
+        String[] cmd = {NFAST_HOME + "/sbin/driver/clean"};
+        new RunProcBuilder2().run(cmd);
 
         System.out.println("Configure");
-        String cmd1 = NFAST_HOME + "/sbin/driver/configure";
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd1});
+        String[] cmd1 = {NFAST_HOME + "/sbin/driver/configure"};
+        new RunProcBuilder2().run(cmd1);
 
         System.out.println("Compile");
         String cmd2 = NFAST_HOME + "/sbin/driver/make";
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd2});
+        new RunProcBuilder2().run(new String[]{cmd2});
 
         System.out.println("Make");
-        String cmd3 = NFAST_HOME + "/sbin/driver/make install";
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd3});
+        String[] cmd3 = {NFAST_HOME + "/sbin/driver/make", "install"};
+        new RunProcBuilder2().run(cmd3);
 
         System.out.println("Install");
         String cmd4 = NFAST_HOME + "/sbin/install";
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd4});
+        new RunProcBuilder2().run(new String[]{cmd4});
 
         System.out.println("\nRestarting NFAST Service...");
-        String cmd5 = NFAST_HOME + "/sbin/init.d-ncipher restart";
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd5});
+        String[] cmd5 = {NFAST_HOME + "/sbin/init.d-ncipher", "restart"};
+        new RunProcBuilder2().run(cmd5);
 
         String cmd6 = NFAST_HOME + "/bin/enquiry";
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd6});
+        new RunProcBuilder2().run(new String[]{cmd6});
 
         String cmd7 = NFAST_HOME + "/bin/nfkminfo";
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd7});
-
+        new RunProcBuilder2().run(new String[]{cmd7});
     }
 }
