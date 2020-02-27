@@ -1,14 +1,16 @@
 
+hsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(ÚøT8««Ùó‡.
 vsquid:S2095)"SUse try-with-resources or close this "TarArchiveInputStream" in a "finally" clause.(±®Óáøÿÿÿÿ8ÑÀé„.
-jsquid:S2095x"LUse try-with-resources or close this "ZipInputStream" in a "finally" clause.(¸¶Óº8ÖÿĞú….
-Gsquid:S1148”"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÖÿĞú….
-[squid:S1197~"8Move the array designator from the variable to the type.(†êê¾ûÿÿÿÿ8ÖÿĞú….
+vsquid:S2095‡"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(îı¹ñıÿÿÿÿ8ÖÿĞú….
+rsquid:S2095†"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(Ÿ½ëàşÿÿÿÿ8ïØÚó‡.
+lsquid:S2095O"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(’¨Ì½8ëåä„.
+Usquid:S2629z"7Use the built-in formatting to construct this argument.(Ä­¢‰8ïØÚó‡.
+Gsquid:S1148’"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ïØÚó‡.
 d
-squid:S899>"BDo something with the "boolean" value returned by "createNewFile".(’ƒ™òùÿÿÿÿ8â¬øø….
-rsquid:S2095ˆ"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(Ÿ½ëàşÿÿÿÿ8ÖÿĞú….
-Dsquid:S1075p"&Remove this hard-coded path-delimiter.(º³ãË8èÜ‹û….
-ksquid:S2095w"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(Ç´ó¦8ÖÿĞú….
-ksquid:S2095P"MUse try-with-resources or close this "GZIPInputStream" in a "finally" clause.(Èß¯8ëåä„.
-vsquid:S2095‰"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(îı¹ñıÿÿÿÿ8ÖÿĞú….
-lsquid:S2095Q"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(’¨Ì½8ëåä„.
-Usquid:S2629|"7Use the built-in formatting to construct this argument.(Ä­¢‰8ÊäÈŠ‡.
+squid:S899<"BDo something with the "boolean" value returned by "createNewFile".(’ƒ™òùÿÿÿÿ8ïØÚó‡.
+ksquid:S2095N"MUse try-with-resources or close this "GZIPInputStream" in a "finally" clause.(Èß¯8ïØÚó‡.
+jsquid:S2095v"LUse try-with-resources or close this "ZipInputStream" in a "finally" clause.(¸¶Óº8ÖÿĞú….
+Dsquid:S1075n"&Remove this hard-coded path-delimiter.(º³ãË8ïØÚó‡.
+[squid:S1197|"8Move the array designator from the variable to the type.(†êê¾ûÿÿÿÿ8ïØÚó‡.
+nsquid:CommentedOutCodeLine9"<This block of commented-out lines of code should be removed.(íƒëÆÿÿÿÿÿ8®³èó‡.
+ksquid:S2095u"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(Ç´ó¦8ïØÚó‡.

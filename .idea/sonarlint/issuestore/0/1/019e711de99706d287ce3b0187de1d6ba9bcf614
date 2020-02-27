@@ -1,17 +1,25 @@
 
-_squid:S1854‹";Remove this useless assignment to local variable "console".(¡•Àşÿÿÿÿ8İÅ÷‹‡.
-nsquid:CommentedOutCodeLinez"<This block of commented-out lines of code should be removed.(óè™Œÿÿÿÿÿ8Ëšÿƒ.
-Psquid:S1481‹",Remove this unused "console" local variable.(¡•Àşÿÿÿÿ8İÅ÷‹‡.
-nsquid:CommentedOutCodeLinem"<This block of commented-out lines of code should be removed.(úºÿùúÿÿÿÿ8Ëšÿƒ.
-ºsquid:S1192I"›Define a constant instead of duplicating this literal "Could not get security world file from args, none supplied. Will search file system %s: %s" 3 times.(¶éÆÕ8İÅ÷‹‡.
-osquid:CommentedOutCodeLineÌ"<This block of commented-out lines of code should be removed.(â‘àÂÿÿÿÿÿ8İÅ÷‹‡.
-osquid:CommentedOutCodeLine¢"<This block of commented-out lines of code should be removed.(ü¼„±ûÿÿÿÿ8œ¹ì„.
-psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(œû¿Ø8İÅ÷‹‡.
-isquid:S11927"FDefine a constant instead of duplicating this literal "level" 5 times.(ƒ²ßúÿÿÿÿ8İÅ÷‹‡.
-jsquid:CommentedOutCodeLineÂ"<This block of commented-out lines of code should be removed.(¨¼©â8¨™§†.
-fsquid:S1192:"HDefine a constant instead of duplicating this literal "Install" 4 times.(Ÿ­¼Ş8İÅ÷‹‡.
-osquid:CommentedOutCodeLine¤"<This block of commented-out lines of code should be removed.(şÌƒÙüÿÿÿÿ8Ëšÿƒ.
-jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¨Ü–…8İÅ÷‹‡.
-isquid:CommentedOutCodeLineÓ"<This block of commented-out lines of code should be removed.(’ñë58İÅ÷‹‡.
-osquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(´ƒç¸ûÿÿÿÿ8İÅ÷‹‡.
-jsquid:CommentedOutCodeLine˜"<This block of commented-out lines of code should be removed.(‡›Ûã8Ëšÿƒ.
+osquid:CommentedOutCodeLineµ"<This block of commented-out lines of code should be removed.(â‘àÂÿÿÿÿÿ8Œ Ââ‡.
+Gsquid:S1148¤"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Œ Ââ‡.
+jsquid:CommentedOutCodeLineù"<This block of commented-out lines of code should be removed.(ì¥È8ë°‚æ‡.
+osquid:CommentedOutCodeLineò"<This block of commented-out lines of code should be removed.(ÕêÜŞüÿÿÿÿ8ë°‚æ‡.
+Nsquid:S5411‹"*Use the primitive boolean expression here.(¹”±¥ùÿÿÿÿ8•Ş„ğ‡.
+Nsquid:S5411Æ"*Use the primitive boolean expression here.(¦ğµ•üÿÿÿÿ8ÕÓØô‡.
+osquid:CommentedOutCodeLine×"<This block of commented-out lines of code should be removed.(ÿ¼ü¿ûÿÿÿÿ8ë°‚æ‡.
+Vsquid:S1854Ã"7Remove this useless assignment to local variable "nix".(¶¤È8Ëğ‡.
+isquid:CommentedOutCodeLine-"<This block of commented-out lines of code should be removed.(Ã²ñó8Ó¾±ã‡.
+osquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(óè™Œÿÿÿÿÿ8Œ Ââ‡.
+osquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(ßºì üÿÿÿÿ8Œ Ââ‡.
+jsquid:CommentedOutCodeLineí"<This block of commented-out lines of code should be removed.(èˆµà8ÛÆé‡.
+jsquid:CommentedOutCodeLine©"<This block of commented-out lines of code should be removed.(¨¼©â8Œ Ââ‡.
+Psquid:S1135+"2Complete the task associated to this TODO comment.(¼ìæŸ8š±ã‡.
+psquid:S3776%"RRefactor this method to reduce its Cognitive Complexity from 52 to the 15 allowed.(œû¿Ø8Œ Ââ‡.
+isquid:CommentedOutCodeLineæ"<This block of commented-out lines of code should be removed.(““àz8ë°‚æ‡.
+jsquid:CommentedOutCodeLine¦"<This block of commented-out lines of code should be removed.(¨Ü–…8Œ Ââ‡.
+osquid:CommentedOutCodeLine„"<This block of commented-out lines of code should be removed.(úºÿùúÿÿÿÿ8Œ Ââ‡.
+jsquid:CommentedOutCodeLine¢"<This block of commented-out lines of code should be removed.(¹½Ø8¸Ìã‡.
+Gsquid:S1148ß"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ë°‚æ‡.
+jsquid:CommentedOutCodeLine®"<This block of commented-out lines of code should be removed.(‡›Ûã8Œ Ââ‡.
+osquid:CommentedOutCodeLine©"<This block of commented-out lines of code should be removed.(´ƒç¸ûÿÿÿÿ8Œ Ââ‡.
+_squid:S1854µ";Remove this useless assignment to local variable "windows".(ÒôÀÎøÿÿÿÿ8ë°‚æ‡.
+isquid:CommentedOutCodeLine¼"<This block of commented-out lines of code should be removed.(’ñë58Œ Ââ‡.

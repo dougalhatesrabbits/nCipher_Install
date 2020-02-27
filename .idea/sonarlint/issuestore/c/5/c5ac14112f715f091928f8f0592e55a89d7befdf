@@ -1,32 +1,121 @@
 
-Psquid:S1135K"2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
-Xsquid:S1854I"5Remove this useless assignment to local variable "p".(ð¤Ã“ûÿÿÿÿ8ÇÔÿê….
-qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(‹¯·­8ÇÔÿê….
-Qsquid:S1135´"2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
-Isquid:S1481I"&Remove this unused "p" local variable.(ð¤Ã“ûÿÿÿÿ8ÇÔÿê….
-Qsquid:S1135¬"2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
-nsquid:CommentedOutCodeLineJ"<This block of commented-out lines of code should be removed.(¯€•ýÿÿÿÿ8ÇÔÿê….
-Psquid:S1135&"2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
-Psquid:S1135 "2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
-Qsquid:S1135•"2Complete the task associated to this TODO comment.(…ïœ†8ÇÔÿê….
-Vsquid:S2629Ý"7Use the built-in formatting to construct this argument.(åˆƒ8ÕäÈŠ‡.
-Vsquid:S2629ê"7Use the built-in formatting to construct this argument.(åˆƒ8ÕäÈŠ‡.
-isquid:S1192<"KDefine a constant instead of duplicating this literal "/bin/bash" 17 times.(œšúò8ÕäÈŠ‡.
-osquid:S11927"QDefine a constant instead of duplicating this literal "Cannot uninstall" 4 times.(³ÿæû8ÕäÈŠ‡.
-qsquid:S11925"NDefine a constant instead of duplicating this literal "SecurityWorld" 4 times.(™—ƒ»ûÿÿÿÿ8ÕäÈŠ‡.
-lsquid:S1192Ü"MDefine a constant instead of duplicating this literal "Using NFAST " 4 times.(òÚ¿8ÕäÈŠ‡.
-osquid:S11926"QDefine a constant instead of duplicating this literal "removeExistingSW" 4 times.(¸¾²Ã8ÕäÈŠ‡.
-fsquid:UselessImportCheck";Remove this unused import 'java.net.MalformedURLException'.(ªËÞˆ8ÕäÈŠ‡.
-jsquid:UselessImportCheck":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8ÕäÈŠ‡.
-Fsquid:S11483"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÕäÈŠ‡.
-Fsquid:S1148@"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÕäÈŠ‡.
-Gsquid:S1148ß"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÕäÈŠ‡.
-Gsquid:S1148ì"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÕäÈŠ‡.
-Rsquid:S2864]"4Iterate over the "entrySet" instead of the "keySet".(øÂ×„8ÕäÈŠ‡.
-\"squid:SwitchLastCaseIsDefaultChecka""Add a default case to this switch.(êÙ¢´øÿÿÿÿ8ÕäÈŠ‡.
-Usquid:S1135j"2Complete the task associated to this TODO comment.(ñ•Ôøÿÿÿÿ8ÕäÈŠ‡.
-Usquid:S1135m"2Complete the task associated to this TODO comment.(ñ•Ôøÿÿÿÿ8ÕäÈŠ‡.
-Usquid:S1135w"2Complete the task associated to this TODO comment.(ñ•Ôøÿÿÿÿ8ÕäÈŠ‡.
-Rsquid:S2864"4Iterate over the "entrySet" instead of the "keySet".(Ý—žå8ÕäÈŠ‡.
-nsquid:CommentedOutCodeLineY"<This block of commented-out lines of code should be removed.(ñšÜòûÿÿÿÿ8ÕäÈŠ‡.
-isquid:CommentedOutCodeLinez"<This block of commented-out lines of code should be removed.(¤õëÁ8ÕäÈŠ‡.
+Hsquid:S2629®"$Invoke method(s) only conditionally.(ÙÊÉóûÿÿÿÿ8¼´¶ò‡.
+osquid:CommentedOutCodeLine¶"<This block of commented-out lines of code should be removed.(¿öáãùÿÿÿÿ8­¦Áó‡.
+osquid:CommentedOutCodeLine¨"<This block of commented-out lines of code should be removed.(¡»¢üùÿÿÿÿ8àÕÖã‡.
+Vsquid:S1135Ç"2Complete the task associated to this TODO comment.(øÄÜúÿÿÿÿ8àÕÖã‡.
+osquid:CommentedOutCodeLine¤"<This block of commented-out lines of code should be removed.(ÀŽ¾ûÿÿÿÿ8¼´¶ò‡.
+gsquid:S4042Ó"IUse "java.nio.Files#delete" here for better messages on error conditions.(Áñõ8¼´¶ò‡.
+ª%squid:RedundantThrowsDeclarationCheck•"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¯ŸØ×þÿÿÿÿ8ºÍåè‡.
+{squid:S00116#"WRename this field "NFAST_KMDATA" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ÖÊøþÿÿÿÿ8ºÍåè‡.
+?squid:S1170("!Make this final field static too.(—ˆ±Ð8ºÍåè‡.
+?squid:S1170)"!Make this final field static too.(ó³†ô8ºÍåè‡.
+Qsquid:S1135¸"2Complete the task associated to this TODO comment.(¸áÒà8àÕÖã‡.
+]"squid:SwitchLastCaseIsDefaultCheck›""Add a default case to this switch.(êÙ¢´øÿÿÿÿ8àÕÖã‡.
+Hsquid:S1481¦")Remove this unused "home" local variable.(üÊšõ8àÕÖã‡.
+jsquid:CommentedOutCodeLineà"<This block of commented-out lines of code should be removed.(€²Ù‚8¼´¶ò‡.
+Gsquid:S1148ë"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8›Š¥ê‡.
+vsquid:ModifiersOrderCheck""EReorder the modifiers to comply with the Java Language Specification.(Áèó·þÿÿÿÿ8ºÍåè‡.
+usquid:S00116%"QRename this field "sw_iso" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ìŠèúÿÿÿÿ8ºÍåè‡.
+?squid:S1170+"!Make this final field static too.(Æçã8ºÍåè‡.
+Psquid:S11359"2Complete the task associated to this TODO comment.(²¼à÷8àÕÖã‡.
+gsquid:HiddenFieldCheck€"8Rename "path" which hides the field declared at line 31.(åç‹¿úÿÿÿÿ8›Š¥ê‡.
+Qsquid:S1135û"2Complete the task associated to this TODO comment.(–°®º8›Š¥ê‡.
+Gsquid:S1148â"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àÕÖã‡.
+_squid:S1075+"ARefactor your code to get this URI from a customizable parameter.(Æçã8‹Œ—é‡.
+Bsquid:S2629©"$Invoke method(s) only conditionally.(³ü¼8¼´¶ò‡.
+jsquid:CommentedOutCodeLine§"<This block of commented-out lines of code should be removed.(Ÿæ´Ç8²¦Þè‡.
+Vsquid:S2629¼"7Use the built-in formatting to construct this argument.(âû“É8¼´¶ò‡.
+osquid:CommentedOutCodeLineü"<This block of commented-out lines of code should be removed.(»‡ûÿÿÿÿ8›Š¥ê‡.
+osquid:CommentedOutCodeLineê"<This block of commented-out lines of code should be removed.(ç¹é¸øÿÿÿÿ8›Š¥ê‡.
+psquid:S3776Í"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¼ø^8àÕÖã‡.
+nsquid:CommentedOutCodeLines"<This block of commented-out lines of code should be removed.(ËŽ¥ûÿÿÿÿÿ8ÅËÃñ‡.
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(‹¯·­8àÕÖã‡.
+osquid:CommentedOutCodeLineÀ"<This block of commented-out lines of code should be removed.(»‡ûÿÿÿÿ8²¦Þè‡.
+osquid:CommentedOutCodeLineÊ"<This block of commented-out lines of code should be removed.(üé¼ïúÿÿÿÿ8¼´¶ò‡.
+Dsquid:S1170'"!Make this final field static too.(î°Ý÷ýÿÿÿÿ8ºÍåè‡.
+osquid:CommentedOutCodeLine—"<This block of commented-out lines of code should be removed.(Î»žýûÿÿÿÿ8›Š¥ê‡.
+Gsquid:S1148¸"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àÕÖã‡.
+Vsquid:S2629“"7Use the built-in formatting to construct this argument.(±æø„8›Š¥ê‡.
+Gsquid:S1148Ó"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àÕÖã‡.
+[squid:S2629Ò"7Use the built-in formatting to construct this argument.(”Â…³ÿÿÿÿÿ8›Š¥ê‡.
+Vsquid:S2629®"7Use the built-in formatting to construct this argument.(ëÏÉÎ8›Š¥ê‡.
+Gsquid:S1148À"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8¼´¶ò‡.
+osquid:CommentedOutCodeLine›"<This block of commented-out lines of code should be removed.(¡»¢üùÿÿÿÿ8²¦Þè‡.
+Vsquid:S2629È"7Use the built-in formatting to construct this argument.(ÈîÉ¥8²¦Þè‡.
+Gsquid:S1148Ä"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àÕÖã‡.
+jsquid:CommentedOutCodeLineâ"<This block of commented-out lines of code should be removed.(Ù›Òº8¼´¶ò‡.
+vsquid:S00117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅŒí‚þÿÿÿÿ8›Š¥ê‡.
+Gsquid:S1148Ž"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8›Š¥ê‡.
+nsquid:S00116+"ORename this field "PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æçã8ºÍåè‡.
+osquid:CommentedOutCodeLineó"<This block of commented-out lines of code should be removed.(ç¹é¸øÿÿÿÿ8›Š¥ê‡.
+[squid:S2629¨"7Use the built-in formatting to construct this argument.(úÍ©ûÿÿÿÿ8›Š¥ê‡.
+Qsquid:S1135©"2Complete the task associated to this TODO comment.(®üäŽ8àÕÖã‡.
+Vsquid:S1135é"2Complete the task associated to this TODO comment.(—ëêãùÿÿÿÿ8àÕÖã‡.
+Gsquid:S1148»"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8²¦Þè‡.
+jsquid:CommentedOutCodeLine˜"<This block of commented-out lines of code should be removed.(Åçéƒ8›Š¥ê‡.
+©%squid:RedundantThrowsDeclarationCheckB"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(Òž•œþÿÿÿÿ8äˆôð‡.
+rsquid:S00116."SRename this field "sw_files" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©Ö¢Ô8ºÍåè‡.
+ysquid:S00116!"URename this field "sw_version" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å¯Îüÿÿÿÿ8ºÍåè‡.
+Gsquid:S1148¿"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àÕÖã‡.
+jsquid:CommentedOutCodeLine¨"<This block of commented-out lines of code should be removed.(ÚÀßø8¬¿ó‡.
+]"squid:SwitchLastCaseIsDefaultCheckç""Add a default case to this switch.(êÙ¢´øÿÿÿÿ8àÕÖã‡.
+tsquid:S001162"URename this field "TAR_FOLDER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ÛÛ8ºÍåè‡.
+Gsquid:S1148É"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àÕÖã‡.
+ssquid:S00116("TRename this field "JAVA_HOME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ˆ±Ð8ºÍåè‡.
+jsquid:CommentedOutCodeLineš"<This block of commented-out lines of code should be removed.(šóñˆ8›Š¥ê‡.
+jsquid:CommentedOutCodeLineó"<This block of commented-out lines of code should be removed.(ª®ã©8›Š¥ê‡.
+[squid:S2629¿"7Use the built-in formatting to construct this argument.(¦Ž‡èúÿÿÿÿ8²¦Þè‡.
+Psquid:S1135?"2Complete the task associated to this TODO comment.(òæ¼ó8àÕÖã‡.
+osquid:CommentedOutCodeLine­"<This block of commented-out lines of code should be removed.(µ£çªûÿÿÿÿ8¡Àó‡.
+Usquid:S2629e"7Use the built-in formatting to construct this argument.(åˆƒ8äˆôð‡.
+?squid:S1170*"!Make this final field static too.(Ù‰ÓÂ8ºÍåè‡.
+xsquid:S00116'"TRename this field "CLASSPATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î°Ý÷ýÿÿÿÿ8ºÍåè‡.
+bsquid:UselessImportCheck
+"2Remove this unused import 'com.platform.Platform'.(Ë®¢Íùÿÿÿÿ8ÚýÜð‡.
+Gsquid:S1148Ý"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àÕÖã‡.
+Gsquid:S1148Û"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8¼´¶ò‡.
+Dsquid:S1170#"!Make this final field static too.(¾ÖÊøþÿÿÿÿ8ºÍåè‡.
+osquid:CommentedOutCodeLineä"<This block of commented-out lines of code should be removed.(´ÈÎÚÿÿÿÿÿ8¼´¶ò‡.
+gsquid:HiddenFieldCheck•"8Rename "path" which hides the field declared at line 31.(åç‹¿úÿÿÿÿ8›Š¥ê‡.
+jsquid:CommentedOutCodeLine‚"<This block of commented-out lines of code should be removed.(§ò¤§8ßÈˆë‡.
+Vsquid:S2629„"7Use the built-in formatting to construct this argument.(ÈîÉ¥8›Š¥ê‡.
+Ssquid:S2864š"4Iterate over the "entrySet" instead of the "keySet".(øÂ×„8àÕÖã‡.
+}squid:S1845+"_Rename field "PATH" to prevent any misunderstanding/clash with field "path" defined on line 31.(Æçã8ºÍåè‡.
+Psquid:S1135a"2Complete the task associated to this TODO comment.(™°«Ê8§‚Òò‡.
+Fsquid:S1148g"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8äˆôð‡.
+osquid:CommentedOutCodeLineÄ"<This block of commented-out lines of code should be removed.(ø“öýÿÿÿÿ8²¦Þè‡.
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¨¹ÇŸ8›Š¥ê‡.
+osquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(»‡ûÿÿÿÿ8›Š¥ê‡.
+bsquid:HiddenFieldCheckž"8Rename "path" which hides the field declared at line 31.(ü‰ôè8¼´¶ò‡.
+[squid:S2629û"7Use the built-in formatting to construct this argument.(¦Ž‡èúÿÿÿÿ8›Š¥ê‡.
+ssquid:S00116*"TRename this field "JAVA_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù‰ÓÂ8ºÍåè‡.
+jsquid:CommentedOutCodeLineâ"<This block of commented-out lines of code should be removed.(¼‹¢Ÿ8ÝüÁê‡.
+Wsquid:S1854¦"8Remove this useless assignment to local variable "home".(üÊšõ8àÕÖã‡.
+jsquid:CommentedOutCodeLine·"<This block of commented-out lines of code should be removed.(ª®ã©8²¦Þè‡.
+Psquid:S1135u"2Complete the task associated to this TODO comment.(™°«Ê8úÒÖò‡.
+zsquid:S00116,"VRename this field "sw_location" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´„”ÿÿÿÿÿ8ºÍåè‡.
+Gsquid:S1148Î"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àÕÖã‡.
+Fsquid:S1148|"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àÕÖã‡.
+ª%squid:RedundantThrowsDeclarationCheckÏ"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(º‡˜ãýÿÿÿÿ8÷ÚÁê‡.
+jsquid:CommentedOutCodeLineÈ"<This block of commented-out lines of code should be removed.(¼Ù´­8¼´¶ò‡.
+rsquid:S00116)"SRename this field "JRE_HOME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó³†ô8ºÍåè‡.
+Hsquid:S2629š"$Invoke method(s) only conditionally.(ý¾–‹úÿÿÿÿ8›Š¥ê‡.
+Gsquid:S1148ç"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àÕÖã‡.
+Vsquid:S1135ß"2Complete the task associated to this TODO comment.(¸œÏšüÿÿÿÿ8¼´¶ò‡.
+[squid:S2629Ó"7Use the built-in formatting to construct this argument.(ËžéØýÿÿÿÿ8›Š¥ê‡.
+Gsquid:S1148Ø"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àÕÖã‡.
+Vsquid:S1135ö"2Complete the task associated to this TODO comment.(‹Ù®¸üÿÿÿÿ8àÕÖã‡.
+dsquid:S1075'"ARefactor your code to get this URI from a customizable parameter.(î°Ý÷ýÿÿÿÿ8˜½–é‡.
+isquid:CommentedOutCodeLine‡"<This block of commented-out lines of code should be removed.(õÝâe8›Š¥ê‡.
+Ssquid:S2864æ"4Iterate over the "entrySet" instead of the "keySet".(øÂ×„8àÕÖã‡.
+gsquid:HiddenFieldCheckÆ"8Rename "path" which hides the field declared at line 31.(åç‹¿úÿÿÿÿ8²¦Þè‡.
+isquid:CommentedOutCodeLine_"<This block of commented-out lines of code should be removed.(ö«Ãá8äˆôð‡.
+Vsquid:S2629"7Use the built-in formatting to construct this argument.(·’Œ¦8êô‘é‡.
+osquid:CommentedOutCodeLine¤"<This block of commented-out lines of code should be removed.(£âëøÿÿÿÿ8›Š¥ê‡.
+wsquid:S00116&"SRename this field "iso_File" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êü›ñûÿÿÿÿ8ºÍåè‡.
+jsquid:CommentedOutCodeLine»"<This block of commented-out lines of code should be removed.(ëóˆ8›ŽÂó‡.
+osquid:CommentedOutCodeLineÕ"<This block of commented-out lines of code should be removed.(¡»¢üùÿÿÿÿ8÷ÚÁê‡.
+Gsquid:S1148÷"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8›Š¥ê‡.
+isquid:CommentedOutCodeLine²"<This block of commented-out lines of code should be removed.(éø»r8ŽýÀó‡.
+Zsquid:S1751†"6Remove this "return" statement or make it conditional.(”ëµþùÿÿÿÿ8¤¯‰ë‡.
+[squid:S2629Á"7Use the built-in formatting to construct this argument.(ÍÙ‹Îÿÿÿÿÿ8›Š¥ê‡.

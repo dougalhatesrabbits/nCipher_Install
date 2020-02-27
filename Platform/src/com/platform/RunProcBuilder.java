@@ -33,7 +33,10 @@ public class RunProcBuilder {
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
             }
+            inputStream.close();
+            reader.close();
             process.waitFor();
+            process.destroy();
         } catch (Exception ex) {
             ex.printStackTrace();
             LOGGER.logp(Level.SEVERE,

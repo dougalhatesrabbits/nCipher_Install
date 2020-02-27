@@ -36,6 +36,7 @@ public class Install {
 
     public static void main(String[] args) throws IOException {
 
+        /*
         Process p = Runtime.getRuntime().exec("id -u");
         String output = read(p.getInputStream());
         String error = read(p.getErrorStream());
@@ -43,6 +44,8 @@ public class Install {
             System.out.println("User must be elevated as root/admin to run this installer: " +output +error);
             System.exit(1);
         }
+
+         */
 
         final ArgumentParser parser = ArgumentParsers.newFor("nCipher_Install.jar").build()
                 .defaultHelp(true)
@@ -220,7 +223,8 @@ public class Install {
                 e.printStackTrace();
             }
 
-            osx.checkMount(osx.sw_filename);
+            //osx.checkMount(osx.sw_filename);
+            osx.checkMount2(osx.sw_filename);
             osx.getTars(); //also unpacks secWorld
 
                 /*
@@ -231,7 +235,8 @@ public class Install {
                  */
 
             osx.applySecWorld();
-            //osx.applyDrivers();
+            osx.applyDrivers();
+            osx.restartService();
 
             int osxversion = Integer.parseInt(osx.sw_version);
             if (osxversion > 125040) {
@@ -287,7 +292,8 @@ public class Install {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            linux.checkMount(linux.sw_filename);
+            //linux.checkMount(linux.sw_filename);
+            linux.checkMount2(linux.sw_filename);
             linux.getTars(); //also unpacks secWorld
                 /*
                 //linux.unpackSecWorld("SecWorld-linux64-user-12.60.3.iso", "mnt");
@@ -296,8 +302,9 @@ public class Install {
                 //linux.unpackSecurityWorld("apache-maven-3.6.3-bin.tar", "mnt");
                  */
 
-            linux.applySecWorld();
-            linux.applyDrivers();
+            linux.applySecWorld(); //installs SW
+            linux.applyDrivers(); //install drivers
+            linux.restartService();
 
             int linuxversion = Integer.parseInt(linux.sw_version);
             if (linuxversion > 125040) {

@@ -9,12 +9,10 @@ import com.file.ReadIso;
 import com.file.UnTarFile;
 import com.platform.ConsoleColours;
 import com.platform.RunProcBuilder;
-import com.platform.RunProcBuilder2;
 import org.apache.commons.io.FileUtils;
 import org.apache.tools.ant.DirectoryScanner;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -80,26 +78,6 @@ public class Linux extends SecurityWorld {
             System.out.println("No existing SW found, proceeding with install");
         }
         return removeStatus;
-    }
-
-    public void removeExistingSW() {
-        LOGGER.fine("running removeExistingSW method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nRemoving old Security World" + ConsoleColours.RESET);
-
-        String[] cmd = {NFAST_HOME + "/sbin/install", "-u"};
-        //String cmd = "sudo rm -rf " + NFAST_HOME;
-
-        try {
-            new RunProcBuilder2().run(cmd);
-            System.out.println("Using NFAST " + cmd);
-            LOGGER.info("Using NFAST " + cmd);
-        } catch (Exception e) {
-            e.printStackTrace();
-            LOGGER.logp(Level.WARNING,
-                    "SecurityWorld",
-                    "removeExistingSW",
-                    "Cannot uninstall", e.fillInStackTrace());
-        }
     }
 
     void checkEnvVariables() {
@@ -275,6 +253,187 @@ public class Linux extends SecurityWorld {
         }
     }
 
+    //TODO checkmount2
+    void checkMount2(Path sw_filename) {
+        LOGGER.fine("running -checkMount- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking if ISO is already mounted" + ConsoleColours.RESET);
+        LOGGER.info("Checking if ISO is already mounted");
+        File isoFile = null;
+        //File isoFile = new File(sw_location + "/" + sw_filename);
+
+        System.out.println("check iso location: " + sw_location);
+        LOGGER.info("check iso location: " + sw_location);
+
+        if (sw_filename != null) {
+            isoFile = new File(sw_filename.toString());
+            //isoFile.setExecutable(true);
+        } else {
+            System.out.println("Cannot find iso");
+            //isoFile = new File(sw_location + "/" + sw_filename);
+        }
+
+        // Lets try unmounting first
+        String[] cmd = new String[]{"/bin/bash ", "-c ", "umount ", sw_location};
+
+        ProcessBuilder pb = new ProcessBuilder(cmd);
+        String line = null;
+        Boolean status = false;
+
+        try {
+            pb.redirectErrorStream(true);
+            //pb.directory(new File ("/"));
+
+            Map<String, String> env = pb.environment();
+            //env.put("TERM", "xterm-256color");
+            //env.remove("var3");
+
+            Process process = pb.start();
+            InputStream inputStream = process.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    inputStream));
+            //OutputStream out = process.getOutputStream();
+
+            while ((line = reader.readLine()) != null) {
+                //System.out.println(line +pb.redirectErrorStream());
+                System.out.println(line);
+                status = true;
+            }
+            inputStream.close();
+            reader.close();
+            process.waitFor();
+            //process.wait();
+            process.destroy();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            LOGGER.logp(Level.SEVERE,
+                    "RunProcBuilder",
+                    "run",
+                    "Cannot run command", ex.getCause());
+        }
+        //return status;
+
+        //TODO  Disable this for now
+        /*
+        // Check if source file already exists on mnt
+        String path = null;
+        boolean bool = false;
+        File file2 = null;
+        File file = null;
+        try {
+            // 'creating' new file (paths)
+            //file  = new File(sw_location,"linux");
+            file  = new File(sw_location);
+
+            //file.createNewFile(); //this gets done by ReadISO
+            //System.out.println("Relative filepath 'file' " + file);
+            LOGGER.fine((file.toString()));
+
+            // creating new canonical from file object
+            file2 = file.getCanonicalFile();
+            //System.out.println("Canonical filepath 'file2' " + file2);
+            LOGGER.fine((file2.toString()));
+
+            // returns true if the file exists
+            bool = file2.exists();
+            //System.out.println("Does canon path 'file2' exists? " + bool);
+
+            // returns absolute pathname
+            path = file2.getAbsolutePath();
+            //System.out.println("Absolute path of 'file2' " + path);
+
+            // if file path exists
+            if (bool) {
+                // prints
+                //System.out.print(path + " Exists? " + bool);
+                LOGGER.fine(path + " Exists? " + bool);
+            }
+        } catch (Exception e) {
+            // if any error occurs
+            e.printStackTrace();
+        }
+        if(bool){
+            try {
+                if (file2.isDirectory()){
+                    FileUtils.cleanDirectory(file2);
+                    FileUtils.deleteDirectory(file2);
+                    //FileUtils.forceDelete(file2);
+                    /*
+                    assert path != null;
+                    Files.walk(Paths.get(path))
+                            .sorted(Comparator.reverseOrder())
+                            .map(Path::toFile)
+                            .forEach(File::delete);
+                     */
+        /*
+                } else if (file.delete()) {
+                    System.out.println(file.getName() + " deleted");//getting and printing the file name
+                    LOGGER.fine(file.getName() + " deleted");
+                } else {
+                    System.out.println("failed");
+                    LOGGER.fine("failed");
+                }
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+        */
+
+
+        // TODO Do checksum on iso
+        //new ReadIso(new File(sw_filename), destFile);
+        try {
+            //new ReadIso(isoFile, new File(sw_location));
+
+            //new ReadIso(isoFile, new File(String.valueOf(file2)));
+            //new ReadIso(isoFile, file2);
+            //TODO pb mount
+            cmd = new String[]{"/bin/bash ", "-c ", "mount -o loop", String.valueOf(sw_filename), sw_location};
+
+            pb = new ProcessBuilder(cmd);
+            String line1 = null;
+            status = false;
+
+            try {
+                pb.redirectErrorStream(true);
+                //pb.directory(new File ("/"));
+
+                Map<String, String> env = pb.environment();
+                //env.put("TERM", "xterm-256color");
+                //env.remove("var3");
+
+                Process process = pb.start();
+                InputStream inputStream = process.getInputStream();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(
+                        inputStream));
+                //OutputStream out = process.getOutputStream();
+
+                while ((line = reader.readLine()) != null) {
+                    //System.out.println(line +pb.redirectErrorStream());
+                    System.out.println(line);
+                    status = true;
+                }
+                inputStream.close();
+                reader.close();
+                process.waitFor();
+                //process.wait();
+                process.destroy();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                LOGGER.logp(Level.SEVERE,
+                        "RunProcBuilder",
+                        "run",
+                        "Cannot run command", ex.getCause());
+            }
+            //return status;
+            //sw_iso = sw_filename;
+
+            System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_location);
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     void getTars(){
         LOGGER.fine("running -getTars- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED+"getTars..." +ConsoleColours.RESET);
@@ -303,7 +462,27 @@ public class Linux extends SecurityWorld {
             //tar_files.add(path);
             System.out.println(path);
             LOGGER.info(path.toString());
-            unpackSecWorld(found, TAR_DESTINATION);
+            unpackSecWorld2(found, TAR_DESTINATION);
+        }
+    }
+
+    public void removeExistingSW() {
+        LOGGER.fine("running removeExistingSW method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nRemoving old Security World" + ConsoleColours.RESET);
+
+        String[] cmd = {NFAST_HOME + "/sbin/install", "-u"};
+        //String cmd = "sudo rm -rf " + NFAST_HOME;
+
+        try {
+            new RunProcBuilder().run(cmd);
+            System.out.println("Using NFAST " + cmd);
+            LOGGER.info("Using NFAST " + cmd);
+        } catch (Exception e) {
+            e.printStackTrace();
+            LOGGER.logp(Level.WARNING,
+                    "SecurityWorld",
+                    "removeExistingSW",
+                    "Cannot uninstall", e.fillInStackTrace());
         }
     }
 }

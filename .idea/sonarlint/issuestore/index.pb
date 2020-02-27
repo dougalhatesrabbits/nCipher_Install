@@ -36,8 +36,6 @@ A
 install-log-0.xml,3/0/30d1a49a3a711aebafceb07b5a186fbf10c0ee3f
 L
 IO/src/com/file/ReadIso.java,8/0/8006450b16f0bb248286d43087e77a9bb88c9cf8
-D
-META-INF/MANIFEST.MF,2/e/2e8cf92205ec303e7304888d382cb6a8cf5f56ba
 =
 secWorld.json,a/6/a628d0dd13d3da252807e3e584ee8b99c2d84c2a
 ]
@@ -56,3 +54,15 @@ A
 12-60-Bundle.json,2/c/2cf039596cc8d7fa8cbbfae022b412cdcfb071b5
 A
 12-50-Bundle.json,4/3/43b3b53a42e38dd5fce57ec7e18ac0553108c2e6
+F
+src/main/java/OSX.java,1/7/171622eca4fb081abb7ddd8921eae8416db479ec
+T
+$IO/src/com/file/ReadLinuxBundle.java,8/7/873a7aefbf7d5bf14c9e6f68702d72c5b007b3a4
+Q
+!IO/src/com/file/ReadSecWorld.java,e/e/ee670aa1d1bda3e7af511ce499754a1a0b7c3bbe
+G
+src/main/java/Unix.java,b/7/b7b0a4b86d56c8b17d8d970a8c6552e28d974e77
+Y
+)Platform/src/com/platform/DumpFields.java,3/8/386377fcdf6b8d067b9c492ecd10ce0a8fc740c6
+=
+.bash_profile,e/3/e38129eed72dd7079098b771cb2d7735c90a5afd

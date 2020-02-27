@@ -9,12 +9,11 @@ import com.file.UnTarFile;
 import com.platform.ConsoleColours;
 import com.platform.Platform;
 import com.platform.RunProcBuilder;
-import com.platform.RunProcBuilder2;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.tools.ant.DirectoryScanner;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -53,6 +52,53 @@ public class SecurityWorld {
     Boolean removeStatus = false;
 
     // Methods
+    void applyDrivers() throws IOException {
+        LOGGER.fine("running -applyDrivers- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nAdding PCI drivers"+ConsoleColours.RESET);
+        LOGGER.info("Adding PCI drivers");
+
+        System.out.println("\nChecking standard linux gcc compiler is installed/at correct version");
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "gcc --version"});
+        System.out.println("\nChecking standard linux make builder is installed/at correct version");
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "make --version"});
+        System.out.println("\nChecking existing pci drivers");
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn"});
+        System.out.println("\nChecking existing usb drivers");
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
+
+        System.out.println("Configure");
+        String[] cmd1 = {NFAST_HOME + "/driver/configure"};
+        new RunProcBuilder().run(cmd1);
+
+        System.out.println("\nClean");
+        String[] cmd = {NFAST_HOME + "/driver/make", "clean"};
+        new RunProcBuilder().run(cmd);
+
+        System.out.println("Compile");
+        String cmd2 = NFAST_HOME + "/driver/make";
+        new RunProcBuilder().run(new String[]{cmd2});
+
+        System.out.println("Make");
+        String[] cmd3 = {NFAST_HOME + "/driver/make", "install"};
+        new RunProcBuilder().run(cmd3);
+    }
+
+    void restartService() throws IOException {
+        LOGGER.fine("running -restartService- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nrestartService"+ConsoleColours.RESET);
+        LOGGER.info("restartService");
+
+        System.out.println("\nRestarting NFAST Service...");
+        String[] cmd5 = {NFAST_HOME + "/sbin/init.d-ncipher", "restart"};
+        new RunProcBuilder().run(cmd5);
+
+        String cmd6 = NFAST_HOME + "/bin/enquiry";
+        new RunProcBuilder().run(new String[]{cmd6});
+
+        String cmd7 = NFAST_HOME + "/bin/nfkminfo";
+        new RunProcBuilder().run(new String[]{cmd7});
+    }
+
     void applyFirmware() {
         LOGGER.fine("running -applyFirmware- method");
         System.out.println("Installing firmware");
@@ -65,51 +111,6 @@ public class SecurityWorld {
         // TODO apply hotfix
     }
 
-    public Boolean checkExistingSW() throws IOException {
-        LOGGER.fine("running -checkExistingSW- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking Existing SW" + ConsoleColours.RESET);
-        LOGGER.info("Checking existing SW");
-
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking for existing Security World in $NFAST_HOME: " + path + ConsoleColours.RESET);
-
-        if (Files.exists(Paths.get(NFAST_HOME))) {
-            System.out.println("Found SW, removing previous install: \nConfirm (Y) to proceed, (N) to abort installation >");
-            Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-            String confirm = myObj.nextLine();  // Read user input
-
-            if (confirm.equalsIgnoreCase("y")) {
-                System.out.println("You entered proceed " + confirm);
-                removeStatus = true;// Output user input
-            } else {
-                System.out.println("You entered stop " + confirm);
-                System.exit(1);
-            }
-        } else {
-            System.out.println("No existing SW found, proceeding with install");
-        }
-        return removeStatus;
-    }
-
-    public void removeExistingSW() {
-        LOGGER.fine("running removeExistingSW method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nRemoving old Security World" + ConsoleColours.RESET);
-
-        String[] cmd = {NFAST_HOME + "/sbin/install", "-u"};
-        //String cmd = "sudo rm -rf " + NFAST_HOME;
-
-        try {
-            new RunProcBuilder2().run(cmd);
-            System.out.println("Using NFAST " + cmd);
-            LOGGER.info("Using NFAST " + cmd);
-        } catch (Exception e) {
-            e.printStackTrace();
-            LOGGER.logp(Level.WARNING,
-                    "SecurityWorld",
-                    "removeExistingSW",
-                    "Cannot uninstall", e.fillInStackTrace());
-        }
-    }
-
     void applySecWorld() throws IOException {
         LOGGER.fine("running -applySecurityWorld- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nInstalling Security World" + ConsoleColours.RESET);
@@ -119,7 +120,7 @@ public class SecurityWorld {
 
         System.out.println(cmd);
         try {
-            new RunProcBuilder2().run(new String[]{cmd});
+            new RunProcBuilder().run(new String[]{cmd});
 
             LOGGER.info(cmd);
         } catch (Exception e) {
@@ -202,6 +203,31 @@ public class SecurityWorld {
                     break;
             }
         }
+    }
+
+    public Boolean checkExistingSW() throws IOException {
+        LOGGER.fine("running -checkExistingSW- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking Existing SW" + ConsoleColours.RESET);
+        LOGGER.info("Checking existing SW");
+
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking for existing Security World in $NFAST_HOME: " + path + ConsoleColours.RESET);
+
+        if (Files.exists(Paths.get(NFAST_HOME))) {
+            System.out.println("Found SW, removing previous install: \nConfirm (Y) to proceed, (N) to abort installation >");
+            Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+            String confirm = myObj.nextLine();  // Read user input
+
+            if (confirm.equalsIgnoreCase("y")) {
+                System.out.println("You entered proceed " + confirm);
+                removeStatus = true;// Output user input
+            } else {
+                System.out.println("You entered stop " + confirm);
+                System.exit(1);
+            }
+        } else {
+            System.out.println("No existing SW found, proceeding with install");
+        }
+        return removeStatus;
     }
 
     void checkJava() throws IOException {
@@ -288,79 +314,315 @@ public class SecurityWorld {
         }
     }
 
-    void installJava() {
-        LOGGER.fine("running -installJava- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nInstalling Java" + ConsoleColours.RESET);
-        LOGGER.info("Installing Java");
+    void checkMount(Path sw_filename) {
+        LOGGER.fine("running -checkMount- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking if ISO is already mounted" + ConsoleColours.RESET);
+        LOGGER.info("Checking if ISO is already mounted");
+        File isoFile = null;
+        //File isoFile = new File(sw_location + "/" + sw_filename);
 
-        String home = System.getProperty("user.home");
+        System.out.println("check iso location: " + sw_filename);
+        LOGGER.info("check: " + sw_filename);
+
+        if (sw_filename != null) {
+            isoFile = new File(sw_filename.toString());
+            //isoFile.setExecutable(true);
+        } else {
+            System.out.println("Cannot find iso");
+            //isoFile = new File(sw_location + "/" + sw_filename);
+        }
+
+        // Check if source file exists on mnt
+        String path = null;
+        boolean bool = false;
+        File file2 = null;
+        File file = null;
+        try {
+            // 'creating' new file (paths)
+            //file  = new File(sw_location,"linux");
+            file  = new File(sw_location);
+
+            //file.createNewFile(); //this gets done by ReadISO
+            //System.out.println("Relative filepath 'file' " + file);
+            LOGGER.fine((file.toString()));
+
+            // creating new canonical from file object
+            file2 = file.getCanonicalFile();
+            //System.out.println("Canonical filepath 'file2' " + file2);
+            LOGGER.fine((file2.toString()));
+
+            // returns true if the file exists
+            bool = file2.exists();
+            //System.out.println("Does canon path 'file2' exists? " + bool);
+
+            // returns absolute pathname
+            path = file2.getAbsolutePath();
+            //System.out.println("Absolute path of 'file2' " + path);
+
+            // if file path exists
+            if (bool) {
+                // prints
+                //System.out.print(path + " Exists? " + bool);
+                LOGGER.fine(path + " Exists? " + bool);
+            }
+        } catch (Exception e) {
+            // if any error occurs
+            e.printStackTrace();
+        }
+        if(bool){
+
+            try {
+                if (file2.isDirectory()){
+                    FileUtils.cleanDirectory(file2);
+                    FileUtils.deleteDirectory(file2);
+                    //FileUtils.forceDelete(file2);
+                    /*
+                    assert path != null;
+                    Files.walk(Paths.get(path))
+                            .sorted(Comparator.reverseOrder())
+                            .map(Path::toFile)
+                            .forEach(File::delete);
+
+                     */
+
+
+                } else if (file.delete()) {
+                    System.out.println(file.getName() + " deleted");//getting and printing the file name
+                    LOGGER.fine(file.getName() + " deleted");
+                } else {
+                    System.out.println("failed");
+                    LOGGER.fine("failed");
+                }
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+        // TODO Do checksum on iso
+        //new ReadIso(new File(sw_filename), destFile);
+        try {
+            //new ReadIso(isoFile, new File(sw_location));
+
+            //new ReadIso(isoFile, new File(String.valueOf(file2)));
+            new ReadIso(isoFile, file2);
+            sw_iso = file2;
+
+            System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_iso);
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    void checkMount2(Path sw_filename) {
+        LOGGER.fine("running -checkMount- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking if ISO is already mounted" + ConsoleColours.RESET);
+        LOGGER.info("Checking if ISO is already mounted");
+        File isoFile = null;
+        //File isoFile = new File(sw_location + "/" + sw_filename);
+
+        System.out.println("check iso location: " + sw_filename);
+        LOGGER.info("check iso location: " + sw_filename);
+
+        if (sw_filename != null) {
+            isoFile = new File(sw_filename.toString());
+            //isoFile.setExecutable(true);
+        } else {
+            System.out.println("Cannot find iso");
+            //isoFile = new File(sw_location + "/" + sw_filename);
+        }
+
+        // Lets try unmounting first
+        String[] cmd = new String[]{"/bin/bash ", "-c ", "umount ", sw_location};
+
+        ProcessBuilder pb = new ProcessBuilder(cmd);
+        String line = null;
+        Boolean status = false;
+
+        try {
+            pb.redirectErrorStream(true);
+            //pb.directory(new File ("/"));
+
+            Map<String, String> env = pb.environment();
+            //env.put("TERM", "xterm-256color");
+            //env.remove("var3");
+
+            Process process = pb.start();
+            InputStream inputStream = process.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    inputStream));
+            //OutputStream out = process.getOutputStream();
+
+            while ((line = reader.readLine()) != null) {
+                //System.out.println(line +pb.redirectErrorStream());
+                System.out.println(line);
+                status = true;
+            }
+            inputStream.close();
+            reader.close();
+            process.waitFor();
+            //process.wait();
+            process.destroy();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            LOGGER.logp(Level.SEVERE,
+                    "RunProcBuilder",
+                    "run",
+                    "Cannot run command", ex.getCause());
+        }
+        //return status;
+
+        //TODO  Disable this for now
         /*
+        // Check if source file already exists on mnt
+        String path = null;
+        boolean bool = false;
+        File file2 = null;
+        File file = null;
         try {
-            IOUtils.copy(
-                    new URL("https://www.oracle.com/java/technologies/javase-jdk13-doc-downloads.html#license-lightbox").openStream(),
-                    new FileOutputStream(home + "/Documents/oracle")
-            );
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            // 'creating' new file (paths)
+            //file  = new File(sw_location,"linux");
+            file  = new File(sw_location);
 
-         */
-        // JDK 9
-        try {
-            System.out.println("sudo cd /opt/java");
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cd /opt/java"});
+            //file.createNewFile(); //this gets done by ReadISO
+            //System.out.println("Relative filepath 'file' " + file);
+            LOGGER.fine((file.toString()));
 
+            // creating new canonical from file object
+            file2 = file.getCanonicalFile();
+            //System.out.println("Canonical filepath 'file2' " + file2);
+            LOGGER.fine((file2.toString()));
+
+            // returns true if the file exists
+            bool = file2.exists();
+            //System.out.println("Does canon path 'file2' exists? " + bool);
+
+            // returns absolute pathname
+            path = file2.getAbsolutePath();
+            //System.out.println("Absolute path of 'file2' " + path);
+
+            // if file path exists
+            if (bool) {
+                // prints
+                //System.out.print(path + " Exists? " + bool);
+                LOGGER.fine(path + " Exists? " + bool);
+            }
         } catch (Exception e) {
+            // if any error occurs
             e.printStackTrace();
         }
+        if(bool){
+            try {
+                if (file2.isDirectory()){
+                    FileUtils.cleanDirectory(file2);
+                    FileUtils.deleteDirectory(file2);
+                    //FileUtils.forceDelete(file2);
+                    /*
+                    assert path != null;
+                    Files.walk(Paths.get(path))
+                            .sorted(Comparator.reverseOrder())
+                            .map(Path::toFile)
+                            .forEach(File::delete);
+                     */
+        /*
+                } else if (file.delete()) {
+                    System.out.println(file.getName() + " deleted");//getting and printing the file name
+                    LOGGER.fine(file.getName() + " deleted");
+                } else {
+                    System.out.println("failed");
+                    LOGGER.fine("failed");
+                }
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+        */
+
+
+        // TODO Do checksum on iso
+        //new ReadIso(new File(sw_filename), destFile);
         try {
-            System.out.println("wget");
-            String cmd = "sudo wget --no-cookies --no-check-certificate --header \"Cookie: oraclelicense=accept-securebackup-cookie\" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz";
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd});
-        } catch (Exception e) {
+            //new ReadIso(isoFile, new File(sw_location));
+
+            //new ReadIso(isoFile, new File(String.valueOf(file2)));
+            //new ReadIso(isoFile, file2);
+            //TODO pb mount
+            cmd = new String[]{"/bin/bash ", "-c ", "mount -o loop", String.valueOf(sw_filename), sw_location};
+
+            pb = new ProcessBuilder(cmd);
+            String line1 = null;
+            status = false;
+
+            try {
+                pb.redirectErrorStream(true);
+                //pb.directory(new File ("/"));
+
+                Map<String, String> env = pb.environment();
+                //env.put("TERM", "xterm-256color");
+                //env.remove("var3");
+
+                Process process = pb.start();
+                InputStream inputStream = process.getInputStream();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(
+                        inputStream));
+                //OutputStream out = process.getOutputStream();
+
+                while ((line = reader.readLine()) != null) {
+                    //System.out.println(line +pb.redirectErrorStream());
+                    System.out.println(line);
+                    status = true;
+                }
+                inputStream.close();
+                reader.close();
+                process.waitFor();
+                //process.wait();
+                process.destroy();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                LOGGER.logp(Level.SEVERE,
+                        "RunProcBuilder",
+                        "run",
+                        "Cannot run command", ex.getCause());
+            }
+            //return status;
+            //sw_iso = sw_filename;
+
+            System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_location);
+
+        } catch (Exception e){
             e.printStackTrace();
         }
-        try {
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo tar -zxvf jdk-9.0.4_linux-x64_bin.tar.gz"});
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cd jdk-9.0.4/"});
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --install /usr/bin/java java /opt/java/jdk-9.0.4/bin/java 100"});
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --config java"});
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --install /usr/bin/javac javac /opt/java/jdk-9.0.4/bin/javac 100"});
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --config javac"});
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --install /usr/bin/jar jar /opt/java/jdk-9.0.4/bin/jar 100"});
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --config jar"});
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        //TODO validate java install logic
+    }
+
+    void checkUsers() throws IOException {
+        LOGGER.fine("running -checkUsers- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nChecking if Users are in correct Groups"+ConsoleColours.RESET);
+        LOGGER.info("Checking if Users are in correct Groups");
+        //Process p = Runtime.getRuntime().exec("////command////");
+        //Process p = Runtime.getRuntime().exec("pwd");
+        System.out.println(ConsoleColours.YELLOW+"\nUsers"+ConsoleColours.RESET);
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/passwd | grep nfast"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/passwd"});
+        new RunProcBuilder().run(new String[]{"/usr/bin/bash", "-c", "sudo cat /etc/passwd | grep nfast"});
+        System.out.println(ConsoleColours.YELLOW+"\nGroups"+ConsoleColours.RESET);
+        //todo logic on filter return
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/group | grep nfast"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/group"});
+        //new RunProcBuilder().run(new String[]{"/usr/bin/bash", "-c", "sudo cat /etc/group | grep nfast"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "source .bash_profile"});
+        //new RunProcBuilder().run(new String[]{"/usr/bin/bash", "-c", "source .bash_profile"});
+
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo groups nfast"});
+        //s
+        //
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent group"}); // Get all system groups
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "awk -F':' '{ print $1}' /etc/passwd"});
+
+
+        // TODO add users if not exist
+        //new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo groupadd nfast"});
+        //new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo usermod -a -G nfast nfast"});
+
     }
 
     void configureJava() throws IOException {
@@ -377,6 +639,7 @@ public class SecurityWorld {
     }
 
     public Path getIsoChoices() {
+        //TODO menu option [Q]uit
         LOGGER.fine("running -getIsoChoices- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nGet ISO user choice" + ConsoleColours.RESET);
         LOGGER.info("Get ISO user choice");
@@ -522,137 +785,6 @@ public class SecurityWorld {
         return path;
     }
 
-    void checkMount(Path sw_filename) {
-        LOGGER.fine("running -checkMount- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking if ISO is already mounted" + ConsoleColours.RESET);
-        LOGGER.info("Checking if ISO is already mounted");
-        File isoFile = null;
-        //File isoFile = new File(sw_location + "/" + sw_filename);
-
-        System.out.println("check iso location: " + sw_filename);
-        LOGGER.info("check: " + sw_filename);
-
-        if (sw_filename != null) {
-            isoFile = new File(sw_filename.toString());
-            //isoFile.setExecutable(true);
-        } else {
-            System.out.println("Cannot find iso");
-            //isoFile = new File(sw_location + "/" + sw_filename);
-        }
-
-        // Check if source file exists on mnt
-        String path = null;
-        boolean bool = false;
-        File file2 = null;
-        File file = null;
-        try {
-            // 'creating' new file (paths)
-            //file  = new File(sw_location,"linux");
-            file  = new File(sw_location);
-
-            //file.createNewFile(); //this gets done by ReadISO
-            //System.out.println("Relative filepath 'file' " + file);
-            LOGGER.fine((file.toString()));
-
-            // creating new canonical from file object
-            file2 = file.getCanonicalFile();
-            //System.out.println("Canonical filepath 'file2' " + file2);
-            LOGGER.fine((file2.toString()));
-
-            // returns true if the file exists
-            bool = file2.exists();
-            //System.out.println("Does canon path 'file2' exists? " + bool);
-
-            // returns absolute pathname
-            path = file2.getAbsolutePath();
-            //System.out.println("Absolute path of 'file2' " + path);
-
-            // if file path exists
-            if (bool) {
-                // prints
-                //System.out.print(path + " Exists? " + bool);
-                LOGGER.fine(path + " Exists? " + bool);
-            }
-        } catch (Exception e) {
-            // if any error occurs
-            e.printStackTrace();
-        }
-        if(bool){
-
-            try {
-                if (file2.isDirectory()){
-                    FileUtils.cleanDirectory(file2);
-                    FileUtils.deleteDirectory(file2);
-                    //FileUtils.forceDelete(file2);
-                    /*
-                    assert path != null;
-                    Files.walk(Paths.get(path))
-                            .sorted(Comparator.reverseOrder())
-                            .map(Path::toFile)
-                            .forEach(File::delete);
-
-                     */
-
-
-                } else if (file.delete()) {
-                    System.out.println(file.getName() + " deleted");//getting and printing the file name
-                    LOGGER.fine(file.getName() + " deleted");
-                } else {
-                    System.out.println("failed");
-                    LOGGER.fine("failed");
-                }
-            } catch(Exception e) {
-                e.printStackTrace();
-            }
-
-        }
-        // TODO Do checksum on iso
-        //new ReadIso(new File(sw_filename), destFile);
-        try {
-            //new ReadIso(isoFile, new File(sw_location));
-
-            //new ReadIso(isoFile, new File(String.valueOf(file2)));
-            new ReadIso(isoFile, file2);
-            sw_iso = file2;
-
-            System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_iso);
-
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    void checkUsers() throws IOException {
-        LOGGER.fine("running -checkUsers- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nChecking if Users are in correct Groups"+ConsoleColours.RESET);
-        LOGGER.info("Checking if Users are in correct Groups");
-        //Process p = Runtime.getRuntime().exec("////command////");
-        //Process p = Runtime.getRuntime().exec("pwd");
-        System.out.println(ConsoleColours.YELLOW+"\nUsers"+ConsoleColours.RESET);
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/passwd | grep nfast"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/passwd"});
-        new RunProcBuilder().run(new String[]{"/usr//bin/bash", "-c", "sudo cat /etc/passwd | grep nfast"});
-        System.out.println(ConsoleColours.YELLOW+"\nGroups"+ConsoleColours.RESET);
-        //todo logic on filter return
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/group | grep nfast"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/group"});
-        //new RunProcBuilder().run(new String[]{"/usr/bin/bash", "-c", "sudo cat /etc/group | grep nfast"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "source .bash_profile"});
-        //new RunProcBuilder().run(new String[]{"/usr/bin/bash", "-c", "source .bash_profile"});
-
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo groups nfast"});
-        //s
-        //
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent group"}); // Get all system groups
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "awk -F':' '{ print $1}' /etc/passwd"});
-
-
-        // TODO add users if not exist
-        //new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo groupadd nfast"});
-        //new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo usermod -a -G nfast nfast"});
-
-    }
-
     void getTars(){
         LOGGER.fine("running -getTars- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED+"getTars..." +ConsoleColours.RESET);
@@ -681,7 +813,102 @@ public class SecurityWorld {
             //tar_files.add(path);
             System.out.println(path);
             LOGGER.info(path.toString());
-            unpackSecWorld(found, TAR_DESTINATION);
+            unpackSecWorld2(found, TAR_DESTINATION);
+        }
+    }
+
+    void installJava() {
+        LOGGER.fine("running -installJava- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nInstalling Java" + ConsoleColours.RESET);
+        LOGGER.info("Installing Java");
+
+        String home = System.getProperty("user.home");
+        /*
+        try {
+            IOUtils.copy(
+                    new URL("https://www.oracle.com/java/technologies/javase-jdk13-doc-downloads.html#license-lightbox").openStream(),
+                    new FileOutputStream(home + "/Documents/oracle")
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+         */
+        // JDK 9
+        try {
+            System.out.println("sudo cd /opt/java");
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cd /opt/java"});
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            System.out.println("wget");
+            String cmd = "sudo wget --no-cookies --no-check-certificate --header \"Cookie: oraclelicense=accept-securebackup-cookie\" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz";
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", cmd});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo tar -zxvf jdk-9.0.4_linux-x64_bin.tar.gz"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cd jdk-9.0.4/"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --install /usr/bin/java java /opt/java/jdk-9.0.4/bin/java 100"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --config java"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --install /usr/bin/javac javac /opt/java/jdk-9.0.4/bin/javac 100"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --config javac"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --install /usr/bin/jar jar /opt/java/jdk-9.0.4/bin/jar 100"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo update-alternatives --config jar"});
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //TODO validate java install logic
+    }
+
+    public void removeExistingSW() {
+        LOGGER.fine("running removeExistingSW method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nRemoving old Security World" + ConsoleColours.RESET);
+
+        String[] cmd = {NFAST_HOME + "/sbin/install", "-u"};
+        //String cmd = "sudo rm -rf " + NFAST_HOME;
+
+        try {
+            new RunProcBuilder().run(cmd);
+            System.out.println("Using NFAST " + cmd);
+            LOGGER.info("Using NFAST " + cmd);
+        } catch (Exception e) {
+            e.printStackTrace();
+            LOGGER.logp(Level.WARNING,
+                    "SecurityWorld",
+                    "removeExistingSW",
+                    "Cannot uninstall", e.fillInStackTrace());
         }
     }
 
@@ -756,46 +983,73 @@ public class SecurityWorld {
         }
     }
 
-    void applyDrivers() throws IOException {
-        LOGGER.fine("running -applyDrivers- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nAdding PCI drivers"+ConsoleColours.RESET);
-        LOGGER.info("Adding PCI drivers");
+    void unpackSecWorld2(String tar, String dest) {
+        LOGGER.fine("running -UnpackSecurityWorld- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED+"Unpacking Security World..." +ConsoleColours.RESET);
+        LOGGER.info("Unpacking Security World...");
 
-        System.out.println("\nChecking standard linux gcc compiler is installed/at correct version");
-        new RunProcBuilder2().run(new String[]{"/bin/bash", "-c", "gcc --version"});
-        System.out.println("\nChecking existing pci drivers");
-        new RunProcBuilder2().run(new String[]{"/bin/bash", "-c", "lspci -nn"});
-        System.out.println("\nChecking existing usb drivers");
-        new RunProcBuilder2().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
+        String ext = FilenameUtils.getExtension(tar);
+        //String ext = FileUtils.getName(
+        String[] cmd = null;
 
-        System.out.println("\nClean");
-        String[] cmd = {NFAST_HOME + "/sbin/driver/clean"};
-        new RunProcBuilder2().run(cmd);
+        if (ext.equals("tgz")) {
+            System.out.println("We have a Gunzip compressed tarball " + tar);
+            LOGGER.info("We have a Gunzip compressed tarball " + tar);
+            cmd = new String[]{"/bin/bash ", "-c ", "tar -xvf ", tar};
+        }
+        if (ext.equals("zip")) {
+            System.out.println("We have a standard zip file " + tar);
+            LOGGER.info("We have a standard zip file " + tar);
+            cmd = new String[]{"/bin/bash ", "-c ", "unzip ", "tar"};
+        }
+        if (ext.equals("tar")) {
+            System.out.println("We have a standard compressed tarball " + tar);
+            LOGGER.info("We have a standard compressed tarball " + tar);
+            cmd = new String[]{"/bin/bash ", "-c ", "tar xf ", "tar"};
+        } else {
+            System.out.println("Unknown archive bundle... exiting " + tar);
+            LOGGER.info("Unknown archive bundle... exiting " + tar);
+            System.exit(1);
+        }
 
-        System.out.println("Configure");
-        String[] cmd1 = {NFAST_HOME + "/sbin/driver/configure"};
-        new RunProcBuilder2().run(cmd1);
 
-        System.out.println("Compile");
-        String cmd2 = NFAST_HOME + "/sbin/driver/make";
-        new RunProcBuilder2().run(new String[]{cmd2});
+        ProcessBuilder pb = new ProcessBuilder(cmd);
+        String line = null;
+        Boolean status = false;
 
-        System.out.println("Make");
-        String[] cmd3 = {NFAST_HOME + "/sbin/driver/make", "install"};
-        new RunProcBuilder2().run(cmd3);
+        try {
+            pb.redirectErrorStream(true);
+            pb.directory(new File ("/"));
 
-        System.out.println("Install");
-        String cmd4 = NFAST_HOME + "/sbin/install";
-        new RunProcBuilder2().run(new String[]{cmd4});
+            Map<String, String> env = pb.environment();
+            //env.put("TERM", "xterm-256color");
+            //env.remove("var3");
 
-        System.out.println("\nRestarting NFAST Service...");
-        String[] cmd5 = {NFAST_HOME + "/sbin/init.d-ncipher", "restart"};
-        new RunProcBuilder2().run(cmd5);
+            Process process = pb.start();
+            InputStream inputStream = process.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    inputStream));
+            //OutputStream out = process.getOutputStream();
 
-        String cmd6 = NFAST_HOME + "/bin/enquiry";
-        new RunProcBuilder2().run(new String[]{cmd6});
-
-        String cmd7 = NFAST_HOME + "/bin/nfkminfo";
-        new RunProcBuilder2().run(new String[]{cmd7});
+            while ((line = reader.readLine()) != null) {
+                //System.out.println(line +pb.redirectErrorStream());
+                System.out.println(line);
+                status = true;
+            }
+            inputStream.close();
+            reader.close();
+            process.waitFor();
+            //process.wait();
+            process.destroy();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            LOGGER.logp(Level.SEVERE,
+                    "RunProcBuilder",
+                    "run",
+                    "Cannot run command", ex.getCause());
+        }
+        //return status;
     }
+
+
 }
