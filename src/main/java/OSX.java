@@ -4,11 +4,8 @@
  *   file 'LICENSE.txt', which is part of this source code package.
  */
 
-import com.file.Find;
 import com.file.ReadIso;
-import com.file.UnTarFile;
 import com.platform.ConsoleColours;
-import com.platform.Platform;
 import com.platform.RunProcBuilder;
 import org.apache.commons.io.FileUtils;
 import org.apache.tools.ant.DirectoryScanner;
@@ -17,8 +14,6 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -325,12 +320,11 @@ public class OSX extends SecurityWorld {
                 System.out.println(line);
                 output = true;
             }
-            if (process.exitValue() == 1) {
-                status = false;
-            }
+
             inputStream.close();
             reader.close();
             process.waitFor();
+            status = process.exitValue() != 1;
             //process.wait();
             process.destroy();
         } catch (Exception ex) {

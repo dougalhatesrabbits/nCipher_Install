@@ -7,7 +7,6 @@
 import com.file.ReadIso;
 import com.file.UnTarFile;
 import com.platform.ConsoleColours;
-import com.platform.Platform;
 import com.platform.RunProcBuilder;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
@@ -17,7 +16,9 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -433,7 +434,7 @@ public class SecurityWorld {
         }
 
         // Lets try unmounting first
-        String[] cmd = new String[]{"/bin/bash ", "-c ", "umount ", sw_location};
+        String[] cmd = new String[]{"/bin/bash", "-c", "umount", sw_location};
 
         ProcessBuilder pb = new ProcessBuilder(cmd);
         String line = null;
@@ -547,7 +548,7 @@ public class SecurityWorld {
             //new ReadIso(isoFile, new File(String.valueOf(file2)));
             //new ReadIso(isoFile, file2);
             //TODO pb mount
-            cmd = new String[]{"/bin/bash ", "-c ", "mount -o loop", String.valueOf(sw_filename), sw_location};
+            cmd = new String[]{"/bin/bash", "-c", "mount -o loop", String.valueOf(sw_filename), sw_location};
 
             pb = new ProcessBuilder(cmd);
             String line1 = null;
@@ -992,20 +993,18 @@ public class SecurityWorld {
         //String ext = FileUtils.getName(
         String[] cmd = null;
 
-        if (ext.equals("tgz")) {
+        if (ext.equals("tgz") || ext.equals("gz")) {
             System.out.println("We have a Gunzip compressed tarball " + tar);
             LOGGER.info("We have a Gunzip compressed tarball " + tar);
-            cmd = new String[]{"/bin/bash ", "-c ", "tar -xvf ", tar};
-        }
-        if (ext.equals("zip")) {
+            cmd = new String[]{"/bin/bash", "-c", "tar", "-xvf", tar};
+        } else if (ext.equals("zip")) {
             System.out.println("We have a standard zip file " + tar);
             LOGGER.info("We have a standard zip file " + tar);
-            cmd = new String[]{"/bin/bash ", "-c ", "unzip ", "tar"};
-        }
-        if (ext.equals("tar")) {
+            cmd = new String[]{"/bin/bash", "-c", "unzip", "-c", "tar"};
+        } else if (ext.equals("tar")) {
             System.out.println("We have a standard compressed tarball " + tar);
             LOGGER.info("We have a standard compressed tarball " + tar);
-            cmd = new String[]{"/bin/bash ", "-c ", "tar xf ", "tar"};
+            cmd = new String[]{"/bin/bash", "-c", "tar", "xf", "tar"};
         } else {
             System.out.println("Unknown archive bundle... exiting " + tar);
             LOGGER.info("Unknown archive bundle... exiting " + tar);

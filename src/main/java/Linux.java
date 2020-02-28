@@ -4,9 +4,7 @@
  *   file 'LICENSE.txt', which is part of this source code package.
  */
 
-import com.file.Find;
 import com.file.ReadIso;
-import com.file.UnTarFile;
 import com.platform.ConsoleColours;
 import com.platform.RunProcBuilder;
 import org.apache.commons.io.FileUtils;
@@ -17,7 +15,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -273,11 +270,12 @@ public class Linux extends SecurityWorld {
         }
 
         // Lets try unmounting first
-        String[] cmd = new String[]{"/bin/bash ", "-c ", "umount ", sw_location};
+        String[] cmd = new String[]{"/bin/bash", "-c", "umount", sw_location};
 
         ProcessBuilder pb = new ProcessBuilder(cmd);
         String line = null;
         Boolean status = false;
+        Boolean output = false;
 
         try {
             pb.redirectErrorStream(true);
@@ -296,11 +294,14 @@ public class Linux extends SecurityWorld {
             while ((line = reader.readLine()) != null) {
                 //System.out.println(line +pb.redirectErrorStream());
                 System.out.println(line);
-                status = true;
+                output = true;
             }
+
+
             inputStream.close();
             reader.close();
             process.waitFor();
+            status = process.exitValue() != 1;
             //process.wait();
             process.destroy();
         } catch (Exception ex) {
@@ -313,70 +314,73 @@ public class Linux extends SecurityWorld {
         //return status;
 
         //TODO  Disable this for now
-        /*
-        // Check if source file already exists on mnt
-        String path = null;
-        boolean bool = false;
-        File file2 = null;
-        File file = null;
-        try {
-            // 'creating' new file (paths)
-            //file  = new File(sw_location,"linux");
-            file  = new File(sw_location);
-
-            //file.createNewFile(); //this gets done by ReadISO
-            //System.out.println("Relative filepath 'file' " + file);
-            LOGGER.fine((file.toString()));
-
-            // creating new canonical from file object
-            file2 = file.getCanonicalFile();
-            //System.out.println("Canonical filepath 'file2' " + file2);
-            LOGGER.fine((file2.toString()));
-
-            // returns true if the file exists
-            bool = file2.exists();
-            //System.out.println("Does canon path 'file2' exists? " + bool);
-
-            // returns absolute pathname
-            path = file2.getAbsolutePath();
-            //System.out.println("Absolute path of 'file2' " + path);
-
-            // if file path exists
-            if (bool) {
-                // prints
-                //System.out.print(path + " Exists? " + bool);
-                LOGGER.fine(path + " Exists? " + bool);
-            }
-        } catch (Exception e) {
-            // if any error occurs
-            e.printStackTrace();
-        }
-        if(bool){
+        if (!status) {
+            System.out.println("couldn't unmount iso, checking if fs exists in" + sw_location);
+            // Check if source file already exists on dangling mnt
+            String path = null;
+            boolean bool = false;
+            File file2 = null;
+            File file = null;
             try {
-                if (file2.isDirectory()){
-                    FileUtils.cleanDirectory(file2);
-                    FileUtils.deleteDirectory(file2);
-                    //FileUtils.forceDelete(file2);
-                    /*
-                    assert path != null;
-                    Files.walk(Paths.get(path))
-                            .sorted(Comparator.reverseOrder())
-                            .map(Path::toFile)
-                            .forEach(File::delete);
-                     */
-        /*
-                } else if (file.delete()) {
-                    System.out.println(file.getName() + " deleted");//getting and printing the file name
-                    LOGGER.fine(file.getName() + " deleted");
-                } else {
-                    System.out.println("failed");
-                    LOGGER.fine("failed");
+                // 'creating' new file (paths)
+                //file  = new File(sw_location,"linux");
+                file = new File(sw_location);
+
+                //file.createNewFile(); //this gets done by ReadISO
+                //System.out.println("Relative filepath 'file' " + file);
+                LOGGER.fine((file.toString()));
+
+                // creating new canonical from file object
+                file2 = file.getCanonicalFile();
+                //System.out.println("Canonical filepath 'file2' " + file2);
+                LOGGER.fine((file2.toString()));
+
+                // returns true if the file exists
+                bool = file2.exists();
+                //System.out.println("Does canon path 'file2' exists? " + bool);
+
+                // returns absolute pathname
+                path = file2.getAbsolutePath();
+                //System.out.println("Absolute path of 'file2' " + path);
+
+                // if file path exists
+                if (bool) {
+                    // prints
+                    //System.out.print(path + " Exists? " + bool);
+                    LOGGER.fine(path + " Exists? " + bool);
                 }
-            } catch(Exception e) {
+            } catch (Exception e) {
+                // if any error occurs
                 e.printStackTrace();
             }
+            if (bool) {
+                try {
+                    if (file2.isDirectory()) {
+                        FileUtils.cleanDirectory(file2);
+                        FileUtils.deleteDirectory(file2);
+                        //FileUtils.forceDelete(file2);
+                        /*
+                        assert path != null;
+                        Files.walk(Paths.get(path))
+                                .sorted(Comparator.reverseOrder())
+                                .map(Path::toFile)
+                                .forEach(File::delete);
+                         */
+
+                    } else if (file.delete()) {
+                        System.out.println(file.getName() + " deleted");//getting and printing the file name
+                        LOGGER.fine(file.getName() + " deleted");
+                    } else {
+                        System.out.println("failed");
+                        LOGGER.fine("failed");
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            System.out.println("ISO unmounted");
         }
-        */
 
 
         // TODO Do checksum on iso
@@ -387,7 +391,13 @@ public class Linux extends SecurityWorld {
             //new ReadIso(isoFile, new File(String.valueOf(file2)));
             //new ReadIso(isoFile, file2);
             //TODO pb mount
-            cmd = new String[]{"/bin/bash ", "-c ", "mount -o loop", String.valueOf(sw_filename), sw_location};
+            File file = new File(sw_location);
+            file.mkdir();
+            file.canExecute();
+            file.canWrite();
+            file.canRead();
+
+            cmd = new String[]{"/bin/bash", "-c", "mount -o loop", String.valueOf(sw_filename), sw_location};
 
             pb = new ProcessBuilder(cmd);
             String line1 = null;
@@ -415,6 +425,19 @@ public class Linux extends SecurityWorld {
                 inputStream.close();
                 reader.close();
                 process.waitFor();
+                if (process.exitValue() > 0) {
+                    cmd = new String[]{"/bin/bash", "-c", "mount -t iso9660 -o loop", String.valueOf(sw_filename), sw_location};
+                    pb.command(cmd);
+                    pb.start();
+                    while ((line = reader.readLine()) != null) {
+                        //System.out.println(line +pb.redirectErrorStream());
+                        System.out.println(line);
+                        status = true;
+                    }
+                    inputStream.close();
+                    reader.close();
+                    process.waitFor();
+                }
                 //process.wait();
                 process.destroy();
             } catch (Exception ex) {
@@ -429,8 +452,10 @@ public class Linux extends SecurityWorld {
 
             System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_location);
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("\nCould not mount... " + sw_filename + " at " + sw_location);
+            System.exit(1);
         }
     }
 
@@ -443,7 +468,7 @@ public class Linux extends SecurityWorld {
         DirectoryScanner scanner = new DirectoryScanner();
         scanner.setIncludes(new String[]{"**/*tar*"});
         //scanner.setBasedir(sw_location);
-        scanner.setBasedir(sw_iso);
+        scanner.setBasedir(sw_location);
         scanner.setCaseSensitive(false);
         scanner.setFollowSymlinks(false);
         try {
