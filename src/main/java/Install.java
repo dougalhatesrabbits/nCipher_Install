@@ -36,6 +36,8 @@ public class Install {
 
     public static void main(String[] args) throws IOException {
 
+        //TODO SUDO startup!
+        /*
         Process p = Runtime.getRuntime().exec("id -u");
         String output = read(p.getInputStream());
         String error = read(p.getErrorStream());
@@ -43,6 +45,8 @@ public class Install {
             System.out.println("User must be elevated as root/admin to run this installer: " +output +error);
             System.exit(1);
         }
+
+         */
 
         final ArgumentParser parser = ArgumentParsers.newFor("nCipher_Install.jar").build()
                 .defaultHelp(true)
@@ -140,11 +144,6 @@ public class Install {
         imagefile.readImage("apple.jpg");
          */
 
-        /* Get platform properties listing
-        System.out.println(System.getProperty("os.name"));
-        System.getProperties().list(System.out);
-        */
-
         // Sanity check args
         if (argSilent.equals("Yes") && argFile == null) {
             System.err.println("Silent mode requires iso file");
@@ -156,7 +155,6 @@ public class Install {
             // Silent mode Redirecting System.out.println() output to a file using print stream
             // Creating a File object that represents the disk file.
             PrintStream o = new PrintStream(new File("silent.txt"));
-
             // Store current System.out before assigning a new value
             //PrintStream console = System.out;
 
@@ -170,8 +168,6 @@ public class Install {
         }
 
         Platform os = new Platform();
-        //String os = osx.getOsName();
-        // System.out.println("\n" + os);
         String osName = os.getOsName();
 
         if (osName.equals("windows")) {
@@ -213,7 +209,16 @@ public class Install {
                     osx.sw_filename = osx.getIsoChoices();
                 } else {
                     for (String search : world.getLinuxSearch()) {
-                        osx.sw_filename = osx.getSecWorld(search, argFile);
+                        osx.sw_files = osx.getSecWorld(search, argFile);
+
+                    }
+                    Integer idx = osx.sw_files.size();
+                    if (idx > 0) {
+                        osx.sw_filename = osx.sw_files.get(idx - 1);
+
+                    } else {
+                        System.out.println("Could not find provided ISO " + osx.sw_filename);
+                        System.exit(1);
                     }
                 }
             } catch (IOException e) {
@@ -223,14 +228,6 @@ public class Install {
             //osx.checkMount(osx.sw_filename);
             osx.checkMount2(osx.sw_filename);
             osx.getTars(); //also unpacks secWorld
-
-                /*
-                //osx.unpackSecWorld("SecWorld-osx64-user-12.60.3.iso", "mnt");
-                //osx.unpackSecurityWorld("Archive.zip", "mnt");
-                //osx.unpackSecurityWorld("commons-compress-1.20-bin.tar.gz", "mnt");
-                //osx.unpackSecurityWorld("apache-maven-3.6.3-bin.tar", "mnt");
-                 */
-
             osx.applySecWorld();
             osx.applyDrivers();
             osx.restartService();
@@ -256,17 +253,15 @@ public class Install {
 
             // **Synchronous** //
             // ******************
-            if (argType.equals("remove")) {
+            if (argType.equals("remove") && argSilent.equals("Yes")) {
                 linux.removeExistingSW();
                 System.exit(0);
             }
-            if (argSilent.equals("No")) {
+            if (argType.equals("remove") && argSilent.equals("No")) {
                 Boolean linuxStatus = linux.checkExistingSW();
                 if (linuxStatus) {
                     linux.removeExistingSW();
                 }
-            } else {
-                linux.removeExistingSW();
             }
 
             ObjectMapper mapper = new ObjectMapper();
@@ -282,8 +277,17 @@ public class Install {
                     //System.out.println(linux.sw_files);
                     linux.sw_filename = linux.getIsoChoices();
                 } else {
+                    //overloadad
                     for (String search : world.getLinuxSearch()) {
-                        linux.sw_filename = linux.getSecWorld(search, argFile);
+                        linux.sw_files = linux.getSecWorld(search, argFile);
+                    }
+                    Integer idx = linux.sw_files.size();
+                    if (idx > 0) {
+                        linux.sw_filename = linux.sw_files.get(idx - 1);
+
+                    } else {
+                        System.out.println("Could not find provided ISO " + linux.sw_filename);
+                        System.exit(1);
                     }
                 }
             } catch (IOException e) {
@@ -293,6 +297,7 @@ public class Install {
             linux.checkMount2(linux.sw_filename);
             linux.getTars(); //also unpacks secWorld
             linux.applySecWorld(); //installs SW
+            //If HSM = Solo or Edge
             linux.applyDrivers(); //install drivers
             linux.restartService();
 
@@ -307,7 +312,7 @@ public class Install {
             linux.checkEnvVariables();
             linux.checkJava();
             //linux.installJava();
-            linux.configureJava();
+            //linux.configureJava();
             linux.checkUsers();
         } else if (osName.equals("nix")) {
             System.out.println("Unix OS");

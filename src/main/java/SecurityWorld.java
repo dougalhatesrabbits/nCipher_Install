@@ -62,42 +62,76 @@ public class SecurityWorld {
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "gcc --version"});
         System.out.println("\nChecking standard linux make builder is installed/at correct version");
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "make --version"});
-        System.out.println("\nChecking existing pci drivers");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing pci drivers" + ConsoleColours.RESET);
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn"});
-        System.out.println("\nChecking existing usb drivers");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing usb drivers" + ConsoleColours.RESET);
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
 
-        System.out.println("Configure");
-        String[] cmd1 = {NFAST_HOME + "/driver/configure"};
-        new RunProcBuilder().run(cmd1);
-
-        System.out.println("\nClean");
-        String[] cmd = {NFAST_HOME + "/driver/make", "clean"};
+        System.out.println(ConsoleColours.YELLOW + "Configure" + ConsoleColours.YELLOW);
+        String[] cmd = {NFAST_HOME + "/driver/configure"};
         new RunProcBuilder().run(cmd);
 
-        System.out.println("Compile");
-        String cmd2 = NFAST_HOME + "/driver/make";
-        new RunProcBuilder().run(new String[]{cmd2});
+        ProcessBuilder pb = new ProcessBuilder(cmd);
+        String line = null;
+        int status = -1;
+        Boolean output = false;
 
-        System.out.println("Make");
-        String[] cmd3 = {NFAST_HOME + "/driver/make", "install"};
-        new RunProcBuilder().run(cmd3);
+        try {
+            pb.redirectErrorStream(true);
+            pb.directory(new File(NFAST_HOME + "/driver"));
+
+            Map<String, String> env = pb.environment();
+            env.put("User Name", "root");
+            //env.remove("var3");
+
+            Process process = pb.start();
+            InputStream inputStream = process.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    inputStream));
+            //OutputStream out = process.getOutputStream();
+
+            while ((line = reader.readLine()) != null) {
+                //System.out.println(line +pb.redirectErrorStream());
+                System.out.println(line);
+                output = true;
+            }
+            process.waitFor();
+            status = process.exitValue();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            LOGGER.logp(Level.SEVERE,
+                    "SecurityWorld",
+                    "applyDrivers",
+                    "Cannot run command", ex.getCause());
+        }
+
+        System.out.println(ConsoleColours.YELLOW + "\nClean" + ConsoleColours.RESET);
+        cmd = new String[]{NFAST_HOME + "/driver/make", "clean"};
+        new RunProcBuilder().run(cmd);
+
+        System.out.println(ConsoleColours.YELLOW + "Compile" + ConsoleColours.RESET);
+        cmd = new String[]{NFAST_HOME + "/driver/make"};
+        new RunProcBuilder().run(cmd);
+
+        System.out.println(ConsoleColours.YELLOW + "Make" + ConsoleColours.RESET);
+        cmd = new String[]{NFAST_HOME + "/driver/make", "install"};
+        new RunProcBuilder().run(cmd);
     }
 
     void restartService() throws IOException {
         LOGGER.fine("running -restartService- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nrestartService"+ConsoleColours.RESET);
-        LOGGER.info("restartService");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nrestartService" + ConsoleColours.RESET);
+
 
         System.out.println("\nRestarting NFAST Service...");
-        String[] cmd5 = {NFAST_HOME + "/sbin/init.d-ncipher", "restart"};
-        new RunProcBuilder().run(cmd5);
+        String[] cmd = {NFAST_HOME + "/sbin/init.d-ncipher", "restart"};
+        new RunProcBuilder().run(cmd);
 
-        String cmd6 = NFAST_HOME + "/bin/enquiry";
-        new RunProcBuilder().run(new String[]{cmd6});
+        cmd = new String[]{NFAST_HOME + "/bin/enquiry"};
+        new RunProcBuilder().run(cmd);
 
-        String cmd7 = NFAST_HOME + "/bin/nfkminfo";
-        new RunProcBuilder().run(new String[]{cmd7});
+        cmd = new String[]{NFAST_HOME + "/bin/nfkminfo"};
+        new RunProcBuilder().run(cmd);
     }
 
     void applyFirmware() {
@@ -621,29 +655,27 @@ public class SecurityWorld {
 
     void checkUsers() throws IOException {
         LOGGER.fine("running -checkUsers- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nChecking if Users are in correct Groups"+ConsoleColours.RESET);
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking if Users are in correct Groups" + ConsoleColours.RESET);
         LOGGER.info("Checking if Users are in correct Groups");
-        //Process p = Runtime.getRuntime().exec("////command////");
-        //Process p = Runtime.getRuntime().exec("pwd");
-        System.out.println(ConsoleColours.YELLOW+"\nUsers"+ConsoleColours.RESET);
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/passwd | grep nfast"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/passwd"});
-        new RunProcBuilder().run(new String[]{"/usr/bin/bash", "-c", "sudo cat /etc/passwd | grep nfast"});
+
+        System.out.println(ConsoleColours.YELLOW + "\nUsers" + ConsoleColours.RESET);
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent passwd | grep david | cut -d: -f1"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent passwd | grep nfast | cut -d: -f1"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent passwd | grep raserv | cut -d: -f1"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent passwd | grep ncsnmpd | cut -d: -f1"});
+
         System.out.println(ConsoleColours.YELLOW + "\nGroups" + ConsoleColours.RESET);
         //todo logic on filter return
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/group | grep nfast"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo cat /etc/group"});
-        //new RunProcBuilder().run(new String[]{"/usr/bin/bash", "-c", "sudo cat /etc/group | grep nfast"});
+        //new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent group"}); // Get all system groups
+        //new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "awk -F':' '{ print $1}' /etc/passwd"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent group | grep david | cut -d: -f1"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent group | grep nfast | cut -d: -f1"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent group | grep raserv | cut -d: -f1"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent group | grep ncsnmpd | cut -d: -f1"});// Get all system groups
+
+
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "source .bash_profile"});
         //new RunProcBuilder().run(new String[]{"/usr/bin/bash", "-c", "source .bash_profile"});
-
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo groups nfast"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo groups rasserv"});
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo groups snmpd"});
-
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "getent group"}); // Get all system groups
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "awk -F':' '{ print $1}' /etc/passwd"});
-
 
         // TODO add users if not exist
         //new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "sudo groupadd nfast"});
@@ -695,8 +727,8 @@ public class SecurityWorld {
 
     ArrayList<Path> getSecWorld(String searchpath) throws IOException {
         LOGGER.fine("running -getSecWorld- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "Getting Security World" +ConsoleColours.RESET);
-        LOGGER.info("Getting Security World");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "Searching for ISO in directory: " + searchpath + ConsoleColours.RESET);
+        LOGGER.info("Searching for ISO in directory: " + searchpath);
 
         /*
         try {
@@ -743,72 +775,46 @@ public class SecurityWorld {
             //String ext = FilenameUtils.getExtension(found);
             //System.out.println(ext);
             Path path = Paths.get(found);
-            System.out.println("Path: " +path);
-            LOGGER.info("Path: " +path);
+            System.out.println("Found: " + path);
+            LOGGER.info("Found: " + path);
             sw_files.add(path);
         }
         return sw_files;
     }
 
     //Overloaded
-    public Path getSecWorld(String searchpath, String sw) throws IOException {
+    ArrayList<Path> getSecWorld(String searchpath, String sw) throws IOException {
         LOGGER.fine("running -getSecWorld- overloaded");
-        System.out.println("Getting Security world overloaded: " +sw);
-        LOGGER.info("Getting Security world overloaded: " +sw);
+        System.out.println("Searching for: " + sw + " in directory: " + searchpath);
+        LOGGER.info("Searching for: " + sw + " in directory: " + searchpath);
 
-        /*
-        try {
-            //Find.Finder iso = new Find.Finder(sw);
-            //String ext = FilenameUtils.getExtension(tar);
-            //Find.main(new String[]{"/Users/david/IdeaProjects/nCipher_Install", "-name", "*test"});
-
-            Find.main(new String[]{searchpath, "-name", sw});
-            //isoList = iso.getResult();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-         */
-
-        /*
-        File[] dirs = new File(searchpath).listFiles((FileFilter) new WildcardFileFilter(sw));
-        for (File dir : dirs) {
-            System.out.println(dir);
-            LOGGER.info((Supplier<String>) dir);
-            if (dir.isDirectory()) {
-                File[] files = dir.listFiles((FileFilter) new WildcardFileFilter(sw));
-            }
-        }
-        */
+        Path path = null;
 
         // https://ant.apache.org/manual/api/org/apache/tools/ant/DirectoryScanner.html
         DirectoryScanner scanner = new DirectoryScanner();
 
-        scanner.setIncludes(new String[]{"**/" + sw});
+        //scanner.setExcludes(new String[]{".*/*" + sw});
+        scanner.setIncludes(new String[]{"**/*" + sw});
         scanner.setBasedir(searchpath);
         scanner.setCaseSensitive(false);
         scanner.setFollowSymlinks(false);
-        //scanner.setExcludes(new String[]{"**/."});
+
         try {
             scanner.scan();
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         String[] files = scanner.getIncludedFiles();
-        System.out.println("Files: " +files.length);
-        LOGGER.info("Files: " +files.length);
-        //ArrayList<Path> swfiles = new ArrayList<Path>();
-        //String found = null;
+        System.out.println("Files: " + scanner.getIncludedFilesCount());
+        LOGGER.info("Files: " + scanner.getIncludedFilesCount());
         for (String file : files) {
             String found = scanner.getBasedir() + "/" + file;
-            Path path = Paths.get(found);
-
-            //sw_filename = path;
-            System.out.println("Path: " +path);
-            LOGGER.info("Path: " +path);
-            System.out.println("Found: " +found);
-            return path;
+            path = Paths.get(found);
+            LOGGER.info("Found: " + path);
+            System.out.println("Found: " + found);
+            sw_files.add(path);
         }
-        return path;
+        return sw_files;
     }
 
     void getTars() {
@@ -1021,15 +1027,15 @@ public class SecurityWorld {
         if (ext.equals("tgz")) {
             System.out.println("We have a Gunzip compressed tarball " + tar);
             LOGGER.info("We have a Gunzip compressed tarball " + tar);
-            cmd = new String[]{"tar", "-zxvf", tar};
+            cmd = new String[]{"tar", "-zxf", tar};
         } else if (ext.equals("zip")) {
             System.out.println("We have a standard zip file " + tar);
             LOGGER.info("We have a standard zip file " + tar);
-            cmd = new String[]{"unzip", "-c", tar};
+            cmd = new String[]{"unzip", tar};
         } else if (ext.equals("tar") || ext.equals("gz")) {
             System.out.println("We have a standard compressed tarball " + tar);
             LOGGER.info("We have a standard compressed tarball " + tar);
-            cmd = new String[]{"tar", "-xvf", tar};
+            cmd = new String[]{"tar", "-xf", tar};
         } else {
             System.out.println("Unknown archive bundle... exiting " + tar);
             LOGGER.info("Unknown archive bundle... exiting " + tar);

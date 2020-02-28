@@ -294,7 +294,7 @@ public class OSX extends SecurityWorld {
         }
 
         // Lets try unmounting first
-        String[] cmd = new String[]{"umount", "-d", sw_location};
+        String[] cmd = new String[]{"/bin/bash", "-c", "hdiutil unmount ", sw_location};
 
         ProcessBuilder pb = new ProcessBuilder(cmd);
         String line = null;
@@ -428,7 +428,7 @@ public class OSX extends SecurityWorld {
         }
 
         try {
-            cmd = new String[]{"mount", "-o", "loop", String.valueOf(sw_filename), sw_location};
+            cmd = new String[]{"/bin/bash", "-c", "hdiutil unmount", String.valueOf(sw_filename), sw_location};
             pb.command(cmd);
             Process process = pb.start();
             InputStream inputStream = process.getInputStream();
@@ -446,7 +446,7 @@ public class OSX extends SecurityWorld {
 
             System.out.println("Mount exit value = " + exitValue);
             if (exitValue != 0) {
-                cmd = new String[]{"mount", "-t", "iso9660", "-o", "loop", String.valueOf(sw_filename), sw_location};
+                cmd = new String[]{"/bin/bash", "-c", "hdiutil unmount", String.valueOf(sw_filename), sw_location};
                 pb.command(cmd);
                 process = pb.start();
                 inputStream = process.getInputStream();
