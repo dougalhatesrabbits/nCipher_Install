@@ -15,6 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -32,7 +33,7 @@ public class Linux extends SecurityWorld {
 
     Path sw_filename = null;
     String sw_version = "126030";
-    final static String NFAST_HOME ="/opt/nfast";
+    final static String NFAST_HOME = "/opt/nfast";
     final String NFAST_KMDATA = "/opt/nfast/kmdata";
     final String TAR_DESTINATION = "/";
 
@@ -86,16 +87,16 @@ public class Linux extends SecurityWorld {
         System.out.println(ConsoleColours.YELLOW + "PATH= " + ConsoleColours.RESET + System.getenv("PATH"));
         System.out.println(ConsoleColours.YELLOW + "NFAST_KMDATA= " + ConsoleColours.RESET + System.getenv("NFAST_KMDATA"));
 
-        System.out.println("User TZ: " +System.getProperty("user.timezone"));
-        System.out.println("OS Name: " +System.getProperty("os.name"));
-        System.out.println("User Country: " +System.getProperty("user.country"));
-        System.out.println("CPU Endian: " +System.getProperty("sun.cpu.endian"));
-        System.out.println("User Home: " +System.getProperty("user.home"));
-        System.out.println("User Lang: " +System.getProperty("user.language"));
-        System.out.println("User Name: " +System.getProperty("user.name"));
-        System.out.println("OS Version: " +System.getProperty("os.versiom"));
-        System.out.println("User Dir: " +System.getProperty("user.dir"));
-        System.out.println("OS Arch: " +System.getProperty("os.arch=x86_64"));
+        System.out.println("User TZ: " + System.getProperty("user.timezone"));
+        System.out.println("OS Name: " + System.getProperty("os.name"));
+        System.out.println("User Country: " + System.getProperty("user.country"));
+        System.out.println("CPU Endian: " + System.getProperty("sun.cpu.endian"));
+        System.out.println("User Home: " + System.getProperty("user.home"));
+        System.out.println("User Lang: " + System.getProperty("user.language"));
+        System.out.println("User Name: " + System.getProperty("user.name"));
+        System.out.println("OS Version: " + System.getProperty("os.versiom"));
+        System.out.println("User Dir: " + System.getProperty("user.dir"));
+        System.out.println("OS Arch: " + System.getProperty("os.arch=x86_64"));
 
         System.out.println();
         Map<String, String> envVars = System.getenv();
@@ -176,7 +177,7 @@ public class Linux extends SecurityWorld {
         try {
             // 'creating' new file (paths)
             //file  = new File(sw_location,"linux");
-            file  = new File(sw_location);
+            file = new File(sw_location);
 
             //file.createNewFile(); //this gets done by ReadISO
             //System.out.println("Relative filepath 'file' " + file);
@@ -205,10 +206,10 @@ public class Linux extends SecurityWorld {
             // if any error occurs
             e.printStackTrace();
         }
-        if(bool){
+        if (bool) {
 
             try {
-                if (file2.isDirectory()){
+                if (file2.isDirectory()) {
                     FileUtils.cleanDirectory(file2);
                     FileUtils.deleteDirectory(file2);
                     //FileUtils.forceDelete(file2);
@@ -229,7 +230,7 @@ public class Linux extends SecurityWorld {
                     System.out.println("failed");
                     LOGGER.fine("failed");
                 }
-            } catch(Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
 
@@ -245,7 +246,7 @@ public class Linux extends SecurityWorld {
 
             System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_iso);
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -267,14 +268,15 @@ public class Linux extends SecurityWorld {
         } else {
             System.out.println("Cannot find iso");
             //isoFile = new File(sw_location + "/" + sw_filename);
+            System.exit(1);
         }
 
         // Lets try unmounting first
-        String[] cmd = new String[]{"/bin/bash", "-c", "umount", sw_location};
+        String[] cmd = new String[]{"umount", "-d", sw_location};
 
         ProcessBuilder pb = new ProcessBuilder(cmd);
         String line = null;
-        Boolean status = false;
+        int status = -1;
         Boolean output = false;
 
         try {
@@ -282,7 +284,7 @@ public class Linux extends SecurityWorld {
             //pb.directory(new File ("/"));
 
             Map<String, String> env = pb.environment();
-            //env.put("TERM", "xterm-256color");
+            env.put("User Name", "root");
             //env.remove("var3");
 
             Process process = pb.start();
@@ -298,12 +300,12 @@ public class Linux extends SecurityWorld {
             }
 
 
-            inputStream.close();
-            reader.close();
+            //inputStream.close();
+            //reader.close();
             process.waitFor();
-            status = process.exitValue() != 1;
+            status = process.exitValue();
             //process.wait();
-            process.destroy();
+            //process.destroy();
         } catch (Exception ex) {
             ex.printStackTrace();
             LOGGER.logp(Level.SEVERE,
@@ -312,10 +314,11 @@ public class Linux extends SecurityWorld {
                     "Cannot run command", ex.getCause());
         }
         //return status;
+        System.out.println("Unmount exit status = " + status);
 
         //TODO  Disable this for now
-        if (!status) {
-            System.out.println("couldn't unmount iso, checking if fs exists in" + sw_location);
+        if (status != 0) {
+            System.out.println("couldn't unmount iso, checking if fs exists in " + sw_location);
             // Check if source file already exists on dangling mnt
             String path = null;
             boolean bool = false;
@@ -392,83 +395,77 @@ public class Linux extends SecurityWorld {
             //new ReadIso(isoFile, file2);
             //TODO pb mount
             File file = new File(sw_location);
-            file.mkdir();
+            file.mkdirs();
             file.canExecute();
             file.canWrite();
             file.canRead();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("\nCould not create mount... " + sw_filename + " at " + sw_location);
+            System.exit(1);
+        }
 
-            cmd = new String[]{"/bin/bash", "-c", "mount -o loop", String.valueOf(sw_filename), sw_location};
+        try {
+            cmd = new String[]{"mount", "-o", "loop", String.valueOf(sw_filename), sw_location};
+            pb.command(cmd);
+            Process process = pb.start();
+            InputStream inputStream = process.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    inputStream));
+            while ((line = reader.readLine()) != null) {
+                //System.out.println(line +pb.redirectErrorStream());
+                System.out.println(line);
+                //status = true;
+            }
+            //inputStream.close();
+            //reader.close();
 
-            pb = new ProcessBuilder(cmd);
-            String line1 = null;
-            status = false;
+            int exitValue = process.waitFor();
 
-            try {
-                pb.redirectErrorStream(true);
-                //pb.directory(new File ("/"));
-
-                Map<String, String> env = pb.environment();
-                //env.put("TERM", "xterm-256color");
-                //env.remove("var3");
-
-                Process process = pb.start();
-                InputStream inputStream = process.getInputStream();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(
+            System.out.println("Mount exit value = " + exitValue);
+            if (exitValue != 0) {
+                cmd = new String[]{"mount", "-t", "iso9660", "-o", "loop", String.valueOf(sw_filename), sw_location};
+                pb.command(cmd);
+                process = pb.start();
+                inputStream = process.getInputStream();
+                reader = new BufferedReader(new InputStreamReader(
                         inputStream));
-                //OutputStream out = process.getOutputStream();
-
                 while ((line = reader.readLine()) != null) {
                     //System.out.println(line +pb.redirectErrorStream());
                     System.out.println(line);
-                    status = true;
+                    //status = true;
                 }
-                inputStream.close();
-                reader.close();
+                //inputStream.close();
+                //reader.close();
                 process.waitFor();
-                if (process.exitValue() > 0) {
-                    cmd = new String[]{"/bin/bash", "-c", "mount -t iso9660 -o loop", String.valueOf(sw_filename), sw_location};
-                    pb.command(cmd);
-                    pb.start();
-                    while ((line = reader.readLine()) != null) {
-                        //System.out.println(line +pb.redirectErrorStream());
-                        System.out.println(line);
-                        status = true;
-                    }
-                    inputStream.close();
-                    reader.close();
-                    process.waitFor();
-                }
-                //process.wait();
-                process.destroy();
-            } catch (Exception ex) {
-                ex.printStackTrace();
-                LOGGER.logp(Level.SEVERE,
-                        "RunProcBuilder",
-                        "run",
-                        "Cannot run command", ex.getCause());
             }
-            //return status;
-            //sw_iso = sw_filename;
-
-            System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_location);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("\nCould not mount... " + sw_filename + " at " + sw_location);
-            System.exit(1);
+            //process.wait();
+            //process.destroy();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            LOGGER.logp(Level.SEVERE,
+                    "RunProcBuilder",
+                    "run",
+                    "Cannot run command", ex.getCause());
         }
+        //return status;
+        //sw_iso = sw_filename;
+
+        System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_location);
+
+
     }
 
-    void getTars(){
+    void getTars() {
         LOGGER.fine("running -getTars- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"getTars..." +ConsoleColours.RESET);
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "getTars..." + ConsoleColours.RESET);
         LOGGER.info("getTars...");
 
         // https://ant.apache.org/manual/api/org/apache/tools/ant/DirectoryScanner.html
         DirectoryScanner scanner = new DirectoryScanner();
         scanner.setIncludes(new String[]{"**/*tar*"});
-        //scanner.setBasedir(sw_location);
         scanner.setBasedir(sw_location);
+        //scanner.setBasedir(sw_iso);
         scanner.setCaseSensitive(false);
         scanner.setFollowSymlinks(false);
         try {
@@ -500,8 +497,8 @@ public class Linux extends SecurityWorld {
 
         try {
             new RunProcBuilder().run(cmd);
-            System.out.println("Using NFAST " + cmd);
-            LOGGER.info("Using NFAST " + cmd);
+            System.out.println("Using NFAST " + Arrays.toString(cmd));
+            LOGGER.info("Using NFAST " + Arrays.toString(cmd));
         } catch (Exception e) {
             e.printStackTrace();
             LOGGER.logp(Level.WARNING,

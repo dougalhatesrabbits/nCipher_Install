@@ -290,15 +290,15 @@ public class OSX extends SecurityWorld {
         } else {
             System.out.println("Cannot find iso");
             //isoFile = new File(sw_location + "/" + sw_filename);
+            System.exit(1);
         }
 
         // Lets try unmounting first
-        String[] cmd = new String[]{"/bin/bash", "-c", "hdiutil unmount " +sw_location};
-        //String[] cmd = new String[]{"/bin/bash", "-c", "ls -l", sw_location};
+        String[] cmd = new String[]{"umount", "-d", sw_location};
 
         ProcessBuilder pb = new ProcessBuilder(cmd);
         String line = null;
-        Boolean status = false;
+        int status = -1;
         Boolean output = false;
 
         try {
@@ -306,7 +306,7 @@ public class OSX extends SecurityWorld {
             //pb.directory(new File ("/"));
 
             Map<String, String> env = pb.environment();
-            //env.put("TERM", "xterm-256color");
+            env.put("User Name", "root");
             //env.remove("var3");
 
             Process process = pb.start();
@@ -321,12 +321,13 @@ public class OSX extends SecurityWorld {
                 output = true;
             }
 
-            inputStream.close();
-            reader.close();
+
+            //inputStream.close();
+            //reader.close();
             process.waitFor();
-            status = process.exitValue() != 1;
+            status = process.exitValue();
             //process.wait();
-            process.destroy();
+            //process.destroy();
         } catch (Exception ex) {
             ex.printStackTrace();
             LOGGER.logp(Level.SEVERE,
@@ -335,12 +336,12 @@ public class OSX extends SecurityWorld {
                     "Cannot run command", ex.getCause());
         }
         //return status;
+        System.out.println("Unmount exit status = " + status);
 
         //TODO  Disable this for now
-
-        if (!status) {
-            System.out.println("couldn't unmount iso, checking if fs exists in" + sw_location);
-            // Check if source file already exists on mnt
+        if (status != 0) {
+            System.out.println("couldn't unmount iso, checking if fs exists in " + sw_location);
+            // Check if source file already exists on dangling mnt
             String path = null;
             boolean bool = false;
             File file2 = null;
@@ -407,7 +408,6 @@ public class OSX extends SecurityWorld {
         }
 
 
-
         // TODO Do checksum on iso
         //new ReadIso(new File(sw_filename), destFile);
         try {
@@ -417,70 +417,77 @@ public class OSX extends SecurityWorld {
             //new ReadIso(isoFile, file2);
             //TODO pb mount
             File file = new File(sw_location);
-            file.mkdir();
+            file.mkdirs();
             file.canExecute();
             file.canWrite();
             file.canRead();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("\nCould not create mount... " + sw_filename + " at " + sw_location);
+            System.exit(1);
+        }
 
-            cmd = new String[]{"/bin/bash", "-c", "hdiutil mount", String.valueOf(sw_filename)};
+        try {
+            cmd = new String[]{"mount", "-o", "loop", String.valueOf(sw_filename), sw_location};
+            pb.command(cmd);
+            Process process = pb.start();
+            InputStream inputStream = process.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    inputStream));
+            while ((line = reader.readLine()) != null) {
+                //System.out.println(line +pb.redirectErrorStream());
+                System.out.println(line);
+                //status = true;
+            }
+            //inputStream.close();
+            //reader.close();
 
-            pb = new ProcessBuilder(cmd);
-            String line1 = null;
-            status = false;
+            int exitValue = process.waitFor();
 
-            try {
-                pb.redirectErrorStream(true);
-                //pb.directory(new File ("/"));
-
-                Map<String, String> env = pb.environment();
-                //env.put("TERM", "xterm-256color");
-                //env.remove("var3");
-
-                Process process = pb.start();
-                InputStream inputStream = process.getInputStream();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(
+            System.out.println("Mount exit value = " + exitValue);
+            if (exitValue != 0) {
+                cmd = new String[]{"mount", "-t", "iso9660", "-o", "loop", String.valueOf(sw_filename), sw_location};
+                pb.command(cmd);
+                process = pb.start();
+                inputStream = process.getInputStream();
+                reader = new BufferedReader(new InputStreamReader(
                         inputStream));
-                //OutputStream out = process.getOutputStream();
-
                 while ((line = reader.readLine()) != null) {
                     //System.out.println(line +pb.redirectErrorStream());
                     System.out.println(line);
-                    status = true;
+                    //status = true;
                 }
-                inputStream.close();
-                reader.close();
+                //inputStream.close();
+                //reader.close();
                 process.waitFor();
-                //process.wait();
-                process.destroy();
-            } catch (Exception ex) {
-                ex.printStackTrace();
-                LOGGER.logp(Level.SEVERE,
-                        "RunProcBuilder",
-                        "run",
-                        "Cannot run command", ex.getCause());
             }
-            //return status;
-            //sw_iso = sw_filename;
-
-            System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_location);
-
-        } catch (Exception e){
-            e.printStackTrace();
-            System.out.println("\nCould not mount... " + sw_filename + " at " + sw_location);
-            System.exit(1);
+            //process.wait();
+            //process.destroy();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            LOGGER.logp(Level.SEVERE,
+                    "RunProcBuilder",
+                    "run",
+                    "Cannot run command", ex.getCause());
         }
+        //return status;
+        //sw_iso = sw_filename;
+
+        System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_location);
+
+
     }
 
-    void getTars(){
+    void getTars() {
         LOGGER.fine("running -getTars- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"getTars..." +ConsoleColours.RESET);
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "getTars..." + ConsoleColours.RESET);
         LOGGER.info("getTars...");
 
         // https://ant.apache.org/manual/api/org/apache/tools/ant/DirectoryScanner.html
         DirectoryScanner scanner = new DirectoryScanner();
         scanner.setIncludes(new String[]{"**/*tar*"});
-        //scanner.setBasedir(sw_location);
         scanner.setBasedir(sw_location);
+        //scanner.setBasedir(sw_iso);
         scanner.setCaseSensitive(false);
         scanner.setFollowSymlinks(false);
         try {

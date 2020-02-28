@@ -36,8 +36,6 @@ public class Install {
 
     public static void main(String[] args) throws IOException {
 
-
-        /*
         Process p = Runtime.getRuntime().exec("id -u");
         String output = read(p.getInputStream());
         String error = read(p.getErrorStream());
@@ -45,8 +43,6 @@ public class Install {
             System.out.println("User must be elevated as root/admin to run this installer: " +output +error);
             System.exit(1);
         }
-
-         */
 
         final ArgumentParser parser = ArgumentParsers.newFor("nCipher_Install.jar").build()
                 .defaultHelp(true)
@@ -296,13 +292,6 @@ public class Install {
             //linux.checkMount(linux.sw_filename);
             linux.checkMount2(linux.sw_filename);
             linux.getTars(); //also unpacks secWorld
-                /*
-                //linux.unpackSecWorld("SecWorld-linux64-user-12.60.3.iso", "mnt");
-                //linux.unpackSecurityWorld("Archive.zip", "mnt");
-                //linux.unpackSecurityWorld("commons-compress-1.20-bin.tar.gz", "mnt");
-                //linux.unpackSecurityWorld("apache-maven-3.6.3-bin.tar", "mnt");
-                 */
-
             linux.applySecWorld(); //installs SW
             linux.applyDrivers(); //install drivers
             linux.restartService();
@@ -328,6 +317,7 @@ public class Install {
             System.out.println("Solaris OS");
         } else {
             System.out.println("Unknown OS");
+            System.exit(1);
         }
 
         log.close();
