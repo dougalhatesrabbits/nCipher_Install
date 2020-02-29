@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class Install {
+    long start = System.currentTimeMillis();
     // Always use the classname, this way you can refactor
     private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
@@ -128,6 +129,7 @@ public class Install {
 
         InstallLogger log = new InstallLogger();
         log.setup(argLevel);
+        long start = System.currentTimeMillis();
 
         LOGGER.info("New instance of -Install- started");
 
@@ -253,6 +255,11 @@ public class Install {
 
             // **Synchronous** //
             // ******************
+
+            //TODO Backup
+            // .cknfastrc
+            // .ssl.conf
+            // .kmdata
             if (argType.equals("remove") && argSilent.equals("Yes")) {
                 linux.removeExistingSW();
                 System.exit(0);
@@ -326,6 +333,8 @@ public class Install {
         }
 
         log.close();
+        System.err.println("Execution time: " +
+                ((System.currentTimeMillis() - start) / 1000 + " secs"));
         System.exit(0);
     }
 }

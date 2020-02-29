@@ -11,11 +11,9 @@ import org.apache.commons.io.FileUtils;
 import org.apache.tools.ant.DirectoryScanner;
 
 import java.io.*;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -52,31 +50,6 @@ public class OSX extends SecurityWorld {
                     "removeExistingSW",
                     "Cannot uninstall", e.fillInStackTrace());
         }
-    }
-
-    public Boolean checkExistingSW() throws IOException {
-        LOGGER.fine("running -checkExistingSW- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking Existing SW" + ConsoleColours.RESET);
-        LOGGER.info("Checking existing SW");
-
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking for existing Security World in $NFAST_HOME: " + path + ConsoleColours.RESET);
-
-        if (Files.exists(Paths.get(NFAST_HOME))) {
-            System.out.println("Found SW, removing previous install: \nConfirm (Y) to proceed, (N) to abort installation >");
-            Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-            String confirm = myObj.nextLine();  // Read user input
-
-            if (confirm.equalsIgnoreCase("y")) {
-                System.out.println("You entered proceed " + confirm);
-                removeStatus = true;// Output user input
-            } else {
-                System.out.println("You entered stop " + confirm);
-                System.exit(1);
-            }
-        } else {
-            System.out.println("No existing SW found, proceeding with install");
-        }
-        return removeStatus;
     }
 
     public void removeExistingSW() {

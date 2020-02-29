@@ -22,21 +22,25 @@ public class RunProcBuilder {
         //Process p = Runtime.getRuntime().exec("pwd");
         //List<String> args = new ArrayList<String>();
         ProcessBuilder pb = new ProcessBuilder(args);
+        String line = null;
 
         try {
             pb.redirectErrorStream();
+            //try this https://stackoverflow.com/questions/3936023/printing-runtime-exec-outputstream-to-console
+            pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
             Process process = pb.start();
             InputStream inputStream = process.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     inputStream));
-            String line = null;
+
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
             }
+
+            process.waitFor();
             //inputStream.close();
             //reader.close();
-            process.waitFor();
-            process.destroy();
+            //process.destroy();
         } catch (Exception ex) {
             ex.printStackTrace();
             LOGGER.logp(Level.SEVERE,
@@ -45,7 +49,4 @@ public class RunProcBuilder {
                     "Cannot run command", ex.getCause());
         }
     }
-
-
-
 }

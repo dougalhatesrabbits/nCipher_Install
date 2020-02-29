@@ -32,18 +32,22 @@ public class SecurityWorld {
     Path path = null;
 
     String sw_version = "126030";
+    Path sw_filename = null;
+    String sw_location = "/mnt/iso";
+    File sw_iso = null;
+    Path iso_File = null;
+
     final static String NFAST_HOME = ("/opt/nfast");
     final String NFAST_KMDATA = "/opt/nfast/kmdata";
     final String TAR_DESTINATION = "/";
 
-    File sw_iso = null;
-    Path iso_File = null;
+
     final String CLASSPATH = "/opt/nfast/java:/opt/nfast/java/bin";
     final String JAVA_HOME = "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64";
     final String JRE_HOME = "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre";
     final String JAVA_PATH = "";
     final String PATH = "/opt/nfast/bin:/opt/nfast/sbin";
-    String sw_location = "/mnt/iso";
+
     // List of source iso filepaths i.e /home/myiso.iso
     ArrayList<Path> sw_files = new ArrayList<>();
 
@@ -106,12 +110,44 @@ public class SecurityWorld {
         }
 
         System.out.println(ConsoleColours.YELLOW + "\nClean" + ConsoleColours.RESET);
-        cmd = new String[]{NFAST_HOME + "/driver/make", "clean"};
+        cmd = new String[]{"/bin/bash", "-c", "make", "clean"};
         new RunProcBuilder().run(cmd);
+        new ProcessBuilder(cmd);
+        try {
+            pb.redirectErrorStream(true);
+            pb.directory(new File(NFAST_HOME + "/driver"));
+
+            Map<String, String> env = pb.environment();
+            env.put("User Name", "root");
+            //env.remove("var3");
+
+            Process process = pb.start();
+            InputStream inputStream = process.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    inputStream));
+            //OutputStream out = process.getOutputStream();
+
+            while ((line = reader.readLine()) != null) {
+                //System.out.println(line +pb.redirectErrorStream());
+                System.out.println(line);
+                output = true;
+            }
+            process.waitFor();
+            status = process.exitValue();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+
+            LOGGER.logp(Level.SEVERE,
+                    "SecurityWorld",
+                    "applyDrivers",
+                    "Cannot run command", ex.getCause());
+        }
+
 
         System.out.println(ConsoleColours.YELLOW + "Compile" + ConsoleColours.RESET);
-        cmd = new String[]{NFAST_HOME + "/driver/make"};
+        cmd = new String[]{"/bin/bash", "-c", "make"};
         new RunProcBuilder().run(cmd);
+
 
         System.out.println(ConsoleColours.YELLOW + "Make" + ConsoleColours.RESET);
         cmd = new String[]{NFAST_HOME + "/driver/make", "install"};
@@ -127,7 +163,7 @@ public class SecurityWorld {
         String[] cmd = {NFAST_HOME + "/sbin/init.d-ncipher", "restart"};
         new RunProcBuilder().run(cmd);
 
-        cmd = new String[]{NFAST_HOME + "/bin/enquiry"};
+        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "/bin/enquiry"};
         new RunProcBuilder().run(cmd);
 
         cmd = new String[]{NFAST_HOME + "/bin/nfkminfo"};
@@ -245,7 +281,7 @@ public class SecurityWorld {
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking Existing SW" + ConsoleColours.RESET);
         LOGGER.info("Checking existing SW");
 
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking for existing Security World in $NFAST_HOME: " + path + ConsoleColours.RESET);
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking for existing Security World in: " + NFAST_HOME + ConsoleColours.RESET);
 
         if (Files.exists(Paths.get(NFAST_HOME))) {
             System.out.println("Found SW, removing previous install: \nConfirm (Y) to proceed, (N) to abort installation >");
@@ -1078,8 +1114,8 @@ public class SecurityWorld {
                     "run",
                     "Cannot run command", ex.getCause());
         }
-        //return status;
     }
+        //return status;
 
 
 }

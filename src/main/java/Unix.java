@@ -1,22 +1,20 @@
-import com.file.Find;
-import com.file.ReadIso;
-import com.file.UnTarFile;
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
+
 import com.platform.ConsoleColours;
 import com.platform.RunProcBuilder;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.filefilter.WildcardFileFilter;
-import org.apache.tools.ant.DirectoryScanner;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -52,6 +50,9 @@ public class Unix extends SecurityWorld {
     // This folder should exist, that's where
     // .tar file will go
     String TAR_FOLDER = "/tmp";
+
+    public Unix() throws UnsupportedEncodingException {
+    }
     // After untar files will go to this folder
     // String DESTINATION_FOLDER = "mnt";
 

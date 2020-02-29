@@ -1,14 +1,19 @@
-import com.file.Find;
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
+
 import com.platform.ConsoleColours;
 import com.platform.RunProcBuilder;
 import org.apache.tools.ant.DirectoryScanner;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,9 +37,12 @@ public class Windows extends SecurityWorld {
     final String JAVA_PATH = null;
     Boolean removeStatus = false;
 
+    public Windows() throws UnsupportedEncodingException {
+    }
+
     ArrayList<Path> getSecWorld(String searchpath) throws IOException {
         LOGGER.fine("running -getSecWorld- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "Getting Security World" +ConsoleColours.RESET);
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "Getting Security World" + ConsoleColours.RESET);
         LOGGER.info("Getting Security World");
 
         /*

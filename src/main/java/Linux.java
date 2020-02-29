@@ -10,14 +10,14 @@ import com.platform.RunProcBuilder;
 import org.apache.commons.io.FileUtils;
 import org.apache.tools.ant.DirectoryScanner;
 
-import java.io.*;
-import java.nio.file.Files;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -31,53 +31,15 @@ public class Linux extends SecurityWorld {
      * @param version
      */
 
-    Path sw_filename = null;
-    String sw_version = "126030";
-    final static String NFAST_HOME = "/opt/nfast";
-    final String NFAST_KMDATA = "/opt/nfast/kmdata";
-    final String TAR_DESTINATION = "/";
-
-    File sw_iso = null;
-    Path iso_File = null;
     final String CLASSPATH = "/opt/nfast/java:/opt/nfast/java/bin";
     final String JAVA_HOME = "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64";
     final String JRE_HOME = "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre";
     final String JAVA_PATH = "";
     final String PATH = "$NFAST_HOME/bin:$NFAST_HOME/sbin";
-    String sw_location = "/mnt/iso";
-    // List of source iso filepaths i.e /home/myiso.iso
-    ArrayList<Path> sw_files = new ArrayList<>();
 
-    // This folder should exist, that's where
-    // .tar file will go
-    String TAR_FOLDER = "/tmp";
-    Boolean removeStatus = false;
+    Path sw_filename = null;
 
-    public Boolean checkExistingSW() throws IOException {
-        LOGGER.fine("running -checkExistingSW- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking Existing SW" + ConsoleColours.RESET);
-        LOGGER.info("Checking existing SW");
-
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking for existing Security World in $NFAST_HOME: " + path + ConsoleColours.RESET);
-
-        if (Files.exists(Paths.get(NFAST_HOME))) {
-            System.out.println("Found SW, removing previous install: \nConfirm (Y) to proceed, (N) to abort installation >");
-            Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-            String confirm = myObj.nextLine();  // Read user input
-
-            if (confirm.equalsIgnoreCase("y")) {
-                System.out.println("You entered proceed " + confirm);
-                removeStatus = true;// Output user input
-            } else {
-                System.out.println("You entered stop " + confirm);
-                System.exit(1);
-            }
-        } else {
-            System.out.println("No existing SW found, proceeding with install");
-        }
-        return removeStatus;
-    }
-
+    @Override
     void checkEnvVariables() {
         LOGGER.fine("running -checkEnvironmentVariables- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking environment variables" + ConsoleColours.RESET);
@@ -151,6 +113,7 @@ public class Linux extends SecurityWorld {
         }
     }
 
+    @Override
     void checkMount(Path sw_filename) {
         LOGGER.fine("running -checkMount- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking if ISO is already mounted" + ConsoleColours.RESET);
@@ -252,6 +215,7 @@ public class Linux extends SecurityWorld {
     }
 
     //TODO checkmount2
+    @Override
     void checkMount2(Path sw_filename) {
         LOGGER.fine("running -checkMount- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking if ISO is already mounted" + ConsoleColours.RESET);
@@ -456,6 +420,7 @@ public class Linux extends SecurityWorld {
 
     }
 
+    @Override
     void getTars() {
         LOGGER.fine("running -getTars- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "getTars..." + ConsoleColours.RESET);
@@ -488,6 +453,7 @@ public class Linux extends SecurityWorld {
         }
     }
 
+    @Override
     public void removeExistingSW() {
         LOGGER.fine("running removeExistingSW method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nRemoving old Security World" + ConsoleColours.RESET);
