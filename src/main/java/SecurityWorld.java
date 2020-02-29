@@ -67,7 +67,7 @@ public class SecurityWorld {
         System.out.println("\nChecking standard linux make builder is installed/at correct version");
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "make --version"});
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing pci drivers" + ConsoleColours.RESET);
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn | grep Freescale"});
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing usb drivers" + ConsoleColours.RESET);
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
 
@@ -86,7 +86,9 @@ public class SecurityWorld {
 
             Map<String, String> env = pb.environment();
             env.put("User Name", "root");
+            env.put("User Dir", NFAST_HOME + "/driver");
             //env.remove("var3");
+            pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
 
             Process process = pb.start();
             InputStream inputStream = process.getInputStream();
@@ -118,8 +120,10 @@ public class SecurityWorld {
             pb.directory(new File(NFAST_HOME + "/driver"));
 
             Map<String, String> env = pb.environment();
+            env.put("User Dir", NFAST_HOME + "/driver");
             env.put("User Name", "root");
             //env.remove("var3");
+            pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
 
             Process process = pb.start();
             InputStream inputStream = process.getInputStream();
@@ -145,12 +149,12 @@ public class SecurityWorld {
 
 
         System.out.println(ConsoleColours.YELLOW + "Compile" + ConsoleColours.RESET);
-        cmd = new String[]{"/bin/bash", "-c", "make"};
+        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "driver/make"};
         new RunProcBuilder().run(cmd);
 
 
         System.out.println(ConsoleColours.YELLOW + "Make" + ConsoleColours.RESET);
-        cmd = new String[]{NFAST_HOME + "/driver/make", "install"};
+        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "/driver/make", "install"};
         new RunProcBuilder().run(cmd);
     }
 
