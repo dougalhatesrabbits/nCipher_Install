@@ -6,14 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="973d0605-95d8-4bd4-a8e9-ad1b0f427f7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Install.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Install.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Linux.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Linux.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SecurityWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SecurityWorld.java" afterDir="false" />
-    </list>
+    <list default="true" id="973d0605-95d8-4bd4-a8e9-ad1b0f427f7a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -379,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582932466536</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="0.9.4 Runtime java fix">
+      <created>1583090581421</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1583090581421</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -428,7 +428,8 @@
     <MESSAGE value="0.9 Use OS native mount instead of Java 7-zip libraries" />
     <MESSAGE value="0.9.1 Runtime error fixes&#10;* Makefiles&#10;* Fixed overloaded method unpackSW&#10;* Users &amp; Groups" />
     <MESSAGE value="0.9.4 Runtime env fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.9.4 Runtime env fix" />
+    <MESSAGE value="0.9.4 Runtime java fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.9.4 Runtime java fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -513,11 +514,11 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="451" y="166" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.22.1440.824@0.22.1440.824" timestamp="1582333769923" />
-    <state x="326" y="28" width="763" height="723" key="CommitChangelistDialog2" timestamp="1583090442134">
+    <state x="326" y="28" width="763" height="711" key="CommitChangelistDialog2" timestamp="1583090580456">
       <screen x="0" y="28" width="1286" height="711" />
     </state>
     <state x="365" y="22" key="CommitChangelistDialog2/0.22.1440.824@0.22.1440.824" timestamp="1582785052477" />
-    <state x="326" y="28" key="CommitChangelistDialog2/0.28.1286.711@0.28.1286.711" timestamp="1583090442134" />
+    <state x="326" y="28" width="763" height="711" key="CommitChangelistDialog2/0.28.1286.711@0.28.1286.711" timestamp="1583090580456" />
     <state x="294" y="28" width="763" height="723" key="CommitChangelistDialog2/0.28.1335.723@0.28.1335.723" timestamp="1582932463782" />
     <state x="365" y="28" width="763" height="838" key="CommitChangelistDialog2/0.28.1440.838@0.28.1440.838" timestamp="1583079130139" />
     <state x="511" y="157" key="DetectedRootsChooserDialog" timestamp="1582111334603">
@@ -599,10 +600,11 @@
       <screen x="0" y="22" width="1440" height="824" />
     </state>
     <state x="494" y="144" key="VCS.ChangeListViewerDialog/0.22.1440.824@0.22.1440.824" timestamp="1581789358160" />
-    <state x="308" y="150" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1582932519857">
-      <screen x="0" y="28" width="1335" height="723" />
+    <state x="297" y="148" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583090599663">
+      <screen x="0" y="28" width="1286" height="711" />
     </state>
     <state x="332" y="161" key="Vcs.Push.Dialog.v2/0.22.1440.824@0.22.1440.824" timestamp="1582785143307" />
+    <state x="297" y="148" key="Vcs.Push.Dialog.v2/0.28.1286.711@0.28.1286.711" timestamp="1583090599663" />
     <state x="308" y="150" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.1335.723@0.28.1335.723" timestamp="1582932519857" />
     <state x="332" y="169" width="800" height="535" key="Vcs.Push.Dialog.v2/0.28.1440.838@0.28.1440.838" timestamp="1582851960235" />
     <state x="527" y="206" key="chooseDestDirectoryDialog" timestamp="1581539051280">
