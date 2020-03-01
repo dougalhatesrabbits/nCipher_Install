@@ -479,7 +479,7 @@ public class OSX extends SecurityWorld {
             //tar_files.add(path);
             System.out.println(path);
             LOGGER.info(path.toString());
-            unpackSecWorld2(found, TAR_DESTINATION);
+            unpackSecWorld2(found);
         }
     }
 }

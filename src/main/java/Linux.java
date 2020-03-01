@@ -140,7 +140,7 @@ public class Linux extends SecurityWorld {
         try {
             // 'creating' new file (paths)
             //file  = new File(sw_location,"linux");
-            file = new File(sw_location);
+            file = new File(isoLocation);
 
             //file.createNewFile(); //this gets done by ReadISO
             //System.out.println("Relative filepath 'file' " + file);
@@ -223,8 +223,8 @@ public class Linux extends SecurityWorld {
         File isoFile = null;
         //File isoFile = new File(sw_location + "/" + sw_filename);
 
-        System.out.println("check iso location: " + sw_location);
-        LOGGER.info("check iso location: " + sw_location);
+        System.out.println("check iso location: " + isoLocation);
+        LOGGER.info("check iso location: " + isoLocation);
 
         if (sw_filename != null) {
             isoFile = new File(sw_filename.toString());
@@ -236,7 +236,7 @@ public class Linux extends SecurityWorld {
         }
 
         // Lets try unmounting first
-        String[] cmd = new String[]{"umount", "-d", sw_location};
+        String[] cmd = new String[]{"umount", "-d", isoLocation};
 
         ProcessBuilder pb = new ProcessBuilder(cmd);
         String line = null;
@@ -282,7 +282,7 @@ public class Linux extends SecurityWorld {
 
         //TODO  Disable this for now
         if (status != 0) {
-            System.out.println("couldn't unmount iso, checking if fs exists in " + sw_location);
+            System.out.println("couldn't unmount iso, checking if fs exists in " + isoLocation);
             // Check if source file already exists on dangling mnt
             String path = null;
             boolean bool = false;
@@ -291,7 +291,7 @@ public class Linux extends SecurityWorld {
             try {
                 // 'creating' new file (paths)
                 //file  = new File(sw_location,"linux");
-                file = new File(sw_location);
+                file = new File(isoLocation);
 
                 //file.createNewFile(); //this gets done by ReadISO
                 //System.out.println("Relative filepath 'file' " + file);
@@ -358,19 +358,19 @@ public class Linux extends SecurityWorld {
             //new ReadIso(isoFile, new File(String.valueOf(file2)));
             //new ReadIso(isoFile, file2);
             //TODO pb mount
-            File file = new File(sw_location);
+            File file = new File(isoLocation);
             file.mkdirs();
             file.canExecute();
             file.canWrite();
             file.canRead();
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("\nCould not create mount... " + sw_filename + " at " + sw_location);
+            System.out.println("\nCould not create mount... " + sw_filename + " at " + isoLocation);
             System.exit(1);
         }
 
         try {
-            cmd = new String[]{"mount", "-o", "loop", String.valueOf(sw_filename), sw_location};
+            cmd = new String[]{"mount", "-o", "loop", String.valueOf(sw_filename), isoLocation};
             pb.command(cmd);
             Process process = pb.start();
             InputStream inputStream = process.getInputStream();
@@ -388,7 +388,7 @@ public class Linux extends SecurityWorld {
 
             System.out.println("Mount exit value = " + exitValue);
             if (exitValue != 0) {
-                cmd = new String[]{"mount", "-t", "iso9660", "-o", "loop", String.valueOf(sw_filename), sw_location};
+                cmd = new String[]{"mount", "-t", "iso9660", "-o", "loop", String.valueOf(sw_filename), isoLocation};
                 pb.command(cmd);
                 process = pb.start();
                 inputStream = process.getInputStream();
@@ -415,7 +415,7 @@ public class Linux extends SecurityWorld {
         //return status;
         //sw_iso = sw_filename;
 
-        System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_location);
+        System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + isoLocation);
 
 
     }
@@ -429,7 +429,7 @@ public class Linux extends SecurityWorld {
         // https://ant.apache.org/manual/api/org/apache/tools/ant/DirectoryScanner.html
         DirectoryScanner scanner = new DirectoryScanner();
         scanner.setIncludes(new String[]{"**/*tar*"});
-        scanner.setBasedir(sw_location);
+        scanner.setBasedir(isoLocation);
         //scanner.setBasedir(sw_iso);
         scanner.setCaseSensitive(false);
         scanner.setFollowSymlinks(false);
@@ -449,7 +449,7 @@ public class Linux extends SecurityWorld {
             //tar_files.add(path);
             System.out.println(path);
             LOGGER.info(path.toString());
-            unpackSecWorld2(found, TAR_DESTINATION);
+            unpackSecWorld2(found);
         }
     }
 

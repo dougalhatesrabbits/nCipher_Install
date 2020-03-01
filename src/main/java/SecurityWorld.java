@@ -17,6 +17,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -33,9 +34,11 @@ public class SecurityWorld {
 
     String sw_version = "126030";
     Path sw_filename = null;
-    String sw_location = "/mnt/iso";
+    final String isoLocation = "/mnt/iso";
     File sw_iso = null;
-    Path iso_File = null;
+    // This folder should exist, that's where
+    // .tar file will go
+    final String tarFolder = "/tmp";
 
     final static String NFAST_HOME = ("/opt/nfast");
     final String NFAST_KMDATA = "/opt/nfast/kmdata";
@@ -50,10 +53,7 @@ public class SecurityWorld {
 
     // List of source iso filepaths i.e /home/myiso.iso
     ArrayList<Path> sw_files = new ArrayList<>();
-
-    // This folder should exist, that's where
-    // .tar file will go
-    String TAR_FOLDER = "/tmp";
+    Path iso_FilePath = null;
     Boolean removeStatus = false;
 
     // Methods
@@ -78,13 +78,14 @@ public class SecurityWorld {
         ProcessBuilder pb = new ProcessBuilder(cmd);
         String line = null;
         int status = -1;
-        Boolean output = false;
 
         try {
             pb.redirectErrorStream(true);
             pb.directory(new File(NFAST_HOME + "/driver"));
 
+
             Map<String, String> env = pb.environment();
+            env.clear();
             env.put("User Name", "root");
             env.put("User Dir", NFAST_HOME + "/driver");
             //env.remove("var3");
@@ -99,10 +100,13 @@ public class SecurityWorld {
             while ((line = reader.readLine()) != null) {
                 //System.out.println(line +pb.redirectErrorStream());
                 System.out.println(line);
-                output = true;
             }
             process.waitFor();
             status = process.exitValue();
+            if (status == -1) {
+                System.out.println("Command runtime error");
+            }
+
         } catch (Exception ex) {
             ex.printStackTrace();
             LOGGER.logp(Level.SEVERE,
@@ -112,14 +116,16 @@ public class SecurityWorld {
         }
 
         System.out.println(ConsoleColours.YELLOW + "\nClean" + ConsoleColours.RESET);
-        cmd = new String[]{"/bin/bash", "-c", "make", "clean"};
+        cmd = new String[]{"/bin/bash", "-c", "make", "-C", NFAST_HOME + "/driver", NFAST_HOME + "/driver", "clean"};
         new RunProcBuilder().run(cmd);
         new ProcessBuilder(cmd);
+        status = -1;
         try {
             pb.redirectErrorStream(true);
             pb.directory(new File(NFAST_HOME + "/driver"));
 
             Map<String, String> env = pb.environment();
+            env.clear();
             env.put("User Dir", NFAST_HOME + "/driver");
             env.put("User Name", "root");
             //env.remove("var3");
@@ -134,10 +140,14 @@ public class SecurityWorld {
             while ((line = reader.readLine()) != null) {
                 //System.out.println(line +pb.redirectErrorStream());
                 System.out.println(line);
-                output = true;
+                //output = true;
             }
             process.waitFor();
+
             status = process.exitValue();
+            if (status == -1) {
+                System.out.println("Command runtime error");
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
 
@@ -149,7 +159,7 @@ public class SecurityWorld {
 
 
         System.out.println(ConsoleColours.YELLOW + "Compile" + ConsoleColours.RESET);
-        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "driver/make"};
+        cmd = new String[]{"/bin/bash", "-c", "-C", NFAST_HOME + "/driver", NFAST_HOME + "driver/make"};
         new RunProcBuilder().run(cmd);
 
 
@@ -415,7 +425,7 @@ public class SecurityWorld {
         try {
             // 'creating' new file (paths)
             //file  = new File(sw_location,"linux");
-            file  = new File(sw_location);
+            file = new File(isoLocation);
 
             //file.createNewFile(); //this gets done by ReadISO
             //System.out.println("Relative filepath 'file' " + file);
@@ -496,8 +506,8 @@ public class SecurityWorld {
         File isoFile = null;
         //File isoFile = new File(sw_location + "/" + sw_filename);
 
-        System.out.println("check iso location: " + sw_location);
-        LOGGER.info("check iso location: " + sw_location);
+        System.out.println("check iso location: " + isoLocation);
+        LOGGER.info("check iso location: " + isoLocation);
 
         if (sw_filename != null) {
             isoFile = new File(sw_filename.toString());
@@ -509,12 +519,12 @@ public class SecurityWorld {
         }
 
         // Lets try unmounting first
-        String[] cmd = new String[]{"umount", "-d", sw_location};
+        String[] cmd = new String[]{"umount", "-d", isoLocation};
 
         ProcessBuilder pb = new ProcessBuilder(cmd);
         String line = null;
         int status = -1;
-        Boolean output = false;
+        //Boolean output = false;
 
         try {
             pb.redirectErrorStream(true);
@@ -533,7 +543,7 @@ public class SecurityWorld {
             while ((line = reader.readLine()) != null) {
                 //System.out.println(line +pb.redirectErrorStream());
                 System.out.println(line);
-                output = true;
+                //output = true;
             }
 
 
@@ -543,6 +553,9 @@ public class SecurityWorld {
             status = process.exitValue();
             //process.wait();
             //process.destroy();
+            if (status == -1) {
+                System.out.println("Command runtime error");
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
             LOGGER.logp(Level.SEVERE,
@@ -555,7 +568,7 @@ public class SecurityWorld {
 
         //TODO  Disable this for now
         if (status != 0) {
-            System.out.println("couldn't unmount iso, checking if fs exists in " + sw_location);
+            System.out.println("couldn't unmount iso, checking if fs exists in " + isoLocation);
             // Check if source file already exists on dangling mnt
             String path = null;
             boolean bool = false;
@@ -564,7 +577,7 @@ public class SecurityWorld {
             try {
                 // 'creating' new file (paths)
                 //file  = new File(sw_location,"linux");
-                file = new File(sw_location);
+                file = new File(isoLocation);
 
                 //file.createNewFile(); //this gets done by ReadISO
                 //System.out.println("Relative filepath 'file' " + file);
@@ -631,19 +644,19 @@ public class SecurityWorld {
             //new ReadIso(isoFile, new File(String.valueOf(file2)));
             //new ReadIso(isoFile, file2);
             //TODO pb mount
-            File file = new File(sw_location);
+            File file = new File(isoLocation);
             file.mkdirs();
             file.canExecute();
             file.canWrite();
             file.canRead();
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("\nCould not create mount... " + sw_filename + " at " + sw_location);
+            System.out.println("\nCould not create mount... " + sw_filename + " at " + isoLocation);
             System.exit(1);
         }
 
         try {
-            cmd = new String[]{"mount", "-o", "loop", String.valueOf(sw_filename), sw_location};
+            cmd = new String[]{"mount", "-o", "loop", String.valueOf(sw_filename), isoLocation};
             pb.command(cmd);
             Process process = pb.start();
             InputStream inputStream = process.getInputStream();
@@ -661,7 +674,7 @@ public class SecurityWorld {
 
             System.out.println("Mount exit value = " + exitValue);
             if (exitValue != 0) {
-                cmd = new String[]{"mount", "-t", "iso9660", "-o", "loop", String.valueOf(sw_filename), sw_location};
+                cmd = new String[]{"mount", "-t", "iso9660", "-o", "loop", String.valueOf(sw_filename), isoLocation};
                 pb.command(cmd);
                 process = pb.start();
                 inputStream = process.getInputStream();
@@ -688,7 +701,7 @@ public class SecurityWorld {
         //return status;
         //sw_iso = sw_filename;
 
-        System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + sw_location);
+        System.out.println("\nCompleted Reading ISO, Mounted... " + sw_filename + " at " + isoLocation);
 
 
     }
@@ -742,8 +755,10 @@ public class SecurityWorld {
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nGet ISO user choice" + ConsoleColours.RESET);
         LOGGER.info("Get ISO user choice");
 
+        int confirm = 0;
+
         if (sw_files.isEmpty()) {
-            System.out.println(ConsoleColours.RED +"\nNo ISO found on system, aborting install" +ConsoleColours.RESET);
+            System.out.println(ConsoleColours.RED + "\nNo ISO found on system, aborting install" + ConsoleColours.RESET);
             System.exit(1);
         }
 
@@ -753,16 +768,24 @@ public class SecurityWorld {
             System.out.println("[" + i + "] " + file);
             i = i + 1;
         }
+        System.out.println("[0] Quit");
 
         System.out.println(ConsoleColours.YELLOW + "Enter choice: " + ConsoleColours.RESET);
         LOGGER.info("Enter choice: ");
-        Scanner sw = new Scanner(System.in);  // Create a Scanner object
-        int confirm = sw.nextInt();
-        iso_File =  sw_files.get(confirm-1);
-        System.out.println("[" + confirm + "]" + ConsoleColours.YELLOW +iso_File+ConsoleColours.RESET);
-        LOGGER.info("You entered " + iso_File);
+        Scanner sw = new Scanner(System.in);
 
-        return iso_File;
+        confirm = sw.nextInt();
+
+        if (confirm == 0) {
+            System.exit(0);
+        }
+
+
+        iso_FilePath = sw_files.get(confirm - 1);
+        System.out.println("[" + confirm + "]" + ConsoleColours.YELLOW + iso_FilePath + ConsoleColours.RESET);
+        LOGGER.info("You entered " + iso_FilePath);
+
+        return iso_FilePath;
     }
 
     ArrayList<Path> getSecWorld(String searchpath) throws IOException {
@@ -823,7 +846,7 @@ public class SecurityWorld {
     }
 
     //Overloaded
-    ArrayList<Path> getSecWorld(String searchpath, String sw) throws IOException {
+    ArrayList<Path> getSecWorld(String searchpath, String sw) {
         LOGGER.fine("running -getSecWorld- overloaded");
         System.out.println("Searching for: " + sw + " in directory: " + searchpath);
         LOGGER.info("Searching for: " + sw + " in directory: " + searchpath);
@@ -865,7 +888,7 @@ public class SecurityWorld {
         // https://ant.apache.org/manual/api/org/apache/tools/ant/DirectoryScanner.html
         DirectoryScanner scanner = new DirectoryScanner();
         scanner.setIncludes(new String[]{"**/*tar*"});
-        scanner.setBasedir(sw_location);
+        scanner.setBasedir(isoLocation);
         //scanner.setBasedir(sw_iso);
         scanner.setCaseSensitive(false);
         scanner.setFollowSymlinks(false);
@@ -885,7 +908,7 @@ public class SecurityWorld {
             //tar_files.add(path);
             System.out.println(path);
             LOGGER.info(path.toString());
-            unpackSecWorld2(found, TAR_DESTINATION);
+            unpackSecWorld2(found);
         }
     }
 
@@ -973,8 +996,8 @@ public class SecurityWorld {
 
         try {
             new RunProcBuilder().run(cmd);
-            System.out.println("Using NFAST " + cmd);
-            LOGGER.info("Using NFAST " + cmd);
+            System.out.println("Using NFAST " + Arrays.toString(cmd));
+            LOGGER.info("Using NFAST " + Arrays.toString(cmd));
         } catch (Exception e) {
             e.printStackTrace();
             LOGGER.logp(Level.WARNING,
@@ -997,7 +1020,7 @@ public class SecurityWorld {
             UnTarFile untar = new UnTarFile();
             try {
                 File inputFile = new File(tar);
-                String outputFile = UnTarFile.getFileName(inputFile, TAR_FOLDER);
+                String outputFile = UnTarFile.getFileName(inputFile, tarFolder);
                 System.out.println(ConsoleColours.GREEN + "outputFile " + outputFile + ConsoleColours.RESET);
                 LOGGER.info("outputFile " + outputFile);
                 File tarFile = new File(outputFile);
@@ -1021,9 +1044,10 @@ public class SecurityWorld {
             LOGGER.info("We have a standard zip file " + tar);
             UnTarFile untar = new UnTarFile();
             try {
-                String inputFile = tar;
+                //String inputFile = tar;
                 File destFile = new File(dest);
-                untar.unzip(inputFile, destFile);
+                //untar.unzip(inputFile, destFile);
+                untar.unzip(tar, destFile);
             } catch (IOException e) {
                 LOGGER.logp(Level.WARNING,
                         "Linux",
@@ -1055,9 +1079,9 @@ public class SecurityWorld {
         }
     }
 
-    void unpackSecWorld2(String tar, String dest) {
+    void unpackSecWorld2(String tar) {
         LOGGER.fine("running -UnpackSecurityWorld- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"Unpacking Security World..." +ConsoleColours.RESET);
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "Unpacking Security World..." + ConsoleColours.RESET);
         LOGGER.info("Unpacking Security World...");
 
         String ext = FilenameUtils.getExtension(tar);
@@ -1085,13 +1109,16 @@ public class SecurityWorld {
 
         ProcessBuilder pb = new ProcessBuilder(cmd);
         String line = null;
-        Boolean status = false;
+        Integer status = -1;
 
         try {
             pb.redirectErrorStream(true);
-            pb.directory(new File ("/"));
+            pb.directory(new File("/"));
 
             Map<String, String> env = pb.environment();
+            env.clear();
+            env.put("User Name", "root");
+            //env.put("User Dir", NFAST_HOME + "/driver");
             //env.put("TERM", "xterm-256color");
             //env.remove("var3");
 
@@ -1104,13 +1131,17 @@ public class SecurityWorld {
             while ((line = reader.readLine()) != null) {
                 //System.out.println(line +pb.redirectErrorStream());
                 System.out.println(line);
-                status = true;
+                //status = true;
             }
             //inputStream.close();
             //reader.close();
             process.waitFor();
             //process.wait();
-            process.destroy();
+            //process.destroy();
+            status = process.exitValue();
+            if (status == -1) {
+                System.out.println("Command runtime error");
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
             LOGGER.logp(Level.SEVERE,

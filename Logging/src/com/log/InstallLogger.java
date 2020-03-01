@@ -1,3 +1,9 @@
+/*
+ *   Copyright (c) 2020. David Brooke
+ *   This file is subject to the terms and conditions defined in
+ *   file 'LICENSE.txt', which is part of this source code package.
+ */
+
 package com.log;
 
 import java.io.IOException;
@@ -5,7 +11,7 @@ import java.util.logging.*;
 
 public class InstallLogger {
 
-    public FileHandler fileTxt = null;
+    private FileHandler fileTxt = null;
     static private CustomFormatter formatterTxt;
     public FileHandler fileHTML = null;
     static private MyHtmlFormatter formatterHTML;

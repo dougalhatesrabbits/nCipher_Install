@@ -23,11 +23,12 @@ public class RunProcBuilder {
         //List<String> args = new ArrayList<String>();
         ProcessBuilder pb = new ProcessBuilder(args);
         String line = null;
+        Integer status = -1;
 
         try {
             pb.redirectErrorStream();
             //try this https://stackoverflow.com/questions/3936023/printing-runtime-exec-outputstream-to-console
-            pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+            //pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
             Process process = pb.start();
             InputStream inputStream = process.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(
@@ -41,8 +42,13 @@ public class RunProcBuilder {
             //inputStream.close();
             //reader.close();
             //process.destroy();
+            status = process.exitValue();
+            if (status == -1) {
+                System.out.println("Command runtime error");
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
+
             LOGGER.logp(Level.SEVERE,
                     "RunProcBuilder",
                     "run",
