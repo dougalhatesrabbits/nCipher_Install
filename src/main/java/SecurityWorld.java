@@ -198,9 +198,9 @@ public class SecurityWorld {
         System.out.println("\nChecking standard linux make builder is installed/at correct version");
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "make --version"});
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing pci drivers" + ConsoleColours.RESET);
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn", "|", "grep Freescale"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn | grep -i Freescale"});
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing usb drivers" + ConsoleColours.RESET);
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb | grep -i Future"});
     }
 
     void checkEnvVariables() {

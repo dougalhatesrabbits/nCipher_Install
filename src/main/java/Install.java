@@ -38,8 +38,6 @@ public class Install {
     public static void main(String[] args) throws IOException {
 
         //TODO SUDO startup!
-
-        /*
         Process p = Runtime.getRuntime().exec("id -u");
         String output = read(p.getInputStream());
         String error = read(p.getErrorStream());
@@ -47,8 +45,6 @@ public class Install {
             System.out.println("User must be elevated as root/admin to run this installer: " +output +error);
             System.exit(1);
         }
-
-         */
 
         final ArgumentParser parser = ArgumentParsers.newFor("nCipher_Install.jar").build()
                 .defaultHelp(true)
