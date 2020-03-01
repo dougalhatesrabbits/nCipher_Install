@@ -45,10 +45,6 @@ public class SecurityWorld {
     final String TAR_DESTINATION = "/";
 
 
-    final String CLASSPATH = "/opt/nfast/java:/opt/nfast/java/bin";
-    final String JAVA_HOME = "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64";
-    final String JRE_HOME = "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre";
-    final String JAVA_PATH = "";
     final String PATH = "/opt/nfast/bin:/opt/nfast/sbin";
 
     // List of source iso filepaths i.e /home/myiso.iso
@@ -56,20 +52,11 @@ public class SecurityWorld {
     Path iso_FilePath = null;
     Boolean removeStatus = false;
 
+
     // Methods
     void applyDrivers() throws IOException {
         LOGGER.fine("running -applyDrivers- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"\nAdding PCI drivers"+ConsoleColours.RESET);
-        LOGGER.info("Adding PCI drivers");
-
-        System.out.println("\nChecking standard linux gcc compiler is installed/at correct version");
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "gcc --version"});
-        System.out.println("\nChecking standard linux make builder is installed/at correct version");
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "make --version"});
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing pci drivers" + ConsoleColours.RESET);
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn | grep Freescale"});
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing usb drivers" + ConsoleColours.RESET);
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nApplying PCI drivers" + ConsoleColours.RESET);
 
         System.out.println(ConsoleColours.YELLOW + "Configure" + ConsoleColours.YELLOW);
         String[] cmd = {NFAST_HOME + "/driver/configure"};
@@ -164,25 +151,10 @@ public class SecurityWorld {
 
 
         System.out.println(ConsoleColours.YELLOW + "Make" + ConsoleColours.RESET);
-        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "/driver/make", "install"};
+        cmd = new String[]{"/bin/bash", "-c", "-C", NFAST_HOME + "/driver", NFAST_HOME + "/driver/make", "install"};
         new RunProcBuilder().run(cmd);
     }
 
-    void restartService() throws IOException {
-        LOGGER.fine("running -restartService- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nrestartService" + ConsoleColours.RESET);
-
-
-        System.out.println("\nRestarting NFAST Service...");
-        String[] cmd = {NFAST_HOME + "/sbin/init.d-ncipher", "restart"};
-        new RunProcBuilder().run(cmd);
-
-        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "/bin/enquiry"};
-        new RunProcBuilder().run(cmd);
-
-        cmd = new String[]{NFAST_HOME + "/bin/nfkminfo"};
-        new RunProcBuilder().run(cmd);
-    }
 
     void applyFirmware() {
         LOGGER.fine("running -applyFirmware- method");
@@ -215,6 +187,20 @@ public class SecurityWorld {
                     "removeExistingSW",
                     "Cannot uninstall", e.fillInStackTrace());
         }
+    }
+
+    void checkDrivers() throws IOException {
+        LOGGER.fine("running -checkDrivers- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking PCI drivers" + ConsoleColours.RESET);
+
+        System.out.println("\nChecking standard linux gcc compiler is installed/at correct version");
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "gcc --version"});
+        System.out.println("\nChecking standard linux make builder is installed/at correct version");
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "make --version"});
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing pci drivers" + ConsoleColours.RESET);
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn", "|", "grep Freescale"});
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing usb drivers" + ConsoleColours.RESET);
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
     }
 
     void checkEnvVariables() {
@@ -316,6 +302,9 @@ public class SecurityWorld {
     }
 
     void checkJava() throws IOException {
+        /***
+         * Don't forget when run as sudo it takes root envs so may be nulls if not set at environment/systemwide level
+         */
         LOGGER.fine("running -checkJava- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking Java" + ConsoleColours.RESET);
         LOGGER.info("Checking Java environment variables");
@@ -326,15 +315,16 @@ public class SecurityWorld {
         System.out.println(ConsoleColours.YELLOW + "$JAVA_PATH= " + ConsoleColours.RESET + System.getenv("JAVA_PATH"));
 
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "java --version"}); // this may be a JRE (not reqd)
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "$JAVA_HOME/bin/javac -version"}); // This is what we want a JDK
-        System.out.println("JDK Version: " +System.getProperty("java.version"));
-        System.out.println("JRE Version: " +System.getProperty("java.runtime.version"));
-        System.out.println("System Java Home: " +System.getProperty("java.home"));
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "javac -version"}); // This is what we want a JDK
+
+        System.out.println("JDK Version: " + System.getProperty("java.version"));
+        System.out.println("JRE Version: " + System.getProperty("java.runtime.version"));
+        System.out.println("System Java Home: " + System.getProperty("java.home"));
         System.out.println(System.getProperty("java.vendor"));
         System.out.println(System.getProperty("java.vendor.url"));
-        System.out.println("System Classpath: " +System.getProperty("java.class.path"));
-        System.out.println("System Library path: " +System.getProperty("java.library.path"));
-        System.out.println("Java Specification version: " +System.getProperty("java.specification.version"));
+        System.out.println("System Classpath: " + System.getProperty("java.class.path"));
+        System.out.println("System Library path: " + System.getProperty("java.library.path"));
+        System.out.println("Java Specification version: " + System.getProperty("java.specification.version"));
 
         Linux linux = new Linux();
 
@@ -344,7 +334,7 @@ public class SecurityWorld {
             switch (envName) {
                 case "JAVA_HOME":
                     assert false;
-                    if (envVars.get(envName).contains(linux.JAVA_HOME)) {
+                    if (envVars.get(envName).contains("Java")) {
                         System.out.format("%s=%s%n",
                                 envName,
                                 envVars.get(envName));
@@ -1007,9 +997,25 @@ public class SecurityWorld {
         }
     }
 
+    void restartService() throws IOException {
+        LOGGER.fine("running -restartService- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nrestartService" + ConsoleColours.RESET);
+
+
+        System.out.println("\nRestarting NFAST Service...");
+        String[] cmd = {NFAST_HOME + "/sbin/init.d-ncipher", "restart"};
+        new RunProcBuilder().run(cmd);
+
+        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "/bin/enquiry"};
+        new RunProcBuilder().run(cmd);
+
+        cmd = new String[]{NFAST_HOME + "/bin/nfkminfo"};
+        new RunProcBuilder().run(cmd);
+    }
+
     void unpackSecWorld(String tar, String dest) {
         LOGGER.fine("running -UnpackSecurityWorld- method");
-        System.out.println(ConsoleColours.BLUE_UNDERLINED+"Unpacking Security World..." +ConsoleColours.RESET);
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "Unpacking Security World..." + ConsoleColours.RESET);
         LOGGER.info("Unpacking Security World...");
 
         //String ext = FilenameUtils.getExtension(tar);

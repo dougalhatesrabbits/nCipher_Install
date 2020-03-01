@@ -31,11 +31,14 @@ public class Linux extends SecurityWorld {
      * @param version
      */
 
-    final String CLASSPATH = "/opt/nfast/java:/opt/nfast/java/bin";
+
+    final String CLASSPATH = "/opt/nfast/java/classes/nfjava.jar:/opt/nfast/java/classes/kmjava.jar:/opt/nfast/java/classes/keysafe.jar";
     final String JAVA_HOME = "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64";
     final String JRE_HOME = "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre";
     final String JAVA_PATH = "";
-    final String PATH = "$NFAST_HOME/bin:$NFAST_HOME/sbin";
+
+
+    final String PATH = "/opt/nfast/bin:/opt/nfast/sbin";
 
     Path sw_filename = null;
 
@@ -66,14 +69,14 @@ public class Linux extends SecurityWorld {
             switch (envName) {
                 case "NFAST_HOME":
                     if (envVars.get(envName).contains(NFAST_HOME)) {
-                        System.out.println(NFAST_HOME);
+                        System.out.println("$NFAST_HOME=" + NFAST_HOME);
                         System.out.format("%s=%s%n",
                                 envName,
                                 envVars.get(envName));
                         System.out.println(ConsoleColours.GREEN + "[OK]" +
                                 ConsoleColours.RESET);
                     } else {
-                        System.out.println(NFAST_HOME);
+                        System.out.println("$NFAST_HOME=" + NFAST_HOME);
                         System.out.println(ConsoleColours.RED + "[NOK]" +
                                 ConsoleColours.RESET);
                     }
@@ -81,14 +84,14 @@ public class Linux extends SecurityWorld {
                     break;
                 case "NFAST_KMDATA":
                     if (envVars.get(envName).contains(NFAST_KMDATA)) {
-                        System.out.println(NFAST_KMDATA);
+                        System.out.println("$NFAST_KMDATA=" + NFAST_KMDATA);
                         System.out.format("%s=%s%n",
                                 envName,
                                 envVars.get(envName));
                         System.out.println(ConsoleColours.GREEN + "[OK]" +
                                 ConsoleColours.RESET);
                     } else {
-                        System.out.println(NFAST_KMDATA);
+                        System.out.println("$NFAST_KMDATA=" + NFAST_KMDATA);
                         System.out.println(ConsoleColours.RED + "[NOK]" +
                                 ConsoleColours.RESET);
                     }
@@ -96,14 +99,14 @@ public class Linux extends SecurityWorld {
                     break;
                 case "PATH":
                     if (envVars.get(envName).contains(PATH)) {
-                        System.out.println(PATH);
+                        System.out.println("$PATH=" + PATH);
                         System.out.format("%s=%s%n",
                                 envName,
                                 envVars.get(envName));
                         System.out.println(ConsoleColours.GREEN + "[OK]" +
                                 ConsoleColours.RESET);
                     } else {
-                        System.out.println(PATH);
+                        System.out.println("$PATH=" + PATH);
                         System.out.println(ConsoleColours.RED + "[NOK]" +
                                 ConsoleColours.RESET);
                     }

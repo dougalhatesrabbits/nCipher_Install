@@ -38,6 +38,7 @@ public class Install {
     public static void main(String[] args) throws IOException {
 
         //TODO SUDO startup!
+
         /*
         Process p = Runtime.getRuntime().exec("id -u");
         String output = read(p.getInputStream());
@@ -304,6 +305,7 @@ public class Install {
             linux.checkMount2(linux.sw_filename);
             linux.getTars(); //also unpacks secWorld
             linux.applySecWorld(); //installs SW
+            linux.checkDrivers();
             //If HSM = Solo or Edge
             linux.applyDrivers(); //install drivers
             linux.restartService();
