@@ -1,27 +1,24 @@
 
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ßºì üÿÿÿÿ8¬½ßµˆ.
-Ksquid:S5411"*Use the primitive boolean expression here.(¦ðµ•üÿÿÿÿ8¬½ßµˆ.
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¨£›”ûÿÿÿÿ8 €ž¼ˆ.
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(““àz8¬½ßµˆ.
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÿ¼ü¿ûÿÿÿÿ8¬½ßµˆ.
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8¬½ßµˆ.
-psquid:S3776%"RRefactor this method to reduce its Cognitive Complexity from 56 to the 15 allowed.(œû¿Ø8Œ Ââ‡.
-Ssquid:S1854"7Remove this useless assignment to local variable "nix".(¶¤È8¬½ßµˆ.
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ì¥È8¬½ßµˆ.
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(óè™Œÿÿÿÿÿ8¬½ßµˆ.
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‡›Ûã8¬½ßµˆ.
-\squid:S1854";Remove this useless assignment to local variable "windows".(ÒôÀÎøÿÿÿÿ8¬½ßµˆ.
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(úºÿùúÿÿÿÿ8§‡²Ãˆ.
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ð¤Ã“ûÿÿÿÿ8»í±Ãˆ.
-Dsquid:S1481"(Remove this unused "nix" local variable.(¶¤È8¬½ßµˆ.
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(’ñë58¬½ßµˆ.
-Ksquid:S5411"*Use the primitive boolean expression here.(¹”±¥ùÿÿÿÿ8¬½ßµˆ.
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´ƒç¸ûÿÿÿÿ8¬½ßµˆ.
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÕêÜÞüÿÿÿÿ8¬½ßµˆ.
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¹½Ø8¬½ßµˆ.
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(â‘àÂÿÿÿÿÿ8¬½ßµˆ.
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¨Ü–…8¬½ßµˆ.
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÖîÏï8˜¾‚Äˆ.
-Msquid:S1481",Remove this unused "windows" local variable.(ÒôÀÎøÿÿÿÿ8¬½ßµˆ.
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8¬½ßµˆ.
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¨¼©â8¬½ßµˆ.
+osquid:CommentedOutCodeLineí"<This block of commented-out lines of code should be removed.(ÕêÜÞüÿÿÿÿ8Äª»¼‰.
+Vsquid:S1854Å"7Remove this useless assignment to local variable "nix".(¶¤È8ÒÌãüˆ.
+osquid:CommentedOutCodeLine¥"<This block of commented-out lines of code should be removed.(´ƒç¸ûÿÿÿÿ8Äª»¼‰.
+Nsquid:S5411Š"*Use the primitive boolean expression here.(¹”±¥ùÿÿÿÿ8Äª»¼‰.
+Gsquid:S1481Å"(Remove this unused "nix" local variable.(¶¤È8ÒÌãüˆ.
+Vsquid:S1135€"2Complete the task associated to this TODO comment.(•ÆÒèüÿÿÿÿ8Äª»¼‰.
+Psquid:S1135("2Complete the task associated to this TODO comment.(×Ê¸ç8ÒÌãüˆ.
+jsquid:CommentedOutCodeLineô"<This block of commented-out lines of code should be removed.(ì¥È8Äª»¼‰.
+osquid:CommentedOutCodeLine™"<This block of commented-out lines of code should be removed.(ßºì üÿÿÿÿ8Äª»¼‰.
+psquid:S3776&"RRefactor this method to reduce its Cognitive Complexity from 66 to the 15 allowed.(œû¿Ø8ÒÌãüˆ.
+Psquid:S1481¯",Remove this unused "windows" local variable.(ÒôÀÎøÿÿÿÿ8Äª»¼‰.
+Gsquid:S1148ª"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Äª»¼‰.
+osquid:CommentedOutCodeLine¬"<This block of commented-out lines of code should be removed.(¨£›”ûÿÿÿÿ8Äª»¼‰.
+jsquid:CommentedOutCodeLine¢"<This block of commented-out lines of code should be removed.(¨Ü–…8Äª»¼‰.
+jsquid:CommentedOutCodeLinež"<This block of commented-out lines of code should be removed.(¹½Ø8Äª»¼‰.
+osquid:CommentedOutCodeLine†"<This block of commented-out lines of code should be removed.(úºÿùúÿÿÿÿ8Äª»¼‰.
+osquid:CommentedOutCodeLineÏ"<This block of commented-out lines of code should be removed.(ÿ¼ü¿ûÿÿÿÿ8Äª»¼‰.
+osquid:CommentedOutCodeLine¸"<This block of commented-out lines of code should be removed.(â‘àÂÿÿÿÿÿ8ÒÌãüˆ.
+_squid:S1854¯";Remove this useless assignment to local variable "windows".(ÒôÀÎøÿÿÿÿ8Äª»¼‰.
+jsquid:CommentedOutCodeLineã"<This block of commented-out lines of code should be removed.(ÖîÏï8Äª»¼‰.
+isquid:CommentedOutCodeLine¿"<This block of commented-out lines of code should be removed.(’ñë58ÒÌãüˆ.
+Nsquid:S5411¾"*Use the primitive boolean expression here.(¦ðµ•üÿÿÿÿ8Äª»¼‰.
+Gsquid:S1148à"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Äª»¼‰.

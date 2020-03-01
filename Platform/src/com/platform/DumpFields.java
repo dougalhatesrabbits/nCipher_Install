@@ -21,13 +21,14 @@ public class DumpFields {
         }
 
         Map<String, String> envVars = System.getenv();
-        for (String envName : envVars.keySet())
-        {
+        for (String envName : envVars.keySet()) {
             System.out.format("%s=%s%n",
                     envName,
                     envVars.get(envName));
         }
 
+        System.out.println("JH: " + envVars.get("JAVA_PATH"));
+        System.out.println("JH: " + System.getenv("JAVA_PATH"));
         System.out.println();
 
         Properties envProps = System.getProperties();
