@@ -355,7 +355,7 @@ public class Linux extends SecurityWorld {
 
         // TODO Do checksum on iso
         System.out.println("Check sum on:" + iso_FilePath);
-        new Checksum().main(new String[]{"-t SHA-256", String.valueOf(isoFile)});
+        new Checksum().main(new String[]{"-t", "SHA-256", String.valueOf(isoFile)});
 
         try {
             //new ReadIso(isoFile, new File(sw_location));
