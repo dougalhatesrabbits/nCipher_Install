@@ -4,6 +4,7 @@
  *   file 'LICENSE.txt', which is part of this source code package.
  */
 
+import com.file.Checksum;
 import com.file.ReadIso;
 import com.platform.ConsoleColours;
 import com.platform.RunProcBuilder;
@@ -244,7 +245,6 @@ public class Linux extends SecurityWorld {
         ProcessBuilder pb = new ProcessBuilder(cmd);
         String line = null;
         int status = -1;
-        Boolean output = false;
 
         try {
             pb.redirectErrorStream(true);
@@ -263,7 +263,7 @@ public class Linux extends SecurityWorld {
             while ((line = reader.readLine()) != null) {
                 //System.out.println(line +pb.redirectErrorStream());
                 System.out.println(line);
-                output = true;
+
             }
 
 
@@ -354,7 +354,9 @@ public class Linux extends SecurityWorld {
 
 
         // TODO Do checksum on iso
-        //new ReadIso(new File(sw_filename), destFile);
+        System.out.println("Check sum on:" + iso_FilePath);
+        new Checksum().main(new String[]{"-t SHA-256", String.valueOf(isoFile)});
+
         try {
             //new ReadIso(isoFile, new File(sw_location));
 

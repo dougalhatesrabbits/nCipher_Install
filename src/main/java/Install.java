@@ -21,8 +21,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("ALL")
 public class Install {
-    long start = System.currentTimeMillis();
+
     // Always use the classname, this way you can refactor
     private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
@@ -38,9 +39,10 @@ public class Install {
     }
 
     public static void main(String[] args) throws IOException {
+        long start = System.currentTimeMillis();
 
         //TODO SUDO startup!
-        /*
+
         Process p = Runtime.getRuntime().exec("id -u");
         String output = read(p.getInputStream());
         String error = read(p.getErrorStream());
@@ -48,8 +50,6 @@ public class Install {
             System.out.println("User must be elevated as root/admin to run this installer: " +output +error);
             System.exit(1);
         }
-
-         */
 
         final ArgumentParser parser = ArgumentParsers.newFor("nCipher_Install.jar").build()
                 .defaultHelp(true)
@@ -131,7 +131,7 @@ public class Install {
 
         InstallLogger log = new InstallLogger();
         log.setup(argLevel);
-        long start = System.currentTimeMillis();
+
 
         LOGGER.info("New instance of -Install- started");
 
@@ -174,175 +174,199 @@ public class Install {
         Platform os = new Platform();
         String osName = os.getOsName();
 
-        if (osName.equals("windows")) {
-            System.out.println("Windows OS");
-            LOGGER.info("Windows OS");
-            Windows windows = new Windows();
-        } else if (osName.equals("mac os x")) {
-            System.out.println(ConsoleColours.BLUE_BRIGHT + "MAC OS machine" + ConsoleColours.RESET);
-            LOGGER.info("MAC OS machine");
-            OSX osx = new OSX();
+        switch (osName) {
+            case "windows":
+                System.out.println("Windows OS");
+                LOGGER.info("Windows OS");
+                Windows windows = new Windows();
+                windows.removeExistingSW();
+                break;
+            case "mac os x": {
+                System.out.println(ConsoleColours.BLUE_BRIGHT + "MAC OS machine" + ConsoleColours.RESET);
+                LOGGER.info("MAC OS machine");
+                OSX osx = new OSX();
 
-            // **Synchronous** //
-            // ******************
-            //TODO Backup
-            //osx.backup(osx.NFAST_KMDATA, System.getProperty("user.dir" + "/backup"));
-            String dirName = new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
-            osx.backup(osx.NFAST_KMDATA, "backup_" + dirName);
+                // **Synchronous** //
+                // ******************
+                //TODO Backup
+                //osx.backup(osx.NFAST_KMDATA, System.getProperty("user.dir" + "/backup"));
+                String dirName = new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
+                osx.backup(osx.NFAST_KMDATA, "backup_" + dirName);
 
-            // .cknfastrc
-            // .ssl.conf
-            // .kmdata
+                // .cknfastrc
+                // .ssl.conf
+                // .kmdata
 
-            if (argType.equals("remove")) {
-                osx.removeExistingSW();
-                System.exit(0);
-            }
+                if (argType.equals("remove")) {
+                    osx.removeExistingSW();
+                    System.exit(0);
+                }
 
-            if (argSilent.equals("No")) {
-                Boolean macStatus = osx.checkExistingSW();
-                if (macStatus) {
+                if (argSilent.equals("No")) {
+                    Boolean macStatus = osx.checkExistingSW();
+                    if (macStatus) {
+                        osx.removeExistingSW();
+                    }
+                } else {
                     osx.removeExistingSW();
                 }
-            } else {
-                osx.removeExistingSW();
-            }
 
-            ObjectMapper osxmapper = new ObjectMapper();
-            String osxjsonfile = System.getProperty("user.dir") + "/secWorld.json";
-            try {
-                // JSON file to Java object
-                SecWorld world = osxmapper.readValue(new File(osxjsonfile), SecWorld.class);
-                if (argFile == null) {
-                    for (String search : world.getLinuxSearch()) {
-                        System.out.println("\nSearching " + search);
-                        osx.sw_files = osx.getSecWorld(search);
-                    }
-                    //System.out.println(osx.sw_files);
-                    osx.sw_filename = osx.getIsoChoices();
-                } else {
-                    for (String search : world.getLinuxSearch()) {
-                        osx.sw_files = osx.getSecWorld(search, argFile);
-
-                    }
-                    Integer idx = osx.sw_files.size();
-                    if (idx > 0) {
-                        osx.sw_filename = osx.sw_files.get(idx - 1);
-
+                ObjectMapper osxmapper = new ObjectMapper();
+                String osxjsonfile = System.getProperty("user.dir") + "/secWorld.json";
+                try {
+                    // JSON file to Java object
+                    SecWorld world = osxmapper.readValue(new File(osxjsonfile), SecWorld.class);
+                    if (argFile == null) {
+                        for (String search : world.getLinuxSearch()) {
+                            System.out.println("\nSearching " + search);
+                            osx.sw_files = osx.getSecWorld(search);
+                        }
+                        //System.out.println(osx.sw_files);
+                        osx.sw_filename = osx.getIsoChoices();
                     } else {
-                        System.out.println("Could not find provided ISO " + osx.sw_filename);
-                        System.exit(1);
+                        for (String search : world.getLinuxSearch()) {
+                            osx.sw_files = osx.getSecWorld(search, argFile);
+
+                        }
+                        byte idx = (byte) osx.sw_files.size();
+                        if (idx > 0) {
+                            osx.sw_filename = osx.sw_files.get(idx - 1);
+
+                        } else {
+                            System.out.println("Could not find provided ISO " + osx.sw_filename);
+                            System.exit(1);
+                        }
                     }
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
-            //osx.checkMount(osx.sw_filename);
-            osx.checkMount2(osx.sw_filename);
-            osx.getTars(); //also unpacks secWorld
-            osx.applySecWorld();
-            osx.applyDrivers();
-            osx.restartService();
+                //osx.checkMount(osx.sw_filename);
+                osx.checkMount2(osx.sw_filename);
+                osx.getTars(); //also unpacks secWorld
 
+                osx.applySecWorld();
+                osx.applyDrivers();
+                osx.restartService();
+
+            /*
             int osxversion = Integer.parseInt(osx.sw_version);
             if (osxversion > 125040) {
                 // This is really separate to Client install but can still prep by copy over to RFS
                 //osx.applyFirmware();
             }
 
-            // **Asynchronous** //
-            // *******************
-            osx.checkEnvVariables();
-            osx.checkJava();
-            //osx.installJava();
-            //osx.configureJava();
-            osx.checkUsers();
-        } else if (osName.equals("linux")) {
-            System.out.println(ConsoleColours.BLUE_BRIGHT + "Linux OS machine" + ConsoleColours.RESET);
-            LOGGER.info("Linux OS");
+             */
 
-            Linux linux = new Linux();
-
-            // **Synchronous** //
-            // ******************
-
-            //TODO Backup
-            linux.backup(linux.NFAST_KMDATA, System.getProperty("user.dir"));
-            // .cknfastrc
-            // .ssl.conf
-            // .kmdata
-            if (argType.equals("remove") && argSilent.equals("Yes")) {
-                linux.removeExistingSW();
-                System.exit(0);
+                // **Asynchronous** //
+                // *******************
+                osx.checkEnvVariables();
+                osx.checkJava();
+                //osx.installJava();
+                //osx.configureJava();
+                osx.checkUsers();
+                break;
             }
-            if (argType.equals("remove") && argSilent.equals("No")) {
-                Boolean linuxStatus = linux.checkExistingSW();
-                if (linuxStatus) {
+            case "linux": {
+                System.out.println(ConsoleColours.BLUE_BRIGHT + "Linux OS machine" + ConsoleColours.RESET);
+                LOGGER.info("Linux OS");
+
+                Linux linux = new Linux();
+
+                // **Synchronous** //
+                // ******************
+
+                //TODO Backup
+                //osx.backup(osx.NFAST_KMDATA, System.getProperty("user.dir" + "/backup"));
+                String dirName = new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
+                linux.backup(linux.NFAST_KMDATA, "backup_" + dirName);
+
+                // .cknfastrc
+                // .ssl.conf
+                // .kmdata
+
+                if (argType.equals("remove") && argSilent.equals("Yes")) {
                     linux.removeExistingSW();
+                    System.exit(0);
                 }
-            }
-
-            ObjectMapper mapper = new ObjectMapper();
-            String jsonfile = System.getProperty("user.dir") + "/secWorld.json";
-            try {
-                // JSON file to Java object
-                SecWorld world = mapper.readValue(new File(jsonfile), SecWorld.class);
-                if (argFile == null) {
-                    for (String search : world.getLinuxSearch()) {
-                        System.out.println("\nSearching " + search);
-                        linux.sw_files = linux.getSecWorld(search);
+                if (argType.equals("remove") && argSilent.equals("No")) {
+                    Boolean linuxStatus = linux.checkExistingSW();
+                    if (linuxStatus) {
+                        linux.removeExistingSW();
                     }
-                    //System.out.println(linux.sw_files);
-                    linux.sw_filename = linux.getIsoChoices();
-                } else {
-                    //overloadad
-                    for (String search : world.getLinuxSearch()) {
-                        linux.sw_files = linux.getSecWorld(search, argFile);
-                    }
-                    Integer idx = linux.sw_files.size();
-                    if (idx > 0) {
-                        linux.sw_filename = linux.sw_files.get(idx - 1);
+                }
 
+                ObjectMapper mapper = new ObjectMapper();
+                String jsonfile = System.getProperty("user.dir") + "/secWorld.json";
+                try {
+                    // JSON file to Java object
+                    SecWorld world = mapper.readValue(new File(jsonfile), SecWorld.class);
+                    if (argFile == null) {
+                        for (String search : world.getLinuxSearch()) {
+                            System.out.println("\nSearching " + search);
+                            linux.sw_files = linux.getSecWorld(search);
+                        }
+                        //System.out.println(linux.sw_files);
+                        linux.sw_filename = linux.getIsoChoices();
                     } else {
-                        System.out.println("Could not find provided ISO " + linux.sw_filename);
-                        System.exit(1);
-                    }
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            //linux.checkMount(linux.sw_filename);
-            linux.checkMount2(linux.sw_filename);
-            linux.getTars(); //also unpacks secWorld
-            linux.applySecWorld(); //installs SW
-            linux.checkDrivers();
-            //If HSM = Solo or Edge
-            linux.applyDrivers(); //install drivers
-            linux.restartService();
+                        //overloadad
+                        for (String search : world.getLinuxSearch()) {
+                            linux.sw_files = linux.getSecWorld(search, argFile);
+                        }
+                        byte idx = (byte) linux.sw_files.size();
+                        if (idx > 0) {
+                            linux.sw_filename = linux.sw_files.get(idx - 1);
 
+                        } else {
+                            System.out.println("Could not find provided ISO " + linux.sw_filename);
+                            System.exit(1);
+                        }
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                //linux.checkMount(linux.sw_filename);
+                linux.checkMount2(linux.sw_filename);
+                linux.getTars(); //also unpacks secWorld
+
+                linux.applySecWorld(); //installs SW
+
+                linux.checkDrivers();
+                //If HSM = Solo or Edge
+                linux.applyDrivers(); //install drivers
+
+                linux.restartService();
+
+            /*
             int linuxversion = Integer.parseInt(linux.sw_version);
             if (linuxversion > 125040) {
                 // This is really separate to Client install but can still prep by copy over to RFS
                 //linux.applyFirmware();
             }
 
-            // **Asynchronous** //
-            // *******************
-            linux.checkEnvVariables();
-            linux.checkJava();
-            //linux.installJava();
-            //linux.configureJava();
-            linux.checkUsers();
-        } else if (osName.equals("nix")) {
-            System.out.println("Unix OS");
-            LOGGER.info("Unix OS");
-            OSX nix = new OSX();
-        } else if (osName.equals("sunos")) {
-            System.out.println("Solaris OS");
-        } else {
-            System.out.println("Unknown OS");
-            System.exit(1);
+             */
+
+                // **Asynchronous** //
+                // *******************
+                linux.checkEnvVariables();
+                linux.checkJava();
+                //linux.installJava();
+                //linux.configureJava();
+                linux.checkUsers();
+                break;
+            }
+            case "nix":
+                System.out.println("Unix OS");
+                LOGGER.info("Unix OS");
+                OSX nix = new OSX();
+                nix.removeExistingSW();
+                break;
+            case "sunos":
+                System.out.println("Solaris OS");
+                break;
+            default:
+                System.out.println("Unknown OS");
+                System.exit(1);
         }
 
         log.close();

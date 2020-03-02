@@ -4,6 +4,7 @@
  *   file 'LICENSE.txt', which is part of this source code package.
  */
 
+import com.file.Checksum;
 import com.file.CopyDir;
 import com.file.ReadIso;
 import com.file.UnTarFile;
@@ -505,12 +506,14 @@ public class SecurityWorld {
                     System.out.println("failed");
                     LOGGER.fine("failed");
                 }
-            } catch(Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
 
         }
         // TODO Do checksum on iso
+        new Checksum().main(new String[]{"-t SHA256 ", String.valueOf(sw_filename)});
+
         //new ReadIso(new File(sw_filename), destFile);
         try {
             //new ReadIso(isoFile, new File(sw_location));
@@ -664,7 +667,9 @@ public class SecurityWorld {
 
 
         // TODO Do checksum on iso
-        //new ReadIso(new File(sw_filename), destFile);
+        System.out.println("Check sum on:" + iso_FilePath);
+        new Checksum().main(new String[]{"-t SHA-256", String.valueOf(isoFile)});
+
         try {
             //new ReadIso(isoFile, new File(sw_location));
 

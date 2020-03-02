@@ -4,6 +4,7 @@
  *   file 'LICENSE.txt', which is part of this source code package.
  */
 
+import com.file.Checksum;
 import com.file.ReadIso;
 import com.platform.ConsoleColours;
 import com.platform.RunProcBuilder;
@@ -383,7 +384,10 @@ public class OSX extends SecurityWorld {
 
 
         // TODO Do checksum on iso
-        //new ReadIso(new File(sw_filename), destFile);
+        System.out.println(ConsoleColours.YELLOW + "\nChecksum on: " + ConsoleColours.RESET + iso_FilePath);
+        new Checksum().main(new String[]{"-t", "SHA-256", String.valueOf(isoFile)});
+        System.out.println();
+
         try {
             //new ReadIso(isoFile, new File(sw_location));
 
