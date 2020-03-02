@@ -66,7 +66,7 @@ public class SecurityWorld {
 
         System.out.println(ConsoleColours.YELLOW + "Configure" + ConsoleColours.YELLOW);
         String[] cmd = {NFAST_HOME + "/driver/configure"};
-        new RunProcBuilder().run(cmd);
+        //new RunProcBuilder().run(cmd);
 
         ProcessBuilder pb = new ProcessBuilder(cmd);
         String line = null;
@@ -108,10 +108,10 @@ public class SecurityWorld {
                     "Cannot run command", ex.getCause());
         }
 
-        System.out.println(ConsoleColours.YELLOW + "\nClean" + ConsoleColours.RESET);
+        System.out.println(ConsoleColours.YELLOW + "\nMake Clean" + ConsoleColours.RESET);
         cmd = new String[]{"/bin/bash", "-c", "make", "-C", NFAST_HOME + "/driver", NFAST_HOME + "/driver", "clean"};
-        new RunProcBuilder().run(cmd);
-        new ProcessBuilder(cmd);
+        //new RunProcBuilder().run(cmd);
+        pb = new ProcessBuilder(cmd);
         status = -1;
         try {
             pb.redirectErrorStream(true);
@@ -151,14 +151,91 @@ public class SecurityWorld {
         }
 
 
-        System.out.println(ConsoleColours.YELLOW + "Compile" + ConsoleColours.RESET);
-        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "driver/make", "-C", NFAST_HOME + "/driver"};
-        new RunProcBuilder().run(cmd);
-
-
         System.out.println(ConsoleColours.YELLOW + "Make" + ConsoleColours.RESET);
+        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "driver/make", "-C", NFAST_HOME + "/driver"};
+        //new RunProcBuilder().run(cmd);
+        //new RunProcBuilder().run(cmd);
+        pb = new ProcessBuilder(cmd);
+        status = -1;
+        try {
+            pb.redirectErrorStream(true);
+            pb.directory(new File(NFAST_HOME + "/driver"));
+
+            Map<String, String> env = pb.environment();
+            env.clear();
+            env.put("User Dir", NFAST_HOME + "/driver");
+            env.put("User Name", "root");
+            //env.remove("var3");
+            pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+
+            Process process = pb.start();
+            InputStream inputStream = process.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    inputStream));
+            //OutputStream out = process.getOutputStream();
+
+            while ((line = reader.readLine()) != null) {
+                //System.out.println(line +pb.redirectErrorStream());
+                System.out.println(line);
+                //output = true;
+            }
+            process.waitFor();
+
+            status = process.exitValue();
+            if (status == -1) {
+                System.out.println("Command runtime error");
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+
+            LOGGER.logp(Level.SEVERE,
+                    "SecurityWorld",
+                    "applyDrivers",
+                    "Cannot run command", ex.getCause());
+        }
+
+
+        System.out.println(ConsoleColours.YELLOW + "Make Install" + ConsoleColours.RESET);
         cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "/driver/make", "-C", NFAST_HOME + "/driver", "install"};
-        new RunProcBuilder().run(cmd);
+        //new RunProcBuilder().run(cmd);
+        pb = new ProcessBuilder(cmd);
+        status = -1;
+        try {
+            pb.redirectErrorStream(true);
+            pb.directory(new File(NFAST_HOME + "/driver"));
+
+            Map<String, String> env = pb.environment();
+            env.clear();
+            env.put("User Dir", NFAST_HOME + "/driver");
+            env.put("User Name", "root");
+            //env.remove("var3");
+            pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+
+            Process process = pb.start();
+            InputStream inputStream = process.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    inputStream));
+            //OutputStream out = process.getOutputStream();
+
+            while ((line = reader.readLine()) != null) {
+                //System.out.println(line +pb.redirectErrorStream());
+                System.out.println(line);
+                //output = true;
+            }
+            process.waitFor();
+
+            status = process.exitValue();
+            if (status == -1) {
+                System.out.println("Command runtime error");
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+
+            LOGGER.logp(Level.SEVERE,
+                    "SecurityWorld",
+                    "applyDrivers",
+                    "Cannot run command", ex.getCause());
+        }
     }
 
     void restartService() throws IOException {
@@ -235,10 +312,6 @@ public class SecurityWorld {
         System.out.println("\nChecking standard linux make builder is installed/at correct version");
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "make --version"});
 
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing pci drivers" + ConsoleColours.RESET);
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn", "|", "grep Freescale"});
-        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing usb drivers" + ConsoleColours.RESET);
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb"});
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing pci drivers" + ConsoleColours.RESET);
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn | grep -i Freescale"});
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing usb drivers" + ConsoleColours.RESET);
