@@ -4,6 +4,7 @@
  *   file 'LICENSE.txt', which is part of this source code package.
  */
 
+import com.file.CopyDir;
 import com.file.ReadIso;
 import com.file.UnTarFile;
 import com.platform.ConsoleColours;
@@ -150,12 +151,12 @@ public class SecurityWorld {
 
 
         System.out.println(ConsoleColours.YELLOW + "Compile" + ConsoleColours.RESET);
-        cmd = new String[]{"/bin/bash", "-c", "-C", NFAST_HOME + "/driver", NFAST_HOME + "driver/make"};
+        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "driver/make", "-C", NFAST_HOME + "/driver"};
         new RunProcBuilder().run(cmd);
 
 
         System.out.println(ConsoleColours.YELLOW + "Make" + ConsoleColours.RESET);
-        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "/driver/make", "install"};
+        cmd = new String[]{"/bin/bash", "-c", NFAST_HOME + "/driver/make", "-C", NFAST_HOME + "/driver", "install"};
         new RunProcBuilder().run(cmd);
     }
 
@@ -208,6 +209,22 @@ public class SecurityWorld {
         }
     }
 
+    void backup(String source, String target) throws IOException {
+        LOGGER.fine("running -backup- method");
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nPerforming Backup" + ConsoleColours.RESET);
+
+        Path sourceDir = Paths.get(source);
+        Path targetDir = Paths.get(target);
+
+        try {
+            Files.walkFileTree(sourceDir, new CopyDir(sourceDir, targetDir));
+            System.out.println("Backup complete: " + targetDir);
+        } catch (IOException e) {
+            System.out.println("Unable to perform backup to " + targetDir);
+            e.printStackTrace();
+        }
+    }
+
     void checkDrivers() throws IOException {
         LOGGER.fine("running -checkDrivers- method");
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking PCI drivers" + ConsoleColours.RESET);
@@ -216,10 +233,15 @@ public class SecurityWorld {
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "gcc --version"});
         System.out.println("\nChecking standard linux make builder is installed/at correct version");
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "make --version"});
+
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing pci drivers" + ConsoleColours.RESET);
         new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn", "|", "grep Freescale"});
         System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing usb drivers" + ConsoleColours.RESET);
-        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb -nn"});
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb"});
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing pci drivers" + ConsoleColours.RESET);
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lspci -nn | grep -i Freescale"});
+        System.out.println(ConsoleColours.BLUE_UNDERLINED + "\nChecking existing usb drivers" + ConsoleColours.RESET);
+        new RunProcBuilder().run(new String[]{"/bin/bash", "-c", "lsusb | grep -i Future"});
     }
 
     void checkEnvVariables() {

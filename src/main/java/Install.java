@@ -15,6 +15,8 @@ import net.sourceforge.argparse4j.inf.ArgumentParserException;
 import net.sourceforge.argparse4j.inf.Namespace;
 
 import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -38,6 +40,7 @@ public class Install {
     public static void main(String[] args) throws IOException {
 
         //TODO SUDO startup!
+        /*
         Process p = Runtime.getRuntime().exec("id -u");
         String output = read(p.getInputStream());
         String error = read(p.getErrorStream());
@@ -45,6 +48,8 @@ public class Install {
             System.out.println("User must be elevated as root/admin to run this installer: " +output +error);
             System.exit(1);
         }
+
+         */
 
         final ArgumentParser parser = ArgumentParsers.newFor("nCipher_Install.jar").build()
                 .defaultHelp(true)
@@ -180,6 +185,15 @@ public class Install {
 
             // **Synchronous** //
             // ******************
+            //TODO Backup
+            //osx.backup(osx.NFAST_KMDATA, System.getProperty("user.dir" + "/backup"));
+            String dirName = new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
+            osx.backup(osx.NFAST_KMDATA, "backup_" + dirName);
+
+            // .cknfastrc
+            // .ssl.conf
+            // .kmdata
+
             if (argType.equals("remove")) {
                 osx.removeExistingSW();
                 System.exit(0);
@@ -254,6 +268,7 @@ public class Install {
             // ******************
 
             //TODO Backup
+            linux.backup(linux.NFAST_KMDATA, System.getProperty("user.dir"));
             // .cknfastrc
             // .ssl.conf
             // .kmdata

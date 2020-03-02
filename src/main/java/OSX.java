@@ -27,7 +27,8 @@ public class OSX extends SecurityWorld {
      */
 
     String sw_location = "Volumes/CDROM";
-    public String  NFAST_HOME = "opt/nfast";
+    public String NFAST_HOME = "opt/nfast";
+    public String NFAST_KMDATA = "src";
     Boolean removeStatus = false;
     Path sw_filename = null;
 
